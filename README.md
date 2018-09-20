@@ -40,7 +40,7 @@ const 声明一个只读的常量。一旦声明，常量的值就不能改变�
 const a = 123
 a = 456 // 报错，不可改变
 
-let b = [123]
+const b = [123]
 b = [456] // 报错，不可以重新赋值，不可改变
 ```
 复合类型的数据（主要是对象和数组），可以这样子变动
@@ -834,7 +834,7 @@ let cp = new ColorPoint(); // ReferenceError
 
 关注公众号并回复 **福利** 便免费送你视频资源，绝对干货。
 
-福利详情请点击：  [免费资源分享——Python、Java、Linux、Go、node、vue、react、javaScript](https://www.jianshu.com/p/5bce99731a13)
+福利详情请点击：  [免费资源分享--Python、Java、Linux、Go、node、vue、react、javaScript](https://mp.weixin.qq.com/s?__biz=MzA4MDU1MDExMg==&mid=2247483711&idx=1&sn=1ffb576159805e92fc57f5f1120fce3a&chksm=9fa3c0b0a8d449a664f36f6fdd017ac7da71b6a71c90261b06b4ea69b42359255f02d0ffe7b3&token=1560489745&lang=zh_CN#rd)
 
 ![爱写bugger的阿拉斯加](https://upload-images.jianshu.io/upload_images/12890819-d33a51f4cefc78ea.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
  
