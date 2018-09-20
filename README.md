@@ -3,7 +3,7 @@
 
 # 前言
 
-最新的 ECMAScript 都已经到发布到 2019 版了。
+最新的 ECMAScript 都已经到发布到 2018 版了。
 
 我们应该有的态度是： Stay hungry ! Stay young ！
 
