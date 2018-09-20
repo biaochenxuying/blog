@@ -1,4 +1,3 @@
-# blog
 ![](https://upload-images.jianshu.io/upload_images/12890819-b2a2443f96933250.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
@@ -812,6 +811,9 @@ let cp = new ColorPoint(); // ReferenceError
 总结和写博客的过程就是学习的过程，是一个享受的过程 ！！！
 
 好了，面试和工作中用到 ES6 精粹几乎都在这了。
+
+如果你觉得该文章对你有帮助，欢迎到我的 github star 一下，谢谢。
+ [github 地址](https://github.com/biaochenxuying/blog)
 
 文章很多内容参考了：[ECMAScript 6 标准入门](http://es6.ruanyifeng.com/)
 
