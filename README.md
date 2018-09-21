@@ -1,6 +1,6 @@
 # 简介
 
-我的个人技术博客首发地址，不定期更新，博客另发地址：https://segmentfault.com/u/biaochenxuying 。
+我的个人技术博客地址，不定期更新，博客另发地址：https://segmentfault.com/u/biaochenxuying 。
 
 ![](https://upload-images.jianshu.io/upload_images/12890819-af8dcbb956319a4c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
