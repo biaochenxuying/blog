@@ -2,7 +2,8 @@
 
 我的个人技术博客首发地址，不定期更新，博客另发地址：https://segmentfault.com/u/biaochenxuying 。
 
-![](https://upload-images.jianshu.io/upload_images/12890819-af8dcbb956319a4c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/12890819-64e6626d195fce41.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 # 博客分类
 
@@ -53,6 +54,7 @@
 我会不定期更新有价值的内容，长期运营。
 
 > 微信公众号：**爱写bugger的阿拉斯加**
+
 > 分享 前端开发、后端开发 等相关的技术文章，热点资源，全栈程序员的成长之路。
 
 关注公众号并回复 **福利** 便免费送你视频学习资料，绝对干货。
