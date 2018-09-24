@@ -53,12 +53,13 @@
  
 我会不定期更新有价值的内容，长期运营。
 
-> 微信公众号：**爱写bugger的阿拉斯加**
+
+> 微信公众号：BiaoChenXuYing
 
 > 分享 前端开发、后端开发 等相关的技术文章，热点资源，全栈程序员的成长之路。
 
-关注公众号并回复 **福利** 便免费送你视频学习资料，绝对干货。
+关注公众号并回复 **福利** 便免费送你视频资源，绝对干货。
 
-福利详情请点击：  [免费资源分享——Python、Java、Linux、Go、node、vue、react、javaScript](https://mp.weixin.qq.com/s?__biz=MzA4MDU1MDExMg==&mid=2247483711&idx=1&sn=1ffb576159805e92fc57f5f1120fce3a&chksm=9fa3c0b0a8d449a664f36f6fdd017ac7da71b6a71c90261b06b4ea69b42359255f02d0ffe7b3&token=1560489745&lang=zh_CN#rd)
+福利详情请点击：  [免费资源分享--Python、Java、Linux、Go、node、vue、react、javaScript](https://mp.weixin.qq.com/s?__biz=MzA4MDU1MDExMg==&mid=2247483711&idx=1&sn=1ffb576159805e92fc57f5f1120fce3a&chksm=9fa3c0b0a8d449a664f36f6fdd017ac7da71b6a71c90261b06b4ea69b42359255f02d0ffe7b3&token=1560489745&lang=zh_CN#rd)
 
-![爱写bugger的阿拉斯加](https://upload-images.jianshu.io/upload_images/12890819-d33a51f4cefc78ea.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![BiaoChenXuYing](https://upload-images.jianshu.io/upload_images/12890819-acac0df6ee815801.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
