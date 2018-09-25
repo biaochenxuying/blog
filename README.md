@@ -27,10 +27,13 @@
 
 ### | JavaScript
 
+- [细数 JavaScript 实用黑科技(二)](https://github.com/biaochenxuying/blog/issues/12)
+- [细数 JavaScript 实用黑科技(一)](https://github.com/biaochenxuying/blog/issues/11)
 - [面试题之从敲入 URL 到浏览器渲染完成](https://github.com/biaochenxuying/blog/issues/3)
 - [JS 是单线程，你了解其运行机制吗？](https://github.com/biaochenxuying/blog/issues/8)
 - [js 递归调用 ](https://github.com/biaochenxuying/blog/issues/9)
 - [WebKit 技术内幕之浏览器与WebKit 内核](https://github.com/biaochenxuying/blog/issues/10)
+
 
 
 ### | 随笔
