@@ -1,6 +1,6 @@
 # 简介
 
-我的个人技术博客地址，不定期更新，博客另发地址：https://segmentfault.com/u/biaochenxuying 。
+我的个人技术博客地址，不定期更新，博客另发地址：http://biaochenxuying.cn/main.html 或者 https://segmentfault.com/u/biaochenxuying 。
 
 ![](https://upload-images.jianshu.io/upload_images/12890819-af8dcbb956319a4c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -20,13 +20,18 @@
 - [基于 vue+mint-ui 的 mobile-h5 的项目说明](https://github.com/biaochenxuying/blog/issues/4)
 - [复杂表格设计数据格式](https://github.com/biaochenxuying/blog/issues/7)
 
+### | react 
+
+- [react + node + express + ant + mongodb 的简洁兼时尚的博客网站](https://github.com/biaochenxuying/blog/issues/14)
 
 ### | ES 6
 
 - [那些必会用到的 ES6 精粹](https://github.com/biaochenxuying/blog/issues/1)
 
+
 ### | JavaScript
 
+- [js 日期对象 setMonth 的锅](https://github.com/biaochenxuying/blog/issues/13)
 - [细数 JavaScript 实用黑科技(二)](https://github.com/biaochenxuying/blog/issues/12)
 - [细数 JavaScript 实用黑科技(一)](https://github.com/biaochenxuying/blog/issues/11)
 - [面试题之从敲入 URL 到浏览器渲染完成](https://github.com/biaochenxuying/blog/issues/3)
