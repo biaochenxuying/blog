@@ -1,6 +1,6 @@
 # 简介
 
-我的个人技术博客地址，不定期更新，博客另发地址：http://biaochenxuying.cn/main.html 或者 https://segmentfault.com/u/biaochenxuying 。
+我的个人技术博客地址，不定期更新，博客另发地址：http://biaochenxuying.cn/main.html 
 
 ![](https://upload-images.jianshu.io/upload_images/12890819-af8dcbb956319a4c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -10,6 +10,9 @@
 - [JavaScript ](https://github.com/biaochenxuying/blog/projects/4)
 - [vue](https://github.com/biaochenxuying/blog/projects/3)
 - [ES 6](https://github.com/biaochenxuying/blog/projects/2)
+- [react.js](https://github.com/biaochenxuying/blog/projects/5)
+- [node.js](https://github.com/biaochenxuying/blog/projects/7)
+- [MongoDB](https://github.com/biaochenxuying/blog/projects/5)
 - [随笔](https://github.com/biaochenxuying/blog/projects/5)
 
 # 主要系列文章
@@ -22,6 +25,7 @@
 
 ### | react 
 
+- [项目文档说明：react + Ant Design 的 blog-react-admin](https://github.com/biaochenxuying/blog/issues/16)
 - [react + Ant Design + 支持 markdown 的 blog-react 项目的文档说明](https://github.com/biaochenxuying/blog/issues/15)
 - [react + node + express + ant + mongodb 的简洁兼时尚的博客网站](https://github.com/biaochenxuying/blog/issues/14)
 
@@ -41,6 +45,11 @@
 - [WebKit 技术内幕之浏览器与WebKit 内核](https://github.com/biaochenxuying/blog/issues/10)
 
 
+### | node 
+
+- [基于 node express mongodb 的 blog-node 项目文档说明](https://github.com/biaochenxuying/blog/issues/17)
+- [服务器小白的我,是如何将 node+mongodb 项目部署在服务器上并进行性能优化的](https://github.com/biaochenxuying/blog/issues/18)
+
 
 ### | 随笔
 
@@ -54,6 +63,8 @@
 - [segmentfault：https://segmentfault.com/u/biaochenxuying](https://segmentfault.com/u/biaochenxuying )
 - [知乎：https://www.zhihu.com/people/gu-jian-qi-tan-shui/activities](https://www.zhihu.com/people/gu-jian-qi-tan-shui/activities)
 - [掘金：https://juejin.im/user/591d6b4d0ce463006926ae40](https://juejin.im/user/591d6b4d0ce463006926ae40 )
+- [简书](https://www.jianshu.com/u/91717b553bfd)
+  
 
 # 关于我
 
