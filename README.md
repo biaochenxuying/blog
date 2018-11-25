@@ -47,14 +47,28 @@
 - [程序员，你的身体还健康吗？](https://github.com/biaochenxuying/blog/issues/6)
 
 
+# 活跃社区
+
+
+- [github：https://github.com/biaochenxuying/blog](https://github.com/biaochenxuying/blog )
+- [segmentfault：https://segmentfault.com/u/biaochenxuying](https://segmentfault.com/u/biaochenxuying )
+- [知乎：https://www.zhihu.com/people/gu-jian-qi-tan-shui/activities](https://www.zhihu.com/people/gu-jian-qi-tan-shui/activities)
+- [掘金：https://juejin.im/user/591d6b4d0ce463006926ae40](https://juejin.im/user/591d6b4d0ce463006926ae40 )
 
 # 关于我
 
-本人 小汪，现在从事 前端开发，一枚软件开发攻城狮～
+本人姓名： chenbiao ，常用昵称是：虚影，所以结合起来是 BiaoChenXuYing ，目前从事 前端开发，一枚软件开发攻城狮～
 
-技术栈相关：前端开发、撸过 python、node.js 、数据库等；
+技术栈相关：前端：javaScript、vue.js、react.js ；后端方面：对 node.js、 python、MySql、MongoDB 等也略有接触 ；
 
-业余爱折腾：跑步、健身、旅游、电影；
+业余爱折腾：跑步、健身、旅游、电影，国漫，音乐、毛笔字( 为了生活，暂时放弃了这一爱好，之后还会继续的)；
+
+其他：有什么问题可以到我的个人网站给我留言，有必要的，我都会给您回复邮件的。或者通过我的微信公众号入口加我微信哦，记得加我时要 **暗号** 哦，不然不给通过。
+
+[biaochenxuying 的个人博客网站](http://biaochenxuying.cn/main.html)。
+
+邮箱：**2993806084#qq.com** ，将 **#** 号换成 **@** 即可。
+
 
 # 最后
 
