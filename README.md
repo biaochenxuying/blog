@@ -63,7 +63,7 @@
 - [segmentfault：https://segmentfault.com/u/biaochenxuying](https://segmentfault.com/u/biaochenxuying )
 - [知乎：https://www.zhihu.com/people/gu-jian-qi-tan-shui/activities](https://www.zhihu.com/people/gu-jian-qi-tan-shui/activities)
 - [掘金：https://juejin.im/user/591d6b4d0ce463006926ae40](https://juejin.im/user/591d6b4d0ce463006926ae40 )
-- [简书](https://www.jianshu.com/u/91717b553bfd)
+- [简书：https://www.jianshu.com/u/91717b553bfd](https://www.jianshu.com/u/91717b553bfd)
   
 
 # 关于我
