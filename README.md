@@ -52,7 +52,7 @@
 
 
 ### | 随笔
-
+- [2018 年，我的本命年](https://github.com/biaochenxuying/blog/issues/19)
 - [程序员，你的身体还健康吗？](https://github.com/biaochenxuying/blog/issues/6)
 
 
