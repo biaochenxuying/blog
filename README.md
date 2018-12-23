@@ -64,7 +64,7 @@
 - [程序员，你的身体还健康吗？](https://github.com/biaochenxuying/blog/issues/6)
 
 
-# 活跃社区
+# 4. 活跃社区
 
 - [github：https://github.com/biaochenxuying/blog](https://github.com/biaochenxuying/blog )
 - [segmentfault：https://segmentfault.com/u/biaochenxuying](https://segmentfault.com/u/biaochenxuying )
@@ -73,7 +73,7 @@
 - [简书：https://www.jianshu.com/u/91717b553bfd](https://www.jianshu.com/u/91717b553bfd)
   
 
-# 4. 关于我
+# 5. 关于我
 
 本人姓名： chenbiao ，常用昵称是：虚影，所以结合起来是 BiaoChenXuYing ，现在从事 前端开发，一枚软件开发攻城狮～
 
@@ -92,7 +92,7 @@
 其他：有什么问题可以在我的个人网站、公众号或者邮箱给我留言，有必要的，我都会给您回复邮件的。
 
 
-# 5. 最后
+# 6. 最后
 
 
 鉴于平时请教问题的人有点多，小汪时间有限，处理不过来，大家可以加入 QQ 群：**186045338**，加群暗号：**全栈修炼** ，一起相互交流学习。
