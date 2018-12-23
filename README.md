@@ -1,11 +1,11 @@
-# 简介
+# 1. 简介
 
 我的个人技术博客地址，不定期更新，博客另发地址：http://biaochenxuying.cn/main.html 
 
 ![](https://upload-images.jianshu.io/upload_images/12890819-af8dcbb956319a4c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
-# 博客分类
+# 2. 博客分类
 
 - [JavaScript ](https://github.com/biaochenxuying/blog/projects/4)
 - [vue](https://github.com/biaochenxuying/blog/projects/3)
@@ -15,7 +15,14 @@
 - [MongoDB](https://github.com/biaochenxuying/blog/projects/5)
 - [随笔](https://github.com/biaochenxuying/blog/projects/5)
 
-# 主要系列文章
+# 3. 主要系列文章
+
+## 2019
+
+精彩待谱写 ...
+
+
+## 2018
 
 ### | vue
 
@@ -52,12 +59,12 @@
 
 
 ### | 随笔
+
 - [2018 年，我的本命年](https://github.com/biaochenxuying/blog/issues/19)
 - [程序员，你的身体还健康吗？](https://github.com/biaochenxuying/blog/issues/6)
 
 
 # 活跃社区
-
 
 - [github：https://github.com/biaochenxuying/blog](https://github.com/biaochenxuying/blog )
 - [segmentfault：https://segmentfault.com/u/biaochenxuying](https://segmentfault.com/u/biaochenxuying )
@@ -66,22 +73,26 @@
 - [简书：https://www.jianshu.com/u/91717b553bfd](https://www.jianshu.com/u/91717b553bfd)
   
 
-# 关于我
+# 4. 关于我
 
-本人姓名： chenbiao ，常用昵称是：虚影，所以结合起来是 BiaoChenXuYing ，目前从事 前端开发，一枚软件开发攻城狮～
+本人姓名： chenbiao ，常用昵称是：虚影，所以结合起来是 BiaoChenXuYing ，现在从事 前端开发，一枚软件开发攻城狮～
 
-技术栈相关：前端：javaScript、vue.js、react.js ；后端方面：对 node.js、 python、MySql、MongoDB 等也略有接触 ；
+技术栈相关：
 
-业余爱折腾：跑步、健身、旅游、电影，国漫，音乐、毛笔字( 为了生活，暂时放弃了这一爱好，之后还会继续的)；
+- 前端：javaScript、vue.js、react.js ；
 
-其他：有什么问题可以到我的个人网站给我留言，有必要的，我都会给您回复邮件的。或者通过我的微信公众号入口加我微信哦，记得加我时要 **暗号** 哦，不然不给通过。
+- 后端：对 node.js、 python、MySql、MongoDB 等也略有接触 ；
 
-[biaochenxuying 的个人博客网站](http://biaochenxuying.cn/main.html)。
+业余爱折腾：跑步、健身、旅游、电影，国漫，音乐、毛笔字；
+
+微信：**CB834301747**，加我时的验证申请，请输入暗号哦，暗号是：**全栈修炼** ，不然不给通过。（**非诚勿扰**）
 
 邮箱：**2993806084#qq.com** ，将 **#** 号换成 **@** 即可。
 
+其他：有什么问题可以在我的个人网站、公众号或者邮箱给我留言，有必要的，我都会给您回复邮件的。
 
-# 最后
+
+# 5. 最后
 
 
 鉴于平时请教问题的人有点多，小汪时间有限，处理不过来，大家可以加入 QQ 群：**186045338**，加群暗号：**全栈修炼** ，一起相互交流学习。
@@ -93,7 +104,7 @@
 
 > 微信公众号：**BiaoChenXuYing**
 > 
-> 分享 前端开发、后端开发 等相关的技术文章，热点资源，全栈程序员的成长之路。
+> 分享 前端开发、后端开发 等相关的技术文章，热点资源，随感随想，全栈程序员的成长之路。
 
 关注公众号并回复 **福利** 便免费送你视频资源，绝对干货。
 
