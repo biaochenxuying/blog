@@ -43,6 +43,7 @@
 
 ### | JavaScript
 
+- [js 实现上下改变父 div 的高度，左右上下动态分割孩子的宽高](https://github.com/biaochenxuying/blog/issues/20)
 - [js 日期对象 setMonth 的锅](https://github.com/biaochenxuying/blog/issues/13)
 - [细数 JavaScript 实用黑科技(二)](https://github.com/biaochenxuying/blog/issues/12)
 - [细数 JavaScript 实用黑科技(一)](https://github.com/biaochenxuying/blog/issues/11)
