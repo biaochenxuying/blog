@@ -30,7 +30,9 @@
 
 ### | JavaScript
 
-- [原生 js 实现一个前端路由 router](https://github.com/biaochenxuying/blog/issues/21)
+- [原生 js 实现一个有动画效果的进度条插件 progress](https://github.com/biaochenxuying/blog/issues/21)
+- [原生 js 实现一个前端路由 router](https://github.com/biaochenxuying/blog/issues/22)
+
 
 
 ### | node 
