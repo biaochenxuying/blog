@@ -19,6 +19,11 @@
 
 ## 2019
 
+### | 性能优化
+
+- [一次网站的性能优化之路 -- 天下武功，唯快不破](https://github.com/biaochenxuying/blog/issues/24)
+  
+  
 ### | vue
 
 
@@ -100,7 +105,7 @@
 
 # 5. 关于我
 
-本人姓名： chenbiao ，常用昵称是：虚影，所以结合起来是 BiaoChenXuYing ，现在从事 前端开发，一枚软件开发攻城狮～
+本人姓名： 陈彪 ，常用昵称是：虚影，所以结合起来是 BiaoChenXuYing ，现在从事 前端开发，一枚软件开发攻城狮～
 
 技术栈相关：
 
@@ -110,7 +115,7 @@
 
 业余爱折腾：跑步、健身、旅游、电影，国漫，音乐、毛笔字；
 
-微信：**CB834301747**，加我时的验证申请，请输入暗号哦，暗号是：**全栈修炼** ，不然不给通过。（**非诚勿扰**）
+微信：**CB834301747**，加我时的验证申请，请输入暗号哦，暗号是：**全栈修炼 + 您的姓名** ，不然不给通过。（非诚勿扰）
 
 邮箱：**2993806084#qq.com** ，将 **#** 号换成 **@** 即可。
 
@@ -119,6 +124,8 @@
 
 # 6. 最后
 
+
+如果您觉得本项目和文章不错或者对你有所帮助，请给个星呗，你的肯定就是我继续创作的最大动力。
 
 鉴于平时请教问题的人有点多，小汪时间有限，处理不过来，大家可以加入 QQ 群：**186045338**，加群暗号：**全栈修炼** ，一起相互交流学习。
 
@@ -131,8 +138,6 @@
 > 
 > 分享 前端开发、后端开发 等相关的技术文章，热点资源，随感随想，全栈程序员的成长之路。
 
-关注公众号并回复 **福利** 便免费送你视频资源，绝对干货。
+欢迎关注公众号，并回复 **福利** 可领取免费学习资料，福利详情请猛戳：  [免费资源获取--Python、Java、Linux、Go、node、vue、react、javaScript](https://mp.weixin.qq.com/s?__biz=MzA4MDU1MDExMg==&mid=2247483711&idx=1&sn=1ffb576159805e92fc57f5f1120fce3a&chksm=9fa3c0b0a8d449a664f36f6fdd017ac7da71b6a71c90261b06b4ea69b42359255f02d0ffe7b3&token=1560489745&lang=zh_CN#rd)
 
-福利详情请点击：  [免费资源分享--Python、Java、Linux、Go、node、vue、react、javaScript](https://mp.weixin.qq.com/s?__biz=MzA4MDU1MDExMg==&mid=2247483711&idx=1&sn=1ffb576159805e92fc57f5f1120fce3a&chksm=9fa3c0b0a8d449a664f36f6fdd017ac7da71b6a71c90261b06b4ea69b42359255f02d0ffe7b3&token=1560489745&lang=zh_CN#rd)
-
-![BiaoChenXuYing](https://upload-images.jianshu.io/upload_images/12890819-091ccce387e2ea34.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![BiaoChenXuYing](https://upload-images.jianshu.io/upload_images/12890819-1921c40c1e9c39ab.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
