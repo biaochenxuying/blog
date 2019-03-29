@@ -26,6 +26,7 @@
   
 ### | vue
 
+- [Vue + TypeScript + Element 搭建简洁时尚的博客网站及踩坑记](https://github.com/biaochenxuying/blog/issues/25)
 
 ### | react 
 
