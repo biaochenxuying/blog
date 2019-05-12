@@ -31,6 +31,8 @@
   
 ### | vue
 
+- [一张思维导图辅助你深入了解 Vue | Vue-Router | Vuex 源码架构(文字版)](https://github.com/biaochenxuying/blog/issues/28)
+- [一张思维导图辅助你深入了解 Vue | Vue-Router | Vuex 源码架构](https://github.com/biaochenxuying/blog/issues/27)
 - [Vue + TypeScript + Element 搭建简洁时尚的博客网站及踩坑记](https://github.com/biaochenxuying/blog/issues/25)
 
 ### | react 
@@ -135,15 +137,11 @@
 
 鉴于平时请教问题的人有点多，小汪时间有限，处理不过来，大家可以加入 QQ 群：**186045338**，加群暗号：**全栈修炼** ，一起相互交流学习。
 
-对 **全栈开发** 有兴趣的朋友可以扫下方二维码关注我的公众号
+对 **全栈修炼** 有兴趣的朋友可以扫下方二维码关注我的公众号
  
 我会不定期更新有价值的内容，长期运营。
 
 
-> 微信公众号：**BiaoChenXuYing**
-> 
-> 分享 前端开发、后端开发 等相关的技术文章，热点资源，随感随想，全栈程序员的成长之路。
+关注公众号并回复 **福利** 可领取免费学习资料，福利详情请猛戳：  [Python、Java、Linux、Go、node、vue、react、javaScript](https://biaochenxuying.cn/articleDetail?article_id=5bf4ba3c245730373274df61)
 
-欢迎关注公众号，并回复 **福利** 可领取免费学习资料，福利详情请猛戳：  [免费资源获取--Python、Java、Linux、Go、node、vue、react、javaScript](https://mp.weixin.qq.com/s?__biz=MzA4MDU1MDExMg==&mid=2247483711&idx=1&sn=1ffb576159805e92fc57f5f1120fce3a&chksm=9fa3c0b0a8d449a664f36f6fdd017ac7da71b6a71c90261b06b4ea69b42359255f02d0ffe7b3&token=1560489745&lang=zh_CN#rd)
-
-![BiaoChenXuYing](https://upload-images.jianshu.io/upload_images/12890819-1921c40c1e9c39ab.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![全栈修炼](https://upload-images.jianshu.io/upload_images/12890819-bce9560fec5c49ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
