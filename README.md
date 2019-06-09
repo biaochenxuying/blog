@@ -23,6 +23,7 @@
 
 ### | 数据结构与算法
 
+- [前端解决第三方图片防盗链的办法 - html referrer 访问图片资源403问题](https://github.com/biaochenxuying/blog/issues/31)
 - [数据结构与算法之美 - 时间和空间复杂度](https://github.com/biaochenxuying/blog/issues/29)
 
 ### | 理财
@@ -49,6 +50,7 @@
 
 ### | JavaScript
 
+- [实现一个前端路由，如何实现浏览器的前进与后退 ？](https://github.com/biaochenxuying/blog/issues/30)
 - [原生 js 实现一个有动画效果的进度条插件 progress](https://github.com/biaochenxuying/blog/issues/21)
 - [原生 js 实现一个前端路由 router](https://github.com/biaochenxuying/blog/issues/22)
 
