@@ -146,10 +146,6 @@
 
 如果您觉得本项目和文章不错或者对你有所帮助，请给个星呗，你的肯定就是我继续创作的最大动力。
 
-鉴于平时请教问题的人有点多，笔者时间有限，处理不过来，大家可以加入 QQ 群：**186045338**，加群暗号：**全栈修炼** ，一起相互交流学习。
-
-对 **全栈修炼** 有兴趣的朋友可以扫下方二维码关注我的公众号
- 
-关注公众号并回复 **福利** 可领取免费学习资料，福利详情请猛戳：  [Python、Java、Linux、Go、node、vue、react、javaScript](https://biaochenxuying.cn/articleDetail?article_id=5bf4ba3c245730373274df61)
+**我的公众号**
 
 ![全栈修炼](https://upload-images.jianshu.io/upload_images/12890819-bce9560fec5c49ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
