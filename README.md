@@ -1,4 +1,5 @@
-![夜尽天明](https://upload-images.jianshu.io/upload_images/12890819-b25ca70b76d5bc32.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![夜尽天明](https://upload-images.jianshu.io/upload_images/12890819-d7d54661c3fd18ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 
 ## 1. 简介
@@ -147,7 +148,7 @@
 
 > 文章可以转载，但须注明作者及出处，需要转载到公众号的，喊我加下白名单就行了。
 
-如果你觉得文章不错或者对你有所帮助，请给个 star 呗，你的肯定就是我继续创作的最大动力。
+如果您觉得本项目和文章不错或者对你有所帮助，请给个星呗，你的肯定就是我继续创作的最大动力。
 
 ![笔芯](https://upload-images.jianshu.io/upload_images/12890819-126d4fc9993d21ce.gif?imageMogr2/auto-orient/strip)
 
