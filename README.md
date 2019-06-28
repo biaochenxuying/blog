@@ -1,12 +1,15 @@
-![](https://upload-images.jianshu.io/upload_images/12890819-af8dcbb956319a4c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![夜尽天明](https://upload-images.jianshu.io/upload_images/12890819-b25ca70b76d5bc32.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 ## 1. 简介
 
 > 技术为主，读书笔记、随笔、理财为辅，做个终身学习者。
+> 芳华正华始少年，时光正好，未来可期 ！
 
 我的个人博客地址，不止技术，还有财富。
 
 不定期更新，博客另发地址：https://biaochenxuying.cn 
+
 
 
 ## 2. 博客分类
@@ -28,10 +31,10 @@
 **2019**
 
 - [JavaScript 数据结构与算法之美 - 时间和空间复杂度](https://github.com/biaochenxuying/blog/issues/29)
-- [JavaScript 数据结构与算法之美 - 数组、链表、栈、队列、堆](https://github.com/biaochenxuying/blog/issues/34)
+- [JavaScript 数据结构与算法之美 - 数组、队列、栈、链表](https://github.com/biaochenxuying/blog/issues/34)
+- [JavaScript 数据结构与算法之美 - 实现一个前端路由，如何实现浏览器的前进与后退 ？](https://github.com/biaochenxuying/blog/issues/30)
 
-
-### | 前端工程师成长之路
+### | 前端框架师成长之路
 
 **2019**
 
@@ -79,7 +82,6 @@
 **2019**
 
 - [前端解决第三方图片防盗链的办法 - html referrer 访问图片资源403问题](https://github.com/biaochenxuying/blog/issues/31)
-- [实现一个前端路由，如何实现浏览器的前进与后退 ？](https://github.com/biaochenxuying/blog/issues/30)
 - [原生 js 实现一个有动画效果的进度条插件 progress](https://github.com/biaochenxuying/blog/issues/21)
 - [原生 js 实现一个前端路由 router](https://github.com/biaochenxuying/blog/issues/22)
 
@@ -126,9 +128,9 @@
 ## 4. 活跃社区
 
 - [github：https://github.com/biaochenxuying/blog](https://github.com/biaochenxuying/blog )
-- [segmentfault：https://segmentfault.com/u/biaochenxuying](https://segmentfault.com/u/biaochenxuying )
-- [知乎：https://www.zhihu.com/people/gu-jian-qi-tan-shui/activities](https://www.zhihu.com/people/gu-jian-qi-tan-shui/activities)
 - [掘金：https://juejin.im/user/591d6b4d0ce463006926ae40](https://juejin.im/user/591d6b4d0ce463006926ae40 )
+- [知乎：https://www.zhihu.com/people/gu-jian-qi-tan-shui/activities](https://www.zhihu.com/people/gu-jian-qi-tan-shui/activities)
+- [segmentfault：https://segmentfault.com/u/biaochenxuying](https://segmentfault.com/u/biaochenxuying )
 - [简书：https://www.jianshu.com/u/91717b553bfd](https://www.jianshu.com/u/91717b553bfd)
   
 
@@ -141,11 +143,16 @@
 其他：有什么问题，可以在我的公众号后台或者邮箱给我留言，有必要的，我都会给您回复邮件的。
 
 
-# 6. 最后
+## 6. 最后
 
-如果您觉得本项目和文章不错或者对你有所帮助，请给个星呗，你的肯定就是我继续创作的最大动力。
+> 文章可以转载，但须注明作者及出处，需要转载到公众号的，喊我加下白名单就行了。
+
+如果你觉得文章不错或者对你有所帮助，请给个 star 呗，你的肯定就是我继续创作的最大动力。
+
+![笔芯](https://upload-images.jianshu.io/upload_images/12890819-126d4fc9993d21ce.gif?imageMogr2/auto-orient/strip)
 
 **笔者公众号**
 
-![全栈修炼](https://upload-images.jianshu.io/upload_images/12890819-875fee61524207de.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![全栈修炼](https://upload-images.jianshu.io/upload_images/12890819-548ff9a6a6547b8c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
