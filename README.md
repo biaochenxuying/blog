@@ -31,9 +31,10 @@
 
 **2019**
 
-- [JavaScript 数据结构与算法之美 - 时间和空间复杂度](https://github.com/biaochenxuying/blog/issues/29)
-- [JavaScript 数据结构与算法之美 - 数组、队列、栈、链表](https://github.com/biaochenxuying/blog/issues/34)
-- [JavaScript 数据结构与算法之美 - 实现一个前端路由，如何实现浏览器的前进与后退 ？](https://github.com/biaochenxuying/blog/issues/30)
+- [1. JavaScript 数据结构与算法之美 - 时间和空间复杂度](https://github.com/biaochenxuying/blog/issues/29)
+- [2. JavaScript 数据结构与算法之美 - 数组、队列、栈、链表](https://github.com/biaochenxuying/blog/issues/34)
+- [3. JavaScript 数据结构与算法之美 - 实现一个前端路由，如何实现浏览器的前进与后退 ？](https://github.com/biaochenxuying/blog/issues/30)
+- [4. JavaScript 数据结构与算法之美 - 栈内存与堆内存 、浅拷贝与深拷贝](https://github.com/biaochenxuying/blog/issues/35)
 
 ### | 前端框架师成长之路
 
