@@ -35,6 +35,7 @@
 - [2. JavaScript 数据结构与算法之美 - 数组、队列、栈、链表](https://github.com/biaochenxuying/blog/issues/34)
 - [3. JavaScript 数据结构与算法之美 - 实现一个前端路由，如何实现浏览器的前进与后退 ？](https://github.com/biaochenxuying/blog/issues/30)
 - [4. JavaScript 数据结构与算法之美 - 栈内存与堆内存 、浅拷贝与深拷贝](https://github.com/biaochenxuying/blog/issues/35)
+- [5. JavaScript 数据结构与算法之美 - 非线性表（树、堆）](https://github.com/biaochenxuying/blog/issues/36)
 
 ### | 前端框架师成长之路
 
@@ -107,6 +108,13 @@
 - [服务器小白的我,是如何将 node+mongodb 项目部署在服务器上并进行性能优化的](https://github.com/biaochenxuying/blog/issues/18)
 
 
+### | 性能优化
+
+**2018**
+
+- [一次网站的性能优化之路 -- 天下武功，唯快不破](https://github.com/biaochenxuying/blog/issues/24)
+
+
 ### | 随笔
 
 **2018**
@@ -120,12 +128,6 @@
 **2018**
 
 - [用钱生钱，从掌握金钱的规律开始](https://github.com/biaochenxuying/blog/issues/26)
-
-### | 性能优化
-
-**2018**
-
-- [一次网站的性能优化之路 -- 天下武功，唯快不破](https://github.com/biaochenxuying/blog/issues/24)
 
 ## 4. 活跃社区
 
