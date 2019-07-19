@@ -5,25 +5,28 @@
 
 ## 1. 简介
 
-> 技术为主，读书笔记、随笔、理财为辅，做个终身学习者。
 > 芳华正华始少年，时光正好，未来可期 ！
 
-我的个人博客地址，不止技术，还有财富。
+技术为主，读书笔记、随笔、理财为辅，做个终身学习者。
 
-不定期更新，博客另发地址：https://biaochenxuying.cn 
+收获不止技术，还有财富。
 
+**博客首发地址**
+
+- [【全栈修炼】](https://mp.weixin.qq.com/s/aXek46pU-a0Nr-lA99dLtw)：https://mp.weixin.qq.com/s/aXek46pU-a0Nr-lA99dLtw
+- [【个人网站】](https://biaochenxuying.cn)：https://biaochenxuying.cn 
 
 
 ## 2. 博客分类
 
 - [JavaScript 数据结构与算法之美](https://github.com/biaochenxuying/blog/projects/10)
-- [JavaScript ](https://github.com/biaochenxuying/blog/projects/4)
+- [JavaScript](https://github.com/biaochenxuying/blog/projects/4)
 - [Vue.js](https://github.com/biaochenxuying/blog/projects/3)
 - [ES 6](https://github.com/biaochenxuying/blog/projects/2)
 - [React.js](https://github.com/biaochenxuying/blog/projects/5)
 - [Node.js](https://github.com/biaochenxuying/blog/projects/7)
 - [MongoDB](https://github.com/biaochenxuying/blog/projects/5)
-- [理财](https://github.com/biaochenxuying/blog/projects/9)
+- [理财：用钱生钱](https://github.com/biaochenxuying/blog/projects/9)
 - [随笔](https://github.com/biaochenxuying/blog/projects/5)
 
 ## 3. 文章
@@ -33,10 +36,15 @@
 **2019**
 
 - [1. JavaScript 数据结构与算法之美 - 时间和空间复杂度](https://github.com/biaochenxuying/blog/issues/29)
-- [2. JavaScript 数据结构与算法之美 - 数组、队列、栈、链表](https://github.com/biaochenxuying/blog/issues/34)
+- [2. JavaScript 数据结构与算法之美 - 线性表（数组、队列、栈、链表）](https://github.com/biaochenxuying/blog/issues/34)
 - [3. JavaScript 数据结构与算法之美 - 实现一个前端路由，如何实现浏览器的前进与后退 ？](https://github.com/biaochenxuying/blog/issues/30)
 - [4. JavaScript 数据结构与算法之美 - 栈内存与堆内存 、浅拷贝与深拷贝](https://github.com/biaochenxuying/blog/issues/35)
-- [5. JavaScript 数据结构与算法之美 - 非线性表（树、堆）](https://github.com/biaochenxuying/blog/issues/36)
+- [5. JavaScript 数据结构与算法之美 - 递归](https://github.com/biaochenxuying/blog/issues/36)
+- [6. JavaScript 数据结构与算法之美 - 非线性表（树、堆）](https://github.com/biaochenxuying/blog/issues/37)
+- [7. JavaScript 数据结构与算法之美 - 冒泡排序、选择排序、插入排序](https://github.com/biaochenxuying/blog/issues/39)
+- [8. JavaScript 数据结构与算法之美 - 归并排序、快速排序、希尔排序、堆排序]() | 精彩待续
+- [9. JavaScript 数据结构与算法之美 - 计数排序、桶排序、基数排序]() | 精彩待续
+- [10. JavaScript 数据结构与算法之美 - 十大经典排序汇总]() | 精彩待续
 
 ### | 前端框架师成长之路
 
@@ -97,7 +105,7 @@
 - [细数 JavaScript 实用黑科技(一)](https://github.com/biaochenxuying/blog/issues/11)
 - [面试题之从敲入 URL 到浏览器渲染完成](https://github.com/biaochenxuying/blog/issues/3)
 - [JS 是单线程，你了解其运行机制吗？](https://github.com/biaochenxuying/blog/issues/8)
-- [js 递归调用 ](https://github.com/biaochenxuying/blog/issues/9)
+- [js 递归调用](https://github.com/biaochenxuying/blog/issues/9)
 - [WebKit 技术内幕之浏览器与WebKit 内核](https://github.com/biaochenxuying/blog/issues/10)
 
 
@@ -132,7 +140,7 @@
 
 ## 4. 活跃社区
 
-- [github：https://github.com/biaochenxuying/blog](https://github.com/biaochenxuying/blog )
+- [github：https://github.com/biaochenxuying](https://github.com/biaochenxuying/blog )
 - [掘金：https://juejin.im/user/591d6b4d0ce463006926ae40](https://juejin.im/user/591d6b4d0ce463006926ae40 )
 - [知乎：https://www.zhihu.com/people/gu-jian-qi-tan-shui/activities](https://www.zhihu.com/people/gu-jian-qi-tan-shui/activities)
 - [segmentfault：https://segmentfault.com/u/biaochenxuying](https://segmentfault.com/u/biaochenxuying )
@@ -150,13 +158,9 @@
 
 ## 6. 最后
 
-> 文章可以转载，但须注明作者及出处，需要转载到公众号的，喊我加下白名单就行了。
+> 文章版权为夜尽天明所有，转载文章，请联系笔者。
 
 如果您觉得本项目和文章不错或者对你有所帮助，请给个星呗，你的肯定就是我继续创作的最大动力。
-
-![笔芯](https://upload-images.jianshu.io/upload_images/12890819-126d4fc9993d21ce.gif?imageMogr2/auto-orient/strip)
-
-**笔者公众号**
 
 ![全栈修炼](https://upload-images.jianshu.io/upload_images/12890819-548ff9a6a6547b8c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 

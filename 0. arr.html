@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>JavaScript 数据结构与算法之美 - 数组</title>
+	</head>
+	<body></body>
+	<script>
+		let str = 'string';
+		str = 123;
+		console.log(str); //   123
+
+		let a = 123;
+		let b = '456';
+		let c = a + b;
+		// 数值加字符串，结果是字符串
+		console.log(c); //   "123456"
+
+		// 数组的类型有 数值、字符串，还可以随意变更类型
+		const arr = [12, 34, 'abc'];
+		arr[2] = { key: 'value' }; // 把数组的第二项变成对象
+		console.log(arr); //  [ 12, 34,  { "key": "value"} ]
+
+		const arr2 = [12, 34, 'abc'];
+		arr2.push({ key: 'value' }); // 添加一项 对象
+		console.log(arr2); //  [ 12, 34, "abc", { "key": "value" } ]
+	</script>
+</html>
