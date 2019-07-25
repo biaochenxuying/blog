@@ -14,8 +14,9 @@
 			}
 			//取基准点
 			const midIndex = Math.floor(arr.length / 2);
-			//取基准点的值，splice(index,1) 函数可以返回数组中被删除的那个数 arr[index+1]
-			const midIndexVal = arr.splice(midIndex, 1);
+			//取基准点的值，splice(index,1) 则返回的是含有被删除的元素的数组。
+			const valArr = arr.splice(midIndex, 1);
+			const midIndexVal = valArr[0];
 			const left = []; //存放比基准点小的数组
 			const right = []; //存放比基准点大的数组
 			//遍历数组，进行判断分配
@@ -29,7 +30,7 @@
 			//递归执行以上操作，对左右两个数组进行操作，直到数组长度为 <= 1
 			return quickSort1(left).concat(midIndexVal, quickSort1(right));
 		};
-		const array2 = [5, 4, 3, 2, 1];
+		const array2 = [5, 4, 3, 2, 1, 5, 4, 3, 2, 1];
 		console.log('quickSort1 ', quickSort1(array2));
 		// quickSort1: [1, 2, 3, 4, 5]
 
