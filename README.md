@@ -5,7 +5,7 @@
 
 ## 简介
 
-> 芳华正华始少年，时光正好，未来可期 ！
+> 芳华正茂始少年，时光正好，未来可期 ！
 
 技术为主，读书笔记、随笔、理财为辅，做个终身学习者。
 
@@ -172,7 +172,7 @@
 
 技术博客首发地址：[【全栈修炼】](https://mp.weixin.qq.com/s/i0AsqMpI1YCSvDyK_zdAqw)：https://mp.weixin.qq.com/s/i0AsqMpI1YCSvDyK_zdAqw
 
-![全栈修炼0.png](https://upload-images.jianshu.io/upload_images/12890819-9399d149e09f638e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![全栈修炼](https://upload-images.jianshu.io/upload_images/12890819-9399d149e09f638e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 
@@ -181,8 +181,6 @@
 技术以外的 BB。
 
 闲暇之余，技术以外的世界同样精彩。
-
-
 
 ![硬核杂货铺](https://upload-images.jianshu.io/upload_images/12890819-7ed698c2818cdc3c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) -->
 
