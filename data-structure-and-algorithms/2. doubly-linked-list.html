@@ -41,7 +41,7 @@
 
 			// 向链表特定位置插入一个新的项
 			this.insert = function(position, element) {
-				if (position < 0 && position > length) {
+				if (position < 0 || position > length) {
 					// 越界
 					return false;
 				} else {
