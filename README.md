@@ -48,6 +48,11 @@
 - [2. 前端架构师亲述：前端工程师成长之路的 N 问 及 回答](https://github.com/biaochenxuying/blog/issues/33)
 
 
+#### | 前端面试专题
+
+- [1. fe-interview：HTML + CSS + JS + ES6 + Webpack + Vue + React + Node + HTTPS + 数据结构与算法 + Git](https://github.com/biaochenxuying/blog/blob/master/interview/fe-interview.md)
+
+
 #### | Vue.js
 
 - [1. 一张思维导图辅助你深入了解 Vue | Vue-Router | Vuex 源码架构(文字版)](https://github.com/biaochenxuying/blog/issues/28)
@@ -168,7 +173,7 @@
 
 #### 技术以内
 
-技术以内的 BB。
+这里是笔者平时 BB 技术的地方。
 
 技术博客首发地址：[【全栈修炼】](https://mp.weixin.qq.com/s/i0AsqMpI1YCSvDyK_zdAqw)：https://mp.weixin.qq.com/s/i0AsqMpI1YCSvDyK_zdAqw
 
