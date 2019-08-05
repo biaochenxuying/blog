@@ -81,12 +81,20 @@ document常见的方法
 
 **html 中 title 属性和 alt 属性的区别 ？**
 
-1. <img src="#" alt="alt 信息" />
+1. alt
+   
+```
+<img src="#" alt="alt 信息" />
+```
 
 当图片不输出信息的时候，会显示 alt 信息， 鼠标放上去没有信息。
 当图片正常读取，不会出现 alt 信息。
 
-2. <img src="#" alt="alt 信息" title="title 信息" />
+1. title
+
+```
+<img src="#" alt="alt 信息" title="title 信息" />
+```
  
 当图片不输出信息的时候，会显示 alt 信息，鼠标放上去会出现 title 信息。
 当图片正常输出的时候，不会出现 alt 信息，鼠标放上去会出现 title 信息。
@@ -1055,9 +1063,9 @@ http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
 
 补充：
 
-（1）static / relative：简单说就是它的父元素的内容框（即去掉 padding 的部分）
-（2）absolute: 向上找最近的定位为 absolute / relative 的元素
-（3）fixed: 它的 containing block 一律为根元素(html / body)，根元素也是 initialcontaining block
+1. static / relative：简单说就是它的父元素的内容框（即去掉 padding 的部分）
+2. absolute: 向上找最近的定位为 absolute / relative 的元素
+3. fixed: 它的 containing block 一律为根元素(html / body)，根元素也是 initialcontaining block
  
 ---
 
