@@ -1,10 +1,12 @@
+![前端硬核面试专题](https://upload-images.jianshu.io/upload_images/12890819-143da2ac64b67a73.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 ## 1. 前言
 
 本文面试的内容包含：HTML + CSS + JS + ES6 + Webpack + Vue  + React + Node + HTTPS + 数据结构与算法 + Git 。
 
 > 复习前端面试的知识，是为了巩固前端的基础知识，最重要的还是平时的积累！
 
-注意：答案仅供参考。
+`注意`：文章的题与题之间用下划线分隔开，答案仅供参考。
 
 笔者技术博客首发地址  [GitHub](https://github.com/biaochenxuying/blog)，欢迎关注。
 
@@ -63,7 +65,7 @@ document常见的方法
 - getElementsByName(Name)：获得之前 Name 的对象
 - body.appendChild(oTag)：向 HTML 中插入元素对象
 
-
+---
 
 
 **简述一下 src 与 href 的区别**
@@ -78,6 +80,8 @@ document常见的方法
 **写一个 div + css 布局，左边图片，右边文字，文字环绕图片，外面容器固定宽度，文字不固定。**
 
 直接就一个 img，它 float：left，加文字加 p 标签就好了。
+
+---
 
 **html 中 title 属性和 alt 属性的区别 ？**
 
@@ -114,7 +118,7 @@ repaint 就是重绘，reflow 就是回流。
 1. 不涉及任何 DOM 元素的排版问题的变动为 repaint，例如元素的 color/text-align/text-decoration 等等属性的变动。
 2. 除上面所提到的 DOM 元素 style 的修改基本为 reflow。例如元素的任何涉及 长、宽、行高、边框、display 等 style 的修改。
 
-**常见触发场景**
+常见触发场景
 
 触发 repaint：
 
@@ -152,7 +156,7 @@ repaint 就是重绘，reflow 就是回流。
 
 ---
 
-**HTML5 为什么只需要写 <!DOCTYPE HTML> ？**
+**HTML5 为什么只需要写 < !DOCTYPE HTML> ？**
 
 HTML5 不基于 SGML(标准通用标记语言（以下简称“通用标言”)，因此不需要对 DTD 进行引用，但是需要 doctype 来规范浏览器的行为（让浏览器按照它们应该的方式来运行）；
 而 HTML4.01 基于 SGML，所以需要对 DTD 进行引用，才能告知浏览器文档所使用的文档类型。
@@ -167,7 +171,7 @@ span 默认 display 属性值为 “inline”，是“行内”元素。
 
 - 行内元素有：a b span img input select strong（强调的语气）
 - 块级元素有：div ul ol li dl dt dd h1 h2 h3 h4  p
-- 常见的空元素： <img> <input> <link> <meta> < br> < hr> ，鲜为人知的是：<area> <base> <col> <command> <embed> <keygen> <param> <source> <track> <wbr>
+- 常见的空元素： img input link meta br hr ，鲜为人知的是：area base col command embed keygen param source track wbr
 
 ---
 
@@ -204,12 +208,12 @@ HTML5 现在已经不是 SGML（标准通用标记语言）的子集，主要是
 
 **简述一下你对 HTML 语义化的理解 ？**
 
-1、用正确的标签做正确的事情。
-2、html 语义化让页面的内容结构化，结构更清晰，
-3、便于对浏览器、搜索引擎解析;
-4、即使在没有样式 CSS 情况下也以一种文档格式显示，并且是容易阅读的;
-5、搜索引擎的爬虫也依赖于 HTML 标记来确定上下文和各个关键字的权重，利于 SEO;
-6、使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解。
+- 1、用正确的标签做正确的事情。
+- 2、html 语义化让页面的内容结构化，结构更清晰，
+- 3、便于对浏览器、搜索引擎解析;
+- 4、即使在没有样式 CSS 情况下也以一种文档格式显示，并且是容易阅读的;
+- 5、搜索引擎的爬虫也依赖于 HTML 标记来确定上下文和各个关键字的权重，利于 SEO;
+- 6、使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解。
 
 ---
 
@@ -223,8 +227,8 @@ HTML5 的离线存储是基于一个新建的 .appcache 文件的缓存机制(�
 
 如何使用
 
-1、页面头部像下面一样加入一个 manifest 的属性；
-2、在 cache.manifest 文件的编写离线存储的资源；
+- 1、页面头部像下面一样加入一个 manifest 的属性；
+- 2、在 cache.manifest 文件的编写离线存储的资源；
 ```
 CACHE MANIFEST
 #v0.11
@@ -237,7 +241,7 @@ FALLBACK:
 //offline.html
 ```
 
-3、在离线状态时，操作 window.applicationCache 进行需求实现。
+- 3、在离线状态时，操作 window.applicationCache 进行需求实现。
 
 ---
 
@@ -249,11 +253,13 @@ FALLBACK:
 
 离线的情况下，浏览器就直接使用离线存储的资源。
 
-**请描述一下 cookies，sessionStorage 和 localStorage 的区别？**
+--- 
 
-cookie 是网站为了标示用户身份而储存在用户本地终端（Client Side）上的数据（通常经过加密）。
-cookie 数据始终在同源的 http 请求中携带（即使不需要），也会在浏览器和服务器间来回传递。
-sessionStorage 和localStorage 不会自动把数据发给服务器，仅在本地保存。
+**请描述一下 cookies，sessionStorage 和 localStorage 的区别 ？**
+
+- cookie 是网站为了标示用户身份而储存在用户本地终端（Client Side）上的数据（通常经过加密）。
+- cookie 数据始终在同源的 http 请求中携带（即使不需要），也会在浏览器和服务器间来回传递。
+- sessionStorage 和 localStorage 不会自动把数据发给服务器，仅在本地保存。
 
 存储大小
 
@@ -296,11 +302,13 @@ label 标签来定义表单控制间的关系，当用户选择该标签时，�
 
 给不想要提示的 form 或某个 input 设置为 autocomplete=off。
 
+---
+
 **如何实现浏览器内多个标签页之间的通信 ? (阿里)**
 
 - WebSocket、SharedWorker；
 - 也可以调用 localstorge、cookies 等本地存储方式；
-localstorge 另一个浏览上下文里被添加、修改或删除时，它都会触发一个事件，我们通过监听事件，控制它的值来进行页面信息通信；
+- localstorge 在另一个浏览上下文里被添加、修改或删除时，它都会触发一个事件，我们通过监听事件，控制它的值来进行页面信息通信；
 注意 quirks：Safari 在无痕模式下设置 localstorge 值时会抛出 QuotaExceededError 的异常；
 
 ---
@@ -324,46 +332,46 @@ localstorge 另一个浏览上下文里被添加、修改或删除时，它都�
 
 **网页验证码是干嘛的，是为了解决什么安全问题。**
 
-区分用户是计算机还是人的公共全自动程序。
-可以防止恶意破解密码、刷票、论坛灌水；
-有效防止黑客对某一个特定注册用户用特定程序暴力破解方式进行不断的登陆尝试。
+- 区分用户是计算机还是人的公共全自动程序；
+- 可以防止恶意破解密码、刷票、论坛灌水；
+- 有效防止黑客对某一个特定注册用户用特定程序暴力破解方式进行不断的登陆尝试。
 
 ---
 
 **title 与 h1 的区别、b 与 strong 的区别、i 与 em 的区别 ？**
 
 - title 属性没有明确意义只表示是个标题，H1 则表示层次明确的标题，对页面信息的抓取也有很大的影响；
-- strong 是标明重点内容，有语气加强的含义，使用阅读设备阅读网络时：`<strong> 会重读，而 <B> 是展示强调内容`。
+- strong 是标明重点内容，有语气加强的含义，使用阅读设备阅读网络时：`strong 会重读，而 b 是展示强调内容`。
 - i 内容展示为斜体，em 表示强调的文本；
 
-Physical Style Elements -- 自然样式标签：b, i, u, s, pre
-Semantic Style Elements -- 语义样式标签：strong, em, ins, del, code
-应该准确使用语义样式标签, 但不能滥用, 如果不能确定时，首选使用自然样式标签。
+- Physical Style Elements -- 自然样式标签：b, i, u, s, pre
+- Semantic Style Elements -- 语义样式标签：strong, em, ins, del, code
+- 应该准确使用语义样式标签, 但不能滥用, 如果不能确定时，首选使用自然样式标签。
 
 ---
 
 
 **谈谈以前端的角度出发，做好 SEO ，需要考虑什么 ？**
 
-- 了解搜索引擎如何抓取网页和如何索引网页
+- 了解搜索引擎如何抓取网页和如何索引网页。
 你需要知道一些搜索引擎的基本工作原理，各个搜索引擎之间的区别，搜索机器人（SE robot 或叫 web cra何进行工作，搜索引擎如何对搜索结果进行排序等等。
 - Meta 标签优化
 主要包括主题（Title)，网站描述(Description)，和关键词（Keywords）。还有一些其它的隐藏文字比如 Au 者），Category（目录），Language（编码语种）等。
-- 如何选取关键词并在网页中放置关键词
+- 如何选取关键词并在网页中放置关键词。
 搜索就得用关键词。关键词分析和选择是 SEO 最重要的工作之一。首先要给网站确定主关键词（一般在 5 个上后针对这些关键词进行优化，包括关键词密度（Density），相关度（Relavancy），突出性（Prominency）等等。
-- 了解主要的搜索引擎
+- 了解主要的搜索引擎。
 虽然搜索引擎有很多，但是对网站流量起决定作用的就那么几个。比如英文的主要有 Google，Yahoo，Bing 等有百度，搜狗，有道等。
 不同的搜索引擎对页面的抓取和索引、排序的规则都不一样。
 还要了解各搜索门户和搜索的关系，比如 AOL 网页搜索用的是 Google 的搜索技术，MSN 用的是 Bing 的技术。
-- 主要的互联网目录
+- 主要的互联网目录。
 Open Directory 自身不是搜索引擎，而是一个大型的网站目录，他和搜索引擎的主要区别是网站内容的收集方目录是人工编辑的，主要收录网站主页；搜索引擎是自动收集的，除了主页外还抓取大量的内容页面。
-- 按点击付费的搜索引擎
+- 按点击付费的搜索引擎。
 搜索引擎也需要生存，随着互联网商务的越来越成熟，收费的搜索引擎也开始大行其道。最典型的有 Overture 当然也包括 Google 的广告项目 Google Adwords。越来越多的人通过搜索引擎的点击广告来定位商业网站，这里面化和排名的学问，你得学会用最少的广告投入获得最多的点击。
-- 搜索引擎登录
+- 搜索引擎登录。
 网站做完了以后，别躺在那里等着客人从天而降。要让别人找到你，最简单的办法就是将网站提交（submit）擎。如果你的是商业网站，主要的搜索引擎和目录都会要求你付费来获得收录（比如 Yahoo 要 299 美元），但是好消少到目前为止）最大的搜索引擎 Google 目前还是免费，而且它主宰着 60％ 以上的搜索市场。
-- 链接交换和链接广泛度（Link Popularity）
+- 链接交换和链接广泛度（Link Popularity）。
 网页内容都是以超文本（Hypertext）的方式来互相链接的，网站之间也是如此。除了搜索引擎以外，人们也不同网站之间的链接来 Surfing（“冲浪”）。其它网站到你的网站的链接越多，你也就会获得更多的访问量。更重你的网站的外部链接数越多，会被搜索引擎认为它的重要性越大，从而给你更高的排名。
-- 标签的合理使用
+- 标签的合理使用。
 
 ---
 
@@ -373,9 +381,9 @@ Open Directory 自身不是搜索引擎，而是一个大型的网站目录，�
 
 - 网页的结构层（structurallayer）由 HTML 或 XHTML 之类的标记语言负责创建。
 标签，也就是那些出现在尖括号里的单词，对网页内容的语义含义做出这些标签不包含任何关于如何显示有关内容的信息。例如，P 标签表达了这样一种语义：“这是一个文本段。”
-- 网页的表示层（presentationlayer）由CSS 负责创建。CSS 对“如何显示有关内容”的问题做出了回答。
+- 网页的表示层（presentationlayer）由 CSS 负责创建。CSS 对“如何显示有关内容”的问题做出了回答。
 - 网页的行为层（behaviorlayer）负责回答 “内容应该如何对事件做出反应” 这一问题。
-这是Javascript 语言和 DOM 主宰的领域。
+这是 Javascript 语言和 DOM 主宰的领域。
 
 ---
 
@@ -405,19 +413,21 @@ Open Directory 自身不是搜索引擎，而是一个大型的网站目录，�
 
 
 CSS 盒子模型具有内容 (content)、填充 (padding)、边框 (border)、边界 (margin)这些属性。
+
 我们所说的 width，height 指的是内容 (content) 的宽高。
 
 一个盒子模型的中：
-宽度 = width+ pdding(宽) + border(宽)。
-高度 = height + padding(高) + border(高)。
+
+- 宽度 = width+ pdding(宽) + border(宽)。
+- 高度 = height + padding(高) + border(高)。
 
 ---
 
 **如何在页面上实现一个圆形的可点击区域 ？**
 
-1、map+area 或者 svg
-2、border-radius
-3、纯 js 实现，需要求一个点在不在圆上简单算法、获取鼠标坐标等等
+- 1、map+area 或者 svg
+- 2、border-radius
+- 3、纯 js 实现，需要求一个点在不在圆上简单算法、获取鼠标坐标等等
 
 ---
 
@@ -435,20 +445,6 @@ CSS 盒子模型具有内容 (content)、填充 (padding)、边框 (border)、�
 
 ---
 
-**清除浮动有哪些方式 ？比较好的方式是哪一种 ？**
-
-（1）父级 div 定义 height。
-（2）结尾处加空 div 标签 clear:both。
-（3）父级 div 定义 伪类 :after 和 zoom。
-（4）父级 div 定义 overflow:hidden。
-（5）父级 div 定义 overflow:auto。
-（6）父级 div 也浮动，需要定义宽度。
-（7）父级 div 定义 display:table。
-（8）结尾处加 br 标签 clear:both。
-
-总结：比较好的是第3种方式，简洁方便。
-
----
 
 **box-sizing 常用的属性有哪些 ？分别有什么作用 ？**
 
@@ -494,11 +490,13 @@ L-V-H-A : a:link {} a:visited {} a:hover {} a:active {}
 
 - 父级 div 定义 height，原理：父级 div 手动定义 height，就解决了父级 div 无法自动获取到高度的问题。 
 - 结尾处加空 div 标签 clear: both，原理：添加一个空 div，利用 css 提高的 clear: both 清除浮动，让父级 div 能自动获取到高度。
-- 父级 div 定义 overflow: hidden，  原理：必须定义 width 或 zoom:1，同时不能定义 height，使用 overflow: hidden 时，浏览器会自动检查浮动区域的高度 
+- 父级 div 定义 overflow: hidden，  原理：必须定义 width 或 zoom: 1，同时不能定义 height，使用 overflow: hidden 时，浏览器会自动检查浮动区域的高度。 
 - 父级 div 也一起浮动 。
 - 父级 div 定义 display: table 。
 - 父级 div 定义 伪类 :after 和 zoom 。
 - 结尾处加 br 标签 clear: both， 原理：父级 div 定义 zoom: 1 来解决 IE 浮动问题，结尾处加 br 标签 clear: both。
+
+总结：比较好的是倒数第 2 种方式，简洁方便。
 
 ---
 
@@ -524,7 +522,7 @@ L-V-H-A : a:link {} a:visited {} a:hover {} a:active {}
     margin: 10px auto;
 }
 ```
-（3）多个块状元素解决方案将元素的display属性设置为inline-block，并且把父元素的text-align属性设置为center即可:
+（3）多个块状元素解决方案将元素的 display 属性设置为 inline-block，并且把父元素的 text-align 属性设置为 center 即可:
 ``` 
 .parent {
     text-align:center;
@@ -576,9 +574,9 @@ a {
 
 ``` 
 .item{
+    position: absolute;
     top: 50%;
     margin-top: -50px;  /* margin-top值为自身高度的一半 */
-    position: absolute;
     padding:0;
 }
 ```
@@ -640,16 +638,17 @@ a {
 
 position
 
-- position 属性取值：static(默认)、relative、absolute、fixed、inherit。
+- position 属性取值：static(默认)、relative、absolute、fixed、inherit、sticky。
 - postision：static；始终处于文档流给予的位置。看起来好像没有用，但它可以快速取消定位，让 top，right，bottom，left 的值失效。在切换的时候可以尝试这个方法。
-- 除了 static 值，在其他三个值的设置下，z-index 才会起作用。（确切地说 z-index 只在定位元素上有效）。
+- 除了 static 值，在其他三个值的设置下，z-index 才会起作用。确切地说 z-index 只在定位元素上有效。
 - position：relative 和 absolute 都可以用于定位，区别在于前者的 div 还属于正常的文档流，后者已经是脱离了正常文档流，不占据空间位置，不会将父类撑开。
 定位原点 relative 是相对于它在正常流中的默认位置偏移，它原本占据的空间任然保留；absolute 相对于第一个 position 属性值不为 static 的父类。所以设置了 position：absolute，其父类的该属性值要注意，而且 overflow：hidden 也不能乱设置，因为不属于正常文档流，不会占据父类的高度，也就不会有滚动条。
 - fixed 旧版本 IE 不支持，却是很有用，定位原点相对于浏览器窗口，而且不能变。
 常用于 header，footer 或者一些固定的悬浮 div，随滚动条滚动又稳定又流畅，比 JS 好多了。fixed 可以有很多创造性的布局和作用，兼容性是问题。
 - position：inherit。
-规定从父类继承 position 属性的值，所以这个属性也是有继承性的，但是任何版本的 IE 都不支持该属性值。
-
+规定从父类继承 position 属性的值，所以这个属性也是有继承性的，但需要注意的是 IE8 以及往前的版本都不支持 inherit 属性。
+- sticky ：设置了sticky 的元素，在屏幕范围（viewport）时该元素的位置并不受到定位影响（设置是 top、left 等属性无效），当该元素的位置将要移出偏移范围时，定位又会变成 fixed，根据设置的 left、top 等属性成固定位置的效果。
+  
 float
 
 - float：left (或 right)，向左（或右）浮动，直到它的边缘碰到包含框或另一个浮动框为止。
@@ -719,7 +718,7 @@ SVG
 
 - px 像素（Pixel）。相对长度单位。像素 px 是相对于显示器屏幕分辨率而言的。(引自CSS2.0手册)
 - em 是相对长度单位。相对于当前对象内文本的字体尺寸。如当前对行内文本的字体尺寸未被人为设置，则相对于浏览器的默认字体尺寸。(引自CSS2.0手册)
-- 任意浏览器的默认字体高都是16px。所有未经调整的浏览器都符合: 1em = 16px。
+- 任意浏览器的默认字体高都是 16px。所有未经调整的浏览器都符合: 1em = 16px。
 那么12px = 0.75em,10px = 0.625em。为了简化 font-size 的换算，需要在 css 中的 body 选择器中声明 Font-size = 62.5%，这就使 em 值变为 16px*62.5% = 10px, 这样 12px = 1.2em, 10px = 1em, 也就是说只需要将你的原来的 px 数值除以 10，然后换上 em 作为单位就行了。
 
 ---
@@ -737,7 +736,7 @@ PNG 的特性
 - 能在保证最不失真的情况下尽可能压缩图像文件的大小。
 - PNG 用来存储灰度图像时，灰度图像的深度可多到 16 位，存储彩色图像时，彩色图像的深度可多到 48 位，并且还可存储多到 16 位的 α 通道数据。
 - 对于需要高保真的较复杂的图像，PNG 虽然能无损压缩，但图片文件较大，不适合应用在 Web 页面上。
-- 另外还有一个原则就是用于页面结构的基本视觉元素，如容器的背景、按钮、导航的背景等应该尽量用 PNG 格式进行存储，这样才能更好的保证设计品质。而其他一些内容元素，如广告Banner、商品图片 等对质量要求不是特别苛刻的，则可以用 JPG 去进行存储从而降低文件大小。
+- 另外还有一个原则就是用于页面结构的基本视觉元素，如容器的背景、按钮、导航的背景等应该尽量用 PNG 格式进行存储，这样才能更好的保证设计品质。而其他一些内容元素，如广告 Banner、商品图片 等对质量要求不是特别苛刻的，则可以用 JPG 去进行存储从而降低文件大小。
 
 GIF格式特点
  
@@ -746,7 +745,7 @@ GIF格式特点
 - 无损耗性：Gif 是一种无损耗的图像格式，这也意味着你可以对 gif 图片做任何操作也不会使得图像质量产生损耗。 
 - 水平扫描：Gif 是使用了一种叫作 LZW 的算法进行压缩的，当压缩 gif 的过程中，像素是由上到下水平压缩的，这也意味着同等条件下，横向的 gif 图片比竖向的 gif 图片更加小。
 例如 500*10 的图片比 10*500 的图片更加小。
-间隔渐进显示：Gif 支持可选择性的间隔渐进显示 
+间隔渐进显示：Gif 支持可选择性的间隔渐进显示。 
 
 由以上特点看出只有 256 种颜色的 gif 图片不适合作为照片，它适合做对颜色要求不高的图形。
 
@@ -754,7 +753,7 @@ GIF格式特点
 
 **我们知道可以以外链的方式引入 CSS 文件，请谈谈外链引入 CSS 有哪些方式，这些方式的性能有区别吗 ？**
 
-CSS的引入方式最常用的有三种
+CSS 的引入方式最常用的有三种
 
 第一：外链式
 
@@ -801,7 +800,7 @@ CSS的引入方式最常用的有三种
 
 - 在图片合并的时候，你要把多张图片有序的合理的合并成一张图片，还要留好足够的空间，防止板块内不不必要的背景；这些还好，最痛苦的是在宽屏，高分辨率的屏幕下的自适应页面，你的图片如果不够宽，很容背景断裂；
 - CSS Sprites 在开发的时候比较麻烦，你要通过 photoshop 或其他工具测量计算每一个背景单元的精确位是针线活，没什么难度，但是很繁琐；幸好腾讯的鬼哥用 RIA 开发了一个 CSS Sprites 样式生成工具，虽然些使用上的不灵活，但是已经比 photoshop 测量来的方便多了，而且样式直接生成，复制，拷贝就 OK！ 
-- CSS Sprites 在维护的时候比较麻烦，如果页面背景有少许改动，一般就要改这张合并的图片，无需改的好不要动，这样避免改动更多的 css，如果在原来的地方放不下，又只能（最好）往下加图片，这样图片的字加了，还要改动css。
+- CSS Sprites 在维护的时候比较麻烦，如果页面背景有少许改动，一般就要改这张合并的图片，无需改的好不要动，这样避免改动更多的 css，如果在原来的地方放不下，又只能（最好）往下加图片，这样图片的字加了，还要改动 css。
 
 CSS Sprites 非常值得学习和应用，特别是页面有一堆 ico（图标）。总之很多时候大家要权衡一下再决定是不是应用 CSS Sprites。
 
@@ -886,12 +885,12 @@ border padding margin width height
 - :enabled 选择可用的表单元素
 - :disabled 选择禁用的表单元素
 - :checked 选择被选中的表单元素
-- :after 在元素内部最前添加内容
-- :before 在元素内部最后添加内容
-- :nth-child(n) 匹配父元素下指定子元素，在所有子元素中排序第n
-- :nth-last-child(n) 匹配父元素下指定子元素，在所有子元素中排序第n，从后向前数
-- :nth-child(odd)
-- :nth-child(even)
+- :after 选择器在被选元素的内容后面插入内容
+- :before 选择器在被选元素的内容前面插入内容
+- :nth-child(n) 匹配父元素下指定子元素，在所有子元素中排序第 n
+- :nth-last-child(n) 匹配父元素下指定子元素，在所有子元素中排序第 n，从后向前数
+- :nth-child(odd) 奇数
+- :nth-child(even) 偶数
 - :nth-child(3n+1)
 - :first-child
 - :last-child
@@ -917,7 +916,7 @@ border padding margin width height
 - 对文字加特效（text-shadow） 
 - 线性渐变（gradient） 
 - 旋转、缩放、定位、倾斜 
-```
+```css
  transform: rotate(9deg) scale(0.85,0.90) translate(0px,-30px) skew(-9deg,0deg); 
 ```
 - 增加了更多的 CSS 选择器 
@@ -941,10 +940,10 @@ border padding margin width height
             padding: 0;
         }
         html,body{
-            height: 100%;/*此设置非常关键，因为默认的body，HTML高度为0，所以后面设置的div的高度无法用百分比显示*/
+            height: 100%;/*此设置非常关键，因为默认的 body，HTML 高度为 0，所以后面设置的 div 的高度无法用百分比显示*/
         }       
         .header{
-            height:50%; /*此步结合html,body高度为100%，解决元素相对窗口的定位问题*/
+            height:50%; /*此步结合 html,body 高度为 100%，解决元素相对窗口的定位问题*/
             width: 50%;     
             background: #ccc;           
             margin:0 auto;
@@ -955,7 +954,7 @@ border padding margin width height
             background: #ddd;
         }
         .main .left,.main .right{
-            float: left;/*采用float方式，对元素进行左右定位*/
+            float: left;/*采用 float 方式，对元素进行左右定位*/
             width:50%;/*此步解决元素相对窗口的定位问题*/
             height:100%;/*此步解决元素相对窗口的定位问题*/
             background: yellow;
@@ -999,7 +998,7 @@ body {
 
 ---
 
-**collapse、overflow、float这些特性相互叠加后会怎么样？**
+**collapse、overflow、float 这些特性相互叠加后会怎么样？**
 
 margin collapse 我觉得这里的意思应该是 Collapsing margins，即外边距折叠，指的是毗邻的两个或多个外边距 (margin) 会合并成一个外边距。
 
@@ -1073,7 +1072,7 @@ http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
 
 W3C CSS 2.1 规范中的一个概念，它是一个独立容器，决定了元素如何对其内容进行定位，以及与其他元素的关系和相互作用。
 
-- 一个页面是由很多个 Box 组成的，元素的类型和 display 属性，决定了这个 Box 的类型。
+- 一个页面是由很多个 Box 组成的，元素的类型和 display 属性，决定了这个 Box 的类型。
 - 不同类型的 Box，会参与不同的 Formatting Context（决定如何渲染文档的容器），因此 Box 内的元素会以不同的方式渲染，也就是说 BFC 内部的元素和外部的元素不会互相影响。
 
 ---
@@ -1101,45 +1100,46 @@ W3C CSS 2.1 规范中的一个概念，它是一个独立容器，决定了元�
 - 需要在 border 外侧添加空白时。
 - 空白处不需要背景（色）时。
 - 上下相连的两个盒子之间的空白，需要相互抵消时。
-如15px + 20px 的 margin，将得到 20px 的空白。
+如 15px + 20px 的 margin，将得到 20px 的空白。
 
 何时应当时用 padding
+
 - 需要在 border 内测添加空白时。
 - 空白处需要背景（色）时。
 - 上下相连的两个盒子之间的空白，希望等于两者之和时。
-如15px + 20px 的 padding，将得到35px的空白。
+如 15px + 20px 的 padding，将得到 35px 的空白。
 
-个人认为：`margin 是用来隔开元素与元素的间距；padding 是用来隔开元素与内容的间隔，让内容（文字）与（包裹）元素之间有一段“呼吸距离”`。
+个人认为：`margin 是用来隔开元素与元素的间距；padding 是用来隔开元素与内容的间隔，让内容（文字）与（包裹）元素之间有一段 呼吸距离`。
 
 ---
 
-**文字在超出长度时,如何实现用省略号代替 ? 超长长度的文字在省略显示后，如何在鼠标悬停时，以悬浮框的形式显示出全部信息 ?**
+**文字在超出长度时，如何实现用省略号代替 ? 超长长度的文字在省略显示后，如何在鼠标悬停时，以悬浮框的形式显示出全部信息 ?**
 
 注意：设置 width，overflow: hidden, white-space: nowrap (规定段落中的文本不进行换行), text-overflow: ellipsis，四个属性缺一不可。这种写法在所有的浏览器中都能正常显示。
 
 
 ---
 
-**CSS 里的 visibility 属性有个 collapse 属性值 ？在不同浏览器下以后什么区别 ？**
+**CSS 里的 visibility 属性有个 collapse 属性值 ？在不同浏览器下有什么区别 ？**
 
-Collapse
+collapse
 
 - 当在表格元素中使用时，此值可删除一行或一列，但是它不会影响表格的布局，被行或列占据的空间会留给其他内容使用。
-- 如果此值被用在其他的元素上，会呈现为 "hidden"。
+- 如果此值被用在其他的元素上，会呈现为 hidden。
 - 当一个元素的 visibility 属性被设置成 collapse 值后，对于一般的元素，它的表现跟 hidden 是一样的。
 
-1、chrome中，使用 collapse 值和使用 hidden 没有区别。
-2、firefox，opera 和 IE，使用 collapse 值和使用 display：none 没有什么区别。
+- chrome中，使用 collapse 值和使用 hidden 没有区别。
+- firefox，opera 和 IE，使用 collapse 值和使用 display：none 没有什么区别。
 
 ---
 
 **position 跟 display、overflow、float 这些特性相互叠加后会怎么样 ？**
 
-display 属性规定元素应该生成的框的类型；
-position 属性规定元素的定位类型；
-float 属性是一种布局方式，定义元素在哪个方向浮动。
+- display 属性规定元素应该生成的框的类型；
+- position 属性规定元素的定位类型；
+- float 属性是一种布局方式，定义元素在哪个方向浮动。
+- 类似于优先级机制：position：absolute / fixed 优先级最高，有他们在时，float 不起作用，display 值需要调整。float 或者 absolute 定位的元素，只能是块元素或表格。
 
-类似于优先级机制：position：absolute/fixed 优先级最高，有他们在时，float 不起作用，display 值需要调整。float 或者 absolute 定位的元素，只能是块元素或表格。
 
 ---
 
@@ -1149,21 +1149,22 @@ BFC 规定了内部的 Block Box 如何布局。
 
 定位方案：
 
-1、内部的 Box 会在垂直方向上一个接一个放置。
-2、Box 垂直方向的距离由 margin 决定，属于同一个 BFC 的两个相邻 Box 的 margin 会发生重叠。
-3、每个元素的 margin box 的左边，与包含块 border box 的左边相接触。
-4、BFC 的区域不会与 float box 重叠。
-5、BFC 是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素。
+- 内部的 Box 会在垂直方向上一个接一个放置。
+- Box 垂直方向的距离由 margin 决定，属于同一个 BFC 的两个相邻 Box 的 margin 会发生重叠。
+- 每个元素的 margin box 的左边，与包含块 border box 的左边相接触。
+- BFC 的区域不会与 float box 重叠。
+- BFC 是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素。
 
 计算 BFC 的高度时，浮动元素也会参与计算。
 
 满足下列条件之一就可触发 BFC：
 
-1、根元素，即 html
-2、float 的值不为 none（默认）
-3、overflow 的值不为 visible（默认）
-4、display 的值为 inline-block、table-cell、table-caption
-5、position 的值为 absolute 或 fixed
+- 1、根元素，即 html
+- 2、float 的值不为 none（默认）
+- 3、overflow 的值不为 visible（默认）
+- 4、display 的值为 inline-block、table-cell、table-caption
+- 5、position 的值为 absolute 或 fixed
+
 
 ---
 
@@ -1178,35 +1179,44 @@ BFC 规定了内部的 Block Box 如何布局。
 
 
 ---
+
 **元素竖向的百分比设定是相对于容器的高度吗 ？**
 
 当按百分比设定一个元素的宽度时，它是相对于父容器的宽度计算的。
 
+---
+
 **全屏滚动的原理是什么 ？用到了 CSS 的哪些属性 ？**
 
-1、原理：有点类似于轮播，整体的元素一直排列下去，假设有 5  个需要展示的全屏页面，那么高度是500%，只是展示 100%，剩下的可以通过 transform 进行 y 轴定位，也可以通过 margin-top 实现。
-2、overflow：hidden；transition：all 1000ms ease；
+原理
+
+- 有点类似于轮播，整体的元素一直排列下去，假设有 5  个需要展示的全屏页面，那么高度是 500%，只是展示 100%，剩下的可以通过 transform 进行 y 轴定位，也可以通过 margin-top 实现。
+- overflow：hidden；transition：all 1000ms ease；
+
+---
 
 **什么是响应式设计 ？响应式设计的基本原理是什么 ？如何兼容低版本的 IE ？**
 
 
-响应式网站设计( Responsive Web design ) 是一个网站能够兼容多个终端，而不是为每一个终端做一个特定的版本。
-
-基本原理是通过媒体查询检测不同的设备屏幕尺寸做处理。页面头部必须有 meta 声明的viewport。
+- 响应式网站设计( Responsive Web design ) 是一个网站能够兼容多个终端，而不是为每一个终端做一个特定的版本。
+- 基本原理是通过媒体查询检测不同的设备屏幕尺寸做处理。
+- 页面头部必须有 meta 声明的 viewport。
 
 ```
-<meta name="’viewport’" content="” width="device-width" initial-scale="1" maximum-scale="1" user-scalable="no"/>
+<meta name="viewport" content="” width="device-width" initial-scale="1" maximum-scale="1" user-scalable="no"/>
 ```
+
 ---
 
 **视差滚动效果 ？**
 
-1、视差滚动（Parallax Scrolling）通过在网页向下滚动的时候，`控制背景的移动速度比前景的移动速度慢`来创建出令人惊叹的 3D 效果。
-2、CSS3 实现。
+视差滚动（Parallax Scrolling）通过在网页向下滚动的时候，`控制背景的移动速度比前景的移动速度慢`来创建出令人惊叹的 3D 效果。
+
+- CSS3 实现。
 优点：开发时间短、性能和开发效率比较好，缺点是不能兼容到低版本的浏览器
-3、jQuery 实现。
+- jQuery 实现。
 通过控制不同层滚动速度，计算每一层的时间，控制滚动效果。优点：能兼容到各个版本的，效果可控性好。缺点：开发起来对制作者要求高。
-4、插件实现方式。
+- 插件实现方式。
 例如：parallax-scrolling，兼容性十分好。
 
 ---
@@ -1217,7 +1227,7 @@ BFC 规定了内部的 Block Box 如何布局。
 - ::before 就是以一个子元素的存在，定义在元素主体内容之前的一个伪元素。并不存在于 dom 之中，只存在在页面之中。
 
 :before 和 :after 这两个伪元素，是在 CSS2.1 里新出现的。
-起初，伪元素的前缀使用的是单冒号语法，但随着Web的进化，在 CSS3 的规范里，伪元素的语法被修改成使用双冒号，成为 ::before、 ::after 。
+起初，伪元素的前缀使用的是单冒号语法，但随着 Web 的进化，在 CSS3 的规范里，伪元素的语法被修改成使用双冒号，成为 ::before、 ::after 。
 
 ---
 
@@ -1226,7 +1236,7 @@ BFC 规定了内部的 Block Box 如何布局。
 ```
 p {
   font-size: 10px;
-  -webkit-transform: scale(0.8);  // 0.8是缩放比例
+  -webkit-transform: scale(0.8);  // 0.8 是缩放比例
 } 
 ```
 
@@ -1236,13 +1246,15 @@ p {
 
 -webkit-font-smoothing 在 window 系统下没有起作用，但是在 IOS 设备上起作用 -webkit-font-smoothing：antialiased 是最佳的，灰度平滑。
 
+---
+
 **如果需要手动写动画，你认为最小时间间隔是多久，为什么 ？**
 
 多数显示器默认频率是 60Hz，即 1 秒刷新 60 次，所以理论上最小间隔为：1/60＊1000ms ＝ 16.7ms。
 
 ---
 
-**有一个高度自适应的 div，里面有两个 div，一个高度100px，如何让另一个填满剩下的高度 ？**
+**有一个高度自适应的 div，里面有两个 div，一个高度 100px，如何让另一个填满剩下的高度 ？**
 
 - 外层 div 使用 position：relative；
 - 高度要求自适应的 div 使用 position: absolute; top: 100px; bottom: 0; left: 0
@@ -1281,7 +1293,12 @@ CSS Sprites 能减少图片的字节。
 1、标准浏览器的方法
 
 当然，以不折腾人为标准的 w3c 标准早就为我们提供了制作这种自适应宽度的标准方法。
-把 container 设为 display: table 并指定宽度 100%，然后把 main+sidebar 设为 display: table-cell; 然后只给 sidebar 指定一个宽度，那么 main 的宽度就变成自适应了。
+
+- 把 container 设为 display: table 并指定宽度 100%；
+- 然后把 main + sidebar 设为 display: table-cell; 
+- 然后只给 sidebar 指定一个宽度，那么 main 的宽度就变成自适应了。
+
+代码很少，而且不会有额外标签。不过这是 IE7 及以下都无效的方法。
 
 ```
 .container {
@@ -1299,8 +1316,6 @@ CSS Sprites 能减少图片的字节。
 
 ![](https://upload-images.jianshu.io/upload_images/12890819-ce4324bfc2c4f839.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-
-代码很少，而且不会有额外标签。不过这是 IE7 都无效的方法。
 
 
 2、固定区域浮动，自适应区域不设置宽度但设置 margin
@@ -1331,19 +1346,21 @@ CSS Sprites 能减少图片的字节。
 
 当然我们不能让它填满了，填满了它就不能和 sidebar 保持同一行了。我们给它设置一个 margin。由于 sidebar 在右边，所以我们设置 main 的 margin-right 值，值比 sidebar 的宽度大一点点——以便区分它们的范围，例子中是 320。
 
-假设 main 的默认宽度是 100%，那么它设置了 margin 后，它的宽度就变成了 100%-320，此时 main 发现自己的宽度可以与 sidebar 挤在同一行了，于是它就上来了。 
-而宽度100% 是相对于它的父标签来的，如果我们改变了它父标签的宽度，那 main 的宽度也就会变——比如我们把浏览器窗口缩小，那 container  的宽度就会变小，而 main 的宽度也就变小，但它的实际宽度 100%-320 始终是不会变的。
+假设 main 的默认宽度是 100%，那么它设置了 margin 后，它的宽度就变成了 100% - 320，此时 main 发现自己的宽度可以与 sidebar 挤在同一行了，于是它就上来了。 
+而宽度 100% 是相对于它的父标签来的，如果我们改变了它父标签的宽度，那 main 的宽度也就会变——比如我们把浏览器窗口缩小，那 container  的宽度就会变小，而 main 的宽度也就变小，但它的实际宽度 100% - 320 始终是不会变的。
 
 这个方法看起来很完美，只要我们记得清除浮动(这里我用了最简单的方法)，那 footer 也不会错位。而且无论 main 和 sidebar 谁更长，都不会对布局造成影响。
-
-![](https://upload-images.jianshu.io/upload_images/12890819-47c872107fcc93aa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
 
 但实际上这个方法有个很老火的限制——html 中 sidebar 必须在 main 之前！
 但我需要 sidebar 在 main 之后！因为我的 main 里面才是网页的主要内容，我不想主要内容反而排在次要内容后面。
 但如果 sidebar 在 main 之后，那上面的一切都会化为泡影。
 
-3、固定区域使用定位，自适应区域不设置宽度但设置 margin
+
+![](https://upload-images.jianshu.io/upload_images/12890819-47c872107fcc93aa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+
+3、固定区域使用定位，自适应区域不设置宽度，但设置 margin
 
 ```
 .container {
@@ -1369,7 +1386,7 @@ CSS Sprites 能减少图片的字节。
 其实这与 footer 无关，而是因为 container 对 sidebar 的无视造成的——你再长，我还是没感觉。
 看来这种定位方式只能满足 sidebar 自己，但对它的兄弟们却毫无益处。
 
-4、左边浮动，右边 overflow:hidden;
+4、左边浮动，右边 overflow: hidden;
 
 ```
 *{margin:0; padding: 0;}
@@ -1412,8 +1429,8 @@ BFC 就是一个相对独立的布局环境，它内部元素的布局不受外�
 
 - 浮动会导致父元素无法被撑开，影响与父元素同级的元素。
 - 与该浮动元素同级的非浮动元素，如果是块级元素，会移动到该元素下方，而块级元素内部的行内元素会环绕浮动元素；而如果是内联元素则会环绕该浮动元素。
-- 与该元素同级的浮动元素，对于同一方向的浮动元素(同级)，两个元素将会跟在碰到的浮动元素后；而对于不同方向的浮动元素，在宽度足够时，将分别浮动向不同方向，在宽度不同是将导致一方换行(换行与 HTML 书写顺序有关，后边的将会浮动到下一行)
-- 浮动元素将被视作为块元素
+- 与该元素同级的浮动元素，对于同一方向的浮动元素(同级)，两个元素将会跟在碰到的浮动元素后；而对于不同方向的浮动元素，在宽度足够时，将分别浮动向不同方向，在宽度不同是将导致一方换行(换行与 HTML 书写顺序有关，后边的将会浮动到下一行)。
+- 浮动元素将被视作为块元素。
 - 而浮动元素对于其父元素之外的元素，如果是非浮动元素，则相当于忽视该浮动元素，如果是浮动元素，则相当于同级的浮动元素。
 - 而常用的清除浮动的方法，则如使用空标签，overflow，伪元素等。
 
@@ -1431,41 +1448,58 @@ BFC 就是一个相对独立的布局环境，它内部元素的布局不受外�
 
 一、 rem 的特点
 
-1、rem 的大小是根据 `html` 根目录下的字体大小进行计算的。
-2、当我们改变根目录下的字体大小的时候，下面字体都改变。
-3、rem 不仅可以设置字体的大小，也可以设置元素宽、高等属性。
-4、rem 是 CSS3 新增的一个相对单位（root em，根em），这个单位与 em 区别在于使用 rem 为元素设定字体大小时，仍然是相对大小，但相对的只是 HTML 根元素。
+1. rem 的大小是根据 `html` 根目录下的字体大小进行计算的。
+2. 当我们改变根目录下的字体大小的时候，下面字体都改变。
+3. rem 不仅可以设置字体的大小，也可以设置元素宽、高等属性。
+4. rem 是 CSS3 新增的一个相对单位（root em，根em），这个单位与 em 区别在于使用 rem 为元素设定字体大小时，仍然是相对大小，但相对的只是 HTML 根元素。
+   
 这个单位可谓集相对大小和绝对大小的优点于一身，通过它既可以做到只修改根元素就成比例地调整所有字体大小，又可以避免字体大小逐层复合的连锁反应。
 目前，除了 IE8 及更早版本外，所有浏览器均已支持 rem。
 对于不支持它的浏览器，应对方法也很简单，就是多写一个绝对单位的声明。这些浏览器会忽略用 rem 设定的字体大小。
 
-二、em 的特点
-
-1、字体大小是根据`父元素`字体大小设置的。
-除了IE6-IE8，其它的浏览器都支持 em 和 rem 属性，px 是所有浏览器都支持。
-
-三、px 特点
+二、px 特点
 
 1. px 像素（Pixel）。相对长度单位。像素 px 是相对于显示器屏幕分辨率而言的。
 
-四、em 特点 
+三、em 特点 
 
 1. em 的值并不是固定的；
 2. em 会继承父级元素的字体大小。
 3. em 是相对长度单位。相对于当前对象内文本的字体尺寸。如当前对行内文本的字体尺寸未被人为设置，则相对于浏览器的默认字体尺寸。
-4. 任意浏览器的默认字体高都是16px。
-所有未经调整的浏览器都符合:1em=16px。那么12px=0.75em,10px=0.625em。
-为了简化 font-size 的换算，需要在 css 中的 body 选择器中声明 Fontsize=62.5%，这就使 em 值变为 16px*62.5%=10px, 这样 12px=1.2em, 10px=1em, 也就是说只需要将你的原来的 px 数值除以 10，然后换上 em 作为单位就行了。
+4. 任意浏览器的默认字体高都是 16px。
+   
+所有未经调整的浏览器一般都符合: 1em = 16px。那么 12px = 0.75em，10px = 0.625em。
+为了简化 font-size 的换算，需要在 css 中的 body 选择器中声明 Fontsize = 62.5%，这就使 em 值变为 16px*62.5%=10px, 这样 12px = 1.2em, 10px = 1em, 也就是说只需要将你的原来的 px 数值除以 10，然后换上 em 作为单位就行了。
 
 
-五、vh 与 vw 
 
-1. 因此 html5 和 css3 引入视口的概念来代替显示器的物理尺寸。
-通过在 meta 标签上的设置，视口的长宽可以跟设备的物理分辨率相等，也可以不相等（以便手机上可以实现用两个手指来放大会缩小页面），可根据需要灵活掌握。
-在 PC 中，视口的长宽则是跟浏览器窗口的物理分辨率恒等的。
-2. 1vw 等于视口宽度（viewport width）的百分之一，也就是说 100vw 就是视口的宽度。
-同理，1vh 等于视  30px 改成 5vw，意思就是窗口宽度的 5%，同理 10vw。
-3. 不过由于vw 和 vh 是 css3 才支持的长度单位，所以在不支持 css3 的浏览器中是无效的口高度（viewport height）的百分之一。
+四、vh 与 vw 
+
+视口 
+
+- 在桌面端，指的是浏览器的可视区域；
+- 在移动端，它涉及 3个 视口：Layout Viewport（布局视口），Visual Viewport（视觉视口），Ideal Viewport（理想视口）。
+- 视口单位中的 “视口”，桌面端指的是浏览器的可视区域；移动端指的就是 Viewport 中的 Layout Viewport。
+
+vh / vw 与 % 
+
+| 单位 | 解释 | 
+|  :------ |  :------ |  
+| vw | 1vw = 视口宽度的 1% | 
+| vh | 1vh = 视口高度的 1% | 
+| vmin | 选取 vw 和 vh 中最小的那个 | 
+| vmax | 选取 vw 和 vh 中最大的那个 | 
+
+比如：浏览器视口尺寸为 370px，那么 1vw = 370px * 1% = 6.5px (浏览器会四舍五入向下取 7)
+
+vh / vw 与 % 区别
+
+| 单位 | 解释 | 
+|  :------ |  :------ |  
+| % | 元素的祖先元素 | 
+| vh / vw | 视口的尺寸 | 
+
+不过由于 vw 和 vh 是 css3 才支持的长度单位，所以在不支持 css3 的浏览器中是无效的。
 
 ---
 
