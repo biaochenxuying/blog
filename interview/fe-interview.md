@@ -3016,32 +3016,33 @@ MVC 模式的意思是，软件可以分成三个部分。
 ![](https://upload-images.jianshu.io/upload_images/12890819-1cd8a44ad265101f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
-视图（View）：用户界面。
-控制器（Controller）：业务逻辑
-模型（Model）：数据保存
+- 视图（View）：用户界面。
+- 控制器（Controller）：业务逻辑。
+- 模型（Model）：数据保存。
+
 各部分之间的通信方式如下。
 
 ![](https://upload-images.jianshu.io/upload_images/12890819-a6cb79a0ba433c50.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
-View 传送指令到 Controller
-Controller 完成业务逻辑后，要求 Model 改变状态
-Model 将新的数据发送到 View，用户得到反馈
-所有通信都是单向的（逆时针）。
+- View 传送指令到 Controller
+- Controller 完成业务逻辑后，要求 Model 改变状态
+- Model 将新的数据发送到 View，用户得到反馈
+- 所有通信都是单向的（逆时针）。
 
 MVP 模式将 Controller 改名为 Presenter，同时改变了通信方向。
 
 ![](https://upload-images.jianshu.io/upload_images/12890819-480b96ff581e8cc0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-1. 各部分之间的通信，都是双向的（顺时针）。
-2. View 与 Model 不发生联系，都通过 Presenter 传递。
-3. View 非常薄，不部署任何业务逻辑，称为"被动视图"（Passive View），即没有任何主动性，而 Presenter非常厚，所有逻辑都部署在那里。
+- 各部分之间的通信，都是双向的（顺时针）。
+- View 与 Model 不发生联系，都通过 Presenter 传递。
+- View 非常薄，不部署任何业务逻辑，称为 "被动视图"（Passive View），即没有任何主动性，而 Presenter非常厚，所有逻辑都部署在那里。
 
 MVVM 模式将 Presenter 改名为 ViewModel，基本上与 MVP 模式完全一致。
 
 ![](https://upload-images.jianshu.io/upload_images/12890819-51457e62e079b247.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-唯一的区别是，它采用双向绑定（data-binding）：View的变动，自动反映在 ViewModel，反之亦然。Angular 和 Ember 都采用这种模式。
+唯一的区别是，它采用双向绑定（data-binding）：View 的变动，自动反映在 ViewModel，反之亦然。Angular 和 Ember 都采用这种模式。
 
 ---
 **如何理解 Vue 是异步执行 DOM 更新的 ？**
@@ -3063,7 +3064,7 @@ MVVM 模式将 Presenter 改名为 ViewModel，基本上与 MVP 模式完全一�
 
 如何追踪变化
 
-- 当你把一个普通的 JavaScript 对象传给 Vue 实例的 data 选项，Vue 将遍历此对象所有的属性，并使用 Object.defineProperty 把这些属性全部转getter/setter。
+- 当你把一个普通的 JavaScript 对象传给 Vue 实例的 data 选项，Vue 将遍历此对象所有的属性，并使用 Object.defineProperty 把这些属性全部转 getter/setter。
 - Object.defineProperty 是 ES5 中一个无法 shim 的特性，这也就是为什么 Vue 不支持 IE8 以及更低版本浏览器的原因。
 - 这些 getter/setter 对用户来说是不可见的，但是在内部它们让 Vue 追踪依赖，在属性被访问和修改时通知变化。这里需要注意的问题是浏览器控制台在打印数据对象时 getter/setter 的格式化并不同，所以你可能需要安装 vue-devtools 来获取更加友好的检查接口。
 - 每个组件实例都有相应的 watcher 实例对象，它会在组件渲染的过程中把属性记录为依赖，之后当依赖项的 setter 被调用时，会通知 watcher 重新计算，从而致使它关联的组件得以更新。
@@ -3153,14 +3154,22 @@ export default new Vue;
 
 ```javascript
 <template>
-    <div id="emit">
-        <button @click="bus">按钮</button>
-    </div> </template> import Bus from './bus.js' export default {     data() {        return {            message: ''"        }     },
-　　methods: {
-       bus () {
-          Bus.$emit('msg', '我要传给兄弟组件们，你收到没有')
-       }
+  <div id="emit">
+    <button @click="bus">按钮</button>
+  </div> 
+</template > 
+import Bus from './bus.js'
+export default {
+  data() {
+    return {
+      message: ''
     }
+  },
+  methods: {
+    bus() {
+      Bus.$emit('msg', '我要传给兄弟组件们，你收到没有')
+    }
+  }
 }
 ```
 
@@ -3179,13 +3188,14 @@ export default {
         message:  ''
       }
     },
-    mounted() {　　　 let self = this
+    mounted() {　　　
+       let self = this
        Bus.$on('msg', (e) => {
          self.message = e
          console.log(`传来的数据是：${e}`)
        })
-     }
-   }
+    }
+  }
 ```
 
 最后 p 会显示来自 $emit 传来的信息。
@@ -3370,7 +3380,7 @@ D、Cache-Control: must-revalidate：如果页面是过期的 则去服务器进
 
 Expires：显示的设置页面过期时间
 Last-Modified：请求对象最后一次的修改时间 用来判断缓存是否过期 通常由文件的时间信息产生
-If-Modified-Since ：客户端发送请求附带的信息 指浏览器缓存请求对象的最后修改日期 用来和服务器端的Last-Modified做比较
+If-Modified-Since ：客户端发送请求附带的信息 指浏览器缓存请求对象的最后修改日期 用来和服务器端的 Last-Modified 做比较
 
 ---
 
@@ -3839,7 +3849,7 @@ function findMaxDuplicateChar(str) {
 
 ---
 
-**101 个硬币中有 100真、1假，真假区别在于重量。请用无砝码天平称两次给出真币重还是假币重的结论**
+**101 个硬币中有 100 真、1 假，真假区别在于重量。请用无砝码天平称两次给出真币重还是假币重的结论**
 
 方法 1
 
@@ -3876,7 +3886,7 @@ function findMaxDuplicateChar(str) {
 
 技术博客首发地址  [GitHub](https://github.com/biaochenxuying/blog)。
 
-觉得有用 ？那就收藏，顺便点个赞吧 ！
+觉得有用 ？那就收藏，点个赞，顺便关注我的公众号吧 ！
 
 ![全栈修炼](https://upload-images.jianshu.io/upload_images/12890819-63562882740bae76.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
