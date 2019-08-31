@@ -102,8 +102,8 @@
 			var removeNode = function(key, node) {
 				// console.log('node :', node);
 				// 如果 node 不存在，直接返回
-				if (node === false) {
-					return null;
+				if (node === null) {
+					return false;
 				}
 
 				// 找到要删除的节点

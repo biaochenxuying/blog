@@ -83,7 +83,7 @@
 
 			// 从链表的特定位置移除一项
 			this.removeAt = function(position) {
-				if ((position < 0 && position >= length) || length === 0) {
+				if (position < 0 || position > length || length === 0) {
 					// 越界
 					return false;
 				} else {

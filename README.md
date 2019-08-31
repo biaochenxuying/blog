@@ -110,7 +110,7 @@
 #### | 随笔
 
 
-- [1. 程序员，你的身体还健康吗 ？](https://github.com/biaochenxuying/blog/issues/6)
+- [1. 程序员不止眼前的逻辑和代码，还应有健康的体魄和精气神](https://github.com/biaochenxuying/blog/issues/6)
 
 
 ## 计划
