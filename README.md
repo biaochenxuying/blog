@@ -21,6 +21,7 @@
 - [React.js](https://github.com/biaochenxuying/blog/projects/5)
 - [Node.js](https://github.com/biaochenxuying/blog/projects/7)
 - [MongoDB](https://github.com/biaochenxuying/blog/projects/5)
+- [软技能](https://github.com/biaochenxuying/blog/projects/11)
 - [半小时硬核理财入门](https://github.com/biaochenxuying/blog/projects/9)
 - [随笔](https://github.com/biaochenxuying/blog/projects/5)
 
@@ -100,6 +101,10 @@
 #### | 性能优化
 
 - [1. 一次网站的性能优化之路 -- 天下武功，唯快不破](https://github.com/biaochenxuying/blog/issues/24)
+
+#### | 软技能
+
+- [1. GitHub 上能挖矿的神仙技巧 - 如何发现优秀开源项目](https://github.com/biaochenxuying/blog/issues/45)
 
 
 #### | 半小时硬核理财入门
