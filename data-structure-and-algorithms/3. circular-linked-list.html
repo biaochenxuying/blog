@@ -111,26 +111,6 @@
 				}
 				return false;
 			};
-			this.remove = function() {
-				if (length === 0) {
-					return false;
-				}
-				var current = head,
-					previous,
-					indexCheck = 0;
-				if (length === 1) {
-					head = null;
-					length--;
-					return current.element;
-				}
-				while (indexCheck++ < length) {
-					previous = current;
-					current = current.next;
-				}
-				previous.next = head;
-				length--;
-				return current.element;
-			};
 			this.indexOf = function(element) {
 				var current = head,
 					index = 0;

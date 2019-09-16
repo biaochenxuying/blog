@@ -27,6 +27,11 @@
 
 ## 文章
 
+#### | 软技能
+
+- [1. GitHub 上能挖矿的神仙技巧 - 如何发现优秀开源项目](https://github.com/biaochenxuying/blog/issues/45)
+
+
 #### | JavaScript 数据结构与算法之美
 
 - [1. JavaScript 数据结构与算法之美 - 时间和空间复杂度](https://github.com/biaochenxuying/blog/issues/29)
@@ -102,9 +107,6 @@
 
 - [1. 一次网站的性能优化之路 -- 天下武功，唯快不破](https://github.com/biaochenxuying/blog/issues/24)
 
-#### | 软技能
-
-- [1. GitHub 上能挖矿的神仙技巧 - 如何发现优秀开源项目](https://github.com/biaochenxuying/blog/issues/45)
 
 
 #### | 半小时硬核理财入门
