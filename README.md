@@ -31,6 +31,17 @@
 
 - [1. GitHub 上能挖矿的神仙技巧 - 如何发现优秀开源项目](https://github.com/biaochenxuying/blog/issues/45)
 
+#### | 前端工程师的成长之路
+
+- [1. 2018 年，我的本命年 - 前端工作师的年终总结](https://github.com/biaochenxuying/blog/issues/19)
+- [2. 前端架构师亲述：前端工程师成长之路的 N 问 及 回答](https://github.com/biaochenxuying/blog/issues/33)
+
+
+#### | 随笔
+
+- [1. 程序员不止眼前的逻辑和代码，还应有健康的体魄和精气神](https://github.com/biaochenxuying/blog/issues/6)
+
+
 
 #### | JavaScript 数据结构与算法之美
 
@@ -47,16 +58,11 @@
 - [11. JavaScript 数据结构与算法之美 - 强烈推荐 GitHub 上值得前端学习的数据结构与算法项目](https://github.com/biaochenxuying/blog/issues/43)
 
 
-#### | 前端工程师的成长之路
-
-
-- [1. 2018 年，我的本命年 - 前端工作师的年终总结](https://github.com/biaochenxuying/blog/issues/19)
-- [2. 前端架构师亲述：前端工程师成长之路的 N 问 及 回答](https://github.com/biaochenxuying/blog/issues/33)
-
-
 #### | 前端硬核面试专题
 
 - [1. fe-interview：HTML + CSS + JS + ES6 + Webpack + Vue + React + Node + HTTPS + 数据结构与算法 + Git](https://github.com/biaochenxuying/blog/blob/master/interview/fe-interview.md)
+- [2. 重磅：硬核前端面试开源项目汇总（进大厂必备）](https://github.com/biaochenxuying/blog/issues/47)
+- [3. 2019 前端秋季社招面试经历总结（二年多经验）](https://github.com/biaochenxuying/blog/issues/48)
 
 
 #### | Vue.js
@@ -114,10 +120,6 @@
 - [1. 用钱生钱，从掌握金钱的规律开始](https://github.com/biaochenxuying/blog/issues/26)
 - 精彩待续 ... 
 
-#### | 随笔
-
-
-- [1. 程序员不止眼前的逻辑和代码，还应有健康的体魄和精气神](https://github.com/biaochenxuying/blog/issues/6)
 
 
 ## 计划
