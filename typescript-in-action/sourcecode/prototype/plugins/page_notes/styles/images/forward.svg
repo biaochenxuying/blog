@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="8px" height="14px" viewBox="0 0 8 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.5.2 (25235) - http://www.bohemiancoding.com/sketch -->
+    <title>forward</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="forward" sketch:type="MSArtboardGroup" fill="#4A4A4A">
+            <path d="M5.36658239,6.83451096 L0.504510351,1.43220869 C0.187463692,1.07993462 0.216021147,0.537342972 0.568295213,0.220296313 C0.920569278,-0.0967503457 1.46316093,-0.0681928903 1.78020759,0.284081175 L7.13813599,6.23733496 C7.24341927,6.35431637 7.31059146,6.49228484 7.34045407,6.63601181 C7.43282137,6.93106571 7.36212046,7.26615242 7.12835135,7.49992153 L1.46493243,13.1633404 C1.12980887,13.498464 0.586466228,13.498464 0.251342669,13.1633404 C-0.0837808905,12.8282169 -0.0837808895,12.2848742 0.251342671,11.9497507 L5.36658239,6.83451096 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

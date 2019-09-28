@@ -1,0 +1,14 @@
+.menu {
+    line-height: 64px;
+}
+.contentWrap {
+    padding: 0 50px;
+}
+.content {
+    background: #fff;
+    padding: 24px;
+    min-height: 480px;
+}
+.footer {
+    text-align: center;
+}

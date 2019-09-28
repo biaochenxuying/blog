@@ -1,0 +1,21 @@
+{
+    "flag": 0,
+    "data": [
+        {
+            "id": 1,
+            "key": 1,
+            "name": "小明",
+            "departmentId": 1,
+            "hiredate": "2019-07-01",
+            "levelId": 1
+        }, {
+            "id": 2,
+            "key": 2,
+            "name": "小莉",
+            "departmentId": 2,
+            "hiredate": "2017-07-01",
+            "levelId": 2
+        }
+    ],
+    "msg": "Error"
+}

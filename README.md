@@ -22,6 +22,8 @@
 - [Node.js](https://github.com/biaochenxuying/blog/projects/7)
 - [MongoDB](https://github.com/biaochenxuying/blog/projects/5)
 - [软技能](https://github.com/biaochenxuying/blog/projects/11)
+- [硬核面试专题](https://github.com/biaochenxuying/blog/projects/12)
+- [前端工程师成长之路](https://github.com/biaochenxuying/blog/projects/14)
 - [半小时硬核理财入门](https://github.com/biaochenxuying/blog/projects/9)
 - [随笔](https://github.com/biaochenxuying/blog/projects/5)
 
@@ -114,12 +116,14 @@
 - [1. 一次网站的性能优化之路 -- 天下武功，唯快不破](https://github.com/biaochenxuying/blog/issues/24)
 
 
-
 #### | 半小时硬核理财入门
 
 - [1. 用钱生钱，从掌握金钱的规律开始](https://github.com/biaochenxuying/blog/issues/26)
 - 精彩待续 ... 
 
+#### | 学习资源
+
+- [极客时间上的《TypeScript 开发实战》课程资源，包含课件、思维导图、课程源代码](https://github.com/biaochenxuying/blog/tree/master/typescript-in-action)
 
 
 ## 计划
@@ -138,6 +142,7 @@
 
 #### | TypeScript 入门到熟练
 
+- [1. Vue + TypeScript + Element 搭建简洁时尚的博客网站及踩坑记](https://github.com/biaochenxuying/blog/issues/25)
 - 精彩待续 ... 
   
 #### | 小程序入门到熟练
@@ -157,11 +162,11 @@
 
 ## 社区
 
-- [GitHub：https://github.com/biaochenxuying](https://github.com/biaochenxuying/blog )
-- [掘金：https://juejin.im/user/591d6b4d0ce463006926ae40](https://juejin.im/user/591d6b4d0ce463006926ae40 )
-- [知乎：https://www.zhihu.com/people/gu-jian-qi-tan-shui/activities](https://www.zhihu.com/people/gu-jian-qi-tan-shui/activities)
-- [SegmentFault：https://segmentfault.com/u/biaochenxuying](https://segmentfault.com/u/biaochenxuying )
-- [简书：https://www.jianshu.com/u/91717b553bfd](https://www.jianshu.com/u/91717b553bfd)
+- [**GitHub**](https://github.com/biaochenxuying/blog )
+- [**掘金**](https://juejin.im/user/591d6b4d0ce463006926ae40 )
+- [**知乎**](https://www.zhihu.com/people/gu-jian-qi-tan-shui/activities)
+- [**SegmentFault**](https://segmentfault.com/u/biaochenxuying )
+- [**简书**](https://www.jianshu.com/u/91717b553bfd)
   
 
 ## 撩我
@@ -180,16 +185,20 @@
 
 ## BB
 
+> 文章版权为夜尽天明所有，未经允许，不得转载；如要转载文章，请联系笔者。
+
+如果你觉得该项目不错，或者对你有所帮助，点个 Star 、或者真心赞赏一下 都是对我最大的鼓励，我会更有动力维护好该项目。
+
+
+> **江山父老能容我，不使人间造孽钱**。
+
+![](https://upload-images.jianshu.io/upload_images/12890819-ffab7bd24d08c00d.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
 #### 技术以内
 
 这里是笔者平时 BB 技术的地方。
 
-如果你觉得本项目的文章不错或者对你有所帮助，请给个星呗，你的肯定就是我继续创作的最大动力。
-
-> 文章版权为夜尽天明所有，未经允许，不得转载；如要转载文章，请联系笔者。
-
-
-技术博客首发地址：[【全栈修炼】](https://mp.weixin.qq.com/s/i0AsqMpI1YCSvDyK_zdAqw)：https://mp.weixin.qq.com/s/i0AsqMpI1YCSvDyK_zdAqw
 
 ![全栈修炼](https://upload-images.jianshu.io/upload_images/12890819-9399d149e09f638e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 

@@ -1,0 +1,21 @@
+{
+    "flag": 0,
+    "data": [
+        {
+            "id": 1,
+            "key": 1,
+            "name": "小明",
+            "department": "技术部",
+            "hiredate": "2019-07-01",
+            "level": "1级"
+        }, {
+            "id": 2,
+            "key": 2,
+            "name": "小莉",
+            "department": "产品部",
+            "hiredate": "2017-07-01",
+            "level": "2级"
+        }
+    ],
+    "msg": "Error"
+}

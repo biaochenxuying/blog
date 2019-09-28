@@ -1,0 +1,41 @@
+{
+  "name": "ts_base",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/index.ts",
+  "scripts": {
+    "start": "webpack-dev-server --mode=development --config ./build/webpack.config.js",
+    "build": "webpack --mode=production --config ./build/webpack.config.js",
+    "lint": "eslint src --ext .js,.ts",
+    "test": "jest"
+  },
+  "keywords": [
+    "TypeScript"
+  ],
+  "author": "liangxiao",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^24.0.15",
+    "@types/jquery": "^3.3.29",
+    "@types/source-map": "^0.5.2",
+    "@typescript-eslint/eslint-plugin": "^1.10.2",
+    "@typescript-eslint/parser": "^1.10.2",
+    "awesome-typescript-loader": "^5.2.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "eslint": "^5.16.0",
+    "fork-ts-checker-webpack-plugin": "^1.3.7",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^24.8.0",
+    "ts-jest": "^24.0.2",
+    "ts-loader": "^6.0.2",
+    "typescript": "^3.5.1",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.5.1",
+    "webpack-merge": "^4.2.1"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "moment": "^2.24.0"
+  }
+}
