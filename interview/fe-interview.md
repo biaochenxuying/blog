@@ -154,6 +154,14 @@ repaint 就是重绘，reflow 就是回流。
 - 避免使用 table 进行布局：table 的每个元素的大小以及内容的改动，都会导致整个 table 进行重新计算，造成大幅度的 repaint 或者 reflow。改用 div 则可以进行针对性的 repaint 和避免不必要的 reflow。
 - 避免在 CSS 中使用运算式：学习 CSS 的时候就知道，这个应该避免，不应该加深到这一层再去了解，因为这个的后果确实非常严重，一旦存在动画性的 repaint/reflow，那么每一帧动画都会进行计算，性能消耗不容小觑。
 
+
+参考文章：[你真的了解回流和重绘吗](https://segmentfault.com/a/1190000017329980)
+
+---
+
+- [我终于理解了伪类和伪元素](https://www.jianshu.com/p/996d021bced3)
+
+
 ---
 
 **Doctype 作用 ？标准模式与兼容模式各有什么区别 ?**
@@ -1492,6 +1500,54 @@ vh / vw 与 % 区别
 - 降级（功能衰减）意味着往回看；而渐进增强则意味着朝前看，同时保证其根基处于安全地带。
 
 ---
+**width 和 height 的百分比是相对谁讲的 ？margin 和 padding 呢？**
+
+- width 是相对于直接父元素的 width
+- height 是相对于直接父元素的 height
+- padding 是相对于直接父元素的 width
+- margin 是相对于直接父元素的 margin
+
+```
+<style>
+    #wrapper {
+        width: 500px;
+        height: 800px;
+        background-color: #ccc;
+    }
+    .parent {
+        width: 300px;
+        height: 400px;
+        background-color: yellow;
+    }
+    .son {
+        /* 90*40 */
+        width: 30%;
+        height: 10%;
+        /* 30 30 */
+        padding-left: 10%;
+        margin-left: 10%;
+        background-color: green;
+    }
+</style>
+<div id="wrapper">
+    <div class="parent">
+        <div class="son">
+        </div>
+    </div>
+</div>
+```
+
+相关文章：
+
+- [transform，transition，animation，keyframes区别](https://segmentfault.com/a/1190000012698032)
+- [width 和 height 的百分比是相对谁讲的 ？margin 和 padding 呢？](https://www.jianshu.com/p/075839c8e2f2)
+- [彻底搞懂 CSS 层叠上下文、层叠等级、层叠顺序、z-index](https://juejin.im/post/5b876f86518825431079ddd6)
+
+
+---
+
+
+
 
 ## 4. JavaScript 
 
@@ -1501,6 +1557,168 @@ vh / vw 与 % 区别
 - Gecko 内核：火狐，FF，MozillaSuite / SeaMonkey 等
 - Presto 内核：Opera7 及以上。[Opera 内核原为：Presto，现为：Blink]
 - Webkit 内核：Safari，Chrome 等。 [ Chrome 的：Blink（WebKit 的分支）]
+
+---
+
+**try/catch 无法捕获 promise.reject 的问题**
+
+try..catch 结构，它只能是同步的，无法用于异步代码模式。
+
+https://segmentfault.com/q/1010000014905440
+
+---
+
+**error 事件的事件处理程序**
+
+https://developer.mozilla.org/zh-CN/docs/Web/API/GlobalEventHandlers/onerror
+
+---
+
+**一个简易版的 Function.prototype.bind 实现**
+
+```js
+Function.prototype.bind = function (context) {
+    var self = this;
+    return function () {
+        return self.apply(context, arguments);
+    };
+};
+
+var obj = {
+    name: '前端架构师'
+};
+var func = function () {
+    console.log(this.name);
+}.bind(obj);
+func();
+```
+
+- [【JavaScript】Function.prototype.bind 实现原理](https://blog.csdn.net/w390058785/article/details/83185847)
+
+
+---
+
+**call、apply、bind**
+
+1. 怎么利用 call、apply 来求一个数组中最大或者最小值 ?
+2. 如何利用 call、apply 来做继承 ?
+3. apply、call、bind 的区别和主要应用场景 ?
+
+- call 跟 apply 的用法几乎一样，唯一的不同就是传递的参数不同，call 只能一个参数一个参数的传入。
+- apply 则只支持传入一个数组，哪怕是一个参数也要是数组形式。最终调用函数时候这个数组会拆成一个个参数分别传入。
+- 至于 bind 方法，他是直接改变这个函数的 this 指向并且返回一个新的函数，之后再次调用这个函数的时候 this 都是指向 bind 绑定的第一个参数。
+- bind 传参方式跟 call 方法一致。
+
+适用场景：
+
+求一个数组中最大或者最小值
+
+```js
+// 如果一个数组我们已知里面全都是数字，想要知道最大的那个数，由于 Array 没有 max 方法，Math 对象上有
+// 我们可以根据 apply 传递参数的特性将这个数组当成参数传入
+// 最终 Math.max 函数调用的时候会将 apply 的数组里面的参数一个一个传入，恰好符合 Math.max 的参数传递方式
+// 这样变相的实现了数组的 max 方法。min 方法也同理
+const arr = [1,2,3,4,5,6]
+const max = Math.max.apply(null, arr)
+console.log(max)    // 6
+```
+
+参数都会排在之后
+
+```js
+// 如果你想将某个函数绑定新的`this`指向并且固定先传入几个变量可以在绑定的时候就传入，之后调用新函数传入的参数都会排在之后
+const obj = {}
+function test(...args) { console.log(args) }
+const newFn = test.bind(obj, '静态参数1', '静态参数2')
+newFn('动态参数3', '动态参数4')
+```
+
+利用 call 和 apply 做继承
+
+```js
+function Animal(name){
+  this.name = name;
+  this.showName = function(){
+    console.log(this.name);
+  }
+}
+
+function Cat(name){
+  Animal.call(this, name);
+}
+
+// Animal.call(this) 的意思就是使用 this 对象代替 Animal 对象，那么
+// Cat 中不就有 Animal 的所有属性和方法了吗，Cat 对象就能够直接调用 Animal 的方法以及属性了
+var cat = new Cat("TONY");
+cat.showName(); //TONY
+```
+
+将伪数组转化为数组（含有 length 属性的对象，dom 节点, 函数的参数 arguments）
+
+```js
+// case1: dom节点：
+<div class="div1">1</div>
+<div class="div1">2</div>
+<div class="div1">3</div>
+
+let div = document.getElementsByTagName('div');
+console.log(div); // HTMLCollection(3) [div.div1, div.div1, div.div1] 里面包含length属性
+let arr2 = Array.prototype.slice.call(div);
+console.log(arr2); // 数组 [div.div1, div.div1, div.div1]
+
+
+//case2：fn 内的 arguments
+function fn10() {
+    return Array.prototype.slice.call(arguments);
+}
+console.log(fn10(1,2,3,4,5)); // [1, 2, 3, 4, 5]
+
+
+// case3: 含有 length 属性的对象
+let obj4 = {
+    0: 1,
+    1: 'thomas',
+    2: 13,
+    length: 3 // 一定要有length属性
+};
+console.log(Array.prototype.slice.call(obj4)); // [1, "thomas", 13]
+```
+
+判断变量类型
+
+```js
+let arr1 = [1,2,3];
+let str1 = 'string';
+let obj1 = { name: 'thomas' };
+//
+function isArray(obj) {
+  return Object.prototype.toString.call(obj) === '[object Array]';
+}
+console.log(fn1(arr1)); // true
+
+// 判断类型的方式，这个最常用语判断 array 和 object ，null( 因为 typeof null 等于 object )
+console.log(Object.prototype.toString.call(arr1)); // [object Array]
+console.log(Object.prototype.toString.call(str1)); // [object String]
+console.log(Object.prototype.toString.call(obj1)); // [object Object]
+console.log(Object.prototype.toString.call(null)); // [object Null]
+```
+
+总结：
+
+1. 当我们使用一个函数需要改变 this 指向的时候才会用到 `call` `apply` `bind`
+2. 如果你要传递的参数不多，则可以使用 fn.call(thisObj, arg1, arg2 ...)
+3. 如果你要传递的参数很多，则可以用数组将参数整理好调用 fn.apply(thisObj, [arg1, arg2 ...])
+4. 如果你想生成一个新的函数长期绑定某个函数给某个对象使用，则可以使用 const newFn = fn.bind(thisObj); newFn(arg1, arg2...)
+
+参考文章：
+
+- [call、apply、bind 的区别](https://www.jianshu.com/p/bbeadae6127e)
+- [聊一聊 call、apply、bind 的区别](https://segmentfault.com/a/1190000012772040)
+
+
+---
+
+[理解 js 继承的 6 种方式](https://www.cnblogs.com/Grace-zyy/p/8206002.html)
 
 ---
 
@@ -1815,7 +2033,9 @@ alert(typeof value);    //"number"
 
 该 value 赋值以后，变量赋值初始化就覆盖了函数声明。
 
-重新回到题目，这个函数其实是一个有名函数表达式，函数表达式不像函数声明一样可以覆盖变量声明，但你可以注意到，变量 b 是包含了该函数表达式，而该函数表达式的名字是 a。不同的浏览器对 a 这个名词处理有点不一样，在 IE 里，会将 a 认为函数声明，所以它被变量初始化覆盖了，就是说如果调用 a(–x) 的话就会出错，而其它浏览器在允许在函数内部调用 a(–x)，因为这时候 a 在函数外面依然是数字。
+重新回到题目，这个函数其实是一个有名函数表达式，函数表达式不像函数声明一样可以覆盖变量声明，但你可以注意到，变量 b 是包含了该函数表达式，而该函数表达式的名字是 a。
+
+不同的浏览器对 a 这个名词处理有点不一样，在 IE 里，会将 a 认为函数声明，所以它被变量初始化覆盖了，就是说如果调用 a(–x) 的话就会出错，而其它浏览器在允许在函数内部调用 a(–x)，因为这时候 a 在函数外面依然是数字。
 基本上，IE 里调用 b(2) 的时候会出错，但其它浏览器则返回 undefined。
 
 理解上述内容之后，该题目换成一个更准确和更容易理解的代码应该像这样：
@@ -1918,19 +2138,6 @@ arr[3]();
 
 ---
 
-**JavaScript 里有哪些数据类型**
-
-一、数据类型   
-
-- undefiend 没有定义数据类型        
-- number 数值数据类型，例如 10 或者 1 或者 5.5        
-- string 字符串数据类型用来描述文本，例如  "你的姓名"        
-- boolean 布尔类型 true | false ，不是正就是反        
-- object 对象类型，复杂的一组描述信息的集合
-- function 函数类型
-
----
-
 **解释清楚 null 和 undefined**
 
 null 用来表示尚未存在的对象，常用来表示函数企图返回一个不存在的对象。  null 表示"没有对象"，即该处不应该有值。
@@ -1958,6 +2165,79 @@ null 典型用法是： 
 **讲一下 prototype 是什么东西，原型链的理解，什么时候用 prototype ？**
 
 prototype 是函数对象上面预设的对象属性。
+
+---
+
+**实现 add(1)(2)(3) = 6**
+
+这题考察的是柯里化,做这题之前呢,我们得知道柯里化的概念:
+
+柯里化就是把接收多个参数的函数变换成接收一个单一参数(最初函数的第一个参数)的函数。
+
+```js
+const curry = (fn, ...args) => 
+            args.length < fn.length 
+            // 参数长度不足时,重新柯里化函数,等待接受新参数
+            ? (...arguments) => curry(fn, ...args, ...arguments)
+            // 函数长度满足时,执行函数
+             : fn(...args);
+
+function sumFn(a, b, c){
+    return a + b + c;
+}
+var sum = curry(sumFn);
+console.log(sum(1)(2)(3)); //6
+```
+
+---
+
+**script 标签的 defer 和 async**
+
+
+- 一个普通的 `<script>` 标签的加载和解析都是同步的，会阻塞 DOM 的渲染，这也就是我们经常会把 `<script>` 写在 `<body>`底部的原因之一，为了防止加载资源而导致的长时间的白屏。
+- 另一个原因是 js 可能会进行 DOM 操作，所以要在 DOM 全部渲染完后再执行。
+
+
+defer
+
+```
+如果 script 标签设置了该属性，则浏览器会异步的下载该文件并且不会影响到后续 DOM 的渲染；
+如果有多个设置了 defer 的 script 标签存在，则会按照顺序执行所有的 script；
+defer 脚本会在文档渲染完毕后，DOMContentLoaded 事件调用前执行。
+```
+
+async
+
+```
+async 的设置，会使得 script 脚本异步的加载并在允许的情况下执行 async 的执行，
+并不会按着 script 在页面中的顺序来执行，而是谁先加载完谁执行。
+```
+
+- 概括来讲，就是这两个属性都会使 script 标签异步加载，然而执行的时机是不一样的。
+- 也就是说 async 是乱序的，而 defer 是顺序执行，这也就决定了async 比较适用于百度分析或者谷歌分析这类不依赖其他脚本的库。
+
+
+推荐的应用场景
+
+defer
+
+如果你的脚本代码依赖于页面中的 DOM 元素（文档是否解析完毕），或者被其他脚本文件依赖。
+
+例：
+
+- 评论框
+- 代码语法高亮
+- polyfill.js
+
+async
+
+如果你的脚本并不关心页面中的 DOM 元素（文档是否解析完毕），并且也不会产生其他脚本需要的数据。
+
+例：百度统计
+
+如果不太能确定的话，用 defer 总是会比 async 稳定。。。
+
+参考：[浅谈 script 标签中的 async 和 defer](https://www.cnblogs.com/jiasm/p/7683930.html)
 
 ---
 
@@ -2805,6 +3085,7 @@ var getDataType = function(o){
     }
 };
 ```
+
 ---
 
 **ES5 的继承和 ES6 的继承有什么区别 ？**
@@ -2817,6 +3098,15 @@ ES5 的继承时通过 prototype 或构造函数机制来实现。
 具体的：ES6 通过 class 关键字定义类，里面有构造方法，类之间通过 extends 关键字实现继承。子类必须在 constructor 方法中调用 super 方法，否则新建实例报错。因为子类没有自己的 this 对象，而是继承了父类的 this 对象，然后对其进行加工。如果不调用 super 方法，子类得不到 this 对象。
 
 ps：super 关键字指代父类的实例，即父类的 this 对象。在子类构造函数中，调用 super 后，才可使用 this 关键字，否则报错。
+
+---
+
+**JS 中数据类型的判断 typeof，instanceof，constructor，Object.prototype.toString.call() 的区别**
+
+参考文章：
+
+1. [JS 中数据类型的判断](https://blog.csdn.net/zjy_android_blog/article/details/81023177)
+2. [JS类型判断---typeof, constructor, instanceof, toString](https://juejin.im/post/5d99b56f518825222b5b6737)
 
 ---
 
@@ -2867,6 +3157,11 @@ let b = [...str].reverse().join(""); // drow olleh
 - [你不知道的浏览器页面渲染机制](https://juejin.im/post/5ca0c0abe51d4553a942c17d)
 - [JavaScript设计模式](https://juejin.im/post/59df4f74f265da430f311909)
 - [深入 javascript——构造函数和原型对象](https://segmentfault.com/a/1190000000602050)
+- [高级函数技巧-函数柯里化](https://segmentfault.com/a/1190000018265172)
+- [JavaScript之bind及bind的模拟实现](https://blog.csdn.net/c__dreamer/article/details/79673725)
+- [Http Cookie 机制及 Cookie 的实现原理](https://blog.csdn.net/aa5305123/article/details/83247041)
+- [一个dom,点击事件触发两个事件是同步还是异步](https://blog.csdn.net/u012129607/article/details/78117483)
+- [16种JavaScript设计模式（中）](https://juejin.im/post/5c038df96fb9a04a0378f600)
 
 ---
 
@@ -3029,6 +3324,9 @@ document.addEventListener('scroll', better_scroll)
 #### ES6+ 面试知识文章
 
 - [那些必会用到的 ES6 精粹](https://github.com/biaochenxuying/blog/issues/1)
+- [promise、Generator 函数、async 函数的区别与理解](https://blog.csdn.net/deng1456694385/article/details/83831931)
+
+
 
 ## 6. webpack
 
@@ -3298,8 +3596,9 @@ Vuex
 - [1. Vue 生命周期](https://www.jianshu.com/p/304a44f7c11b)
 - [2. 详解 Vue 生命周期](https://segmentfault.com/a/1190000011381906)
 - [3. Vue 组件间通信六种方式（完整版）](https://juejin.im/post/5cde0b43f265da03867e78d3)
-- [4. Vue 学习笔记-实现一个分页组件](https://www.jianshu.com/p/d17d8e35deda)
-
+- [4. Vue 组件之间 8 种组件通信方式总结](https://blog.csdn.net/zhoulu001/article/details/79548350)
+- [5. Vue 学习笔记-实现一个分页组件](https://www.jianshu.com/p/d17d8e35deda)
+- [6. 30 道 Vue 面试题，内含详细讲解（涵盖入门到精通，自测 Vue 掌握程度）](https://www.jianshu.com/p/b1564296a78b)
 
 ## 8. React
 
@@ -3513,6 +3812,11 @@ HTTP 协议
 - 它安全性更高，客户端支持防御 XSRF
 
 ---
+
+
+相关文章：
+
+[TCP协议和UDP协议的特点和区别](https://blog.csdn.net/lzj2504476514/article/details/81454754)
 
 
 ## 11. 数据结构与算法
