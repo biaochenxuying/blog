@@ -3332,7 +3332,7 @@ document.addEventListener('scroll', better_scroll)
 
 - [那些必会用到的 ES6 精粹](https://github.com/biaochenxuying/blog/issues/1)
 - [promise、Generator 函数、async 函数的区别与理解](https://blog.csdn.net/deng1456694385/article/details/83831931)
-
+- [Typescript 中的 interface 和 type 到底有什么区别](https://blog.csdn.net/weixin_33724659/article/details/88040828)
 
 
 ## 6. webpack
@@ -4273,9 +4273,6 @@ function findMaxDuplicateChar(str) {
 
 技术博客首发地址  [GitHub](https://github.com/biaochenxuying/blog)。
 
-觉得有用 ？那就收藏，点个赞，顺便关注我的公众号吧 ！
-
-![全栈修炼](https://upload-images.jianshu.io/upload_images/12890819-63562882740bae76.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 

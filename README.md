@@ -162,8 +162,8 @@
 
 ## 社区
 
-- [**GitHub**](https://github.com/biaochenxuying/blog )
-- [**掘金**](https://juejin.im/user/591d6b4d0ce463006926ae40 )
+- [**GitHub**](https://github.com/biaochenxuying/blog)
+- [**掘金**](https://juejin.im/user/591d6b4d0ce463006926ae40)
 <!-- - [**知乎**](https://www.zhihu.com/people/gu-jian-qi-tan-shui/activities)
 - [**SegmentFault**](https://segmentfault.com/u/biaochenxuying )
 - [**简书**](https://www.jianshu.com/u/91717b553bfd) -->
@@ -178,9 +178,7 @@
 
 邮箱：**2993806084#qq.com** ，将 **#** 号换成 **@** 即可。
 
-有什么问题，可以在我的公众号后台给我留言。
-
-直接发邮件到我邮箱也可以，有必要的，我都会给您回复邮件的。
+有什么问题，直接发邮件到我邮箱就可以，有必要的，我都会给您回复邮件的。
 
 
 ## BB
@@ -194,13 +192,13 @@
 
 ![](https://upload-images.jianshu.io/upload_images/12890819-ffab7bd24d08c00d.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-
+<!-- 
 #### 技术以内
 
 这里是笔者平时 BB 技术的地方。
 
 
-![全栈修炼](https://upload-images.jianshu.io/upload_images/12890819-9399d149e09f638e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![全栈修炼](https://upload-images.jianshu.io/upload_images/12890819-9399d149e09f638e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) -->
 
 
 
