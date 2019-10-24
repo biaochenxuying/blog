@@ -3168,6 +3168,13 @@ let b = [...str].reverse().join(""); // drow olleh
 
 ## 5. ES6 +
 
+**ES6 函数默认参数和 es5 的实现有什么区别 ？es6 中又有什么需要注意的 ？**
+
+[ES6函数默认参数](https://www.jianshu.com/p/e4ea0d43529c)
+
+---
+
+
 **ES6 声明变量的六种方法**
 
 - ES5 只有两种声明变量的方法：var 和 function 。
