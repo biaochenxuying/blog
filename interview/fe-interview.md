@@ -3145,6 +3145,7 @@ let b = [...str].reverse().join(""); // drow olleh
 
 #### js 经典面试知识文章
 
+- [js 异步执行顺序](https://www.cnblogs.com/xiaozhumaopao/p/11066005.html)
 - [JS 是单线程，你了解其运行机制吗 ？](https://github.com/biaochenxuying/blog/issues/8)
 - [7 分钟理解 JS 的节流、防抖及使用场景](https://juejin.im/post/5b8de829f265da43623c4261)
 - [JavaScript 常见的六种继承方式](https://juejin.im/post/5bb091a7e51d450e8477d9ba)
@@ -3333,7 +3334,11 @@ document.addEventListener('scroll', better_scroll)
 - [那些必会用到的 ES6 精粹](https://github.com/biaochenxuying/blog/issues/1)
 - [promise、Generator 函数、async 函数的区别与理解](https://blog.csdn.net/deng1456694385/article/details/83831931)
 - [Typescript 中的 interface 和 type 到底有什么区别](https://blog.csdn.net/weixin_33724659/article/details/88040828)
+- [进大厂必会 20 道 JS 原理题](https://github.com/Geek-James/Blog/issues/27)
+- [AST 抽象语法树——最基础的 javascript 重点知识，99% 的人根本不了解](https://segmentfault.com/a/1190000016231512)
 
+
+---
 
 ## 6. webpack
 
@@ -3375,6 +3380,11 @@ webpack 从构建到输出文件结果的过程
 - 在递归每个文件的过程中，根据文件类型和配置文件中 loader 找出相对应的 loader 对文件进行转换
 - 递归结束之后得到每个文件最终的结果，根据 entry 配置生成代码 chunk
 - 输出所有 chunk 到文件系统
+
+---
+
+- [webpack 系列--浅析 webpack 的原理](https://www.cnblogs.com/chengxs/p/11022842.html)
+- [一看就懂之 webpack 原理解析与实现一个简单的 webpack](https://segmentfault.com/a/1190000020353337)
 
 ---
 
@@ -3507,6 +3517,10 @@ patch(root, patches)
 
 ---
 
+- [深度剖析：如何实现一个 Virtual DOM 算法](https://segmentfault.com/a/1190000004029168)
+- [virtual-dom(Vue实现)简析](https://segmentfault.com/a/1190000010090659)
+___
+
 **非父子组件如何通信 ？**
 
 Vue 官网介绍了非父子组件通信方法：
@@ -3606,6 +3620,7 @@ Vuex
 - [4. Vue 组件之间 8 种组件通信方式总结](https://blog.csdn.net/zhoulu001/article/details/79548350)
 - [5. Vue 学习笔记-实现一个分页组件](https://www.jianshu.com/p/d17d8e35deda)
 - [6. 30 道 Vue 面试题，内含详细讲解（涵盖入门到精通，自测 Vue 掌握程度）](https://www.jianshu.com/p/b1564296a78b)
+- [7. Vue 生命周期和详细的执行过程](https://blog.csdn.net/qq_38021852/article/details/88640807)
 
 ## 8. React
 
@@ -3823,7 +3838,10 @@ HTTP 协议
 
 相关文章：
 
-[TCP协议和UDP协议的特点和区别](https://blog.csdn.net/lzj2504476514/article/details/81454754)
+- [TCP 协议和 UDP 协议的特点和区别](https://blog.csdn.net/lzj2504476514/article/details/81454754)
+- [(纯干货)HTTP／1.0／1.1／2.0的区别以及http和https的区别](https://www.cnblogs.com/NightTiger/p/11334314.html)
+- [http & https & http2.0](https://www.cnblogs.com/colima/p/7295771.html)
+
 
 
 ## 11. 数据结构与算法
@@ -4248,6 +4266,10 @@ function findMaxDuplicateChar(str) {
 - 把硬币分为 A B C 三组，满足如下条件：C > A = B，先比较 A 和 B。如果 A 和 B 一样重，则敏感词在 C 中。
 - 从 A+B 中选取和 C 同样数量的真币和 C 比较。
 - 如果 A 和 B 重量不等，说明 C 中全为真币，从 C 中选取和 A 一样数量的真币与 A 比较，再结合之前 A B 比较的结果，即可得知敏感词究竟比真币重还是轻。
+
+---
+
+- [查找两个不同元素最近的父节点](https://blog.csdn.net/hhthwx/article/details/79784205)
 
 ---
 
