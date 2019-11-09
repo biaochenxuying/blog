@@ -32,6 +32,7 @@
 #### | 软技能
 
 - [1. GitHub 上能挖矿的神仙技巧 - 如何发现优秀开源项目](https://github.com/biaochenxuying/blog/issues/45)
+- [2. GitHub 吸星大法 - 一年收获 2000+ Star 的心得](https://github.com/biaochenxuying/blog/issues/49)
 
 #### | 前端工程师的成长之路
 
