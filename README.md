@@ -164,9 +164,7 @@
 
 - [**GitHub**](https://github.com/biaochenxuying/blog)
 - [**掘金**](https://juejin.im/user/591d6b4d0ce463006926ae40)
-<!-- - [**知乎**](https://www.zhihu.com/people/gu-jian-qi-tan-shui/activities)
-- [**SegmentFault**](https://segmentfault.com/u/biaochenxuying )
-- [**简书**](https://www.jianshu.com/u/91717b553bfd) -->
+  
   
 
 ## 撩我
