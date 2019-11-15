@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>时间和空间复杂度 · 夜尽天明的博客</title>
+        <title>如何实现浏览器的前进与后退 · 夜尽天明的博客</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -74,8 +74,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="js-route.html" />
+    <link rel="next" href="js-algorithms.html" />
     
+    
+    <link rel="prev" href="js-time-space.html" />
     
 
     <style>
@@ -206,7 +208,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.4.1" data-path="js-time-space.html">
+        <li class="chapter " data-level="1.4.1" data-path="js-time-space.html">
             
                 <a href="js-time-space.html">
             
@@ -219,7 +221,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="js-route.html">
+        <li class="chapter active" data-level="1.4.2" data-path="js-route.html">
             
                 <a href="js-route.html">
             
@@ -280,7 +282,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >时间和空间复杂度</a>
+        <a href="." >如何实现浏览器的前进与后退</a>
     </h1>
 </div>
 
@@ -615,7 +617,7 @@ function find(array, n, x) {
 <a href="https://www.jianshu.com/p/f4cca5ce055a" target="_blank">(&#x6570;&#x636E;&#x7ED3;&#x6784;)&#x5341;&#x5206;&#x949F;&#x641E;&#x5B9A;&#x7B97;&#x6CD5;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</a></p>
 <p><img src="https://upload-images.jianshu.io/upload_images/12890819-126d4fc9993d21ce.gif?imageMogr2/auto-orient/strip" alt="&#x7B14;&#x82AF;"></p>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; biaochenxuying.cn 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2019-11-15 22:44:38
+2019-11-15 22:44:45
 </span></footer>
                                 
                                 </section>
@@ -643,8 +645,12 @@ function find(array, n, x) {
 
             
                 
+                <a href="js-time-space.html" class="navigation navigation-prev " aria-label="Previous page: 时间和空间复杂度">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="js-route.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 如何实现浏览器的前进与后退">
+                
+                <a href="js-algorithms.html" class="navigation navigation-next " aria-label="Next page: 十大经典排序算法">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -655,7 +661,7 @@ function find(array, n, x) {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"时间和空间复杂度","level":"1.4.1","depth":2,"next":{"title":"如何实现浏览器的前进与后退","level":"1.4.2","depth":2,"path":"js-route.md","ref":"js-route.md","articles":[]},"previous":{"title":"JavaScript 数据结构与算法之美","level":"1.4","depth":1,"ref":"","articles":[{"title":"时间和空间复杂度","level":"1.4.1","depth":2,"path":"js-time-space.md","ref":"js-time-space.md","articles":[]},{"title":"如何实现浏览器的前进与后退","level":"1.4.2","depth":2,"path":"js-route.md","ref":"js-route.md","articles":[]},{"title":"十大经典排序算法","level":"1.4.3","depth":2,"path":"js-algorithms.md","ref":"js-algorithms.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-highlight","copy-code-button","search-pro","-search","-lunr","expandable-chapters","splitter","-sharing","github-buttons","donate","tbfed-pagefooter","baidu-tongji","anchor-navigation-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy biaochenxuying.cn 2019","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"baidu-tongji":{"url":"https://hm.baidu.com/hm.js","token":"55e7dfe47f4dc1c018d4042fdfa62565"},"splitter":{},"search-pro":{},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"打赏","title":"","wechat":"https://camo.githubusercontent.com/ee094d402f957e5d656a399b9dc50ff8c010114e/68747470733a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f31323839303831392d666661623762643234643038633030642e6a7065673f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970253743696d61676556696577322f322f772f31323430","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"github-buttons":{"buttons":[{"user":"biaochenxuying","repo":"blog","type":"star","count":true,"size":"small"},{"user":"biaochenxuying","width":"160","type":"follow","count":true,"size":"small"}]},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"biaochenxuying","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"夜尽天明的博客","language":"zh-hans","gitbook":"*","description":"大前端技术为主，读书笔记、随笔、理财为辅，做个终身学习者。"},"file":{"path":"js-time-space.md","mtime":"2019-11-15T14:44:38.125Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-15T15:18:08.866Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"如何实现浏览器的前进与后退","level":"1.4.2","depth":2,"next":{"title":"十大经典排序算法","level":"1.4.3","depth":2,"path":"js-algorithms.md","ref":"js-algorithms.md","articles":[]},"previous":{"title":"时间和空间复杂度","level":"1.4.1","depth":2,"path":"js-time-space.md","ref":"js-time-space.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","copy-code-button","search-pro","-search","-lunr","expandable-chapters","splitter","-sharing","github-buttons","donate","tbfed-pagefooter","baidu-tongji","anchor-navigation-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy biaochenxuying.cn 2019","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"baidu-tongji":{"url":"https://hm.baidu.com/hm.js","token":"55e7dfe47f4dc1c018d4042fdfa62565"},"splitter":{},"search-pro":{},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"打赏","title":"","wechat":"https://camo.githubusercontent.com/ee094d402f957e5d656a399b9dc50ff8c010114e/68747470733a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f31323839303831392d666661623762643234643038633030642e6a7065673f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970253743696d61676556696577322f322f772f31323430","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"github-buttons":{"buttons":[{"user":"biaochenxuying","repo":"blog","type":"star","count":true,"size":"small"},{"user":"biaochenxuying","width":"160","type":"follow","count":true,"size":"small"}]},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"biaochenxuying","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"夜尽天明的博客","language":"zh-hans","gitbook":"*","description":"大前端技术为主，读书笔记、随笔、理财为辅，做个终身学习者。"},"file":{"path":"js-route.md","mtime":"2019-11-15T14:44:45.505Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-15T14:48:17.279Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
