@@ -14,5 +14,5 @@ features:
   details: 读万卷书，行万里路，遇见最好的自己。
 - title: 理财
   details: 人人都应该懂点理财知识，越早懂得越好。
-footer: MIT Licensed | Copyright © 2018-present Evan You
+footer: MIT Licensed | Copyright © 2018-present biaochenxuying
 ---
