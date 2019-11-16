@@ -2,4 +2,6 @@
 
 # dependencies
 /node_modules
+/vuepress/node_modules
+
 
