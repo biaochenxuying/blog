@@ -6,7 +6,8 @@
 
 ## 简介
 
-![](/assets/yuejintianming.png)
+<!-- ![](~@public/assets/yejintianming.png) -->
+![](../.vuepress/public/assets/yejintianming.png)
 
 
 **技术为主，读书笔记、随笔、理财为辅，做个终身学习者，收获不止技术，还有财富**。

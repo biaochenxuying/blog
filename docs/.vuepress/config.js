@@ -1,6 +1,6 @@
 module.exports = {
-    title: 'Hello VuePress',
-    description: 'Just playing around',
+    title: '夜尽天明',
+    description: '夜尽天明的博客',
     base: '/blog/',
     head: [
         [
@@ -14,7 +14,8 @@ module.exports = {
     configureWebpack: {
         resolve: {
             alias: {
-                '@alias': '/'
+                '@alias': '/',
+                '@public': '/public',
             }
         }
     },
