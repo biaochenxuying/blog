@@ -187,7 +187,6 @@ GitHub 可以说是你的技术名片，你在 GitHub 的贡献可以作为简�
 
 [GitHub 上能挖矿的神仙技巧 - 如何发现优秀开源项目](https://github.com/biaochenxuying/blog/issues/45)，估计很多人都不知道的技巧，甚至很多高级工程师都不知道。
 
-[你说你爱学习，且连一台属于自己的服务器都没有](https://mp.weixin.qq.com/s/Qar9mnocUTu7NYQ2FA-2pA)：全栈君觉得每个开发者都应该拥有自己的网站和服务器，这可是很酷的事情，学习 Linux、跑跑脚本、建站、搭博客啥的都行，现在阿里云的服务器只需要 86元 一年，优惠只剩下最后一天了。
 
 ![](https://upload-images.jianshu.io/upload_images/12890819-9ca557f2b5950174.gif?imageMogr2/auto-orient/strip)
 
