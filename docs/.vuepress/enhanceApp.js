@@ -7,18 +7,22 @@ export default ({
     siteData // 站点元数据
 }) => {
     try {
-        setTimeout(() => {
-            try {
-                document && (() => {
-                    integrateGitalk(router)
-                    copy()
-                    baiduTongJi(router, () => { document.getElementById('referrer').setAttribute("content", "never"); })
-                    // document.getElementById('referrer').setAttribute("content", "never");
-                })()
-            } catch (e) {
-                console.error(e.message)
-            }
-        }, 500)
+        // integrateGitalk(router)
+        // copy()
+        // baiduTongJi(router, () => { document.getElementById('referrer').setAttribute("content", "never"); })
+        // document.getElementById('referrer').setAttribute("content", "never");
+        // setTimeout(() => {
+        //     try {
+        //         document && (() => {
+        //             integrateGitalk(router)
+        //             copy()
+        //             baiduTongJi(router, () => { document.getElementById('referrer').setAttribute("content", "never"); })
+        //             document.getElementById('referrer').setAttribute("content", "never");
+        //         })()
+        //     } catch (e) {
+        //         console.error(e.message)
+        //     }
+        // }, 500)
     } catch (e) {
         console.error(e.message)
     }
