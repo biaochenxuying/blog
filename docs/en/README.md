@@ -1,9 +1,9 @@
 ---
 home: true
 heroImage: /assets/logo.jpg
-heroText: 全栈修炼
-tagline: 夜尽天明的博客
-actionText: 开始围观 →
+heroText: Full stack exercise
+tagline: Full stack exercise
+actionText: get start →
 actionLink: /zh/guide/
 sidebarDepth: 2
 features:
