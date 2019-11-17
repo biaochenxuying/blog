@@ -2,6 +2,15 @@ module.exports = {
     title: 'Hello VuePress',
     description: 'Just playing around',
     base: '/blog/',
+    head: [
+        [
+            'link',
+            {
+                rel: 'icon',
+                href: '/favicon.ico'
+            }
+        ]
+    ],
     configureWebpack: {
         resolve: {
             alias: {
@@ -57,15 +66,15 @@ module.exports = {
                     title: 'GitHub',
                     collapsable: false,
                     children: [
-                        '/views/github/follow.md',    
-                        '/views/github/star.md',    
+                        '/views/github/follow.md',
+                        '/views/github/star.md',
                     ],
                 },
                 {
                     title: '算法',
                     collapsable: false,
                     children: [
-                        '/views/algorithms/10algo.md',    
+                        '/views/algorithms/10algo.md',
                     ],
                 },
                 // 'page-a',     /* /views/page-a/ */
@@ -97,5 +106,5 @@ module.exports = {
         },
         '@vuepress/medium-zoom',
         '@vuepress/nprogress'
-        ]
+    ]
 }
