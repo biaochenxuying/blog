@@ -1,14 +1,16 @@
 {
-  "name": "vuepress",
+  "name": "blog",
   "version": "1.0.0",
-  "description": "",
+  "description": "blog",
   "main": "index.js",
   "scripts": {
     "dev": "vuepress dev docs",
+    "docs:dev": "vuepress dev docs",
     "build": "vuepress build docs",
+    "docs:build": "vuepress build docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "biaochenxuying",
   "license": "ISC",
   "devDependencies": {
     "@vuepress/plugin-active-header-links": "^1.2.0",
