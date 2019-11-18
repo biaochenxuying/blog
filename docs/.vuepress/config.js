@@ -15,7 +15,7 @@ module.exports = {
         resolve: {
             alias: {
                 '@alias': '/',
-                '@public': '/public',
+                // '@public': '/public',
             }
         }
     },
@@ -40,12 +40,13 @@ module.exports = {
                 text: 'Views', link: '/views/'
             },
             {
-                text: 'pages',
+                text: 'Vue',
                 items: [
-                    { text: 'page-a', link: '/views/page-a/' },
-                    { text: 'page-b', link: '/views/page-b/' }
+                    // { text: 'page-a', link: '/views/page-a/' },
+                    { text: 'vue', link: '/views/vue/vue/' },
+                    { text: 'vue-2', link: '/views/vue/vue-2/' }
                 ]
-            }
+            },
         ],
         sidebar: {
             '/guide/': [
@@ -58,6 +59,19 @@ module.exports = {
                     children: [
                         '/guide/page-a.md',     /* /views/page-a/ */
                         '/guide/page-b.md',     /* /views/page-b/ */
+                    ],
+                },
+            ],
+            '/vue/': [
+                '',     /* /guide/ */
+                // 'page-a',     /* /views/page-a/ */
+                // 'page-b',     /* /views/page-b/ */
+                {
+                    title: 'vue 页面',
+                    collapsable: false,
+                    children: [
+                        '/views/vue/vue.md',     /* /views/page-a/ */
+                        '/views/vue/vue-2.md',     /* /views/page-b/ */
                     ],
                 },
             ],
