@@ -14,8 +14,9 @@ module.exports = {
     configureWebpack: {
         resolve: {
             alias: {
-                '@alias': '/',
-                // '@public': '/public',
+                '@': '../.vuepress',
+                '@assets': './public/assets',
+                '@public': './public',
             }
         }
     },

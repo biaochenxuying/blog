@@ -2,6 +2,6 @@
 
 ## page-a 说明
 
-![](../.vuepress/public/assets/logo.jpg)
+![logo](../.vuepress/public/assets/logo.jpg)
 
-<!-- ![](~@alias/assets/logo.jpg) -->
+<!-- ![logo](~@assets/logo.jpg) -->

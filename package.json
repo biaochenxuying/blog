@@ -8,6 +8,7 @@
     "docs:dev": "vuepress dev docs",
     "build": "vuepress build docs",
     "docs:build": "vuepress build docs",
+    "delay": "bash delay.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "biaochenxuying",

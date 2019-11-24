@@ -2,3 +2,5 @@
 
 
 ## page-b 说明
+
+<!-- ![](~@assets/logo.jpg) -->

@@ -6,19 +6,19 @@ export default ({
     router, // 当前应用的路由实例
     siteData // 站点元数据
 }) => {
-    // console.log("Vue", Vue);
     Vue.mixin({
         mounted: function () {
+            if (!window.init) {
+                integrateGitalk(router)
+                copy()
+            }
             setTimeout(() => {
-                try {
-                    document && (() => {
-                        integrateGitalk(router)
-                        copy()
-                        baiduTongJi(router, () => { document.getElementById('referrer').setAttribute("content", "never"); })
-                        // document.getElementById('referrer').setAttribute("content", "never");
-                    })()
-                } catch (e) {
-                    console.error(e.message)
+                if (!window.init) {
+                    // integrateGitalk(router)
+                    // copy()
+                    // baiduTongJi(router, () => { document.getElementById('referrer').setAttribute("content", "never"); })
+                    document.getElementById('referrer').setAttribute("content", "never");
+                    window.init = 1;
                 }
             }, 500)
         }
