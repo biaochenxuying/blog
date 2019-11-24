@@ -63,9 +63,9 @@
 
 #### | 前端硬核面试专题
 
-<!-- - [1. fe-interview：HTML + CSS + JS + ES6 + Webpack + Vue + React + Node + HTTPS + 数据结构与算法 + Git](https://github.com/biaochenxuying/blog/blob/master/interview/fe-interview.md)
-- [2. 重磅：硬核前端面试开源项目汇总（进大厂必备）](https://github.com/biaochenxuying/blog/issues/47) -->
-- [1. 2019 前端秋季社招面试经历总结（二年多经验）](https://github.com/biaochenxuying/blog/issues/48)
+- [1. fe-interview：HTML + CSS + JS + ES6 + Webpack + Vue + React + Node + HTTPS + 数据结构与算法 + Git](https://github.com/biaochenxuying/blog/blob/master/interview/fe-interview.md)
+- [2. 重磅：硬核前端面试开源项目汇总（进大厂必备）](https://github.com/biaochenxuying/blog/issues/47)
+- [3. 2019 前端秋季社招面试经历总结（二年多经验）](https://github.com/biaochenxuying/blog/issues/48)
 
 
 #### | Vue.js
@@ -193,13 +193,13 @@
 
 ![](https://upload-images.jianshu.io/upload_images/12890819-ffab7bd24d08c00d.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-<!-- 
+
 #### 技术以内
 
 这里是笔者平时 BB 技术的地方。
 
 
-![全栈修炼](https://upload-images.jianshu.io/upload_images/12890819-9399d149e09f638e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) -->
+![全栈修炼](https://upload-images.jianshu.io/upload_images/12890819-9399d149e09f638e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 
