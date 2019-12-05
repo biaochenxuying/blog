@@ -2,7 +2,6 @@
 ![夜尽天明](https://upload-images.jianshu.io/upload_images/12890819-6e2289f29c0d3b39.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
-
 ## 简介
 
 > 芳华正茂始少年，时光正好，未来可期 ！
@@ -151,10 +150,10 @@
 - 精彩待续 ... 
   
   
-#### | Flutter 入门到熟练
+<!-- #### | Flutter 入门到熟练
 
 - 精彩待续 ... 
-  
+   -->
   
 #### | 翻译国外文章
 
@@ -202,12 +201,11 @@
 ![全栈修炼](https://upload-images.jianshu.io/upload_images/12890819-9399d149e09f638e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
-
-<!-- #### 技术以外
+#### 技术以外
 
 技术以外的 BB。
 
 闲暇之余，技术以外的世界同样精彩。
 
-![硬核杂货铺](https://upload-images.jianshu.io/upload_images/12890819-7ed698c2818cdc3c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) -->
+![硬核杂货铺](https://upload-images.jianshu.io/upload_images/12890819-7ed698c2818cdc3c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
