@@ -207,5 +207,5 @@
 
 闲暇之余，技术以外的世界同样精彩。
 
-![硬核杂货铺](https://upload-images.jianshu.io/upload_images/12890819-7ed698c2818cdc3c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![硬核杂货铺](https://upload-images.jianshu.io/upload_images/12890819-a1e96383a05d5e4b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
