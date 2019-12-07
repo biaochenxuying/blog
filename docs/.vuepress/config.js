@@ -112,7 +112,7 @@ module.exports = {
         '@vuepress/active-header-links',
         '@vuepress/google-analytics',
         {
-            'ga': '' // UA-00000000-0
+            'ga': 'UA-154155909-1' // UA-00000000-0
         },
         '@vuepress/medium-zoom',
         '@vuepress/nprogress'

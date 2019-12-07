@@ -1505,7 +1505,3 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 2. [TypeScript + 大型项目实战](https://www.imooc.com/article/47096)
 
 3. [Vue全家桶+TypeScript使用总结](https://www.jianshu.com/p/6c064270691f)
-
- 
- <comment/> 
- 
