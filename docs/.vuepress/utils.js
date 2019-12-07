@@ -1,5 +1,3 @@
-
-
 export function copy() {
     function addCopy(e) {
         let copyTxt = ""
@@ -61,7 +59,7 @@ export function integrateGitalk(router) {
     });
 
     function loadGitalk(to) {
-        // console.log('to :', to)
+        console.log('to :', to)
         let commentsContainer = document.getElementById('gitalk-container');
         if (!commentsContainer) {
             commentsContainer = document.createElement('div');

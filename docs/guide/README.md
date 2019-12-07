@@ -4,19 +4,34 @@
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/biaochenxuying/blog/blob/master/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/biaochenxuying/blog.svg?style=social&label=Stars)](https://github.com/biaochenxuying/blog)
 
+![夜尽天明](https://upload-images.jianshu.io/upload_images/12890819-6e2289f29c0d3b39.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
 ## 简介
 
-<!-- ![](~@public/assets/yejintianming.png) -->
-![](../.vuepress/public/assets/yejintianming.png)
+地址：[https://biaochenxuying.github.io/blog](https://biaochenxuying.github.io/blog)
+
+> 芳华正茂始少年，时光正好，未来可期 ！
+
+技术为主，读书笔记、随笔、理财为辅，做个终身学习者。
+
+收获不止技术，还有财富。
 
 
-**技术为主，读书笔记、随笔、理财为辅，做个终身学习者，收获不止技术，还有财富**。
+## 分类
 
-## 目录
-
-[[toc]]
-
-
+- [JavaScript 数据结构与算法之美](https://github.com/biaochenxuying/blog/projects/10)
+- [JavaScript](https://github.com/biaochenxuying/blog/projects/4)
+- [Vue.js](https://github.com/biaochenxuying/blog/projects/3)
+- [ES 6](https://github.com/biaochenxuying/blog/projects/2)
+- [React.js](https://github.com/biaochenxuying/blog/projects/5)
+- [Node.js](https://github.com/biaochenxuying/blog/projects/7)
+- [MongoDB](https://github.com/biaochenxuying/blog/projects/5)
+- [软技能](https://github.com/biaochenxuying/blog/projects/11)
+- [硬核面试专题](https://github.com/biaochenxuying/blog/projects/12)
+- [前端工程师成长之路](https://github.com/biaochenxuying/blog/projects/14)
+- [半小时硬核理财入门](https://github.com/biaochenxuying/blog/projects/9)
+- [随笔](https://github.com/biaochenxuying/blog/projects/5)
 
 ## 文章
 
@@ -54,9 +69,9 @@
 
 #### | 前端硬核面试专题
 
-<!-- - [1. fe-interview：HTML + CSS + JS + ES6 + Webpack + Vue + React + Node + HTTPS + 数据结构与算法 + Git](https://github.com/biaochenxuying/blog/blob/master/interview/fe-interview.md)
-- [2. 重磅：硬核前端面试开源项目汇总（进大厂必备）](https://github.com/biaochenxuying/blog/issues/47) -->
-- [1. 2019 前端秋季社招面试经历总结（二年多经验）](https://github.com/biaochenxuying/blog/issues/48)
+- [1. fe-interview：HTML + CSS + JS + ES6 + Webpack + Vue + React + Node + HTTPS + 数据结构与算法 + Git](https://github.com/biaochenxuying/blog/blob/master/interview/fe-interview.md)
+- [2. 重磅：硬核前端面试开源项目汇总（进大厂必备）](https://github.com/biaochenxuying/blog/issues/47)
+- [3. 2019 前端秋季社招面试经历总结（二年多经验）](https://github.com/biaochenxuying/blog/issues/48)
 
 
 #### | Vue.js
@@ -141,10 +156,10 @@
 
 - 精彩待续 ... 
   
-  
+<!--   
 #### | Flutter 入门到熟练
 
-- 精彩待续 ... 
+- 精彩待续 ...  -->
   
   
 #### | 翻译国外文章
@@ -156,7 +171,6 @@
 
 - [**GitHub**](https://github.com/biaochenxuying/blog)
 - [**掘金**](https://juejin.im/user/591d6b4d0ce463006926ae40)
-  
   
 
 ## 撩我
@@ -170,33 +184,34 @@
 
 有什么问题，直接发邮件到我邮箱就可以，有必要的，我都会给您回复邮件的。
 
+<div align="center">
 
-## BB
+![](https://upload-images.jianshu.io/upload_images/12890819-0c42f7a1976fee04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/245)
+![](https://upload-images.jianshu.io/upload_images/12890819-ffab7bd24d08c00d.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/250)
+
+</div>
+
+> **江山父老能容我，不使人间造孽钱**。
 
 > 文章版权为夜尽天明所有，未经允许，不得转载；如要转载文章，请联系笔者。
 
 如果你觉得该项目不错，或者对你有所帮助，点个 Star 、或者真心赞赏一下 都是对我最大的鼓励，我会更有动力维护好该项目。
 
+## BB
 
-> **江山父老能容我，不使人间造孽钱**。
 
-![](https://upload-images.jianshu.io/upload_images/12890819-ffab7bd24d08c00d.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-<!-- 
 #### 技术以内
 
-这里是笔者平时 BB 技术的地方。
+这里是笔者平时 BB 大前端技术的地方。
+
+![全栈修炼](https://upload-images.jianshu.io/upload_images/12890819-9399d149e09f638e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000)
 
 
-![全栈修炼](https://upload-images.jianshu.io/upload_images/12890819-9399d149e09f638e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) -->
-
-
-
-<!-- #### 技术以外
+#### 技术以外
 
 技术以外的 BB。
 
 闲暇之余，技术以外的世界同样精彩。
 
-![硬核杂货铺](https://upload-images.jianshu.io/upload_images/12890819-7ed698c2818cdc3c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) -->
+![硬核杂货铺](https://upload-images.jianshu.io/upload_images/12890819-7ed698c2818cdc3c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000)
 

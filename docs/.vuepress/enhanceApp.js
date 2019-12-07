@@ -9,18 +9,16 @@ export default ({
     Vue.mixin({
         mounted: function () {
             if (!window.init) {
-                integrateGitalk(router)
                 copy()
+                window.init = 1;
             }
-            setTimeout(() => {
-                if (!window.init) {
-                    // integrateGitalk(router)
-                    // copy()
-                    // baiduTongJi(router, () => { document.getElementById('referrer').setAttribute("content", "never"); })
-                    document.getElementById('referrer').setAttribute("content", "never");
-                    window.init = 1;
-                }
-            }, 500)
+            // setTimeout(() => {
+            //     if (!window.init) {
+            //         // baiduTongJi(router, () => { document.getElementById('referrer').setAttribute("content", "never"); })
+            //         document.getElementById('referrer').setAttribute("content", "never");
+            //         window.init = 1;
+            //     }
+            // }, 500)
         }
     });
 

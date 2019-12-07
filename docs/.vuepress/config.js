@@ -7,7 +7,7 @@ module.exports = {
             'link',
             {
                 rel: 'icon',
-                href: '/favicon.ico'
+                href: '/assets/favicon.ico'
             }
         ]
     ],
@@ -36,50 +36,39 @@ module.exports = {
         nav: [
             { text: 'Home', link: '/' },
             { text: 'Guide', link: '/guide/' },
-            //   { text: 'External', link: 'https://google.com' },
             {
                 text: 'Views', link: '/views/'
             },
-            {
-                text: 'Vue',
-                items: [
-                    // { text: 'page-a', link: '/views/page-a/' },
-                    { text: 'vue', link: '/views/vue/vue/' },
-                    { text: 'vue-2', link: '/views/vue/vue-2/' }
-                ]
-            },
+            // {
+            //     text: 'Vue',
+            //     items: [
+            //         // { text: 'page-a', link: '/views/page-a/' },
+            //         { text: 'vue', link: '/views/vue/vue/' },
+            //         { text: 'vue-2', link: '/views/vue/vue-2/' }
+            //     ]
+            // },
         ],
         sidebar: {
             '/guide/': [
                 '',     /* /guide/ */
-                // 'page-a',     /* /views/page-a/ */
-                // 'page-b',     /* /views/page-b/ */
-                {
-                    title: '指南',
-                    collapsable: false,
-                    children: [
-                        '/guide/page-a.md',     /* /views/page-a/ */
-                        '/guide/page-b.md',     /* /views/page-b/ */
-                    ],
-                },
             ],
-            '/vue/': [
-                '',     /* /guide/ */
-                // 'page-a',     /* /views/page-a/ */
-                // 'page-b',     /* /views/page-b/ */
-                {
-                    title: 'vue 页面',
-                    collapsable: false,
-                    children: [
-                        '/views/vue/vue.md',     /* /views/page-a/ */
-                        '/views/vue/vue-2.md',     /* /views/page-b/ */
-                    ],
-                },
-            ],
+            // '/vue/': [
+            //     '',     /* /guide/ */
+            //     // 'page-a',     /* /views/page-a/ */
+            //     // 'page-b',     /* /views/page-b/ */
+            //     {
+            //         title: 'vue 页面',
+            //         collapsable: false,
+            //         children: [
+            //             '/views/vue/vue.md',     /* /views/page-a/ */
+            //             '/views/vue/vue-2.md',     /* /views/page-b/ */
+            //         ],
+            //     },
+            // ],
             '/views/': [
                 '',     /* /views/ */
                 {
-                    title: 'GitHub',
+                    title: 'GitHub 软技能',
                     collapsable: false,
                     children: [
                         '/views/github/follow.md',
@@ -87,14 +76,19 @@ module.exports = {
                     ],
                 },
                 {
-                    title: '算法',
+                    title: 'JS 数据结构与算法之美',
                     collapsable: false,
                     children: [
                         '/views/algorithms/10algo.md',
                     ],
                 },
-                // 'page-a',     /* /views/page-a/ */
-                // 'page-b',     /* /views/page-b/ */
+                {
+                    title: 'Vue.js',
+                    collapsable: false,
+                    children: [
+                        '/views/vue/vue-ts.md',
+                    ],
+                },
             ],
         }
     },

@@ -1300,5 +1300,9 @@ LSD 基数排序动图演示：
 笔者为了写好这系列的文章，花费了大量的业余时间，边学边写，边写边修改，前后历时差不多 2 个月，入门级的文章总算是写完了。
 
 如果你觉得有用或者喜欢，就点收藏，顺便点个赞吧，你的支持是我最大的鼓励 ！
-
-![](https://upload-images.jianshu.io/upload_images/12890819-e82853a16db9db5a.gif?imageMogr2/auto-orient/strip)
+ 
+<comment/> 
+ 
+ 
+ <comment/> 
+ 

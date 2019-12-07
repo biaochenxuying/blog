@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta id="referrer" name="referrer" content="never" />
+    <!-- <meta id="referrer" name="referrer" content="always" /> -->
+    <title>Vue + TypeScript + Element 搭建简洁时尚的博客网站及踩坑记 | 全栈修炼</title>
+    <meta name="description" content="夜尽天明的博客">
+    <link rel="icon" href="/blog/favicon.ico">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.227b0883.css" as="style"><link rel="preload" href="/blog/assets/js/app.c242f6b8.js" as="script"><link rel="preload" href="/blog/assets/js/2.c4b25ab3.js" as="script"><link rel="preload" href="/blog/assets/js/13.12fd43a0.js" as="script"><link rel="preload" href="/blog/assets/js/3.9101969b.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.cff12218.js"><link rel="prefetch" href="/blog/assets/js/11.66cf494f.js"><link rel="prefetch" href="/blog/assets/js/12.81a31ab5.js"><link rel="prefetch" href="/blog/assets/js/14.c7bf5235.js"><link rel="prefetch" href="/blog/assets/js/4.96a8ceba.js"><link rel="prefetch" href="/blog/assets/js/5.aa241708.js"><link rel="prefetch" href="/blog/assets/js/6.fa609a44.js"><link rel="prefetch" href="/blog/assets/js/7.464a44c6.js"><link rel="prefetch" href="/blog/assets/js/8.7617c70f.js"><link rel="prefetch" href="/blog/assets/js/9.aab9e7d3.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.227b0883.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/assets/user-logo.jpeg" alt="全栈修炼" class="logo"> <span class="site-name can-hide">全栈修炼</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">Home</a></div><div class="nav-item"><a href="/blog/guide/" class="nav-link">Guide</a></div><div class="nav-item"><a href="/blog/views/" class="nav-link router-link-active">Views</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/views/vue/vue-ts.html" class="nav-link router-link-exact-active router-link-active">zh-CN</a></li><li class="dropdown-item"><!----> <a href="/blog/en/" class="nav-link">en-US</a></li></ul></div></div> <a href="https://github.com/biaochenxuying/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">Home</a></div><div class="nav-item"><a href="/blog/guide/" class="nav-link">Guide</a></div><div class="nav-item"><a href="/blog/views/" class="nav-link router-link-active">Views</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/views/vue/vue-ts.html" class="nav-link router-link-exact-active router-link-active">zh-CN</a></li><li class="dropdown-item"><!----> <a href="/blog/en/" class="nav-link">en-US</a></li></ul></div></div> <a href="https://github.com/biaochenxuying/blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/blog/views/" class="sidebar-link">大前端知识大集合</a></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>GitHub 软技能</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/views/github/follow.html" class="sidebar-link">GitHub 挖宝技巧</a></li><li><a href="/blog/views/github/star.html" class="sidebar-link">GitHub 吸星大法</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>JS 数据结构与算法之美</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/views/algorithms/10algo.html" class="sidebar-link">十大经典算法</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Vue.js</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/views/vue/vue-ts.html" class="active sidebar-link">Vue + TypeScript + Element 搭建简洁时尚的博客网站及踩坑记</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/views/vue/vue-ts.html#前言" class="sidebar-link">前言</a></li><li class="sidebar-sub-header"><a href="/blog/views/vue/vue-ts.html#_1-效果" class="sidebar-link">1. 效果</a></li><li class="sidebar-sub-header"><a href="/blog/views/vue/vue-ts.html#_2-功能" class="sidebar-link">2. 功能</a></li><li class="sidebar-sub-header"><a href="/blog/views/vue/vue-ts.html#_3-前端主要技术" class="sidebar-link">3. 前端主要技术</a></li><li class="sidebar-sub-header"><a href="/blog/views/vue/vue-ts.html#_4-5-分钟上手-typescript" class="sidebar-link">4. 5 分钟上手 TypeScript</a></li><li class="sidebar-sub-header"><a href="/blog/views/vue/vue-ts.html#_5-5-分钟上手-vue-typescript" class="sidebar-link">5. 5 分钟上手 Vue +TypeScript</a></li><li class="sidebar-sub-header"><a href="/blog/views/vue/vue-ts.html#_6-用-vue-cli-搭建-项目" class="sidebar-link">6. 用 vue-cli 搭建 项目</a></li><li class="sidebar-sub-header"><a href="/blog/views/vue/vue-ts.html#_7-markdown-渲染" class="sidebar-link">7. markdown 渲染</a></li><li class="sidebar-sub-header"><a href="/blog/views/vue/vue-ts.html#_8-注意点" class="sidebar-link">8. 注意点</a></li><li class="sidebar-sub-header"><a href="/blog/views/vue/vue-ts.html#_9-踩坑记" class="sidebar-link">9. 踩坑记</a></li><li class="sidebar-sub-header"><a href="/blog/views/vue/vue-ts.html#_10-build-setup" class="sidebar-link">10. Build Setup</a></li><li class="sidebar-sub-header"><a href="/blog/views/vue/vue-ts.html#_11-项目地址与系列相关文章" class="sidebar-link">11. 项目地址与系列相关文章</a></li><li class="sidebar-sub-header"><a href="/blog/views/vue/vue-ts.html#_12-最后" class="sidebar-link">12. 最后</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vue-typescript-element-搭建简洁时尚的博客网站及踩坑记"><a href="#vue-typescript-element-搭建简洁时尚的博客网站及踩坑记" class="header-anchor">#</a> Vue + TypeScript + Element 搭建简洁时尚的博客网站及踩坑记</h1> <p><img src="https://upload-images.jianshu.io/upload_images/12890819-b96702b6b7cd5c11.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p> <h2 id="前言"><a href="#前言" class="header-anchor">#</a> 前言</h2> <p>本文讲解如何在 Vue 项目中使用 TypeScript 来搭建并开发项目，并在此过程中踩过的坑 。</p> <p>TypeScript 具有类型系统，且是 JavaScript 的超集，TypeScript 在 2018年 势头迅猛，可谓遍地开花。</p> <p>Vue3.0 将使用 TS 重写，重写后的 Vue3.0 将更好的支持 TS。2019 年 TypeScript 将会更加普及，能够熟练掌握 TS，并使用 TS 开发过项目，将更加成为前端开发者的优势。</p> <p>所以笔者就当然也要学这个必备技能，就以 <strong>边学边实践</strong> 的方式，做个博客项目来玩玩。</p> <p>此项目是基于 Vue 全家桶 + TypeScript + Element-UI  的技术栈，且已经开源，github 地址 <a href="https://github.com/biaochenxuying/blog-vue-typescript" target="_blank" rel="noopener noreferrer">blog-vue-typescript<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 。</p> <p>因为之前写了篇纯 Vue 项目搭建的相关文章 <a href="https://biaochenxuying.cn/articleDetail?article_id=5bf0114fbc1e7805eb83db90" target="_blank" rel="noopener noreferrer">基于vue+mint-ui的mobile-h5的项目说明<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> ，有不少人加我微信，要源码来学习，但是这个是我司的项目，不能提供原码。</p> <p>所以做一个不是我司的项目，且又是 vue 相关的项目来练手并开源吧。</p> <h2 id="_1-效果"><a href="#_1-效果" class="header-anchor">#</a> 1. 效果</h2> <p>效果图：</p> <ul><li>pc 端</li></ul> <p><img src="https://upload-images.jianshu.io/upload_images/12890819-9f5f1b384a27c6ff.gif?imageMogr2/auto-orient/strip" alt=""></p> <ul><li>移动端</li></ul> <p><img src="https://upload-images.jianshu.io/upload_images/12890819-5370ed6dfbe61051.gif?imageMogr2/auto-orient/strip" alt=""></p> <p>完整效果请看：<a href="https://biaochenxuying.cn" target="_blank" rel="noopener noreferrer">https://biaochenxuying.cn<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h2 id="_2-功能"><a href="#_2-功能" class="header-anchor">#</a> 2. 功能</h2> <h3 id="已经完成功能"><a href="#已经完成功能" class="header-anchor">#</a> 已经完成功能</h3> <ul><li>[x] 登录</li> <li>[x] 注册</li> <li>[x] 文章列表</li> <li>[x] 文章归档</li> <li>[x] 标签</li> <li>[x] 关于</li> <li>[x] 点赞与评论</li> <li>[x] 留言</li> <li>[x] 历程</li> <li>[x] 文章详情（支持代码语法高亮）</li> <li>[x] 文章详情目录</li> <li>[x] 移动端适配</li> <li>[x] github 授权登录</li></ul> <h3 id="待优化或者实现"><a href="#待优化或者实现" class="header-anchor">#</a> 待优化或者实现</h3> <ul><li>[ ] 使用 vuex-class</li> <li>[ ] 更多 TypeScript 的优化技巧</li> <li>[ ] 服务器渲染 SSR</li></ul> <h2 id="_3-前端主要技术"><a href="#_3-前端主要技术" class="header-anchor">#</a> 3. 前端主要技术</h2> <p>所有技术都是当前最新的。</p> <ul><li>vue： ^2.6.6</li> <li>typescript : ^3.2.1</li> <li>element-ui： 2.6.3</li> <li>vue-router : ^3.0.1</li> <li>webpack： 4.28.4</li> <li>vuex: ^3.0.1</li> <li>axios：0.18.0</li> <li>redux: 4.0.0</li> <li>highlight.js： 9.15.6</li> <li>marked：0.6.1</li></ul> <h2 id="_4-5-分钟上手-typescript"><a href="#_4-5-分钟上手-typescript" class="header-anchor">#</a> 4. 5 分钟上手 TypeScript</h2> <p>如果没有一点点基础，可能没学过 TypeScript 的读者会看不懂往下的内容，所以先学点基础。</p> <p>TypeScript 的静态类型检查是个好东西，可以避免很多不必要的错误, 不用在调试或者项目上线的时候才发现问题 。</p> <ul><li>类型注解</li></ul> <p>TypeScript 里的类型注解是一种轻量级的为函数或变量添加约束的方式。变量定义时也要定义他的类型，比如常见的 ：</p> <div class="language- extra-class"><pre class="language-text"><code>// 布尔值
+let isDone: boolean = false; // 相当于 js 的 let isDone = false;
+// 变量定义之后不可以随便变更它的类型
+isDone = true // 不报错
+isDone = &quot;我要变为字符串&quot; // 报错
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>// 数字
+let decLiteral: number = 6; // 相当于 js 的 let decLiteral = 6;
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>// 字符串
+let name: string = &quot;bob&quot;;  // 相当于 js 的 let name = &quot;bob&quot;;
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>// 数组
+ // 第一种，可以在元素类型后面接上 []，表示由此类型元素组成的一个数组：
+let list: number[] = [1, 2, 3]; // 相当于 js 的let list = [1, 2, 3];
+// 第二种方式是使用数组泛型，Array&lt;元素类型&gt;：
+let list: Array&lt;number&gt; = [1, 2, 3]; // 相当于 js 的let list = [1, 2, 3];
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>// 在 TypeScript 中，我们使用接口（Interfaces）来定义 对象 的类型。
+interface Person {
+    name: string;
+    age: number;
+}
+let tom: Person = {
+    name: 'Tom',
+    age: 25
+};
+// 以上 对象 的代码相当于 
+let tom = {
+    name: 'Tom',
+    age: 25
+};
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>// Any 可以随便变更类型 (当这个值可能来自于动态的内容，比如来自用户输入或第三方代码库)
+let notSure: any = 4;
+notSure = &quot;我可以随便变更类型&quot; // 不报错
+notSure = false;  // 不报错
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>// Void 当一个函数没有返回值时，你通常会见到其返回值类型是 void
+function warnUser(): void {
+    console.log(&quot;This is my warning message&quot;);
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>// 方法的参数也要定义类型，不知道就定义为 any
+function fetch(url: string, id : number, params: any): void {
+    console.log(&quot;fetch&quot;);
+}
+</code></pre></div><p>以上是最简单的一些知识点，更多知识请看 <a href="https://www.tslang.cn/" target="_blank" rel="noopener noreferrer">TypeScript 中文官网<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h2 id="_5-5-分钟上手-vue-typescript"><a href="#_5-5-分钟上手-vue-typescript" class="header-anchor">#</a> 5. 5 分钟上手 Vue +TypeScript</h2> <ul><li><a href="https://github.com/vuejs/vue-class-component" target="_blank" rel="noopener noreferrer">vue-class-component<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> <br>
+vue-class-component 对 <code>Vue</code> 组件进行了一层封装，让 <code>Vue</code> 组件语法在结合了 <code>TypeScript</code> 语法之后更加扁平化：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;input v-model=&quot;msg&quot;&gt;
+    &lt;p&gt;prop: {{propMessage}}&lt;/p&gt;
+    &lt;p&gt;msg: {{msg}}&lt;/p&gt;
+    &lt;p&gt;helloMsg: {{helloMsg}}&lt;/p&gt;
+    &lt;p&gt;computed msg: {{computedMsg}}&lt;/p&gt;
+    &lt;button @click=&quot;greet&quot;&gt;Greet&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import Vue from 'vue'
+import Component from 'vue-class-component'
+
+@Component({
+  props: {
+    propMessage: String
+  }
+})
+export default class App extends Vue {
+  // initial data
+  msg = 123
+
+  // use prop values for initial data
+  helloMsg = 'Hello, ' + this.propMessage
+
+  // lifecycle hook
+  mounted () {
+    this.greet()
+  }
+
+  // computed
+  get computedMsg () {
+    return 'computed ' + this.msg
+  }
+
+  // method
+  greet () {
+    alert('greeting: ' + this.msg)
+  }
+}
+&lt;/script&gt;
+</code></pre></div><p>上面的代码跟下面的代码作用是一样的:</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;input v-model=&quot;msg&quot;&gt;
+    &lt;p&gt;prop: {{propMessage}}&lt;/p&gt;
+    &lt;p&gt;msg: {{msg}}&lt;/p&gt;
+    &lt;p&gt;helloMsg: {{helloMsg}}&lt;/p&gt;
+    &lt;p&gt;computed msg: {{computedMsg}}&lt;/p&gt;
+    &lt;button @click=&quot;greet&quot;&gt;Greet&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  // 属性
+  props: {
+    propMessage: {
+      type: String
+    }
+  },
+  data () {
+    return {
+      msg: 123,
+      helloMsg: 'Hello, ' + this.propMessage
+    }
+  },
+  // 声明周期钩子
+  mounted () {
+    this.greet()
+  },
+  // 计算属性
+  computed: {
+    computedMsg () {
+      return 'computed ' + this.msg
+    }
+  },
+  // 方法
+  methods: {
+    greet () {
+      alert('greeting: ' + this.msg)
+    }
+  },
+}
+&lt;/script&gt;
+</code></pre></div><ul><li><a href="https://github.com/kaorun343/vue-property-decorator" target="_blank" rel="noopener noreferrer">vue-property-decorator<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul> <p>vue-property-decorator 是在 <code>vue-class-component</code> 上增强了更多的结合 <code>Vue</code> 特性的装饰器，新增了这 7 个装饰器：</p> <ul><li><code>@Emit</code></li> <li><code>@Inject</code></li> <li><code>@Model</code></li> <li><code>@Prop</code></li> <li><code>@Provide</code></li> <li><code>@Watch</code></li> <li><code>@Component</code> (从 <code>vue-class-component</code> 继承)</li></ul> <p>在这里列举几个常用的<code>@Prop/@Watch/@Component</code>, 更多信息，详见<a href="https://github.com/kaorun343/vue-property-decorator" target="_blank" rel="noopener noreferrer">官方文档<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <div class="language- extra-class"><pre class="language-text"><code>import { Component, Emit, Inject, Model, Prop, Provide, Vue, Watch } from 'vue-property-decorator'
+
+@Component
+export class MyComponent extends Vue {
+  
+  @Prop()
+  propA: number = 1
+
+  @Prop({ default: 'default value' })
+  propB: string
+
+  @Prop([String, Boolean])
+  propC: string | boolean
+
+  @Prop({ type: null })
+  propD: any
+
+  @Watch('child')
+  onChildChanged(val: string, oldVal: string) { }
+}
+</code></pre></div><p>上面的代码相当于：</p> <div class="language- extra-class"><pre class="language-text"><code>export default {
+  props: {
+    checked: Boolean,
+    propA: Number,
+    propB: {
+      type: String,
+      default: 'default value'
+    },
+    propC: [String, Boolean],
+    propD: { type: null }
+  }
+  methods: {
+    onChildChanged(val, oldVal) { }
+  },
+  watch: {
+    'child': {
+      handler: 'onChildChanged',
+      immediate: false,
+      deep: false
+    }
+  }
+}
+</code></pre></div><ul><li>vuex-class
+<a href="https://github.com/ktsn/vuex-class" target="_blank" rel="noopener noreferrer">vuex-class<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> ：在 <code>vue-class-component</code> 写法中 绑定 <code>vuex</code> 。</li></ul> <div class="language- extra-class"><pre class="language-text"><code>import Vue from 'vue'
+import Component from 'vue-class-component'
+import {
+  State,
+  Getter,
+  Action,
+  Mutation,
+  namespace
+} from 'vuex-class'
+
+const someModule = namespace('path/to/module')
+
+@Component
+export class MyComp extends Vue {
+  @State('foo') stateFoo
+  @State(state =&gt; state.bar) stateBar
+  @Getter('foo') getterFoo
+  @Action('foo') actionFoo
+  @Mutation('foo') mutationFoo
+  @someModule.Getter('foo') moduleGetterFoo
+
+  // If the argument is omitted, use the property name
+  // for each state/getter/action/mutation type
+  @State foo
+  @Getter bar
+  @Action baz
+  @Mutation qux
+
+  created () {
+    this.stateFoo // -&gt; store.state.foo
+    this.stateBar // -&gt; store.state.bar
+    this.getterFoo // -&gt; store.getters.foo
+    this.actionFoo({ value: true }) // -&gt; store.dispatch('foo', { value: true })
+    this.mutationFoo({ value: true }) // -&gt; store.commit('foo', { value: true })
+    this.moduleGetterFoo // -&gt; store.getters['path/to/module/foo']
+  }
+}
+</code></pre></div><h2 id="_6-用-vue-cli-搭建-项目"><a href="#_6-用-vue-cli-搭建-项目" class="header-anchor">#</a> 6. 用 vue-cli 搭建 项目</h2> <p>笔者使用最新的 vue-cli 3 搭建项目，详细的教程，请看我之前写的 <a href="https://segmentfault.com/a/1190000016423943" target="_blank" rel="noopener noreferrer">vue-cli3.x 新特性及踩坑记<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>，里面已经有详细讲解 ，但文章里面的配置和此项目不同的是，我加入了 TypeScript ，其他的配置都是 vue-cli 本来配好的了。详情请看 <a href="https://cli.vuejs.org/zh/guide/creating-a-project.html" target="_blank" rel="noopener noreferrer">vue-cli 官网<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 。</p> <h3 id="_6-1-安装及构建项目目录"><a href="#_6-1-安装及构建项目目录" class="header-anchor">#</a> 6.1 安装及构建项目目录</h3> <p>安装的依赖：</p> <p><img src="https://upload-images.jianshu.io/upload_images/12890819-17027bcbe9b8be71.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p> <p>安装过程选择的一些配置：</p> <p><img src="https://upload-images.jianshu.io/upload_images/12890819-554bf777ccbf942a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p> <p>搭建好之后，初始项目结构长这样：</p> <div class="language- extra-class"><pre class="language-text"><code>├── public                          // 静态页面
+
+├── src                             // 主目录
+
+    ├── assets                      // 静态资源
+
+    ├── components                  // 组件
+
+    ├── views                       // 页面
+
+    ├── App.vue                     // 页面主入口
+
+    ├── main.ts                     // 脚本主入口
+
+    ├── router.ts                   // 路由
+
+    ├── shims-tsx.d.ts              // 相关 tsx 模块注入
+
+    ├── shims-vue.d.ts              // Vue 模块注入
+
+    └── store.ts                    // vuex 配置
+
+├── tests                           // 测试用例
+
+├── .eslintrc.js                    // eslint 相关配置
+
+├── .gitignore                      // git 忽略文件配置
+
+├── babel.config.js                 // babel 配置
+
+├── postcss.config.js               // postcss 配置
+
+├── package.json                    // 依赖
+
+└── tsconfig.json                   // ts 配置
+
+</code></pre></div><p>奔着 <strong>大型项目的结构</strong> 来改造项目结构，改造后 :</p> <div class="language- extra-class"><pre class="language-text"><code>
+├── public                          // 静态页面
+
+├── src                             // 主目录
+
+    ├── assets                      // 静态资源
+
+    ├── filters                     // 过滤
+
+    ├── store                       // vuex 配置
+
+    ├── less                        // 样式
+
+    ├── utils                       // 工具方法(axios封装，全局方法等)
+
+    ├── views                       // 页面
+
+    ├── App.vue                     // 页面主入口
+
+    ├── main.ts                     // 脚本主入口
+
+    ├── router.ts                   // 路由
+
+    ├── shime-global.d.ts           // 相关 全局或者插件 模块注入
+
+    ├── shims-tsx.d.ts              // 相关 tsx 模块注入
+
+    ├── shims-vue.d.ts              // Vue 模块注入, 使 TypeScript 支持 *.vue 后缀的文件
+
+├── tests                           // 测试用例
+
+├── .eslintrc.js                    // eslint 相关配置
+
+├── postcss.config.js               // postcss 配置
+
+├── .gitignore                      // git 忽略文件配置
+
+├── babel.config.js                 // preset 记录
+
+├── package.json                    // 依赖
+
+├── README.md                       // 项目 readme
+
+├── tsconfig.json                   // ts 配置
+
+└── vue.config.js                   // webpack 配置
+
+</code></pre></div><p>tsconfig.json 文件中指定了用来编译这个项目的根文件和编译选项。
+本项目的 tsconfig.json 配置如下 ：</p> <div class="language- extra-class"><pre class="language-text"><code>{
+    // 编译选项
+  &quot;compilerOptions&quot;: {
+    // 编译输出目标 ES 版本
+    &quot;target&quot;: &quot;esnext&quot;,
+    // 采用的模块系统
+    &quot;module&quot;: &quot;esnext&quot;,
+    // 以严格模式解析
+    &quot;strict&quot;: true,
+    &quot;jsx&quot;: &quot;preserve&quot;,
+    // 从 tslib 导入外部帮助库: 比如__extends，__rest等
+    &quot;importHelpers&quot;: true,
+    // 如何处理模块
+    &quot;moduleResolution&quot;: &quot;node&quot;,
+    // 启用装饰器
+    &quot;experimentalDecorators&quot;: true,
+    &quot;esModuleInterop&quot;: true,
+    // 允许从没有设置默认导出的模块中默认导入
+    &quot;allowSyntheticDefaultImports&quot;: true,
+    // 定义一个变量就必须给它一个初始值
+    &quot;strictPropertyInitialization&quot; : false,
+    // 允许编译javascript文件
+    &quot;allowJs&quot;: true,
+    // 是否包含可以用于 debug 的 sourceMap
+    &quot;sourceMap&quot;: true,
+    // 忽略 this 的类型检查, Raise error on this expressions with an implied any type.
+    &quot;noImplicitThis&quot;: false,
+    // 解析非相对模块名的基准目录 
+    &quot;baseUrl&quot;: &quot;.&quot;,
+    // 给错误和消息设置样式，使用颜色和上下文。
+    &quot;pretty&quot;: true,
+    // 设置引入的定义文件
+    &quot;types&quot;: [&quot;webpack-env&quot;, &quot;mocha&quot;, &quot;chai&quot;],
+    // 指定特殊模块的路径
+    &quot;paths&quot;: {
+      &quot;@/*&quot;: [&quot;src/*&quot;]
+    },
+    // 编译过程中需要引入的库文件的列表
+    &quot;lib&quot;: [&quot;esnext&quot;, &quot;dom&quot;, &quot;dom.iterable&quot;, &quot;scripthost&quot;]
+  },
+  // ts 管理的文件
+  &quot;include&quot;: [
+    &quot;src/**/*.ts&quot;,
+    &quot;src/**/*.tsx&quot;,
+    &quot;src/**/*.vue&quot;,
+    &quot;tests/**/*.ts&quot;,
+    &quot;tests/**/*.tsx&quot;
+  ],
+  // ts 排除的文件
+  &quot;exclude&quot;: [&quot;node_modules&quot;]
+}
+
+</code></pre></div><p>更多配置请看官网的 tsconfig.json 的 <a href="https://www.tslang.cn/docs/handbook/compiler-options.html" target="_blank" rel="noopener noreferrer">编译选项<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p>本项目的 vue.config.js:</p> <div class="language- extra-class"><pre class="language-text"><code>const path = require(&quot;path&quot;);
+const sourceMap = process.env.NODE_ENV === &quot;development&quot;;
+
+module.exports = {
+  // 基本路径
+  publicPath: &quot;./&quot;,
+  // 输出文件目录
+  outputDir: &quot;dist&quot;,
+  // eslint-loader 是否在保存的时候检查
+  lintOnSave: false,
+  // webpack配置
+  // see https://github.com/vuejs/vue-cli/blob/dev/docs/webpack.md
+  chainWebpack: () =&gt; {},
+  configureWebpack: config =&gt; {
+    if (process.env.NODE_ENV === &quot;production&quot;) {
+      // 为生产环境修改配置...
+      config.mode = &quot;production&quot;;
+    } else {
+      // 为开发环境修改配置...
+      config.mode = &quot;development&quot;;
+    }
+
+    Object.assign(config, {
+      // 开发生产共同配置
+      resolve: {
+        extensions: [&quot;.js&quot;, &quot;.vue&quot;, &quot;.json&quot;, &quot;.ts&quot;, &quot;.tsx&quot;],
+        alias: {
+          vue$: &quot;vue/dist/vue.js&quot;,
+          &quot;@&quot;: path.resolve(__dirname, &quot;./src&quot;)
+        }
+      }
+    });
+  },
+  // 生产环境是否生成 sourceMap 文件
+  productionSourceMap: sourceMap,
+  // css相关配置
+  css: {
+    // 是否使用css分离插件 ExtractTextPlugin
+    extract: true,
+    // 开启 CSS source maps?
+    sourceMap: false,
+    // css预设器配置项
+    loaderOptions: {},
+    // 启用 CSS modules for all css / pre-processor files.
+    modules: false
+  },
+  // use thread-loader for babel &amp; TS in production build
+  // enabled by default if the machine has more than 1 cores
+  parallel: require(&quot;os&quot;).cpus().length &gt; 1,
+  // PWA 插件相关配置
+  // see https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-pwa
+  pwa: {},
+  // webpack-dev-server 相关配置
+  devServer: {
+    open: process.platform === &quot;darwin&quot;,
+    host: &quot;localhost&quot;,
+    port: 3001, //8080,
+    https: false,
+    hotOnly: false,
+    proxy: {
+      // 设置代理
+      // proxy all requests starting with /api to jsonplaceholder
+      &quot;/api&quot;: {
+        // target: &quot;https://emm.cmccbigdata.com:8443/&quot;,
+        target: &quot;http://localhost:3000/&quot;,
+        // target: &quot;http://47.106.136.114/&quot;,
+        changeOrigin: true,
+        ws: true,
+        pathRewrite: {
+          &quot;^/api&quot;: &quot;&quot;
+        }
+      }
+    },
+    before: app =&gt; {}
+  },
+  // 第三方插件配置
+  pluginOptions: {
+    // ...
+  }
+};
+
+</code></pre></div><h3 id="_6-2-安装-element-ui"><a href="#_6-2-安装-element-ui" class="header-anchor">#</a> 6.2 安装 element-ui</h3> <p>本来想搭配 iview-ui 来用的，但后续还想把这个项目搞成 ssr 的，而 vue + typescript + iview + Nuxt.js 的服务端渲染还有不少坑, 而 vue + typescript + element + Nuxt.js 对 ssr 的支持已经不错了，所以选择了 element-ui 。</p> <p>安装：</p> <div class="language- extra-class"><pre class="language-text"><code>npm i element-ui -S
+</code></pre></div><p>按需引入, 借助 <a href="https://github.com/QingWei-Li/babel-plugin-component" target="_blank" rel="noopener noreferrer">babel-plugin-component<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>，我们可以只引入需要的组件，以达到减小项目体积的目的。</p> <div class="language- extra-class"><pre class="language-text"><code>npm install babel-plugin-component -D
+</code></pre></div><p>然后，将 babel.config.js 修改为：</p> <div class="language- extra-class"><pre class="language-text"><code>module.exports = {
+  presets: [&quot;@vue/app&quot;],
+  plugins: [
+    [
+      &quot;component&quot;,
+      {
+        libraryName: &quot;element-ui&quot;,
+        styleLibraryName: &quot;theme-chalk&quot;
+      }
+    ]
+  ]
+};
+</code></pre></div><p>接下来，如果你只希望引入部分组件，比如 Button 和 Select，那么需要在 main.js 中写入以下内容：</p> <div class="language- extra-class"><pre class="language-text"><code>import Vue from 'vue';
+import { Button, Select } from 'element-ui';
+import App from './App.vue';
+
+Vue.component(Button.name, Button);
+Vue.component(Select.name, Select);
+/* 或写为
+ * Vue.use(Button)
+ * Vue.use(Select)
+ */
+
+new Vue({
+  el: '#app',
+  render: h =&gt; h(App)
+});
+</code></pre></div><h3 id="_6-3-完善项目目录与文件"><a href="#_6-3-完善项目目录与文件" class="header-anchor">#</a> 6.3 完善项目目录与文件</h3> <h4 id="route"><a href="#route" class="header-anchor">#</a> route</h4> <p>使用路由懒加载功能。</p> <div class="language- extra-class"><pre class="language-text"><code>export default new Router({
+  mode: &quot;history&quot;,
+  routes: [
+    {
+      path: &quot;/&quot;,
+      name: &quot;home&quot;,
+      component: () =&gt; import(/* webpackChunkName: &quot;home&quot; */ &quot;./views/home.vue&quot;)
+    },
+    {
+      path: &quot;/articles&quot;,
+      name: &quot;articles&quot;,
+      // route level code-splitting
+      // this generates a separate chunk (articles.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () =&gt;
+        import(/* webpackChunkName: &quot;articles&quot; */ &quot;./views/articles.vue&quot;)
+    },
+  ]
+});
+</code></pre></div><h4 id="utils"><a href="#utils" class="header-anchor">#</a> utils</h4> <ul><li>utils/utils.ts 常用函数的封装， 比如 事件的节流（throttle）与防抖（debounce）方法：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>// fn是我们需要包装的事件回调, delay是时间间隔的阈值
+export function throttle(fn: Function, delay: number) {
+  // last为上一次触发回调的时间, timer是定时器
+  let last = 0,
+    timer: any = null;
+  // 将throttle处理结果当作函数返回
+  return function() {
+    // 保留调用时的this上下文
+    let context = this;
+    // 保留调用时传入的参数
+    let args = arguments;
+    // 记录本次触发回调的时间
+    let now = +new Date();
+    // 判断上次触发的时间和本次触发的时间差是否小于时间间隔的阈值
+    if (now - last &lt; delay) {
+      // 如果时间间隔小于我们设定的时间间隔阈值，则为本次触发操作设立一个新的定时器
+      clearTimeout(timer);
+      timer = setTimeout(function() {
+        last = now;
+        fn.apply(context, args);
+      }, delay);
+    } else {
+      // 如果时间间隔超出了我们设定的时间间隔阈值，那就不等了，无论如何要反馈给用户一次响应
+      last = now;
+      fn.apply(context, args);
+    }
+  };
+}
+</code></pre></div><ul><li>utils/config.ts 配置文件，比如 github 授权登录的回调地址、client_id、client_secret 等。</li></ul> <div class="language- extra-class"><pre class="language-text"><code>const config = {
+  'oauth_uri': 'https://github.com/login/oauth/authorize',
+  'redirect_uri': 'https://biaochenxuying.cn/login',
+  'client_id': 'XXXXXXXXXX',
+  'client_secret': 'XXXXXXXXXX',
+};
+
+// 本地开发环境下
+if (process.env.NODE_ENV === 'development') {
+  config.redirect_uri = &quot;http://localhost:3001/login&quot;
+  config.client_id = &quot;502176cec65773057a9e&quot;
+  config.client_secret = &quot;65d444de381a026301a2c7cffb6952b9a86ac235&quot;
+}
+export default config;
+</code></pre></div><p>如果你的生产环境也要 github 登录授权的话，请在 github 上申请一个 Oauth App ，把你的  redirect_uri，client_id，client_secret 的信息填在 config 里面即可。具体详情请看我写的这篇文章 <a href="https://biaochenxuying.cn/articleDetail?article_id=5c7bd34e42b55e2ecc90976d" target="_blank" rel="noopener noreferrer">github 授权登录教程与如何设计第三方授权登录的用户表<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <ul><li>utils/urls.ts 请求接口地址，统一管理。</li></ul> <div class="language- extra-class"><pre class="language-text"><code>// url的链接
+export const urls: object = {
+  login: &quot;login&quot;,
+  register: &quot;register&quot;,
+  getArticleList: &quot;getArticleList&quot;,
+};
+export default urls;
+</code></pre></div><ul><li>utils/https.ts axios 请求的封装。</li></ul> <div class="language- extra-class"><pre class="language-text"><code>import axios from &quot;axios&quot;;
+
+// 创建axios实例
+let service: any = {};
+service = axios.create({
+    baseURL: &quot;/api&quot;, // api的base_url
+    timeout: 50000 // 请求超时时间
+  });
+
+// request拦截器 axios的一些配置
+service.interceptors.request.use(
+  (config: any) =&gt; {
+    return config;
+  },
+  (error: any) =&gt; {
+    // Do something with request error
+    console.error(&quot;error:&quot;, error); // for debug
+    Promise.reject(error);
+  }
+);
+
+// respone拦截器 axios的一些配置
+service.interceptors.response.use(
+  (response: any) =&gt; {
+    return response;
+  },
+  (error: any) =&gt; {
+    console.error(&quot;error:&quot; + error); // for debug
+    return Promise.reject(error);
+  }
+);
+
+export default service;
+</code></pre></div><p>把 urls 和 https 挂载到 main.ts 里面的 Vue 的 prototype 上面。</p> <div class="language- extra-class"><pre class="language-text"><code>import service from &quot;./utils/https&quot;;
+import urls from &quot;./utils/urls&quot;;
+
+Vue.prototype.$https = service; // 其他页面在使用 axios 的时候直接  this.$http 就可以了
+Vue.prototype.$urls = urls; // 其他页面在使用 urls 的时候直接  this.$urls 就可以了
+</code></pre></div><p>然后就可以统一管理接口，而且调用起来也很方便啦。比如下面 文章列表的请求。</p> <div class="language- extra-class"><pre class="language-text"><code>async handleSearch() {
+    this.isLoading = true;
+    const res: any = await this.$https.get(this.$urls.getArticleList, {
+      params: this.params
+    });
+    this.isLoading = false;
+    if (res.status === 200) {
+      if (res.data.code === 0) {
+        const data: any = res.data.data;
+        this.articlesList = [...this.articlesList, ...data.list];
+        this.total = data.count;
+        this.params.pageNum++;
+        if (this.total === this.articlesList.length) {
+          this.isLoadEnd = true;
+        }
+      } else {
+        this.$message({
+          message: res.data.message,
+          type: &quot;error&quot;
+        });
+      }
+    } else {
+      this.$message({
+        message: &quot;网络错误!&quot;,
+        type: &quot;error&quot;
+      });
+    }
+  }
+</code></pre></div><h4 id="store-vuex"><a href="#store-vuex" class="header-anchor">#</a> store ( Vuex )</h4> <p>一般大型的项目都有很多模块的，比如本项目中有公共信息(比如 token )、 用户模块、文章模块。</p> <div class="language- extra-class"><pre class="language-text"><code>├── modules                         // 模块
+
+    ├── user.ts                     // 用户模块 
+    
+    ├── article.ts                 // 文章模块 
+
+├── types.ts                        // 类型
+
+└── index.ts                        // vuex 主入口
+</code></pre></div><ul><li>store/index.ts 存放公共的信息，并导入其他模块</li></ul> <div class="language- extra-class"><pre class="language-text"><code>import Vue from &quot;vue&quot;;
+import Vuex from &quot;vuex&quot;;
+import * as types from &quot;./types&quot;;
+import user from &quot;./modules/user&quot;;
+import article from &quot;./modules/article&quot;;
+
+Vue.use(Vuex);
+const initPageState = () =&gt; {
+  return {
+    token: &quot;&quot;
+  };
+};
+const store = new Vuex.Store({
+  strict: process.env.NODE_ENV !== &quot;production&quot;,
+  // 具体模块
+  modules: {
+    user,
+    article
+  },
+  state: initPageState(),
+  mutations: {
+    [types.SAVE_TOKEN](state: any, pageState: any) {
+      for (const prop in pageState) {
+        state[prop] = pageState[prop];
+      }
+    }
+  },
+  actions: {}
+});
+
+export default store;
+</code></pre></div><ul><li>types.ts</li></ul> <div class="language- extra-class"><pre class="language-text"><code>// 公共 token
+export const SAVE_TOKEN = &quot;SAVE_TOKEN&quot;;
+
+// 用户
+export const SAVE_USER = &quot;SAVE_USER&quot;;
+</code></pre></div><ul><li>user.ts</li></ul> <div class="language- extra-class"><pre class="language-text"><code>import * as types from &quot;../types&quot;;
+
+const initPageState = () =&gt; {
+  return {
+    userInfo: {
+      _id: &quot;&quot;,
+      name: &quot;&quot;,
+      avator: &quot;&quot;
+    }
+  };
+};
+const user = {
+  state: initPageState(),
+  mutations: {
+    [types.SAVE_USER](state: any, pageState: any) {
+      for (const prop in pageState) {
+        state[prop] = pageState[prop];
+      }
+    }
+  },
+  actions: {}
+};
+
+export default user;
+
+</code></pre></div><h2 id="_7-markdown-渲染"><a href="#_7-markdown-渲染" class="header-anchor">#</a> 7. markdown 渲染</h2> <p>markdown 渲染效果图:</p> <p><img src="https://upload-images.jianshu.io/upload_images/12890819-cf92cfb3f222c4fb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="markdown 渲染效果图"></p> <p>markdown 渲染 采用了开源的 marked， 代码高亮用了 highlight.js 。</p> <p>用法：</p> <p>第一步：npm i marked highlight.js --save</p> <div class="language- extra-class"><pre class="language-text"><code>npm i marked highlight.js --save
+</code></pre></div><p>第二步： 导入封装成 markdown.js，将文章详情由字符串转成 html， 并抽离出文章目录。</p> <p><a href="https://www.cherylgood.cn/detail/5bdaf4722382b4646c27143b.html" target="_blank" rel="noopener noreferrer">marked 的封装<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 得感谢这位老哥。</p> <div class="language- extra-class"><pre class="language-text"><code>const highlight = require(&quot;highlight.js&quot;);
+const marked = require(&quot;marked&quot;);
+const tocObj = {
+  add: function(text, level) {
+    var anchor = `#toc${level}${++this.index}`;
+    this.toc.push({ anchor: anchor, level: level, text: text });
+    return anchor;
+  },
+  // 使用堆栈的方式处理嵌套的ul,li，level即ul的嵌套层次，1是最外层
+  // &lt;ul&gt;
+  //   &lt;li&gt;&lt;/li&gt;
+  //   &lt;ul&gt;
+  //     &lt;li&gt;&lt;/li&gt;
+  //   &lt;/ul&gt;
+  //   &lt;li&gt;&lt;/li&gt;
+  // &lt;/ul&gt;
+  toHTML: function() {
+    let levelStack = [];
+    let result = &quot;&quot;;
+    const addStartUL = () =&gt; {
+      result += '&lt;ul class=&quot;anchor-ul&quot; id=&quot;anchor-fix&quot;&gt;';
+    };
+    const addEndUL = () =&gt; {
+      result += &quot;&lt;/ul&gt;\n&quot;;
+    };
+    const addLI = (anchor, text) =&gt; {
+      result +=
+        '&lt;li&gt;&lt;a class=&quot;toc-link&quot; href=&quot;#' + anchor + '&quot;&gt;' + text + &quot;&lt;a&gt;&lt;/li&gt;\n&quot;;
+    };
+
+    this.toc.forEach(function(item) {
+      let levelIndex = levelStack.indexOf(item.level);
+      // 没有找到相应level的ul标签，则将li放入新增的ul中
+      if (levelIndex === -1) {
+        levelStack.unshift(item.level);
+        addStartUL();
+        addLI(item.anchor, item.text);
+      } // 找到了相应level的ul标签，并且在栈顶的位置则直接将li放在此ul下
+      else if (levelIndex === 0) {
+        addLI(item.anchor, item.text);
+      } // 找到了相应level的ul标签，但是不在栈顶位置，需要将之前的所有level出栈并且打上闭合标签，最后新增li
+      else {
+        while (levelIndex--) {
+          levelStack.shift();
+          addEndUL();
+        }
+        addLI(item.anchor, item.text);
+      }
+    });
+    // 如果栈中还有level，全部出栈打上闭合标签
+    while (levelStack.length) {
+      levelStack.shift();
+      addEndUL();
+    }
+    // 清理先前数据供下次使用
+    this.toc = [];
+    this.index = 0;
+    return result;
+  },
+  toc: [],
+  index: 0
+};
+
+class MarkUtils {
+  constructor() {
+    this.rendererMD = new marked.Renderer();
+    this.rendererMD.heading = function(text, level, raw) {
+      var anchor = tocObj.add(text, level);
+      return `&lt;h${level} id=${anchor}&gt;${text}&lt;/h${level}&gt;\n`;
+    };
+    highlight.configure({ useBR: true });
+    marked.setOptions({
+      renderer: this.rendererMD,
+      headerIds: false,
+      gfm: true,
+      tables: true,
+      breaks: false,
+      pedantic: false,
+      sanitize: false,
+      smartLists: true,
+      smartypants: false,
+      highlight: function(code) {
+        return highlight.highlightAuto(code).value;
+      }
+    });
+  }
+
+  async marked(data) {
+    if (data) {
+      let content = await marked(data); // 文章内容
+      let toc = tocObj.toHTML(); // 文章目录
+      return { content: content, toc: toc };
+    } else {
+      return null;
+    }
+  }
+}
+
+const markdown = new MarkUtils();
+
+export default markdown;
+</code></pre></div><p>第三步： 使用</p> <div class="language- extra-class"><pre class="language-text"><code>import markdown from &quot;@/utils/markdown&quot;;
+
+// 获取文章详情
+async handleSearch() {
+    const res: any = await this.$https.post(
+      this.$urls.getArticleDetail,
+      this.params
+    );
+    if (res.status === 200) {
+      if (res.data.code === 0) {
+        this.articleDetail = res.data.data;
+       // 使用 marked 转换
+        const article = markdown.marked(res.data.data.content);
+        article.then((response: any) =&gt; {
+          this.articleDetail.content = response.content;
+          this.articleDetail.toc = response.toc;
+        });
+      } else {
+        // ...
+    } else {
+     // ... 
+    }
+  }
+
+// 渲染
+&lt;div id=&quot;content&quot;
+       class=&quot;article-detail&quot;
+       v-html=&quot;articleDetail.content&quot;&gt;
+&lt;/div&gt;
+</code></pre></div><p>第四步：引入 monokai_sublime 的 css 样式</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+</code></pre></div><p>第五步：对 markdown 样式的补充</p> <p>如果不补充样式，是没有黑色背景的，字体大小等也会比较小，图片也不会居中显示</p> <div class="language- extra-class"><pre class="language-text"><code>/*对 markdown 样式的补充*/
+pre {
+    display: block;
+    padding: 10px;
+    margin: 0 0 10px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #abb2bf;
+    background: #282c34;
+    word-break: break-all;
+    word-wrap: break-word;
+    overflow: auto;
+}
+h1,h2,h3,h4,h5,h6{
+    margin-top: 1em;
+    /* margin-bottom: 1em; */
+}
+strong {
+    font-weight: bold;
+}
+
+p &gt; code:not([class]) {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 4px;
+}
+p img{
+    /* 图片居中 */
+    margin: 0 auto;
+    display: flex;
+}
+
+#content {
+    font-family: &quot;Microsoft YaHei&quot;,  'sans-serif';
+    font-size: 16px;
+    line-height: 30px;
+}
+
+#content .desc ul,#content .desc ol {
+    color: #333333;
+    margin: 1.5em 0 0 25px;
+}
+
+#content .desc h1, #content .desc h2 {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+#content .desc a {
+    color: #009a61;
+}
+</code></pre></div><h2 id="_8-注意点"><a href="#_8-注意点" class="header-anchor">#</a> 8. 注意点</h2> <ul><li>关于 页面</li></ul> <p>对于 关于 的页面，其实是一篇文章来的，根据文章类型 type 来决定的，数据库里面 type 为 3
+的文章，只能有一篇就是 博主介绍 ；达到了想什么时候修改内容都可以。</p> <p>所以当 <strong>当前路由</strong> === '/about' 时就是请求类型为 博主介绍 的文章。</p> <div class="language- extra-class"><pre class="language-text"><code>type: 3,  // 文章类型: 1：普通文章；2：是博主简历；3 ：是博主简介；
+</code></pre></div><ul><li>移动端适配
+移动端使用 rem 单位适配。</li></ul> <div class="language- extra-class"><pre class="language-text"><code>// 屏幕适配（ window.screen.width / 移动端设计稿宽 * 100）也即是 (window.screen.width / 750 * 100)  ——*100 为了方便计算。即 font-size 值是手机 deviceWidth 与设计稿比值的 100 倍
+document.getElementsByTagName('html')[0].style.fontSize = window.screen.width / 7.5 + 'px';
+</code></pre></div><p>如上：通过查询屏幕宽度，动态的设置 html 的 font-size 值，移动端的设计稿大多以宽为 750 px 来设置的。</p> <p>比如在设计图上一个 150 * 250 的盒子(单位 px)：</p> <p>原本在 css 中的写法：</p> <div class="language- extra-class"><pre class="language-text"><code>width: 150px;
+heigth: 250px;
+</code></pre></div><p>通过上述换算后，在 css 中对应的 rem 值只需要写：</p> <div class="language- extra-class"><pre class="language-text"><code>width: 1.5rem; // 150 / 100 rem
+heigth: 2.5rem; // 250 / 100 rem
+</code></pre></div><p>如果你的移动端的设计稿是以宽为 1080 px 来设置的话，就用 window.screen.width / 10.8 吧。</p> <h2 id="_9-踩坑记"><a href="#_9-踩坑记" class="header-anchor">#</a> 9. 踩坑记</h2> <ul><li><strong>1. 让 vue 识别全局方法/变量</strong></li></ul> <ol><li>我们经常在 main.ts 中给 vue.prototype 挂载实例或者内容，以方便在组件里面使用。</li></ol> <div class="language- extra-class"><pre class="language-text"><code>import service from &quot;./utils/https&quot;;
+import urls from &quot;./utils/urls&quot;;
+
+Vue.prototype.$https = service; // 其他页面在使用 axios 的时候直接  this.$http 就可以了
+Vue.prototype.$urls = urls; // 其他页面在使用 urls 的时候直接  this.$urls 就可以了
+</code></pre></div><p>然而当你在组件中直接  this.$http 或者 this.$urls 时会报错的，那是因为 $http 和 $urls 属性，并没有在 vue 实例中声明。</p> <ol start="2"><li>再比如使用 Element-uI 的 meesage。</li></ol> <div class="language- extra-class"><pre class="language-text"><code>import { Message } from &quot;element-ui&quot;;
+
+Vue.prototype.$message = Message;
+</code></pre></div><p>之前用法如下图：</p> <div class="language- extra-class"><pre class="language-text"><code>  this.$message({
+    message: '恭喜你，这是一条成功消息',
+    type: 'success'
+  })
+</code></pre></div><p>然而还是会报错的。</p> <p>再比如 监听路由的变化：</p> <div class="language- extra-class"><pre class="language-text"><code>import { Vue, Watch } from &quot;vue-property-decorator&quot;;
+import Component from &quot;vue-class-component&quot;;
+import { Route } from &quot;vue-router&quot;;
+
+@Component
+export default class App extends Vue {
+
+  @Watch(&quot;$route&quot;)
+  routeChange(val: Route, oldVal: Route) {
+      //  do something
+  }
+}
+</code></pre></div><p>只是这样写的话，监听 $route 还是会报错的。</p> <p>想要以上三种做法都正常执行，就还要补充如下内容：</p> <p><strong>在 src 下的 shims-vue.d.ts 中加入要挂载的内容。</strong> 表示 vue 里面的 this 下有这些东西。</p> <div class="language- extra-class"><pre class="language-text"><code>import VueRouter, { Route } from &quot;vue-router&quot;;
+
+declare module &quot;vue/types/vue&quot; {
+  interface Vue {
+    $router: VueRouter; // 这表示this下有这个东西
+    $route: Route;
+    $https: any; // 不知道类型就定为 any 吧（偷懒）
+    $urls: any;
+    $Message: any;
+  }
+}
+</code></pre></div><ul><li><strong>2. 引入的模块要声明</strong></li></ul> <p>比如 在组件里面使用 window.document 或者  document.querySelector 的时候会报错的，npm run build 不给通过。</p> <p>再比如：按需引用 element 的组件与动画组件:</p> <div class="language- extra-class"><pre class="language-text"><code>import { Button } from &quot;element-ui&quot;;
+import CollapseTransition from &quot;element-ui/lib/transitions/collapse-transition&quot;;
+</code></pre></div><p>npm run serve 时可以执行，但是在 npm run build 的时候，会直接报错的，因为没有声明。</p> <p>正确做法：</p> <p>我在 src 下新建一个文件 shime-global.d.ts ，加入内容如下：</p> <div class="language- extra-class"><pre class="language-text"><code>// 声明全局的 window ，不然使用 window.XX 时会报错
+declare var window: Window;
+declare var document: Document;
+
+declare module &quot;element-ui/lib/transitions/collapse-transition&quot;;
+declare module &quot;element-ui&quot;;
+</code></pre></div><p>当然，这个文件你加在其他地方也可以，起其他名字都 OK。</p> <p>但是即使配置了以上方法之后，有些地方使用 document.XXX ，比如 document.title 的时候，npm run build 还是通过不了，所以只能这样了：</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;script lang=&quot;ts&quot;&gt;
+// 在用到 document.XXX  的文件中声明一下即可
+declare var document: any;
+// 此处省略 XXXX 多的代码
+&lt;/script&gt;
+</code></pre></div><ul><li><strong>3. this 的类型检查</strong></li></ul> <p>比如之前的 事件的节流（throttle）与防抖（debounce）方法：</p> <div class="language- extra-class"><pre class="language-text"><code>export function throttle(fn: Function, delay: number) {
+  return function() {
+    // 保留调用时的 this 上下文
+    let context = this;
+}
+</code></pre></div><p>function 里面的 this 在 npm run serve 时会报错的，因为 tyescript 检测到它不是在类(class)里面。</p> <p>正确做法：</p> <p>在根目录的 tsconfig.json 里面加上 &quot;noImplicitThis&quot;: false ，忽略 this 的类型检查。</p> <div class="language- extra-class"><pre class="language-text"><code>// 忽略 this 的类型检查, Raise error on this expressions with an implied any type.
+&quot;noImplicitThis&quot;: false,
+</code></pre></div><ul><li><strong>4. import 的 .vue 文件</strong></li></ul> <p>import .vue 的文件的时候，要补全 .vue 的后缀，不然 npm run build 会报错的。</p> <p>比如：</p> <div class="language- extra-class"><pre class="language-text"><code>import Nav from &quot;@/components/nav&quot;; // @ is an alias to /src
+import Footer from &quot;@/components/footer&quot;; // @ is an alias to /src
+</code></pre></div><p>要修改为：</p> <div class="language- extra-class"><pre class="language-text"><code>import Nav from &quot;@/components/nav.vue&quot;; // @ is an alias to /src
+import Footer from &quot;@/components/footer.vue&quot;; // @ is an alias to /src
+</code></pre></div><ul><li><strong>5. 装饰器 @Component</strong></li></ul> <p>报错。</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;script lang=&quot;ts&quot;&gt;
+import { Vue, Component } from &quot;vue-property-decorator&quot;;
+export default class LoadingCustom extends Vue {}
+&lt;/script&gt;
+</code></pre></div><p>以下才是正确，因为这里的 Vue 是从 vue-property-decorator import 来的。</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;script lang=&quot;ts&quot;&gt;
+import { Vue, Component } from &quot;vue-property-decorator&quot;;
+
+@Component
+export default class LoadingCustom extends Vue {}
+&lt;/script&gt;
+</code></pre></div><ul><li><strong>6. 路由的组件导航守卫失效</strong></li></ul> <p>vue-class-component 官网里面的路由的导航钩子的用法是没有效果的 <a href="https://github.com/vuejs/vue-class-component#adding-custom-hooks" target="_blank" rel="noopener noreferrer">Adding Custom Hooks<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p>路由的导航钩子不属于 Vue 本身，这会导致 class 组件转义到配置对象时导航钩子无效，因此如果要使用导航钩子需要在 router 的配置里声明（网上别人说的，还没实践，不确定是否可行）。</p> <ul><li><p><strong>7. tsconfig.json 的 strictPropertyInitialization 设为 false，不然你定义一个变量就必须给它一个初始值。</strong></p></li> <li><p><strong>position: sticky;</strong></p></li></ul> <p>本项目中的文章详情的目录就是用了 sticky。</p> <div class="language- extra-class"><pre class="language-text"><code>.anchor {
+  position: sticky;
+  top: 213px;
+  margin-top: 213px;
+}
+</code></pre></div><p>position:sticky 是 css 定位新增属性；可以说是相对定位 relative 和固定定位 fixed 的结合；它主要用在对 scroll 事件的监听上；简单来说，在滑动过程中，某个元素距离其父元素的距离达到 sticky 粘性定位的要求时(比如 top：100px )；position:sticky 这时的效果相当于 fixed 定位，固定到适当位置。</p> <p>用法像上面那样用即可，但是有使用条件：</p> <p>1、父元素不能 overflow:hidden 或者 overflow:auto 属性。
+2、必须指定 top、bottom、left、right 4 个值之一，否则只会处于相对定位
+3、父元素的高度不能低于 sticky 元素的高度
+4、sticky 元素仅在其父元素内生效</p> <ul><li><strong>8. eslint 报找不到文件和装饰器的错</strong></li></ul> <p>App.vue 中只是写了引用文件而已，而且 webpack 和 tsconfig.josn 里面已经配置了别名了的。</p> <div class="language- extra-class"><pre class="language-text"><code>import Nav from &quot;@/components/nav.vue&quot;; // @ is an alias to /src
+import Slider from &quot;@/components/slider.vue&quot;; // @ is an alias to /src
+import Footer from &quot;@/components/footer.vue&quot;; // @ is an alias to /src
+import ArrowUp from &quot;@/components/arrowUp.vue&quot;; // @ is an alias to /src
+import { isMobileOrPc } from &quot;@/utils/utils&quot;;
+</code></pre></div><p>但是，还是会报如下的错：</p> <p><img src="https://upload-images.jianshu.io/upload_images/12890819-442426b7910d103e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p> <p>只是代码不影响文件的打包，而且本地与生产环境的代码也正常，没报错而已。</p> <p>这个 eslint 的检测目前还没找到相关的配置可以把这些错误去掉。</p> <ul><li><strong>9. 路由模式修改为 history</strong></li></ul> <p>因为文章详情页面有目录，点击目录时定位定相应的内容，但是这个目录定位内容是根据锚点来做的，如果路由模式为 hash 模式的话，本来文章详情页面的路由就是 #articleDetail 了，再点击目录的话（比如 #title2 ），会在 #articleDetail 后面再加上 #title2，一刷新会找不到这个页面的。</p> <h2 id="_10-build-setup"><a href="#_10-build-setup" class="header-anchor">#</a> 10. Build Setup</h2> <div class="language- extra-class"><pre class="language-text"><code> # clone
+git clone https://github.com/biaochenxuying/blog-vue-typescript.git
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code># cd
+cd  blog-vue-typescript
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code># install dependencies
+npm install
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code># Compiles and hot-reloads for development
+npm run serve
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code># Compiles and minifies for production
+npm run build
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>### Run your tests
+npm run test
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>### Lints and fixes files
+npm run lint
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>### Run your unit tests
+npm run test:unit
+</code></pre></div><ul><li>Customize configuration
+See <a href="https://cli.vuejs.org/config/" target="_blank" rel="noopener noreferrer">Configuration Reference<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>.</li></ul> <p>如果要看有后台数据完整的效果，是要和后台项目  <strong><a href="https://github.com/biaochenxuying/blog-node" target="_blank" rel="noopener noreferrer">blog-node<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></strong> 一起运行才行的，不然接口请求会失败。</p> <p>虽然引入了 mock 了，但是还没有时间做模拟数据，想看具体效果，请稳步到我的网站上查看 <a href="https://biaochenxuying.cn" target="_blank" rel="noopener noreferrer">https://biaochenxuying.cn<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h2 id="_11-项目地址与系列相关文章"><a href="#_11-项目地址与系列相关文章" class="header-anchor">#</a> 11. 项目地址与系列相关文章</h2> <p>基于 Vue + TypeScript + Element 的 <a href="https://github.com/biaochenxuying/blog-vue-typescript" target="_blank" rel="noopener noreferrer"> blog-vue-typescript 前台展示: https://github.com/biaochenxuying/blog-vue-typescript<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p>基于 react + node + express + ant + mongodb 的博客前台，这个是笔者之前做的，效果和这个类似，地址如下：
+<a href="https://github.com/biaochenxuying/blog-react" target="_blank" rel="noopener noreferrer"> blog-react 前台展示: https://github.com/biaochenxuying/blog-react<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p><em>推荐阅读 :</em></p> <p><strong>本博客系统的系列文章：</strong></p> <ul><li><ol><li><a href="https://biaochenxuying.cn/articleDetail?article_id=5bf57a8f85e0f13af26e579b" target="_blank" rel="noopener noreferrer">react + node + express + ant + mongodb 的简洁兼时尚的博客网站<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ol></li> <li><ol start="2"><li><a href="https://biaochenxuying.cn/articleDetail?article_id=5bf6bb5e85e0f13af26e57b7" target="_blank" rel="noopener noreferrer">react + Ant Design + 支持 markdown 的 blog-react 项目文档说明<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ol></li> <li><ol start="3"><li><a href="https://biaochenxuying.cn/articleDetail?article_id=5bf8c57185e0f13af26e7d0d" target="_blank" rel="noopener noreferrer">基于 node + express + mongodb 的 blog-node 项目文档说明<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ol></li> <li><ol start="4"><li><a href="https://biaochenxuying.cn/articleDetail?article_id=5bfa728bb54f044b4f9da240" target="_blank" rel="noopener noreferrer">服务器小白的我,是如何将node+mongodb项目部署在服务器上并进行性能优化的<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ol></li> <li><ol start="5"><li><a href="https://biaochenxuying.cn/articleDetail?article_id=5c7bd34e42b55e2ecc90976d" target="_blank" rel="noopener noreferrer">github 授权登录教程与如何设计第三方授权登录的用户表<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ol></li> <li><ol start="6"><li><a href="https://biaochenxuying.cn/articleDetail?article_id=5c8ca2d3b87b8a04f1860c9a" target="_blank" rel="noopener noreferrer">一次网站的性能优化之路 -- 天下武功，唯快不破<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ol></li> <li><ol start="7"><li><a href="https://biaochenxuying.cn/articleDetail?article_id=5c9d8ce5f181945ddd6b0ffc" target="_blank" rel="noopener noreferrer">Vue + TypeScript + Element 搭建简洁时尚的博客网站及踩坑记<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ol></li></ul> <h2 id="_12-最后"><a href="#_12-最后" class="header-anchor">#</a> 12. 最后</h2> <p>笔者也是初学 TS ，如果文章有错的地方，请指出，感谢。</p> <p>一开始用 Vue + TS 来搭建时，我也是挺抵触的，因为踩了好多坑，而且很多类型检查方面也挺烦人。后面解决了，明白原理之后，是越用越爽，哈哈。</p> <p><img src="https://upload-images.jianshu.io/upload_images/12890819-a8fd0a50f25a993e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p> <h4 id="权衡"><a href="#权衡" class="header-anchor">#</a> 权衡</h4> <p>如何更好的利用 JS 的动态性和 TS 的静态特质，我们需要结合项目的实际情况来进行综合判断。一些建议：</p> <ul><li>如果是中小型项目，且生命周期不是很长，那就直接用 JS 吧，不要被 TS 束缚住了手脚。</li> <li>如果是大型应用，且生命周期比较长，那建议试试 TS。</li> <li>如果是框架、库之类的公共模块，那更建议用 TS 了。</li></ul> <p><strong>至于到底用不用TS，还是要看实际项目规模、项目生命周期、团队规模、团队成员情况等实际情况综合考虑。</strong></p> <p>其实本项目也是小项目来的，其实并不太适合加入  TypeScript ，不过这个项目是个人的项目，是为了练手用的，所以就无伤大大雅。</p> <p>未来，class-compoent 也将成为主流，现在写 TypeScript 以后进行 3.0 的迁移会更加方便。</p> <p>每天下班后，用几个晚上的时间来写这篇文章，码字不易，如果您觉得这篇文章不错或者对你有所帮助，<strong>请给个赞或者星吧，你的点赞就是我继续创作的最大动力。</strong></p> <p>参考文章:</p> <ol><li><p><a href="https://segmentfault.com/a/1190000011744210" target="_blank" rel="noopener noreferrer">vue + typescript 项目起手式<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></li> <li><p><a href="https://www.imooc.com/article/47096" target="_blank" rel="noopener noreferrer">TypeScript + 大型项目实战<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></li> <li><p><a href="https://www.jianshu.com/p/6c064270691f" target="_blank" rel="noopener noreferrer">Vue全家桶+TypeScript使用总结<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></li></ol> <div class="gitalk-container"><div id="gitalk-container"></div></div> <div class="gitalk-container"><div id="gitalk-container"></div></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/views/algorithms/10algo.html" class="prev">十大经典算法</a></span> <!----></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/blog/assets/js/app.c242f6b8.js" defer></script><script src="/blog/assets/js/2.c4b25ab3.js" defer></script><script src="/blog/assets/js/13.12fd43a0.js" defer></script><script src="/blog/assets/js/3.9101969b.js" defer></script>
+  </body>
+</html>
