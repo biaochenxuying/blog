@@ -179,12 +179,11 @@
 
 有什么问题，直接发邮件到我邮箱就可以，有必要的，我都会给您回复邮件的。
 
-<div align="center">
 
 ![](https://upload-images.jianshu.io/upload_images/12890819-0c42f7a1976fee04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/245)
+
 ![](https://upload-images.jianshu.io/upload_images/12890819-ffab7bd24d08c00d.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/250)
 
-</div>
 
 > **江山父老能容我，不使人间造孽钱**。
 
