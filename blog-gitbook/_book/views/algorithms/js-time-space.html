@@ -1,0 +1,687 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>时间和空间复杂度 · 夜尽天明的博客</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="biaochenxuying">
+        <meta id="referrer" name="referrer" content="never" />
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="js-10algo.html" />
+    
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"biaochenxuying","repo":"blog","type":"star","count":true,"size":"small"},{"user":"biaochenxuying","width":"160","type":"follow","count":true,"size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../github/follow.html">
+            
+                <a href="../github/follow.html">
+            
+                    
+                    GitHub 吸星大法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../github/star.html">
+            
+                <a href="../github/star.html">
+            
+                    
+                    GitHub 挖宝技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Vue.js
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../vue/vue-ts.html">
+            
+                <a href="../vue/vue-ts.html">
+            
+                    
+                    Vue + TS + El 搭建博客及踩坑记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    JavaScript 数据结构与算法之美
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.5.1" data-path="js-time-space.html">
+            
+                <a href="js-time-space.html">
+            
+                    
+                    时间和空间复杂度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="js-10algo.html">
+            
+                <a href="js-10algo.html">
+            
+                    
+                    十大经典排序算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >时间和空间复杂度</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#1-&#x4EC0;&#x4E48;&#x662F;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;-&#xFF1F;"><b></b>1. &#x4EC0;&#x4E48;&#x662F;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790; &#xFF1F;</a></li><li><span class="title-icon "></span><a href="#2-&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x8FDB;&#x884C;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;-&#xFF1F;"><b></b>2. &#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x8FDB;&#x884C;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790; &#xFF1F;</a></li><li><span class="title-icon "></span><a href="#3-&#x5982;&#x4F55;&#x8FDB;&#x884C;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;-&#xFF1F;"><b></b>3. &#x5982;&#x4F55;&#x8FDB;&#x884C;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790; &#xFF1F;</a></li><ul><li><span class="title-icon "></span><a href="#31-&#x5927;-o-&#x8868;&#x793A;&#x6CD5;"><b></b>3.1 &#x5927; O &#x8868;&#x793A;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#32-&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;"><b></b>3.2 &#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</a></li><li><span class="title-icon "></span><a href="#33-&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;"><b></b>3.3 &#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;</a></li><li><span class="title-icon "></span><a href="#34-&#x5E38;&#x7528;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;"><b></b>3.4 &#x5E38;&#x7528;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;</a></li><li><span class="title-icon "></span><a href="#35-&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x7C7B;"><b></b>3.5 &#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x7C7B;</a></li><li><span class="title-icon "></span><a href="#36-&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x603B;&#x7ED3;"><b></b>3.6 &#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x603B;&#x7ED3;</a></li><li><span class="title-icon "></span><a href="#37-&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;"><b></b>3.7 &#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;</a></li></ul><li><span class="title-icon "></span><a href="#4-&#x5982;&#x4F55;&#x638C;&#x63E1;&#x597D;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;&#x65B9;&#x6CD5;-&#xFF1F;"><b></b>4. &#x5982;&#x4F55;&#x638C;&#x63E1;&#x597D;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;&#x65B9;&#x6CD5; &#xFF1F;</a></li><li><span class="title-icon "></span><a href="#5-&#x6700;&#x540E;"><b></b>5. &#x6700;&#x540E;</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><p><img src="https://upload-images.jianshu.io/upload_images/12890819-891eae6ecef8a506.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<blockquote>
+<p>&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;&#x662F;&#x6574;&#x4E2A;&#x7B97;&#x6CD5;&#x5B66;&#x4E60;&#x7684;&#x7CBE;&#x9AD3;&#xFF0C;&#x53EA;&#x8981;&#x638C;&#x63E1;&#x4E86;&#x5B83;&#xFF0C;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x548C;&#x7B97;&#x6CD5;&#x7684;&#x5185;&#x5BB9;&#x57FA;&#x672C;&#x4E0A;&#x5C31;&#x638C;&#x63E1;&#x4E86;&#x4E00;&#x534A;&#x4E86;&#x3002;</p>
+</blockquote>
+<h2 id="1-&#x4EC0;&#x4E48;&#x662F;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;-&#xFF1F;"><a name="1-&#x4EC0;&#x4E48;&#x662F;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;-&#xFF1F;" class="anchor-navigation-ex-anchor" href="#1-&#x4EC0;&#x4E48;&#x662F;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;-&#xFF1F;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x4EC0;&#x4E48;&#x662F;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790; &#xFF1F;</h2>
+<ol>
+<li><p>&#x6570;&#x636E;&#x7ED3;&#x6784;&#x548C;&#x7B97;&#x6CD5;&#x89E3;&#x51B3;&#x662F; &#x201C;&#x5982;&#x4F55;&#x8BA9;&#x8BA1;&#x7B97;&#x673A;&#x66F4;&#x5FEB;&#x65F6;&#x95F4;&#x3001;&#x66F4;&#x7701;&#x7A7A;&#x95F4;&#x7684;&#x89E3;&#x51B3;&#x95EE;&#x9898;&#x201D;&#x3002;</p>
+</li>
+<li><p>&#x56E0;&#x6B64;&#x9700;&#x4ECE;&#x6267;&#x884C;&#x65F6;&#x95F4;&#x548C;&#x5360;&#x7528;&#x7A7A;&#x95F4;&#x4E24;&#x4E2A;&#x7EF4;&#x5EA6;&#x6765;&#x8BC4;&#x4F30;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x548C;&#x7B97;&#x6CD5;&#x7684;&#x6027;&#x80FD;&#x3002;</p>
+</li>
+<li><p>&#x5206;&#x522B;&#x7528;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x548C;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E24;&#x4E2A;&#x6982;&#x5FF5;&#x6765;&#x63CF;&#x8FF0;&#x6027;&#x80FD;&#x95EE;&#x9898;&#xFF0C;&#x4E8C;&#x8005;&#x7EDF;&#x79F0;&#x4E3A;&#x590D;&#x6742;&#x5EA6;&#x3002;</p>
+</li>
+<li><p>&#x590D;&#x6742;&#x5EA6;&#x63CF;&#x8FF0;&#x7684;&#x662F;&#x7B97;&#x6CD5;&#x6267;&#x884C;&#x65F6;&#x95F4;&#xFF08;&#x6216;&#x5360;&#x7528;&#x7A7A;&#x95F4;&#xFF09;&#x4E0E;&#x6570;&#x636E;&#x89C4;&#x6A21;&#x7684;&#x589E;&#x957F;&#x5173;&#x7CFB;&#x3002;</p>
+</li>
+</ol>
+<h2 id="2-&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x8FDB;&#x884C;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;-&#xFF1F;"><a name="2-&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x8FDB;&#x884C;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;-&#xFF1F;" class="anchor-navigation-ex-anchor" href="#2-&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x8FDB;&#x884C;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;-&#xFF1F;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x8FDB;&#x884C;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790; &#xFF1F;</h2>
+<ol>
+<li><p>&#x548C;&#x6027;&#x80FD;&#x6D4B;&#x8BD5;&#x76F8;&#x6BD4;&#xFF0C;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;&#x6709;&#x4E0D;&#x4F9D;&#x8D56;&#x6267;&#x884C;&#x73AF;&#x5883;&#x3001;&#x6210;&#x672C;&#x4F4E;&#x3001;&#x6548;&#x7387;&#x9AD8;&#x3001;&#x6613;&#x64CD;&#x4F5C;&#x3001;&#x6307;&#x5BFC;&#x6027;&#x5F3A;&#x7684;&#x7279;&#x70B9;&#x3002;</p>
+</li>
+<li><p>&#x638C;&#x63E1;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;&#xFF0C;&#x5C06;&#x80FD;&#x7F16;&#x5199;&#x51FA;&#x6027;&#x80FD;&#x66F4;&#x4F18;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x6709;&#x5229;&#x4E8E;&#x964D;&#x4F4E;&#x7CFB;&#x7EDF;&#x5F00;&#x53D1;&#x548C;&#x7EF4;&#x62A4;&#x6210;&#x672C;&#x3002;</p>
+</li>
+</ol>
+<h2 id="3-&#x5982;&#x4F55;&#x8FDB;&#x884C;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;-&#xFF1F;"><a name="3-&#x5982;&#x4F55;&#x8FDB;&#x884C;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;-&#xFF1F;" class="anchor-navigation-ex-anchor" href="#3-&#x5982;&#x4F55;&#x8FDB;&#x884C;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;-&#xFF1F;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x5982;&#x4F55;&#x8FDB;&#x884C;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790; &#xFF1F;</h2>
+<h3 id="31-&#x5927;-o-&#x8868;&#x793A;&#x6CD5;"><a name="31-&#x5927;-o-&#x8868;&#x793A;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#31-&#x5927;-o-&#x8868;&#x793A;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1 &#x5927; O &#x8868;&#x793A;&#x6CD5;</h3>
+<p>&#x7B97;&#x6CD5;&#x7684;&#x6267;&#x884C;&#x65F6;&#x95F4;&#x4E0E;&#x6BCF;&#x884C;&#x4EE3;&#x7801;&#x7684;&#x6267;&#x884C;&#x6B21;&#x6570;&#x6210;&#x6B63;&#x6BD4;&#xFF0C;&#x7528; T(n) = O(f(n)) &#x8868;&#x793A;&#xFF0C;&#x5176;&#x4E2D; T(n) &#x8868;&#x793A;&#x7B97;&#x6CD5;&#x6267;&#x884C;&#x603B;&#x65F6;&#x95F4;&#xFF0C;f(n) &#x8868;&#x793A;&#x6BCF;&#x884C;&#x4EE3;&#x7801;&#x6267;&#x884C;&#x603B;&#x6B21;&#x6570;&#xFF0C;&#x800C; n &#x5F80;&#x5F80;&#x8868;&#x793A;&#x6570;&#x636E;&#x7684;&#x89C4;&#x6A21;&#x3002;&#x8FD9;&#x5C31;&#x662F;&#x5927; O &#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x8868;&#x793A;&#x6CD5;&#x3002;</p>
+<h3 id="32-&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;"><a name="32-&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;" class="anchor-navigation-ex-anchor" href="#32-&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;"><i class="fa fa-link" aria-hidden="true"></i></a>3.2 &#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</h3>
+<p>1&#xFF09;&#x5B9A;&#x4E49;</p>
+<p>&#x7B97;&#x6CD5;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x7B97;&#x6CD5;&#x7684;&#x65F6;&#x95F4;&#x91CF;&#x5EA6;&#x3002;</p>
+<p><strong>&#x5927; O &#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x8868;&#x793A;&#x6CD5;</strong> &#x5B9E;&#x9645;&#x4E0A;&#x5E76;&#x4E0D;&#x5177;&#x4F53;&#x8868;&#x793A;&#x4EE3;&#x7801;&#x771F;&#x6B63;&#x7684;&#x6267;&#x884C;&#x65F6;&#x95F4;&#xFF0C;&#x800C;&#x662F;&#x8868;&#x793A; <strong>&#x4EE3;&#x7801;&#x6267;&#x884C;&#x65F6;&#x95F4;&#x968F;&#x6570;&#x636E;&#x89C4;&#x6A21;&#x589E;&#x957F;&#x7684;&#x53D8;&#x5316;&#x8D8B;&#x52BF;</strong>&#xFF0C;&#x6240;&#x4EE5;&#x4E5F;&#x53EB; <strong>&#x6E10;&#x8FDB;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</strong>&#xFF0C;&#x7B80;&#x79F0; <strong>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</strong>&#xFF08;asymptotic time complexity&#xFF09;&#x3002;</p>
+<p>&#x4F8B;&#x5B50;1&#xFF1A;</p>
+<pre><code>function aFun() {
+    console.log(&quot;Hello, World!&quot;);      //  &#x9700;&#x8981;&#x6267;&#x884C; 1 &#x6B21;
+    return 0;       // &#x9700;&#x8981;&#x6267;&#x884C; 1 &#x6B21;
+}
+</code></pre><p>&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x9700;&#x8981;&#x6267;&#x884C; 2 &#x6B21;&#x8FD0;&#x7B97;&#x3002;</p>
+<p>&#x4F8B;&#x5B50; 2&#xFF1A;</p>
+<pre><code>function bFun(n) {
+    for(let i = 0; i &lt; n; i++) {         // &#x9700;&#x8981;&#x6267;&#x884C; (n + 1) &#x6B21;
+        console.log(&quot;Hello, World!&quot;);      // &#x9700;&#x8981;&#x6267;&#x884C; n &#x6B21;
+    }
+    return 0;       // &#x9700;&#x8981;&#x6267;&#x884C; 1 &#x6B21;
+}
+</code></pre><p>&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x9700;&#x8981;&#x6267;&#x884C; ( n + 1 + n + 1 ) = 2n +2 &#x6B21;&#x8FD0;&#x7B97;&#x3002;</p>
+<p>&#x4F8B;&#x5B50; 3&#xFF1A;</p>
+<pre><code> function cal(n) {
+   let sum = 0; // 1 &#x6B21;
+   let i = 1; // 1 &#x6B21;
+   let j = 1; // 1 &#x6B21;
+   for (; i &lt;= n; ++i) {  // n &#x6B21;
+     j = 1;  // n &#x6B21;
+     for (; j &lt;= n; ++j) {  // n * n &#xFF0C;&#x4E5F;&#x5373;&#x662F;  n&#x5E73;&#x65B9;&#x6B21;
+       sum = sum +  i * j;  // n * n &#xFF0C;&#x4E5F;&#x5373;&#x662F;  n&#x5E73;&#x65B9;&#x6B21;
+     }
+   }
+ }
+</code></pre><p>&#x6CE8;&#x610F;&#xFF0C;&#x8FD9;&#x91CC;&#x662F;&#x4E8C;&#x5C42; for &#x5FAA;&#x73AF;&#xFF0C;&#x6240;&#x4EE5;&#x7B2C;&#x4E8C;&#x5C42;&#x6267;&#x884C;&#x7684;&#x662F; n * n  = n<sup>2</sup> &#x6B21;&#xFF0C;&#x800C;&#x4E14;&#x8FD9;&#x91CC;&#x7684;&#x5FAA;&#x73AF;&#x662F; ++i&#xFF0C;&#x548C;&#x4F8B;&#x5B50; 2 &#x7684;&#x662F; i++&#xFF0C;&#x662F;&#x4E0D;&#x540C;&#x7684;&#xFF0C;&#x662F;&#x5148;&#x52A0;&#x4E0E;&#x540E;&#x52A0;&#x7684;&#x533A;&#x522B;&#x3002;</p>
+<p>&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x9700;&#x8981;&#x6267;&#x884C; ( n<sup>2</sup> +  n<sup>2</sup> + n + n + 1 + 1 +1 ) = 2n<sup>2</sup> +2n + 3 &#x3002;</p>
+<p>2&#xFF09;&#x7279;&#x70B9;</p>
+<p>&#x4EE5;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;&#x4F8B;&#xFF0C;&#x7531;&#x4E8E; <strong>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</strong> &#x63CF;&#x8FF0;&#x7684;&#x662F;&#x7B97;&#x6CD5;&#x6267;&#x884C;&#x65F6;&#x95F4;&#x4E0E;&#x6570;&#x636E;&#x89C4;&#x6A21;&#x7684; <strong>&#x589E;&#x957F;&#x53D8;&#x5316;&#x8D8B;&#x52BF;</strong>&#xFF0C;&#x6240;&#x4EE5; <strong>&#x5E38;&#x91CF;&#x3001;&#x4F4E;&#x9636;&#x3001;&#x7CFB;&#x6570;</strong> &#x5B9E;&#x9645;&#x4E0A;&#x5BF9;&#x8FD9;&#x79CD;&#x589E;&#x957F;&#x8D8B;&#x52BF;&#x4E0D;&#x4EA7;&#x751F;&#x51B3;&#x5B9A;&#x6027;&#x5F71;&#x54CD;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x505A;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;&#x65F6; <strong>&#x5FFD;&#x7565;</strong> &#x8FD9;&#x4E9B;&#x9879;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#xFF0C;&#x4E0A;&#x9762;&#x4F8B;&#x5B50;1 &#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A; T(n) = O(1)&#xFF0C;&#x4F8B;&#x5B50;2 &#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A; T(n) = O(n)&#xFF0C;&#x4F8B;&#x5B50;3 &#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A; T(n) = O(n<sup>2</sup>)&#x3002;</p>
+<h3 id="33-&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;"><a name="33-&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;" class="anchor-navigation-ex-anchor" href="#33-&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;"><i class="fa fa-link" aria-hidden="true"></i></a>3.3 &#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;</h3>
+<ul>
+<li><ol>
+<li><strong>&#x53EA;&#x5173;&#x6CE8;&#x5FAA;&#x73AF;&#x6267;&#x884C;&#x6B21;&#x6570;&#x6700;&#x591A;&#x7684;&#x4E00;&#x6BB5;&#x4EE3;&#x7801;</strong></li>
+</ol>
+<p>&#x5355;&#x6BB5;&#x4EE3;&#x7801;&#x770B;&#x9AD8;&#x9891;&#xFF1A;&#x6BD4;&#x5982;&#x5FAA;&#x73AF;&#x3002;</p>
+</li>
+</ul>
+<pre><code>function cal(n) { 
+   let sum = 0;
+   let i = 1;
+   for (; i &lt;= n; ++i) {
+     sum = sum + i;
+   }
+   return sum;
+ }
+</code></pre><p>&#x6267;&#x884C;&#x6B21;&#x6570;&#x6700;&#x591A;&#x7684;&#x662F; for &#x5FAA;&#x73AF;&#x53CA;&#x91CC;&#x9762;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x6267;&#x884C;&#x4E86; n &#x6B21;&#xFF0C;&#x6240;&#x4EE5;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A; O(n)&#x3002;</p>
+<ul>
+<li><ol>
+<li><strong>&#x52A0;&#x6CD5;&#x6CD5;&#x5219;&#xFF1A;&#x603B;&#x590D;&#x6742;&#x5EA6;&#x7B49;&#x4E8E;&#x91CF;&#x7EA7;&#x6700;&#x5927;&#x7684;&#x90A3;&#x6BB5;&#x4EE3;&#x7801;&#x7684;&#x590D;&#x6742;&#x5EA6;</strong></li>
+</ol>
+</li>
+</ul>
+<p>&#x591A;&#x6BB5;&#x4EE3;&#x7801;&#x53D6;&#x6700;&#x5927;&#xFF1A;&#x6BD4;&#x5982;&#x4E00;&#x6BB5;&#x4EE3;&#x7801;&#x4E2D;&#x6709;&#x5355;&#x5FAA;&#x73AF;&#x548C;&#x591A;&#x91CD;&#x5FAA;&#x73AF;&#xFF0C;&#x90A3;&#x4E48;&#x53D6;&#x591A;&#x91CD;&#x5FAA;&#x73AF;&#x7684;&#x590D;&#x6742;&#x5EA6;&#x3002;</p>
+<pre><code>function cal(n) {
+   let sum_1 = 0;
+   let p = 1;
+   for (; p &lt; 100; ++p) {
+     sum_1 = sum_1 + p;
+   }
+
+   let sum_2 = 0;
+   let q = 1;
+   for (; q &lt; n; ++q) {
+     sum_2 = sum_2 + q;
+   }
+
+   let sum_3 = 0;
+   let i = 1;
+   let j = 1;
+   for (; i &lt;= n; ++i) {
+     j = 1; 
+     for (; j &lt;= n; ++j) {
+       sum_3 = sum_3 +  i * j;
+     }
+   }
+
+   return sum_1 + sum_2 + sum_3;
+ }
+</code></pre><p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x5206;&#x4E3A;&#x4E09;&#x90E8;&#x5206;&#xFF0C;&#x5206;&#x522B;&#x6C42; sum_1&#x3001;sum_2&#x3001;sum_3 &#xFF0C;&#x4E3B;&#x8981;&#x770B;&#x5FAA;&#x73AF;&#x90E8;&#x5206;&#x3002;</p>
+<p>&#x7B2C;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x6C42; sum_1 &#xFF0C;&#x660E;&#x786E;&#x77E5;&#x9053;&#x6267;&#x884C;&#x4E86; 100 &#x6B21;&#xFF0C;&#x800C;&#x548C; n &#x7684;&#x89C4;&#x6A21;&#x65E0;&#x5173;&#xFF0C;&#x662F;&#x4E2A;&#x5E38;&#x91CF;&#x7684;&#x6267;&#x884C;&#x65F6;&#x95F4;&#xFF0C;&#x4E0D;&#x80FD;&#x53CD;&#x6620;<strong>&#x589E;&#x957F;&#x53D8;&#x5316;&#x8D8B;&#x52BF;</strong>&#xFF0C;&#x6240;&#x4EE5;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A; O(1)&#x3002;</p>
+<p>&#x7B2C;&#x4E8C;&#x548C;&#x7B2C;&#x4E09;&#x90E8;&#x5206;&#xFF0C;&#x6C42; sum_2 &#x548C; sum_3 &#xFF0C;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x662F;&#x548C; n &#x7684;&#x89C4;&#x6A21;&#x6709;&#x5173;&#x7684;&#xFF0C;&#x4E3A;&#x522B;&#x4E3A; O(n) &#x548C; O(n<sup>2</sup>)&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#xFF0C;&#x53D6;&#x4E09;&#x6BB5;&#x4EE3;&#x7801;&#x7684;&#x6700;&#x5927;&#x91CF;&#x7EA7;&#xFF0C;&#x4E0A;&#x9762;&#x4F8B;&#x5B50;&#x7684;&#x6700;&#x7EC8;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A; O(n<sup>2</sup>)&#x3002;</p>
+<p>&#x540C;&#x7406;&#x7C7B;&#x63A8;&#xFF0C;&#x5982;&#x679C;&#x6709; 3 &#x5C42; for &#x5FAA;&#x73AF;&#xFF0C;&#x90A3;&#x4E48;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A; O(n<sup>3</sup>)&#xFF0C;4 &#x5C42;&#x5C31;&#x662F;  O(n<sup>4</sup>)&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#xFF0C;<strong>&#x603B;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5C31;&#x7B49;&#x4E8E;&#x91CF;&#x7EA7;&#x6700;&#x5927;&#x7684;&#x90A3;&#x6BB5;&#x4EE3;&#x7801;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</strong>&#x3002;</p>
+<ul>
+<li><ol>
+<li><strong>&#x4E58;&#x6CD5;&#x6CD5;&#x5219;&#xFF1A;&#x5D4C;&#x5957;&#x4EE3;&#x7801;&#x7684;&#x590D;&#x6742;&#x5EA6;&#x7B49;&#x4E8E;&#x5D4C;&#x5957;&#x5185;&#x5916;&#x4EE3;&#x7801;&#x590D;&#x6742;&#x5EA6;&#x7684;&#x4E58;&#x79EF;</strong></li>
+</ol>
+</li>
+</ul>
+<p>&#x5D4C;&#x5957;&#x4EE3;&#x7801;&#x6C42;&#x4E58;&#x79EF;&#xFF1A;&#x6BD4;&#x5982;&#x9012;&#x5F52;&#x3001;&#x591A;&#x91CD;&#x5FAA;&#x73AF;&#x7B49;&#x3002;</p>
+<pre><code>function cal(n) {
+   let ret = 0; 
+   let i = 1;
+   for (; i &lt; n; ++i) {
+     ret = ret + f(i); // &#x91CD;&#x70B9;&#x4E3A;  f(i)
+   } 
+ } 
+
+function f(n) {
+  let sum = 0;
+  let i = 1;
+  for (; i &lt; n; ++i) {
+    sum = sum + i;
+  } 
+  return sum;
+ }
+</code></pre><p>&#x65B9;&#x6CD5; cal &#x5FAA;&#x73AF;&#x91CC;&#x9762;&#x8C03;&#x7528; f &#x65B9;&#x6CD5;&#xFF0C;&#x800C; f &#x65B9;&#x6CD5;&#x91CC;&#x9762;&#x4E5F;&#x6709;&#x5FAA;&#x73AF;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#xFF0C;&#x6574;&#x4E2A; cal() &#x51FD;&#x6570;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5C31;&#x662F;&#xFF0C;T(n) = T1(n) <em> T2(n) = O(n</em>n) = O(n<sup>2</sup>) &#x3002;</p>
+<ul>
+<li><ol>
+<li><strong>&#x591A;&#x4E2A;&#x89C4;&#x6A21;&#x6C42;&#x52A0;&#x6CD5;&#xFF1A;&#x6BD4;&#x5982;&#x65B9;&#x6CD5;&#x6709;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x63A7;&#x5236;&#x4E24;&#x4E2A;&#x5FAA;&#x73AF;&#x7684;&#x6B21;&#x6570;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x65F6;&#x5C31;&#x53D6;&#x4E8C;&#x8005;&#x590D;&#x6742;&#x5EA6;&#x76F8;&#x52A0;</strong></li>
+</ol>
+</li>
+</ul>
+<pre><code>function cal(m, n) {
+  let sum_1 = 0;
+  let i = 1;
+  for (; i &lt; m; ++i) {
+    sum_1 = sum_1 + i;
+  }
+
+  let sum_2 = 0;
+  let j = 1;
+  for (; j &lt; n; ++j) {
+    sum_2 = sum_2 + j;
+  }
+
+  return sum_1 + sum_2;
+}
+</code></pre><p>&#x4EE5;&#x4E0A;&#x4EE3;&#x7801;&#x4E5F;&#x662F;&#x6C42;&#x548C; &#xFF0C;&#x6C42; sum_1 &#x7684;&#x6570;&#x636E;&#x89C4;&#x6A21;&#x4E3A; m&#x3001;&#x6C42; sum_2 &#x7684;&#x6570;&#x636E;&#x89C4;&#x6A21;&#x4E3A; n&#xFF0C;&#x6240;&#x4EE5;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A; O(m+n)&#x3002;</p>
+<p><strong>&#x516C;&#x5F0F;&#xFF1A;T1(m) + T2(n) = O(f(m) + g(n)) &#x3002;</strong></p>
+<ul>
+<li><ol>
+<li><strong>&#x591A;&#x4E2A;&#x89C4;&#x6A21;&#x6C42;&#x4E58;&#x6CD5;&#xFF1A;&#x6BD4;&#x5982;&#x65B9;&#x6CD5;&#x6709;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x63A7;&#x5236;&#x4E24;&#x4E2A;&#x5FAA;&#x73AF;&#x7684;&#x6B21;&#x6570;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x65F6;&#x5C31;&#x53D6;&#x4E8C;&#x8005;&#x590D;&#x6742;&#x5EA6;&#x76F8;&#x4E58;</strong></li>
+</ol>
+</li>
+</ul>
+<pre><code>function cal(m, n) {
+  let sum_3 = 0;
+   let i = 1;
+   let j = 1;
+   for (; i &lt;= m; ++i) {
+     j = 1; 
+     for (; j &lt;= n; ++j) {
+       sum_3 = sum_3 +  i * j;
+     }
+   }
+}
+</code></pre><p>&#x4EE5;&#x4E0A;&#x4EE3;&#x7801;&#x4E5F;&#x662F;&#x6C42;&#x548C;&#xFF0C;&#x4E24;&#x5C42; for &#x5FAA;&#x73AF; &#xFF0C;&#x6C42; sum_3 &#x7684;&#x6570;&#x636E;&#x89C4;&#x6A21;&#x4E3A; m &#x548C; n&#xFF0C;&#x6240;&#x4EE5;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A; O(m*n)&#x3002;</p>
+<p><strong>&#x516C;&#x5F0F;&#xFF1A;T1(m) <em> T2(n) = O(f(m) </em> g(n)) &#x3002;</strong></p>
+<h3 id="34-&#x5E38;&#x7528;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;"><a name="34-&#x5E38;&#x7528;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;" class="anchor-navigation-ex-anchor" href="#34-&#x5E38;&#x7528;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;"><i class="fa fa-link" aria-hidden="true"></i></a>3.4 &#x5E38;&#x7528;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;</h3>
+<ul>
+<li><ol>
+<li><strong>&#x591A;&#x9879;&#x5F0F;&#x9636;&#xFF1A;&#x968F;&#x7740;&#x6570;&#x636E;&#x89C4;&#x6A21;&#x7684;&#x589E;&#x957F;&#xFF0C;&#x7B97;&#x6CD5;&#x7684;&#x6267;&#x884C;&#x65F6;&#x95F4;&#x548C;&#x7A7A;&#x95F4;&#x5360;&#x7528;&#xFF0C;&#x6309;&#x7167;&#x591A;&#x9879;&#x5F0F;&#x7684;&#x6BD4;&#x4F8B;&#x589E;&#x957F;&#x3002;</strong></li>
+</ol>
+</li>
+</ul>
+<p>&#x5305;&#x62EC; O(1)&#xFF08;&#x5E38;&#x6570;&#x9636;&#xFF09;&#x3001;O(logn)&#xFF08;&#x5BF9;&#x6570;&#x9636;&#xFF09;&#x3001;O(n)&#xFF08;&#x7EBF;&#x6027;&#x9636;&#xFF09;&#x3001;O(nlogn)&#xFF08;&#x7EBF;&#x6027;&#x5BF9;&#x6570;&#x9636;&#xFF09;&#x3001;O(n<sup>2</sup>) &#xFF08;&#x5E73;&#x65B9;&#x9636;&#xFF09;&#x3001;O(n<sup>3</sup>)&#xFF08;&#x7ACB;&#x65B9;&#x9636;&#xFF09;&#x3002;</p>
+<p>&#x9664;&#x4E86; O(logn)&#x3001;O(nlogn) &#xFF0C;&#x5176;&#x4ED6;&#x7684;&#x90FD;&#x53EF;&#x4ECE;&#x4E0A;&#x9762;&#x7684;&#x51E0;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#x770B;&#x5230;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x4E3E;&#x4F8B;&#x8BF4;&#x660E;  <strong>O(logn)&#xFF08;&#x5BF9;&#x6570;&#x9636;&#xFF09;</strong>&#xFF1A;</p>
+<pre><code>let i=1;
+while (i &lt;= n)  {
+   i = i * 2;
+}
+</code></pre><p>&#x4EE3;&#x7801;&#x662F;&#x4ECE; 1 &#x5F00;&#x59CB;&#xFF0C;&#x6BCF;&#x6B21;&#x5FAA;&#x73AF;&#x5C31;&#x4E58;&#x4EE5; 2&#xFF0C;&#x5F53;&#x5927;&#x4E8E; n &#x65F6;&#xFF0C;&#x5FAA;&#x73AF;&#x7ED3;&#x675F;&#x3002;</p>
+<p>&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x9AD8;&#x4E2D;&#x5B66;&#x8FC7;&#x7684;&#x7B49;&#x6BD4;&#x6570;&#x5217;&#xFF0C;i &#x7684;&#x53D6;&#x503C;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x7B49;&#x6BD4;&#x6570;&#x5217;&#x3002;&#x5728;&#x6570;&#x5B66;&#x91CC;&#x9762;&#x662F;&#x8FD9;&#x6837;&#x5B50;&#x7684;&#xFF1A;</p>
+<p>2<sup>0</sup>  2<sup>1</sup>  2<sup>2</sup>  ... 2<sup>k</sup> ...  2<sup>x</sup>  = n</p>
+<p>&#x6240;&#x4EE5;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x8981;&#x77E5;&#x9053; x &#x503C;&#x662F;&#x591A;&#x5C11;&#xFF0C;&#x5C31;&#x77E5;&#x9053;&#x8FD9;&#x884C;&#x4EE3;&#x7801;&#x6267;&#x884C;&#x7684;&#x6B21;&#x6570;&#x4E86;&#xFF0C;&#x901A;&#x8FC7; 2x = n &#x6C42;&#x89E3; x&#xFF0C;&#x6570;&#x5B66;&#x4E2D;&#x6C42;&#x89E3;&#x5F97; x = log<sub>2</sub>n &#x3002;&#x6240;&#x4EE5;&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A; O(log<sub>2</sub>n)&#x3002;</p>
+<p>&#x5B9E;&#x9645;&#x4E0A;&#xFF0C;&#x4E0D;&#x7BA1;&#x662F;&#x4EE5; 2 &#x4E3A;&#x5E95;&#x3001;&#x4EE5; 3 &#x4E3A;&#x5E95;&#xFF0C;&#x8FD8;&#x662F;&#x4EE5; 10 &#x4E3A;&#x5E95;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x628A;&#x6240;&#x6709;&#x5BF9;&#x6570;&#x9636;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x90FD;&#x8BB0;&#x4E3A; O(logn)&#x3002;&#x4E3A;&#x4EC0;&#x4E48;&#x5462;&#xFF1F;</p>
+<p>&#x56E0;&#x4E3A;&#x5BF9;&#x6570;&#x4E4B;&#x95F4;&#x662F;&#x53EF;&#x4EE5;&#x4E92;&#x76F8;&#x8F6C;&#x6362;&#x7684;&#xFF0C;log3n = log<sub>3</sub>2 <em> log<sub>2</sub>n&#xFF0C;&#x6240;&#x4EE5; O(log<sub>3</sub>n) = O(C </em> log<sub>2</sub>n)&#xFF0C;&#x5176;&#x4E2D; C=log<sub>3</sub>2 &#x662F;&#x4E00;&#x4E2A;&#x5E38;&#x91CF;&#x3002;</p>
+<p>&#x7531;&#x4E8E; <strong>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</strong> &#x63CF;&#x8FF0;&#x7684;&#x662F;&#x7B97;&#x6CD5;&#x6267;&#x884C;&#x65F6;&#x95F4;&#x4E0E;&#x6570;&#x636E;&#x89C4;&#x6A21;&#x7684; <strong>&#x589E;&#x957F;&#x53D8;&#x5316;&#x8D8B;&#x52BF;</strong>&#xFF0C;&#x6240;&#x4EE5; <strong>&#x5E38;&#x91CF;&#x3001;&#x4F4E;&#x9636;&#x3001;&#x7CFB;&#x6570;</strong> &#x5B9E;&#x9645;&#x4E0A;&#x5BF9;&#x8FD9;&#x79CD;&#x589E;&#x957F;&#x8D8B;&#x52BF;&#x4E0D;&#x4EA7;&#x751F;&#x51B3;&#x5B9A;&#x6027;&#x5F71;&#x54CD;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x505A;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;&#x65F6; <strong>&#x5FFD;&#x7565;</strong> &#x8FD9;&#x4E9B;&#x9879;&#x3002;</p>
+<p>&#x56E0;&#x6B64;&#xFF0C;<strong>&#x5728;&#x5BF9;&#x6570;&#x9636;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x7684;&#x8868;&#x793A;&#x65B9;&#x6CD5;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x5FFD;&#x7565;&#x5BF9;&#x6570;&#x7684; &#x201C;&#x5E95;&#x201D;&#xFF0C;&#x7EDF;&#x4E00;&#x8868;&#x793A;&#x4E3A; O(logn)</strong>&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x4E3E;&#x4F8B;&#x8BF4;&#x660E;  <strong>O(nlogn)&#xFF08;&#x5BF9;&#x6570;&#x9636;&#xFF09;</strong>&#xFF1A;</p>
+<pre><code>function aFun(n){
+  let i = 1;
+  while (i &lt;= n)  {
+     i = i * 2;
+  }
+  return i
+}
+
+function cal(n) { 
+   let sum = 0;
+   for (let i = 1; i &lt;= n; ++i) {
+     sum = sum + aFun(n);
+   }
+   return sum;
+ }
+</code></pre><p>aFun &#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A; O(logn)&#xFF0C;&#x800C; cal &#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A; O(n)&#xFF0C;&#x6240;&#x4EE5;&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A; T(n) = T1(logn) <em> T2(n) = O(logn</em>n) = O(nlogn) &#x3002;</p>
+<ul>
+<li><ol>
+<li><strong>&#x975E;&#x591A;&#x9879;&#x5F0F;&#x9636;&#xFF1A;&#x968F;&#x7740;&#x6570;&#x636E;&#x89C4;&#x6A21;&#x7684;&#x589E;&#x957F;&#xFF0C;&#x7B97;&#x6CD5;&#x7684;&#x6267;&#x884C;&#x65F6;&#x95F4;&#x548C;&#x7A7A;&#x95F4;&#x5360;&#x7528;&#x66B4;&#x589E;&#xFF0C;&#x8FD9;&#x7C7B;&#x7B97;&#x6CD5;&#x6027;&#x80FD;&#x6781;&#x5DEE;&#x3002;</strong></li>
+</ol>
+</li>
+</ul>
+<p>&#x5305;&#x62EC; O(2<sup>n</sup>)&#xFF08;&#x6307;&#x6570;&#x9636;&#xFF09;&#x3001;O(n!)&#xFF08;&#x9636;&#x4E58;&#x9636;&#xFF09;&#x3002;</p>
+<p> O(2<sup>n</sup>)&#xFF08;&#x6307;&#x6570;&#x9636;&#xFF09;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code>aFunc( n ) {
+    if (n &lt;= 1) {
+        return 1;
+    } else {
+        return aFunc(n - 1) + aFunc(n - 2);
+    }
+}
+</code></pre><p>&#x53C2;&#x8003;&#x7B54;&#x6848;&#xFF1A;
+&#x663E;&#x7136;&#x8FD0;&#x884C;&#x6B21;&#x6570;&#xFF0C;T(0) = T(1) = 1&#xFF0C;&#x540C;&#x65F6; T(n) = T(n - 1) + T(n - 2) + 1&#xFF0C;&#x8FD9;&#x91CC;&#x7684; 1 &#x662F;&#x5176;&#x4E2D;&#x7684;&#x52A0;&#x6CD5;&#x7B97;&#x4E00;&#x6B21;&#x6267;&#x884C;&#x3002;
+&#x663E;&#x7136; T(n) = T(n - 1) + T(n - 2) &#x662F;&#x4E00;&#x4E2A;<a href="https://baike.baidu.com/item/%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97" target="_blank">&#x6590;&#x6CE2;&#x90A3;&#x5951;&#x6570;&#x5217;</a>&#xFF0C;&#x901A;&#x8FC7;&#x5F52;&#x7EB3;&#x8BC1;&#x660E;&#x6CD5;&#x53EF;&#x4EE5;&#x8BC1;&#x660E;&#xFF0C;&#x5F53; n &gt;= 1 &#x65F6; T(n) &lt; (5/3)<sup>n</sup>&#xFF0C;&#x540C;&#x65F6;&#x5F53; n &gt; 4 &#x65F6; T(n) &gt;= (3/2)<sup>n</sup>&#x3002;
+&#x6240;&#x4EE5;&#x8BE5;&#x65B9;&#x6CD5;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x53EF;&#x4EE5;&#x8868;&#x793A;&#x4E3A; O((5/3)<sup>n</sup>)&#xFF0C;&#x7B80;&#x5316;&#x540E;&#x4E3A; O(2<sup>n</sup>)&#x3002;
+&#x53EF;&#x89C1;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x6240;&#x9700;&#x7684;&#x8FD0;&#x884C;&#x65F6;&#x95F4;&#x662F;&#x4EE5;&#x6307;&#x6570;&#x7684;&#x901F;&#x5EA6;&#x589E;&#x957F;&#x7684;&#x3002;
+&#x5982;&#x679C;&#x5927;&#x5BB6;&#x611F;&#x5174;&#x8DA3;&#xFF0C;&#x53EF;&#x4EE5;&#x8BD5;&#x4E0B;&#x5206;&#x522B;&#x7528; 1&#xFF0C;10&#xFF0C;100 &#x7684;&#x8F93;&#x5165;&#x5927;&#x5C0F;&#x6765;&#x6D4B;&#x8BD5;&#x4E0B;&#x7B97;&#x6CD5;&#x7684;&#x8FD0;&#x884C;&#x65F6;&#x95F4;&#xFF0C;&#x76F8;&#x4FE1;&#x5927;&#x5BB6;&#x4F1A;&#x611F;&#x53D7;&#x5230;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x7684;&#x65E0;&#x7A77;&#x9B45;&#x529B;&#x3002;</p>
+<h3 id="35-&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x7C7B;"><a name="35-&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#35-&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>3.5 &#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x7C7B;</h3>
+<p>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x53EF;&#x4EE5;&#x5206;&#x4E3A;&#xFF1A;</p>
+<ul>
+<li><strong>&#x6700;&#x597D;&#x60C5;&#x51B5;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</strong>&#xFF08;best case time complexity&#xFF09;&#xFF1A;&#x5728;&#x6700;&#x7406;&#x60F3;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6267;&#x884C;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x3002;</li>
+<li><strong>&#x6700;&#x574F;&#x60C5;&#x51B5;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</strong>&#xFF08;worst case time complexity&#xFF09;&#xFF1A;&#x5728;&#x6700;&#x7CDF;&#x7CD5;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6267;&#x884C;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x3002;</li>
+<li><strong>&#x5E73;&#x5747;&#x60C5;&#x51B5;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</strong>&#xFF08;average case time complexity&#xFF09;&#xFF0C;&#x7528;&#x4EE3;&#x7801;&#x5728;&#x6240;&#x6709;&#x60C5;&#x51B5;&#x4E0B;&#x6267;&#x884C;&#x7684;&#x6B21;&#x6570;&#x7684;&#x52A0;&#x6743;&#x5E73;&#x5747;&#x503C;&#x8868;&#x793A;&#x3002;&#x4E5F;&#x53EB; <strong>&#x52A0;&#x6743;&#x5E73;&#x5747;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</strong> &#x6216;&#x8005; <strong>&#x671F;&#x671B;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</strong>&#x3002;</li>
+<li><strong>&#x5747;&#x644A;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</strong>&#xFF08;amortized time complexity&#xFF09;: &#x5728;&#x4EE3;&#x7801;&#x6267;&#x884C;&#x7684;&#x6240;&#x6709;&#x590D;&#x6742;&#x5EA6;&#x60C5;&#x51B5;&#x4E2D;&#x7EDD;&#x5927;&#x90E8;&#x5206;&#x662F;&#x4F4E;&#x7EA7;&#x522B;&#x7684;&#x590D;&#x6742;&#x5EA6;&#xFF0C;&#x4E2A;&#x522B;&#x60C5;&#x51B5;&#x662F;&#x9AD8;&#x7EA7;&#x522B;&#x590D;&#x6742;&#x5EA6;&#x4E14;&#x53D1;&#x751F;&#x5177;&#x6709;&#x65F6;&#x5E8F;&#x5173;&#x7CFB;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x4E2A;&#x522B;&#x9AD8;&#x7EA7;&#x522B;&#x590D;&#x6742;&#x5EA6;&#x5747;&#x644A;&#x5230;&#x4F4E;&#x7EA7;&#x522B;&#x590D;&#x6742;&#x5EA6;&#x4E0A;&#x3002;&#x57FA;&#x672C;&#x4E0A;&#x5747;&#x644A;&#x7ED3;&#x679C;&#x5C31;&#x7B49;&#x4E8E;&#x4F4E;&#x7EA7;&#x522B;&#x590D;&#x6742;&#x5EA6;&#x3002;</li>
+</ul>
+<p>&#x4E3E;&#x4F8B;&#x8BF4;&#x660E;&#xFF1A;</p>
+<pre><code>// n &#x8868;&#x793A;&#x6570;&#x7EC4; array &#x7684;&#x957F;&#x5EA6;
+function find(array, n, x) {
+  let i = 0;
+  let pos = -1;
+  for (; i &lt; n; ++i) {
+    if (array[i] == x) {
+      pos = i; 
+      break;
+    }
+  }
+  return pos;
+}
+</code></pre><p>find &#x51FD;&#x6570;&#x5B9E;&#x73B0;&#x7684;&#x529F;&#x80FD;&#x662F;&#x5728;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x4E2D;&#x627E;&#x5230;&#x503C;&#x7B49;&#x4E8E; x &#x7684;&#x9879;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x7D22;&#x5F15;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x627E;&#x5230;&#x5C31;&#x8FD4;&#x56DE; -1 &#x3002;</p>
+<p><strong>&#x6700;&#x597D;&#x60C5;&#x51B5;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF0C;&#x6700;&#x574F;&#x60C5;&#x51B5;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</strong></p>
+<p>&#x5982;&#x679C;&#x6570;&#x7EC4;&#x4E2D;&#x7B2C;&#x4E00;&#x4E2A;&#x503C;&#x5C31;&#x7B49;&#x4E8E; x&#xFF0C;&#x90A3;&#x4E48;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A; O(1)&#xFF0C;&#x5982;&#x679C;&#x6570;&#x7EC4;&#x4E2D;&#x4E0D;&#x5B58;&#x5728;&#x53D8;&#x91CF; x&#xFF0C;&#x90A3;&#x6211;&#x4EEC;&#x5C31;&#x9700;&#x8981;&#x628A;&#x6574;&#x4E2A;&#x6570;&#x7EC4;&#x90FD;&#x904D;&#x5386;&#x4E00;&#x904D;&#xFF0C;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5C31;&#x6210;&#x4E86; O(n)&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x662F;&#x4E0D;&#x4E00;&#x6837;&#x7684;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x7684; <code>&#x6700;&#x597D;&#x60C5;&#x51B5;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</code>&#x4E3A; O(1)&#xFF0C;<code>&#x6700;&#x574F;&#x60C5;&#x51B5;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</code>&#x4E3A; O(n)&#x3002;</p>
+<p><strong>&#x5E73;&#x5747;&#x60C5;&#x51B5;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</strong></p>
+<p>&#x5982;&#x4F55;&#x5206;&#x6790;&#x5E73;&#x5747;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6; &#xFF1F;&#x4EE3;&#x7801;&#x5728;&#x4E0D;&#x540C;&#x60C5;&#x51B5;&#x4E0B;&#x590D;&#x6742;&#x5EA6;&#x51FA;&#x73B0;&#x91CF;&#x7EA7;&#x5DEE;&#x522B;&#xFF0C;&#x5219;&#x7528;&#x4EE3;&#x7801;&#x6240;&#x6709;&#x53EF;&#x80FD;&#x60C5;&#x51B5;&#x4E0B;&#x6267;&#x884C;&#x6B21;&#x6570;&#x7684;&#x52A0;&#x6743;&#x5E73;&#x5747;&#x503C;&#x8868;&#x793A;&#x3002;</p>
+<p>&#x8981;&#x67E5;&#x627E;&#x7684;&#x53D8;&#x91CF; x &#x5728;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x6709; n+1 &#x79CD;&#x60C5;&#x51B5;&#xFF1A;&#x5728;&#x6570;&#x7EC4;&#x7684; 0&#xFF5E;n-1 &#x4F4D;&#x7F6E;&#x4E2D;&#x548C;&#x4E0D;&#x5728;&#x6570;&#x7EC4;&#x4E2D;&#x3002;&#x6211;&#x4EEC;&#x628A;&#x6BCF;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x67E5;&#x627E;&#x9700;&#x8981;&#x904D;&#x5386;&#x7684;&#x5143;&#x7D20;&#x4E2A;&#x6570;&#x7D2F;&#x52A0;&#x8D77;&#x6765;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x9664;&#x4EE5; n+1&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x9700;&#x8981;&#x904D;&#x5386;&#x7684;&#x5143;&#x7D20;&#x4E2A;&#x6570;&#x7684;&#x5E73;&#x5747;&#x503C;&#xFF0C;&#x5373;&#xFF1A;</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/12890819-d26874696f17beeb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>&#x7701;&#x7565;&#x6389;&#x7CFB;&#x6570;&#x3001;&#x4F4E;&#x9636;&#x3001;&#x5E38;&#x91CF;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x8FD9;&#x4E2A;&#x516C;&#x5F0F;&#x7B80;&#x5316;&#x4E4B;&#x540E;&#xFF0C;&#x5F97;&#x5230;&#x7684;<code>&#x5E73;&#x5747;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</code>&#x5C31;&#x662F; O(n)&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x77E5;&#x9053;&#xFF0C;&#x8981;&#x67E5;&#x627E;&#x7684;&#x53D8;&#x91CF; x&#xFF0C;&#x8981;&#x4E48;&#x5728;&#x6570;&#x7EC4;&#x91CC;&#xFF0C;&#x8981;&#x4E48;&#x5C31;&#x4E0D;&#x5728;&#x6570;&#x7EC4;&#x91CC;&#x3002;&#x8FD9;&#x4E24;&#x79CD;&#x60C5;&#x51B5;&#x5BF9;&#x5E94;&#x7684;&#x6982;&#x7387;&#x7EDF;&#x8BA1;&#x8D77;&#x6765;&#x5F88;&#x9EBB;&#x70E6;&#xFF0C;&#x6211;&#x4EEC;&#x5047;&#x8BBE;&#x5728;&#x6570;&#x7EC4;&#x4E2D;&#x4E0E;&#x4E0D;&#x5728;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6982;&#x7387;&#x90FD;&#x4E3A; 1/2&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x8981;&#x67E5;&#x627E;&#x7684;&#x6570;&#x636E;&#x51FA;&#x73B0;&#x5728; 0&#xFF5E;n-1 &#x8FD9; n &#x4E2A;&#x4F4D;&#x7F6E;&#x7684;&#x6982;&#x7387;&#x4E5F;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x4E3A; 1/n&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x6839;&#x636E;&#x6982;&#x7387;&#x4E58;&#x6CD5;&#x6CD5;&#x5219;&#xFF0C;&#x8981;&#x67E5;&#x627E;&#x7684;&#x6570;&#x636E;&#x51FA;&#x73B0;&#x5728; 0&#xFF5E;n-1 &#x4E2D;&#x4EFB;&#x610F;&#x4F4D;&#x7F6E;&#x7684;&#x6982;&#x7387;&#x5C31;&#x662F; 1/(2n)&#x3002;</p>
+<p>&#x56E0;&#x6B64;&#xFF0C;&#x524D;&#x9762;&#x7684;&#x63A8;&#x5BFC;&#x8FC7;&#x7A0B;&#x4E2D;&#x5B58;&#x5728;&#x7684;&#x6700;&#x5927;&#x95EE;&#x9898;&#x5C31;&#x662F;&#xFF0C;&#x6CA1;&#x6709;&#x5C06;&#x5404;&#x79CD;&#x60C5;&#x51B5;&#x53D1;&#x751F;&#x7684;&#x6982;&#x7387;&#x8003;&#x8651;&#x8FDB;&#x53BB;&#x3002;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x628A;&#x6BCF;&#x79CD;&#x60C5;&#x51B5;&#x53D1;&#x751F;&#x7684;&#x6982;&#x7387;&#x4E5F;&#x8003;&#x8651;&#x8FDB;&#x53BB;&#xFF0C;&#x90A3;&#x5E73;&#x5747;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x7684;&#x8BA1;&#x7B97;&#x8FC7;&#x7A0B;&#x5C31;&#x53D8;&#x6210;&#x4E86;&#x8FD9;&#x6837;&#xFF1A;</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/12890819-bdc97cea949dff77.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>&#x8FD9;&#x4E2A;&#x503C;&#x5C31;&#x662F;&#x6982;&#x7387;&#x8BBA;&#x4E2D;&#x7684; <strong>&#x52A0;&#x6743;&#x5E73;&#x5747;&#x503C;</strong>&#xFF0C;&#x4E5F;&#x53EB; <strong>&#x671F;&#x671B;&#x503C;</strong>&#xFF0C;&#x6240;&#x4EE5;&#x5E73;&#x5747;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x7684;&#x5168;&#x79F0;&#x5E94;&#x8BE5;&#x53EB; <strong>&#x52A0;&#x6743;&#x5E73;&#x5747;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</strong> &#x6216;&#x8005; <strong>&#x671F;&#x671B;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</strong>&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#xFF0C;&#x6839;&#x636E;&#x4E0A;&#x9762;&#x7ED3;&#x8BBA;&#x63A8;&#x5BFC;&#x51FA;&#xFF0C;&#x5F97;&#x5230;&#x7684; <code>&#x5E73;&#x5747;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</code> &#x4ECD;&#x7136;&#x662F; O(n)&#x3002;</p>
+<p><strong>&#x5747;&#x644A;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</strong></p>
+<p>&#x5747;&#x644A;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5C31;&#x662F;&#x4E00;&#x79CD;&#x7279;&#x6B8A;&#x7684;&#x5E73;&#x5747;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6; (&#x5E94;&#x7528;&#x573A;&#x666F;&#x975E;&#x5E38;&#x7279;&#x6B8A;&#xFF0C;&#x975E;&#x5E38;&#x6709;&#x9650;&#xFF0C;&#x8FD9;&#x91CC;&#x4E0D;&#x8BF4;)&#x3002;</p>
+<h3 id="36-&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x603B;&#x7ED3;"><a name="36-&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#36-&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>3.6 &#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x603B;&#x7ED3;</h3>
+<p>&#x5E38;&#x7528;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x6240;&#x8017;&#x8D39;&#x7684;&#x65F6;&#x95F4;&#x4ECE;&#x5C0F;&#x5230;&#x5927;&#x4F9D;&#x6B21;&#x662F;&#xFF1A;</p>
+<p><strong>O(1) &lt; O(logn) &lt; (n) &lt; O(nlogn) &lt; O(n<sup>2</sup>) &lt; O(n<sup>3</sup>) &lt; O(2<sup>n</sup>) &lt; O(n!) &lt; O(n<sup>n</sup>)</strong></p>
+<p>&#x5E38;&#x89C1;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/12890819-0fbba76f829055ff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/12890819-10170e78fbe1096d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/12890819-682a810f1a8ecb55.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/12890819-9b2c3a2844f82dbe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h3 id="37-&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;"><a name="37-&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;" class="anchor-navigation-ex-anchor" href="#37-&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;"><i class="fa fa-link" aria-hidden="true"></i></a>3.7 &#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;</h3>
+<p>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x7684;&#x5168;&#x79F0;&#x662F; <strong>&#x6E10;&#x8FDB;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</strong>&#xFF0C;&#x8868;&#x793A; <strong>&#x7B97;&#x6CD5;&#x7684;&#x6267;&#x884C;&#x65F6;&#x95F4;&#x4E0E;&#x6570;&#x636E;&#x89C4;&#x6A21;&#x4E4B;&#x95F4;&#x7684;&#x589E;&#x957F;&#x5173;&#x7CFB;</strong> &#x3002;</p>
+<p>&#x7C7B;&#x6BD4;&#x4E00;&#x4E0B;&#xFF0C;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5168;&#x79F0;&#x5C31;&#x662F; <strong>&#x6E10;&#x8FDB;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;</strong>&#xFF08;asymptotic space complexity&#xFF09;&#xFF0C;&#x8868;&#x793A; <strong>&#x7B97;&#x6CD5;&#x7684;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#x4E0E;&#x6570;&#x636E;&#x89C4;&#x6A21;&#x4E4B;&#x95F4;&#x7684;&#x589E;&#x957F;&#x5173;&#x7CFB;</strong> &#x3002;</p>
+<p>&#x5B9A;&#x4E49;&#xFF1A;&#x7B97;&#x6CD5;&#x7684;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x901A;&#x8FC7;&#x8BA1;&#x7B97;&#x7B97;&#x6CD5;&#x6240;&#x9700;&#x7684;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#x5B9E;&#x73B0;&#xFF0C;&#x7B97;&#x6CD5;&#x7684;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x7684;&#x8BA1;&#x7B97;&#x516C;&#x5F0F;&#x8BB0;&#x4F5C;&#xFF1A;<strong>S(n) = O(f(n))</strong>&#xFF0C;&#x5176;&#x4E2D;&#xFF0C;n &#x4E3A;&#x95EE;&#x9898;&#x7684;&#x89C4;&#x6A21;&#xFF0C;f(n) &#x4E3A;&#x8BED;&#x53E5;&#x5173;&#x4E8E; n &#x6240;&#x5360;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#x7684;&#x51FD;&#x6570;&#x3002;</p>
+<pre><code>function print(n) {
+ const newArr = []; // &#x7B2C; 2 &#x884C;
+ newArr.length = n; // &#x7B2C; 3 &#x884C;
+  for (let i = 0; i &lt;n; ++i) {
+    newArr[i] = i * i;
+  }
+
+  for (let j = n-1; j &gt;= 0; --j) {
+    console.log(newArr[i])
+  }
+}
+</code></pre><p>&#x8DDF;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;&#x4E00;&#x6837;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x7B2C; 2 &#x884C;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x7533;&#x8BF7;&#x4E86;&#x4E00;&#x4E2A;&#x7A7A;&#x95F4;&#x5B58;&#x50A8;&#x53D8;&#x91CF; newArr &#xFF0C;&#x662F;&#x4E2A;&#x7A7A;&#x6570;&#x7EC4;&#x3002;&#x7B2C; 3 &#x884C;&#x628A; newArr &#x7684;&#x957F;&#x5EA6;&#x4FEE;&#x6539;&#x4E3A; n &#x7684;&#x957F;&#x5EA6;&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x6BCF;&#x9879;&#x7684;&#x503C;&#x4E3A; undefined &#xFF0C;&#x9664;&#x6B64;&#x4E4B;&#x5916;&#xFF0C;&#x5269;&#x4E0B;&#x7684;&#x4EE3;&#x7801;&#x90FD;&#x6CA1;&#x6709;&#x5360;&#x7528;&#x66F4;&#x591A;&#x7684;&#x7A7A;&#x95F4;&#xFF0C;&#x6240;&#x4EE5;&#x6574;&#x6BB5;&#x4EE3;&#x7801;&#x7684;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5C31;&#x662F; O(n)&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x5E38;&#x89C1;&#x7684;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5C31;&#x662F; O(1)&#x3001;O(n)&#x3001;O(n<sup>2</sup>)&#xFF0C;&#x50CF; O(logn)&#x3001;O(nlogn) &#x8FD9;&#x6837;&#x7684;&#x5BF9;&#x6570;&#x9636;&#x590D;&#x6742;&#x5EA6;&#x5E73;&#x65F6;&#x90FD;&#x7528;&#x4E0D;&#x5230;&#x3002;</p>
+<h2 id="4-&#x5982;&#x4F55;&#x638C;&#x63E1;&#x597D;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;&#x65B9;&#x6CD5;-&#xFF1F;"><a name="4-&#x5982;&#x4F55;&#x638C;&#x63E1;&#x597D;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;&#x65B9;&#x6CD5;-&#xFF1F;" class="anchor-navigation-ex-anchor" href="#4-&#x5982;&#x4F55;&#x638C;&#x63E1;&#x597D;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;&#x65B9;&#x6CD5;-&#xFF1F;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x5982;&#x4F55;&#x638C;&#x63E1;&#x597D;&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;&#x65B9;&#x6CD5; &#xFF1F;</h2>
+<blockquote>
+<p>&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;&#x5173;&#x952E;&#x5728;&#x4E8E;&#x591A;&#x7EC3;&#xFF0C;&#x6240;&#x8C13;&#x5B70;&#x80FD;&#x751F;&#x5DE7;&#x3002;</p>
+</blockquote>
+<p>&#x5E73;&#x65F6;&#x6211;&#x4EEC;&#x5728;&#x5199;&#x4EE3;&#x7801;&#x65F6;&#xFF0C;&#x662F;&#x7528; &#x7A7A;&#x95F4;&#x6362;&#x65F6;&#x95F4; &#x8FD8;&#x662F; &#x65F6;&#x95F4;&#x6362;&#x7A7A;&#x95F4;&#xFF0C;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x7B97;&#x6CD5;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x548C;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x6765;&#x8861;&#x91CF;&#x3002;</p>
+<h2 id="5-&#x6700;&#x540E;"><a name="5-&#x6700;&#x540E;" class="anchor-navigation-ex-anchor" href="#5-&#x6700;&#x540E;"><i class="fa fa-link" aria-hidden="true"></i></a>5. &#x6700;&#x540E;</h2>
+<p>&#x5982;&#x679C;&#x4F60;&#x89C9;&#x5F97;&#x672C;&#x6587;&#x7AE0;&#x6216;&#x8005;&#x9879;&#x76EE;&#x5BF9;&#x4F60;&#x6709;&#x542F;&#x53D1;&#xFF0C;&#x8BF7;&#x7ED9;&#x4E2A;&#x8D5E;&#x6216;&#x8005;  star &#x5427;&#xFF0C;&#x70B9;&#x8D5E;&#x662F;&#x4E00;&#x79CD;&#x7F8E;&#x5FB7;&#xFF0C;&#x8C22;&#x8C22;&#x3002;</p>
+<p>&#x7B14;&#x8005;&#x6587;&#x7AE0;&#x5E38;&#x66F4;&#x5730;&#x5740;&#xFF1A;</p>
+<p><a href="https://mp.weixin.qq.com/s/-gwh7z1xjpBQ4IzD1ZJd-g" target="_blank">1. &#x5FAE;&#x4FE1;&#x516C;&#x4F17;&#x53F7;</a>
+<a href="https://github.com/biaochenxuying/blog" target="_blank">2. github</a>
+<a href="https://biaochenxuying.cn/" target="_blank">3. &#x5168;&#x6808;&#x4FEE;&#x70BC;</a></p>
+<p>&#x53C2;&#x8003;&#x6587;&#x7AE0;&#xFF1A;</p>
+<p><a href="https://time.geekbang.org/column/article/40036" target="_blank">&#x590D;&#x6742;&#x5EA6;&#x5206;&#x6790;&#xFF08;&#x4E0A;&#xFF09;&#xFF1A;&#x5982;&#x4F55;&#x5206;&#x6790;&#x3001;&#x7EDF;&#x8BA1;&#x7B97;&#x6CD5;&#x7684;&#x6267;&#x884C;&#x6548;&#x7387;&#x548C;&#x8D44;&#x6E90;&#x6D88;&#x8017;&#xFF1F;</a>
+<a href="https://www.jianshu.com/p/f4cca5ce055a" target="_blank">(&#x6570;&#x636E;&#x7ED3;&#x6784;)&#x5341;&#x5206;&#x949F;&#x641E;&#x5B9A;&#x7B97;&#x6CD5;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</a></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/12890819-126d4fc9993d21ce.gif?imageMogr2/auto-orient/strip" alt="&#x7B14;&#x82AF;"></p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; biaochenxuying.cn 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2019-12-08 10:54:17
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="js-10algo.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 十大经典排序算法">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"时间和空间复杂度","level":"1.5.1","depth":2,"next":{"title":"十大经典排序算法","level":"1.5.2","depth":2,"path":"views/algorithms/js-10algo.md","ref":"./views/algorithms/js-10algo.md","articles":[]},"previous":{"title":"JavaScript 数据结构与算法之美","level":"1.5","depth":1,"ref":"","articles":[{"title":"时间和空间复杂度","level":"1.5.1","depth":2,"path":"views/algorithms/js-time-space.md","ref":"./views/algorithms/js-time-space.md","articles":[]},{"title":"十大经典排序算法","level":"1.5.2","depth":2,"path":"views/algorithms/js-10algo.md","ref":"./views/algorithms/js-10algo.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-highlight","copy-code-button","search-pro","-search","-lunr","expandable-chapters","splitter","-sharing","github-buttons","donate","tbfed-pagefooter","baidu-tongji","anchor-navigation-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy biaochenxuying.cn 2019","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"baidu-tongji":{"url":"https://hm.baidu.com/hm.js","token":"82d755d3a2e0a4df9c27c4c5895a4a81"},"splitter":{},"search-pro":{},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"打赏","title":"","wechat":"https://camo.githubusercontent.com/ee094d402f957e5d656a399b9dc50ff8c010114e/68747470733a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f31323839303831392d666661623762643234643038633030642e6a7065673f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970253743696d61676556696577322f322f772f31323430","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"github-buttons":{"buttons":[{"user":"biaochenxuying","repo":"blog","type":"star","count":true,"size":"small"},{"user":"biaochenxuying","width":"160","type":"follow","count":true,"size":"small"}]},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"biaochenxuying","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"夜尽天明的博客","language":"zh-hans","gitbook":"*","description":"大前端技术为主，读书笔记、随笔、理财为辅，做个终身学习者。"},"file":{"path":"views/algorithms/js-time-space.md","mtime":"2019-12-08T02:54:17.930Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-08T03:22:38.247Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-baidu-tongji/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

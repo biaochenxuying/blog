@@ -1,0 +1,57 @@
+{
+  "title": "夜尽天明的博客",
+  "author": "biaochenxuying",
+  "description": "大前端技术为主，读书笔记、随笔、理财为辅，做个终身学习者。",
+  "language": "zh-hans",
+  "plugins": [
+    "-highlight",
+    "copy-code-button",
+    "search-pro",
+    "-search",
+    "-lunr",
+    "expandable-chapters",
+    "splitter",
+    "-sharing",
+    "github-buttons",
+    "donate",
+    "tbfed-pagefooter",
+    "baidu-tongji",
+    "anchor-navigation-ex"
+  ],
+  "pluginsConfig": {
+    "github-buttons": {
+      "buttons": [
+        {
+          "user": "biaochenxuying",
+          "repo": "blog", 
+          "type": "star",
+          "count": true,
+          "size": "small"
+        }, 
+        {
+          "user": "biaochenxuying",
+          "width": "160", 
+          "type": "follow", 
+          "count": true,
+          "size": "small"
+        }
+      ]
+    },
+    "donate": {
+      "button": "打赏",
+      "wechatText": "微信打赏",
+      "wechat": "https://camo.githubusercontent.com/ee094d402f957e5d656a399b9dc50ff8c010114e/68747470733a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f31323839303831392d666661623762643234643038633030642e6a7065673f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970253743696d61676556696577322f322f772f31323430"
+    },
+    "tbfed-pagefooter": {
+      "copyright":"Copyright &copy biaochenxuying.cn 2019",
+      "modify_label": "该文件修订时间：",
+      "modify_format": "YYYY-MM-DD HH:mm:ss"
+    },
+    "baidu-tongji": {
+      "token": "XXXXX"
+    },
+    "anchor-navigation-ex": {
+      "showLevel": false
+    }
+  }
+}

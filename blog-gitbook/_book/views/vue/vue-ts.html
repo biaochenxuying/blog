@@ -1,0 +1,1607 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Vue + TS + El 搭建博客及踩坑记 · 夜尽天明的博客</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="biaochenxuying">
+        <meta id="referrer" name="referrer" content="never" />
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"biaochenxuying","repo":"blog","type":"star","count":true,"size":"small"},{"user":"biaochenxuying","width":"160","type":"follow","count":true,"size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../github/follow.html">
+            
+                <a href="../github/follow.html">
+            
+                    
+                    GitHub 吸星大法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../github/star.html">
+            
+                <a href="../github/star.html">
+            
+                    
+                    GitHub 挖宝技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Vue.js
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.1" data-path="vue-ts.html">
+            
+                <a href="vue-ts.html">
+            
+                    
+                    Vue + TS + El 搭建博客及踩坑记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    JavaScript 数据结构与算法之美
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../algorithms/js-time-space.html">
+            
+                <a href="../algorithms/js-time-space.html">
+            
+                    
+                    时间和空间复杂度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../algorithms/js-10algo.html">
+            
+                <a href="../algorithms/js-10algo.html">
+            
+                    
+                    十大经典排序算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Vue + TS + El 搭建博客及踩坑记</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#vue--ts--el-&#x642D;&#x5EFA;&#x535A;&#x5BA2;&#x53CA;&#x8E29;&#x5751;&#x8BB0;"><b></b>Vue + TS + El &#x642D;&#x5EFA;&#x535A;&#x5BA2;&#x53CA;&#x8E29;&#x5751;&#x8BB0;</a></li><ul><li><span class="title-icon "></span><a href="#&#x524D;&#x8A00;"><b></b>&#x524D;&#x8A00;</a></li><li><span class="title-icon "></span><a href="#1-&#x6548;&#x679C;"><b></b>1. &#x6548;&#x679C;</a></li><li><span class="title-icon "></span><a href="#2-&#x529F;&#x80FD;"><b></b>2. &#x529F;&#x80FD;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5DF2;&#x7ECF;&#x5B8C;&#x6210;&#x529F;&#x80FD;"><b></b>&#x5DF2;&#x7ECF;&#x5B8C;&#x6210;&#x529F;&#x80FD;</a></li><li><span class="title-icon "></span><a href="#&#x5F85;&#x4F18;&#x5316;&#x6216;&#x8005;&#x5B9E;&#x73B0;"><b></b>&#x5F85;&#x4F18;&#x5316;&#x6216;&#x8005;&#x5B9E;&#x73B0;</a></li></ul><li><span class="title-icon "></span><a href="#3-&#x524D;&#x7AEF;&#x4E3B;&#x8981;&#x6280;&#x672F;"><b></b>3. &#x524D;&#x7AEF;&#x4E3B;&#x8981;&#x6280;&#x672F;</a></li><li><span class="title-icon "></span><a href="#4-5-&#x5206;&#x949F;&#x4E0A;&#x624B;-typescript"><b></b>4. 5 &#x5206;&#x949F;&#x4E0A;&#x624B; TypeScript</a></li><li><span class="title-icon "></span><a href="#5-5-&#x5206;&#x949F;&#x4E0A;&#x624B;-vue-typescript"><b></b>5. 5 &#x5206;&#x949F;&#x4E0A;&#x624B; Vue +TypeScript</a></li><li><span class="title-icon "></span><a href="#6-&#x7528;-vue-cli-&#x642D;&#x5EFA;-&#x9879;&#x76EE;"><b></b>6. &#x7528; vue-cli &#x642D;&#x5EFA; &#x9879;&#x76EE;</a></li><ul><li><span class="title-icon "></span><a href="#61-&#x5B89;&#x88C5;&#x53CA;&#x6784;&#x5EFA;&#x9879;&#x76EE;&#x76EE;&#x5F55;"><b></b>6.1 &#x5B89;&#x88C5;&#x53CA;&#x6784;&#x5EFA;&#x9879;&#x76EE;&#x76EE;&#x5F55;</a></li><li><span class="title-icon "></span><a href="#62-&#x5B89;&#x88C5;-element-ui"><b></b>6.2 &#x5B89;&#x88C5; element-ui</a></li><li><span class="title-icon "></span><a href="#63-&#x5B8C;&#x5584;&#x9879;&#x76EE;&#x76EE;&#x5F55;&#x4E0E;&#x6587;&#x4EF6;"><b></b>6.3 &#x5B8C;&#x5584;&#x9879;&#x76EE;&#x76EE;&#x5F55;&#x4E0E;&#x6587;&#x4EF6;</a></li></ul><li><span class="title-icon "></span><a href="#7-markdown-&#x6E32;&#x67D3;"><b></b>7. markdown &#x6E32;&#x67D3;</a></li><li><span class="title-icon "></span><a href="#8-&#x6CE8;&#x610F;&#x70B9;"><b></b>8. &#x6CE8;&#x610F;&#x70B9;</a></li><li><span class="title-icon "></span><a href="#9-&#x8E29;&#x5751;&#x8BB0;"><b></b>9. &#x8E29;&#x5751;&#x8BB0;</a></li><li><span class="title-icon "></span><a href="#10-build-setup"><b></b>10. Build Setup</a></li><li><span class="title-icon "></span><a href="#11-&#x9879;&#x76EE;&#x5730;&#x5740;&#x4E0E;&#x7CFB;&#x5217;&#x76F8;&#x5173;&#x6587;&#x7AE0;"><b></b>11. &#x9879;&#x76EE;&#x5730;&#x5740;&#x4E0E;&#x7CFB;&#x5217;&#x76F8;&#x5173;&#x6587;&#x7AE0;</a></li><li><span class="title-icon "></span><a href="#12-&#x6700;&#x540E;"><b></b>12. &#x6700;&#x540E;</a></li></ul></ul></div><a href="#vue--ts--el-&#x642D;&#x5EFA;&#x535A;&#x5BA2;&#x53CA;&#x8E29;&#x5751;&#x8BB0;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="vue--ts--el-&#x642D;&#x5EFA;&#x535A;&#x5BA2;&#x53CA;&#x8E29;&#x5751;&#x8BB0;"><a name="vue--ts--el-&#x642D;&#x5EFA;&#x535A;&#x5BA2;&#x53CA;&#x8E29;&#x5751;&#x8BB0;" class="anchor-navigation-ex-anchor" href="#vue--ts--el-&#x642D;&#x5EFA;&#x535A;&#x5BA2;&#x53CA;&#x8E29;&#x5751;&#x8BB0;"><i class="fa fa-link" aria-hidden="true"></i></a>Vue + TS + El &#x642D;&#x5EFA;&#x535A;&#x5BA2;&#x53CA;&#x8E29;&#x5751;&#x8BB0;</h1>
+<p><img src="https://upload-images.jianshu.io/upload_images/12890819-b96702b6b7cd5c11.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h2 id="&#x524D;&#x8A00;"><a name="&#x524D;&#x8A00;" class="anchor-navigation-ex-anchor" href="#&#x524D;&#x8A00;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x524D;&#x8A00;</h2>
+<p>&#x672C;&#x6587;&#x8BB2;&#x89E3;&#x5982;&#x4F55;&#x5728; Vue &#x9879;&#x76EE;&#x4E2D;&#x4F7F;&#x7528; TypeScript &#x6765;&#x642D;&#x5EFA;&#x5E76;&#x5F00;&#x53D1;&#x9879;&#x76EE;&#xFF0C;&#x5E76;&#x5728;&#x6B64;&#x8FC7;&#x7A0B;&#x4E2D;&#x8E29;&#x8FC7;&#x7684;&#x5751; &#x3002; </p>
+<p>TypeScript &#x5177;&#x6709;&#x7C7B;&#x578B;&#x7CFB;&#x7EDF;&#xFF0C;&#x4E14;&#x662F; JavaScript &#x7684;&#x8D85;&#x96C6;&#xFF0C;TypeScript &#x5728; 2018&#x5E74; &#x52BF;&#x5934;&#x8FC5;&#x731B;&#xFF0C;&#x53EF;&#x8C13;&#x904D;&#x5730;&#x5F00;&#x82B1;&#x3002;</p>
+<p>Vue3.0 &#x5C06;&#x4F7F;&#x7528; TS &#x91CD;&#x5199;&#xFF0C;&#x91CD;&#x5199;&#x540E;&#x7684; Vue3.0 &#x5C06;&#x66F4;&#x597D;&#x7684;&#x652F;&#x6301; TS&#x3002;2019 &#x5E74; TypeScript &#x5C06;&#x4F1A;&#x66F4;&#x52A0;&#x666E;&#x53CA;&#xFF0C;&#x80FD;&#x591F;&#x719F;&#x7EC3;&#x638C;&#x63E1; TS&#xFF0C;&#x5E76;&#x4F7F;&#x7528; TS &#x5F00;&#x53D1;&#x8FC7;&#x9879;&#x76EE;&#xFF0C;&#x5C06;&#x66F4;&#x52A0;&#x6210;&#x4E3A;&#x524D;&#x7AEF;&#x5F00;&#x53D1;&#x8005;&#x7684;&#x4F18;&#x52BF;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x7B14;&#x8005;&#x5C31;&#x5F53;&#x7136;&#x4E5F;&#x8981;&#x5B66;&#x8FD9;&#x4E2A;&#x5FC5;&#x5907;&#x6280;&#x80FD;&#xFF0C;&#x5C31;&#x4EE5; <strong>&#x8FB9;&#x5B66;&#x8FB9;&#x5B9E;&#x8DF5;</strong> &#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x505A;&#x4E2A;&#x535A;&#x5BA2;&#x9879;&#x76EE;&#x6765;&#x73A9;&#x73A9;&#x3002;</p>
+<p>&#x6B64;&#x9879;&#x76EE;&#x662F;&#x57FA;&#x4E8E; Vue &#x5168;&#x5BB6;&#x6876; + TypeScript + Element-UI  &#x7684;&#x6280;&#x672F;&#x6808;&#xFF0C;&#x4E14;&#x5DF2;&#x7ECF;&#x5F00;&#x6E90;&#xFF0C;github &#x5730;&#x5740; <a href="https://github.com/biaochenxuying/blog-vue-typescript" target="_blank">blog-vue-typescript</a> &#x3002;</p>
+<p>&#x56E0;&#x4E3A;&#x4E4B;&#x524D;&#x5199;&#x4E86;&#x7BC7;&#x7EAF; Vue &#x9879;&#x76EE;&#x642D;&#x5EFA;&#x7684;&#x76F8;&#x5173;&#x6587;&#x7AE0; <a href="https://biaochenxuying.cn/articleDetail?article_id=5bf0114fbc1e7805eb83db90" target="_blank">&#x57FA;&#x4E8E;vue+mint-ui&#x7684;mobile-h5&#x7684;&#x9879;&#x76EE;&#x8BF4;&#x660E;</a> &#xFF0C;&#x6709;&#x4E0D;&#x5C11;&#x4EBA;&#x52A0;&#x6211;&#x5FAE;&#x4FE1;&#xFF0C;&#x8981;&#x6E90;&#x7801;&#x6765;&#x5B66;&#x4E60;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x4E2A;&#x662F;&#x6211;&#x53F8;&#x7684;&#x9879;&#x76EE;&#xFF0C;&#x4E0D;&#x80FD;&#x63D0;&#x4F9B;&#x539F;&#x7801;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x505A;&#x4E00;&#x4E2A;&#x4E0D;&#x662F;&#x6211;&#x53F8;&#x7684;&#x9879;&#x76EE;&#xFF0C;&#x4E14;&#x53C8;&#x662F; vue &#x76F8;&#x5173;&#x7684;&#x9879;&#x76EE;&#x6765;&#x7EC3;&#x624B;&#x5E76;&#x5F00;&#x6E90;&#x5427;&#x3002;</p>
+<h2 id="1-&#x6548;&#x679C;"><a name="1-&#x6548;&#x679C;" class="anchor-navigation-ex-anchor" href="#1-&#x6548;&#x679C;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x6548;&#x679C;</h2>
+<p>&#x6548;&#x679C;&#x56FE;&#xFF1A;</p>
+<ul>
+<li>pc &#x7AEF;</li>
+</ul>
+<p><img src="https://upload-images.jianshu.io/upload_images/12890819-9f5f1b384a27c6ff.gif?imageMogr2/auto-orient/strip" alt=""></p>
+<ul>
+<li>&#x79FB;&#x52A8;&#x7AEF;</li>
+</ul>
+<p><img src="https://upload-images.jianshu.io/upload_images/12890819-5370ed6dfbe61051.gif?imageMogr2/auto-orient/strip" alt=""></p>
+<p>&#x5B8C;&#x6574;&#x6548;&#x679C;&#x8BF7;&#x770B;&#xFF1A;<a href="https://biaochenxuying.cn" target="_blank">https://biaochenxuying.cn</a></p>
+<h2 id="2-&#x529F;&#x80FD;"><a name="2-&#x529F;&#x80FD;" class="anchor-navigation-ex-anchor" href="#2-&#x529F;&#x80FD;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x529F;&#x80FD;</h2>
+<h3 id="&#x5DF2;&#x7ECF;&#x5B8C;&#x6210;&#x529F;&#x80FD;"><a name="&#x5DF2;&#x7ECF;&#x5B8C;&#x6210;&#x529F;&#x80FD;" class="anchor-navigation-ex-anchor" href="#&#x5DF2;&#x7ECF;&#x5B8C;&#x6210;&#x529F;&#x80FD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5DF2;&#x7ECF;&#x5B8C;&#x6210;&#x529F;&#x80FD;</h3>
+<ul>
+<li>[x] &#x767B;&#x5F55;  </li>
+<li>[x] &#x6CE8;&#x518C;  </li>
+<li>[x] &#x6587;&#x7AE0;&#x5217;&#x8868;</li>
+<li>[x] &#x6587;&#x7AE0;&#x5F52;&#x6863;</li>
+<li>[x] &#x6807;&#x7B7E;  </li>
+<li>[x] &#x5173;&#x4E8E;  </li>
+<li>[x] &#x70B9;&#x8D5E;&#x4E0E;&#x8BC4;&#x8BBA;</li>
+<li>[x] &#x7559;&#x8A00;</li>
+<li>[x] &#x5386;&#x7A0B;</li>
+<li>[x] &#x6587;&#x7AE0;&#x8BE6;&#x60C5;&#xFF08;&#x652F;&#x6301;&#x4EE3;&#x7801;&#x8BED;&#x6CD5;&#x9AD8;&#x4EAE;&#xFF09;</li>
+<li>[x] &#x6587;&#x7AE0;&#x8BE6;&#x60C5;&#x76EE;&#x5F55;</li>
+<li>[x] &#x79FB;&#x52A8;&#x7AEF;&#x9002;&#x914D;</li>
+<li>[x] github &#x6388;&#x6743;&#x767B;&#x5F55;</li>
+</ul>
+<h3 id="&#x5F85;&#x4F18;&#x5316;&#x6216;&#x8005;&#x5B9E;&#x73B0;"><a name="&#x5F85;&#x4F18;&#x5316;&#x6216;&#x8005;&#x5B9E;&#x73B0;" class="anchor-navigation-ex-anchor" href="#&#x5F85;&#x4F18;&#x5316;&#x6216;&#x8005;&#x5B9E;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5F85;&#x4F18;&#x5316;&#x6216;&#x8005;&#x5B9E;&#x73B0;</h3>
+<ul>
+<li>[ ] &#x4F7F;&#x7528; vuex-class</li>
+<li>[ ] &#x66F4;&#x591A; TypeScript &#x7684;&#x4F18;&#x5316;&#x6280;&#x5DE7;</li>
+<li>[ ] &#x670D;&#x52A1;&#x5668;&#x6E32;&#x67D3; SSR</li>
+</ul>
+<h2 id="3-&#x524D;&#x7AEF;&#x4E3B;&#x8981;&#x6280;&#x672F;"><a name="3-&#x524D;&#x7AEF;&#x4E3B;&#x8981;&#x6280;&#x672F;" class="anchor-navigation-ex-anchor" href="#3-&#x524D;&#x7AEF;&#x4E3B;&#x8981;&#x6280;&#x672F;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x524D;&#x7AEF;&#x4E3B;&#x8981;&#x6280;&#x672F;</h2>
+<p>&#x6240;&#x6709;&#x6280;&#x672F;&#x90FD;&#x662F;&#x5F53;&#x524D;&#x6700;&#x65B0;&#x7684;&#x3002;</p>
+<ul>
+<li>vue&#xFF1A; ^2.6.6</li>
+<li>typescript : ^3.2.1</li>
+<li>element-ui&#xFF1A; 2.6.3</li>
+<li>vue-router : ^3.0.1</li>
+<li>webpack&#xFF1A; 4.28.4</li>
+<li>vuex: ^3.0.1</li>
+<li>axios&#xFF1A;0.18.0</li>
+<li>redux: 4.0.0</li>
+<li>highlight.js&#xFF1A; 9.15.6</li>
+<li>marked&#xFF1A;0.6.1</li>
+</ul>
+<h2 id="4-5-&#x5206;&#x949F;&#x4E0A;&#x624B;-typescript"><a name="4-5-&#x5206;&#x949F;&#x4E0A;&#x624B;-typescript" class="anchor-navigation-ex-anchor" href="#4-5-&#x5206;&#x949F;&#x4E0A;&#x624B;-typescript"><i class="fa fa-link" aria-hidden="true"></i></a>4. 5 &#x5206;&#x949F;&#x4E0A;&#x624B; TypeScript</h2>
+<p>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x4E00;&#x70B9;&#x70B9;&#x57FA;&#x7840;&#xFF0C;&#x53EF;&#x80FD;&#x6CA1;&#x5B66;&#x8FC7; TypeScript &#x7684;&#x8BFB;&#x8005;&#x4F1A;&#x770B;&#x4E0D;&#x61C2;&#x5F80;&#x4E0B;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x6240;&#x4EE5;&#x5148;&#x5B66;&#x70B9;&#x57FA;&#x7840;&#x3002;</p>
+<p>TypeScript &#x7684;&#x9759;&#x6001;&#x7C7B;&#x578B;&#x68C0;&#x67E5;&#x662F;&#x4E2A;&#x597D;&#x4E1C;&#x897F;&#xFF0C;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x5F88;&#x591A;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x9519;&#x8BEF;, &#x4E0D;&#x7528;&#x5728;&#x8C03;&#x8BD5;&#x6216;&#x8005;&#x9879;&#x76EE;&#x4E0A;&#x7EBF;&#x7684;&#x65F6;&#x5019;&#x624D;&#x53D1;&#x73B0;&#x95EE;&#x9898; &#x3002;</p>
+<ul>
+<li>&#x7C7B;&#x578B;&#x6CE8;&#x89E3;</li>
+</ul>
+<p>TypeScript &#x91CC;&#x7684;&#x7C7B;&#x578B;&#x6CE8;&#x89E3;&#x662F;&#x4E00;&#x79CD;&#x8F7B;&#x91CF;&#x7EA7;&#x7684;&#x4E3A;&#x51FD;&#x6570;&#x6216;&#x53D8;&#x91CF;&#x6DFB;&#x52A0;&#x7EA6;&#x675F;&#x7684;&#x65B9;&#x5F0F;&#x3002;&#x53D8;&#x91CF;&#x5B9A;&#x4E49;&#x65F6;&#x4E5F;&#x8981;&#x5B9A;&#x4E49;&#x4ED6;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x6BD4;&#x5982;&#x5E38;&#x89C1;&#x7684; &#xFF1A;</p>
+<pre><code>// &#x5E03;&#x5C14;&#x503C;
+let isDone: boolean = false; // &#x76F8;&#x5F53;&#x4E8E; js &#x7684; let isDone = false;
+// &#x53D8;&#x91CF;&#x5B9A;&#x4E49;&#x4E4B;&#x540E;&#x4E0D;&#x53EF;&#x4EE5;&#x968F;&#x4FBF;&#x53D8;&#x66F4;&#x5B83;&#x7684;&#x7C7B;&#x578B;
+isDone = true // &#x4E0D;&#x62A5;&#x9519;
+isDone = &quot;&#x6211;&#x8981;&#x53D8;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&quot; // &#x62A5;&#x9519;
+</code></pre><pre><code>// &#x6570;&#x5B57;
+let decLiteral: number = 6; // &#x76F8;&#x5F53;&#x4E8E; js &#x7684; let decLiteral = 6;
+</code></pre><pre><code>// &#x5B57;&#x7B26;&#x4E32;
+let name: string = &quot;bob&quot;;  // &#x76F8;&#x5F53;&#x4E8E; js &#x7684; let name = &quot;bob&quot;;
+</code></pre><pre><code>// &#x6570;&#x7EC4;
+ // &#x7B2C;&#x4E00;&#x79CD;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x5143;&#x7D20;&#x7C7B;&#x578B;&#x540E;&#x9762;&#x63A5;&#x4E0A; []&#xFF0C;&#x8868;&#x793A;&#x7531;&#x6B64;&#x7C7B;&#x578B;&#x5143;&#x7D20;&#x7EC4;&#x6210;&#x7684;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF1A;
+let list: number[] = [1, 2, 3]; // &#x76F8;&#x5F53;&#x4E8E; js &#x7684;let list = [1, 2, 3];
+// &#x7B2C;&#x4E8C;&#x79CD;&#x65B9;&#x5F0F;&#x662F;&#x4F7F;&#x7528;&#x6570;&#x7EC4;&#x6CDB;&#x578B;&#xFF0C;Array&lt;&#x5143;&#x7D20;&#x7C7B;&#x578B;&gt;&#xFF1A;
+let list: Array&lt;number&gt; = [1, 2, 3]; // &#x76F8;&#x5F53;&#x4E8E; js &#x7684;let list = [1, 2, 3];
+</code></pre><pre><code>// &#x5728; TypeScript &#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x63A5;&#x53E3;&#xFF08;Interfaces&#xFF09;&#x6765;&#x5B9A;&#x4E49; &#x5BF9;&#x8C61; &#x7684;&#x7C7B;&#x578B;&#x3002;
+interface Person {
+    name: string;
+    age: number;
+}
+let tom: Person = {
+    name: &apos;Tom&apos;,
+    age: 25
+};
+// &#x4EE5;&#x4E0A; &#x5BF9;&#x8C61; &#x7684;&#x4EE3;&#x7801;&#x76F8;&#x5F53;&#x4E8E; 
+let tom = {
+    name: &apos;Tom&apos;,
+    age: 25
+};
+</code></pre><pre><code>// Any &#x53EF;&#x4EE5;&#x968F;&#x4FBF;&#x53D8;&#x66F4;&#x7C7B;&#x578B; (&#x5F53;&#x8FD9;&#x4E2A;&#x503C;&#x53EF;&#x80FD;&#x6765;&#x81EA;&#x4E8E;&#x52A8;&#x6001;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x6BD4;&#x5982;&#x6765;&#x81EA;&#x7528;&#x6237;&#x8F93;&#x5165;&#x6216;&#x7B2C;&#x4E09;&#x65B9;&#x4EE3;&#x7801;&#x5E93;)
+let notSure: any = 4;
+notSure = &quot;&#x6211;&#x53EF;&#x4EE5;&#x968F;&#x4FBF;&#x53D8;&#x66F4;&#x7C7B;&#x578B;&quot; // &#x4E0D;&#x62A5;&#x9519;
+notSure = false;  // &#x4E0D;&#x62A5;&#x9519;
+</code></pre><pre><code>// Void &#x5F53;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#x65F6;&#xFF0C;&#x4F60;&#x901A;&#x5E38;&#x4F1A;&#x89C1;&#x5230;&#x5176;&#x8FD4;&#x56DE;&#x503C;&#x7C7B;&#x578B;&#x662F; void
+function warnUser(): void {
+    console.log(&quot;This is my warning message&quot;);
+}
+</code></pre><pre><code>// &#x65B9;&#x6CD5;&#x7684;&#x53C2;&#x6570;&#x4E5F;&#x8981;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;&#xFF0C;&#x4E0D;&#x77E5;&#x9053;&#x5C31;&#x5B9A;&#x4E49;&#x4E3A; any
+function fetch(url: string, id : number, params: any): void {
+    console.log(&quot;fetch&quot;);
+}
+</code></pre><p>&#x4EE5;&#x4E0A;&#x662F;&#x6700;&#x7B80;&#x5355;&#x7684;&#x4E00;&#x4E9B;&#x77E5;&#x8BC6;&#x70B9;&#xFF0C;&#x66F4;&#x591A;&#x77E5;&#x8BC6;&#x8BF7;&#x770B; <a href="https://www.tslang.cn/" target="_blank">TypeScript &#x4E2D;&#x6587;&#x5B98;&#x7F51;</a></p>
+<h2 id="5-5-&#x5206;&#x949F;&#x4E0A;&#x624B;-vue-typescript"><a name="5-5-&#x5206;&#x949F;&#x4E0A;&#x624B;-vue-typescript" class="anchor-navigation-ex-anchor" href="#5-5-&#x5206;&#x949F;&#x4E0A;&#x624B;-vue-typescript"><i class="fa fa-link" aria-hidden="true"></i></a>5. 5 &#x5206;&#x949F;&#x4E0A;&#x624B; Vue +TypeScript</h2>
+<ul>
+<li><a href="https://github.com/vuejs/vue-class-component" target="_blank">vue-class-component</a><br>vue-class-component &#x5BF9; <code>Vue</code> &#x7EC4;&#x4EF6;&#x8FDB;&#x884C;&#x4E86;&#x4E00;&#x5C42;&#x5C01;&#x88C5;&#xFF0C;&#x8BA9; <code>Vue</code> &#x7EC4;&#x4EF6;&#x8BED;&#x6CD5;&#x5728;&#x7ED3;&#x5408;&#x4E86; <code>TypeScript</code> &#x8BED;&#x6CD5;&#x4E4B;&#x540E;&#x66F4;&#x52A0;&#x6241;&#x5E73;&#x5316;&#xFF1A;</li>
+</ul>
+<pre><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;input v-model=&quot;msg&quot;&gt;
+    &lt;p&gt;prop: {{propMessage}}&lt;/p&gt;
+    &lt;p&gt;msg: {{msg}}&lt;/p&gt;
+    &lt;p&gt;helloMsg: {{helloMsg}}&lt;/p&gt;
+    &lt;p&gt;computed msg: {{computedMsg}}&lt;/p&gt;
+    &lt;button @click=&quot;greet&quot;&gt;Greet&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import Vue from &apos;vue&apos;
+import Component from &apos;vue-class-component&apos;
+
+@Component({
+  props: {
+    propMessage: String
+  }
+})
+export default class App extends Vue {
+  // initial data
+  msg = 123
+
+  // use prop values for initial data
+  helloMsg = &apos;Hello, &apos; + this.propMessage
+
+  // lifecycle hook
+  mounted () {
+    this.greet()
+  }
+
+  // computed
+  get computedMsg () {
+    return &apos;computed &apos; + this.msg
+  }
+
+  // method
+  greet () {
+    alert(&apos;greeting: &apos; + this.msg)
+  }
+}
+&lt;/script&gt;
+</code></pre><p>&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x8DDF;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x4F5C;&#x7528;&#x662F;&#x4E00;&#x6837;&#x7684;:</p>
+<pre><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;input v-model=&quot;msg&quot;&gt;
+    &lt;p&gt;prop: {{propMessage}}&lt;/p&gt;
+    &lt;p&gt;msg: {{msg}}&lt;/p&gt;
+    &lt;p&gt;helloMsg: {{helloMsg}}&lt;/p&gt;
+    &lt;p&gt;computed msg: {{computedMsg}}&lt;/p&gt;
+    &lt;button @click=&quot;greet&quot;&gt;Greet&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  // &#x5C5E;&#x6027;
+  props: {
+    propMessage: {
+      type: String
+    }
+  },
+  data () {
+    return {
+      msg: 123,
+      helloMsg: &apos;Hello, &apos; + this.propMessage
+    }
+  },
+  // &#x58F0;&#x660E;&#x5468;&#x671F;&#x94A9;&#x5B50;
+  mounted () {
+    this.greet()
+  },
+  // &#x8BA1;&#x7B97;&#x5C5E;&#x6027;
+  computed: {
+    computedMsg () {
+      return &apos;computed &apos; + this.msg
+    }
+  },
+  // &#x65B9;&#x6CD5;
+  methods: {
+    greet () {
+      alert(&apos;greeting: &apos; + this.msg)
+    }
+  },
+}
+&lt;/script&gt;
+</code></pre><ul>
+<li><a href="https://github.com/kaorun343/vue-property-decorator" target="_blank">vue-property-decorator</a>  </li>
+</ul>
+<p>vue-property-decorator &#x662F;&#x5728; <code>vue-class-component</code> &#x4E0A;&#x589E;&#x5F3A;&#x4E86;&#x66F4;&#x591A;&#x7684;&#x7ED3;&#x5408; <code>Vue</code> &#x7279;&#x6027;&#x7684;&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x65B0;&#x589E;&#x4E86;&#x8FD9; 7 &#x4E2A;&#x88C5;&#x9970;&#x5668;&#xFF1A;</p>
+<ul>
+<li><code>@Emit</code></li>
+<li><code>@Inject</code></li>
+<li><code>@Model</code></li>
+<li><code>@Prop</code></li>
+<li><code>@Provide</code></li>
+<li><code>@Watch</code></li>
+<li><code>@Component</code> (&#x4ECE; <code>vue-class-component</code> &#x7EE7;&#x627F;)</li>
+</ul>
+<p>&#x5728;&#x8FD9;&#x91CC;&#x5217;&#x4E3E;&#x51E0;&#x4E2A;&#x5E38;&#x7528;&#x7684;<code>@Prop/@Watch/@Component</code>, &#x66F4;&#x591A;&#x4FE1;&#x606F;&#xFF0C;&#x8BE6;&#x89C1;<a href="https://github.com/kaorun343/vue-property-decorator" target="_blank">&#x5B98;&#x65B9;&#x6587;&#x6863;</a></p>
+<pre><code>import { Component, Emit, Inject, Model, Prop, Provide, Vue, Watch } from &apos;vue-property-decorator&apos;
+
+@Component
+export class MyComponent extends Vue {
+
+  @Prop()
+  propA: number = 1
+
+  @Prop({ default: &apos;default value&apos; })
+  propB: string
+
+  @Prop([String, Boolean])
+  propC: string | boolean
+
+  @Prop({ type: null })
+  propD: any
+
+  @Watch(&apos;child&apos;)
+  onChildChanged(val: string, oldVal: string) { }
+}
+</code></pre><p>&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x76F8;&#x5F53;&#x4E8E;&#xFF1A;</p>
+<pre><code>export default {
+  props: {
+    checked: Boolean,
+    propA: Number,
+    propB: {
+      type: String,
+      default: &apos;default value&apos;
+    },
+    propC: [String, Boolean],
+    propD: { type: null }
+  }
+  methods: {
+    onChildChanged(val, oldVal) { }
+  },
+  watch: {
+    &apos;child&apos;: {
+      handler: &apos;onChildChanged&apos;,
+      immediate: false,
+      deep: false
+    }
+  }
+}
+</code></pre><ul>
+<li>vuex-class
+<a href="https://github.com/ktsn/vuex-class" target="_blank">vuex-class</a> &#xFF1A;&#x5728; <code>vue-class-component</code> &#x5199;&#x6CD5;&#x4E2D; &#x7ED1;&#x5B9A; <code>vuex</code> &#x3002;</li>
+</ul>
+<pre><code>import Vue from &apos;vue&apos;
+import Component from &apos;vue-class-component&apos;
+import {
+  State,
+  Getter,
+  Action,
+  Mutation,
+  namespace
+} from &apos;vuex-class&apos;
+
+const someModule = namespace(&apos;path/to/module&apos;)
+
+@Component
+export class MyComp extends Vue {
+  @State(&apos;foo&apos;) stateFoo
+  @State(state =&gt; state.bar) stateBar
+  @Getter(&apos;foo&apos;) getterFoo
+  @Action(&apos;foo&apos;) actionFoo
+  @Mutation(&apos;foo&apos;) mutationFoo
+  @someModule.Getter(&apos;foo&apos;) moduleGetterFoo
+
+  // If the argument is omitted, use the property name
+  // for each state/getter/action/mutation type
+  @State foo
+  @Getter bar
+  @Action baz
+  @Mutation qux
+
+  created () {
+    this.stateFoo // -&gt; store.state.foo
+    this.stateBar // -&gt; store.state.bar
+    this.getterFoo // -&gt; store.getters.foo
+    this.actionFoo({ value: true }) // -&gt; store.dispatch(&apos;foo&apos;, { value: true })
+    this.mutationFoo({ value: true }) // -&gt; store.commit(&apos;foo&apos;, { value: true })
+    this.moduleGetterFoo // -&gt; store.getters[&apos;path/to/module/foo&apos;]
+  }
+}
+</code></pre><h2 id="6-&#x7528;-vue-cli-&#x642D;&#x5EFA;-&#x9879;&#x76EE;"><a name="6-&#x7528;-vue-cli-&#x642D;&#x5EFA;-&#x9879;&#x76EE;" class="anchor-navigation-ex-anchor" href="#6-&#x7528;-vue-cli-&#x642D;&#x5EFA;-&#x9879;&#x76EE;"><i class="fa fa-link" aria-hidden="true"></i></a>6. &#x7528; vue-cli &#x642D;&#x5EFA; &#x9879;&#x76EE;</h2>
+<p>&#x7B14;&#x8005;&#x4F7F;&#x7528;&#x6700;&#x65B0;&#x7684; vue-cli 3 &#x642D;&#x5EFA;&#x9879;&#x76EE;&#xFF0C;&#x8BE6;&#x7EC6;&#x7684;&#x6559;&#x7A0B;&#xFF0C;&#x8BF7;&#x770B;&#x6211;&#x4E4B;&#x524D;&#x5199;&#x7684; <a href="https://segmentfault.com/a/1190000016423943" target="_blank">vue-cli3.x &#x65B0;&#x7279;&#x6027;&#x53CA;&#x8E29;&#x5751;&#x8BB0;</a>&#xFF0C;&#x91CC;&#x9762;&#x5DF2;&#x7ECF;&#x6709;&#x8BE6;&#x7EC6;&#x8BB2;&#x89E3; &#xFF0C;&#x4F46;&#x6587;&#x7AE0;&#x91CC;&#x9762;&#x7684;&#x914D;&#x7F6E;&#x548C;&#x6B64;&#x9879;&#x76EE;&#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF0C;&#x6211;&#x52A0;&#x5165;&#x4E86; TypeScript &#xFF0C;&#x5176;&#x4ED6;&#x7684;&#x914D;&#x7F6E;&#x90FD;&#x662F; vue-cli &#x672C;&#x6765;&#x914D;&#x597D;&#x7684;&#x4E86;&#x3002;&#x8BE6;&#x60C5;&#x8BF7;&#x770B; <a href="https://cli.vuejs.org/zh/guide/creating-a-project.html" target="_blank">vue-cli &#x5B98;&#x7F51;</a> &#x3002;</p>
+<h3 id="61-&#x5B89;&#x88C5;&#x53CA;&#x6784;&#x5EFA;&#x9879;&#x76EE;&#x76EE;&#x5F55;"><a name="61-&#x5B89;&#x88C5;&#x53CA;&#x6784;&#x5EFA;&#x9879;&#x76EE;&#x76EE;&#x5F55;" class="anchor-navigation-ex-anchor" href="#61-&#x5B89;&#x88C5;&#x53CA;&#x6784;&#x5EFA;&#x9879;&#x76EE;&#x76EE;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>6.1 &#x5B89;&#x88C5;&#x53CA;&#x6784;&#x5EFA;&#x9879;&#x76EE;&#x76EE;&#x5F55;</h3>
+<p>&#x5B89;&#x88C5;&#x7684;&#x4F9D;&#x8D56;&#xFF1A;</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/12890819-17027bcbe9b8be71.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>&#x5B89;&#x88C5;&#x8FC7;&#x7A0B;&#x9009;&#x62E9;&#x7684;&#x4E00;&#x4E9B;&#x914D;&#x7F6E;&#xFF1A;</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/12890819-554bf777ccbf942a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>&#x642D;&#x5EFA;&#x597D;&#x4E4B;&#x540E;&#xFF0C;&#x521D;&#x59CB;&#x9879;&#x76EE;&#x7ED3;&#x6784;&#x957F;&#x8FD9;&#x6837;&#xFF1A;</p>
+<pre><code>&#x251C;&#x2500;&#x2500; public                          // &#x9759;&#x6001;&#x9875;&#x9762;
+
+&#x251C;&#x2500;&#x2500; src                             // &#x4E3B;&#x76EE;&#x5F55;
+
+    &#x251C;&#x2500;&#x2500; assets                      // &#x9759;&#x6001;&#x8D44;&#x6E90;
+
+    &#x251C;&#x2500;&#x2500; components                  // &#x7EC4;&#x4EF6;
+
+    &#x251C;&#x2500;&#x2500; views                       // &#x9875;&#x9762;
+
+    &#x251C;&#x2500;&#x2500; App.vue                     // &#x9875;&#x9762;&#x4E3B;&#x5165;&#x53E3;
+
+    &#x251C;&#x2500;&#x2500; main.ts                     // &#x811A;&#x672C;&#x4E3B;&#x5165;&#x53E3;
+
+    &#x251C;&#x2500;&#x2500; router.ts                   // &#x8DEF;&#x7531;
+
+    &#x251C;&#x2500;&#x2500; shims-tsx.d.ts              // &#x76F8;&#x5173; tsx &#x6A21;&#x5757;&#x6CE8;&#x5165;
+
+    &#x251C;&#x2500;&#x2500; shims-vue.d.ts              // Vue &#x6A21;&#x5757;&#x6CE8;&#x5165;
+
+    &#x2514;&#x2500;&#x2500; store.ts                    // vuex &#x914D;&#x7F6E;
+
+&#x251C;&#x2500;&#x2500; tests                           // &#x6D4B;&#x8BD5;&#x7528;&#x4F8B;
+
+&#x251C;&#x2500;&#x2500; .eslintrc.js                    // eslint &#x76F8;&#x5173;&#x914D;&#x7F6E;
+
+&#x251C;&#x2500;&#x2500; .gitignore                      // git &#x5FFD;&#x7565;&#x6587;&#x4EF6;&#x914D;&#x7F6E;
+
+&#x251C;&#x2500;&#x2500; babel.config.js                 // babel &#x914D;&#x7F6E;
+
+&#x251C;&#x2500;&#x2500; postcss.config.js               // postcss &#x914D;&#x7F6E;
+
+&#x251C;&#x2500;&#x2500; package.json                    // &#x4F9D;&#x8D56;
+
+&#x2514;&#x2500;&#x2500; tsconfig.json                   // ts &#x914D;&#x7F6E;
+</code></pre><p>&#x5954;&#x7740; <strong>&#x5927;&#x578B;&#x9879;&#x76EE;&#x7684;&#x7ED3;&#x6784;</strong> &#x6765;&#x6539;&#x9020;&#x9879;&#x76EE;&#x7ED3;&#x6784;&#xFF0C;&#x6539;&#x9020;&#x540E; : </p>
+<pre><code>
+&#x251C;&#x2500;&#x2500; public                          // &#x9759;&#x6001;&#x9875;&#x9762;
+
+&#x251C;&#x2500;&#x2500; src                             // &#x4E3B;&#x76EE;&#x5F55;
+
+    &#x251C;&#x2500;&#x2500; assets                      // &#x9759;&#x6001;&#x8D44;&#x6E90;
+
+    &#x251C;&#x2500;&#x2500; filters                     // &#x8FC7;&#x6EE4;
+
+    &#x251C;&#x2500;&#x2500; store                       // vuex &#x914D;&#x7F6E;
+
+    &#x251C;&#x2500;&#x2500; less                        // &#x6837;&#x5F0F;
+
+    &#x251C;&#x2500;&#x2500; utils                       // &#x5DE5;&#x5177;&#x65B9;&#x6CD5;(axios&#x5C01;&#x88C5;&#xFF0C;&#x5168;&#x5C40;&#x65B9;&#x6CD5;&#x7B49;)
+
+    &#x251C;&#x2500;&#x2500; views                       // &#x9875;&#x9762;
+
+    &#x251C;&#x2500;&#x2500; App.vue                     // &#x9875;&#x9762;&#x4E3B;&#x5165;&#x53E3;
+
+    &#x251C;&#x2500;&#x2500; main.ts                     // &#x811A;&#x672C;&#x4E3B;&#x5165;&#x53E3;
+
+    &#x251C;&#x2500;&#x2500; router.ts                   // &#x8DEF;&#x7531;
+
+    &#x251C;&#x2500;&#x2500; shime-global.d.ts           // &#x76F8;&#x5173; &#x5168;&#x5C40;&#x6216;&#x8005;&#x63D2;&#x4EF6; &#x6A21;&#x5757;&#x6CE8;&#x5165;
+
+    &#x251C;&#x2500;&#x2500; shims-tsx.d.ts              // &#x76F8;&#x5173; tsx &#x6A21;&#x5757;&#x6CE8;&#x5165;
+
+    &#x251C;&#x2500;&#x2500; shims-vue.d.ts              // Vue &#x6A21;&#x5757;&#x6CE8;&#x5165;, &#x4F7F; TypeScript &#x652F;&#x6301; *.vue &#x540E;&#x7F00;&#x7684;&#x6587;&#x4EF6;
+
+&#x251C;&#x2500;&#x2500; tests                           // &#x6D4B;&#x8BD5;&#x7528;&#x4F8B;
+
+&#x251C;&#x2500;&#x2500; .eslintrc.js                    // eslint &#x76F8;&#x5173;&#x914D;&#x7F6E;
+
+&#x251C;&#x2500;&#x2500; postcss.config.js               // postcss &#x914D;&#x7F6E;
+
+&#x251C;&#x2500;&#x2500; .gitignore                      // git &#x5FFD;&#x7565;&#x6587;&#x4EF6;&#x914D;&#x7F6E;
+
+&#x251C;&#x2500;&#x2500; babel.config.js                 // preset &#x8BB0;&#x5F55;
+
+&#x251C;&#x2500;&#x2500; package.json                    // &#x4F9D;&#x8D56;
+
+&#x251C;&#x2500;&#x2500; README.md                       // &#x9879;&#x76EE; readme
+
+&#x251C;&#x2500;&#x2500; tsconfig.json                   // ts &#x914D;&#x7F6E;
+
+&#x2514;&#x2500;&#x2500; vue.config.js                   // webpack &#x914D;&#x7F6E;
+</code></pre><p>tsconfig.json &#x6587;&#x4EF6;&#x4E2D;&#x6307;&#x5B9A;&#x4E86;&#x7528;&#x6765;&#x7F16;&#x8BD1;&#x8FD9;&#x4E2A;&#x9879;&#x76EE;&#x7684;&#x6839;&#x6587;&#x4EF6;&#x548C;&#x7F16;&#x8BD1;&#x9009;&#x9879;&#x3002;
+&#x672C;&#x9879;&#x76EE;&#x7684; tsconfig.json &#x914D;&#x7F6E;&#x5982;&#x4E0B; &#xFF1A;</p>
+<pre><code>{
+    // &#x7F16;&#x8BD1;&#x9009;&#x9879;
+  &quot;compilerOptions&quot;: {
+    // &#x7F16;&#x8BD1;&#x8F93;&#x51FA;&#x76EE;&#x6807; ES &#x7248;&#x672C;
+    &quot;target&quot;: &quot;esnext&quot;,
+    // &#x91C7;&#x7528;&#x7684;&#x6A21;&#x5757;&#x7CFB;&#x7EDF;
+    &quot;module&quot;: &quot;esnext&quot;,
+    // &#x4EE5;&#x4E25;&#x683C;&#x6A21;&#x5F0F;&#x89E3;&#x6790;
+    &quot;strict&quot;: true,
+    &quot;jsx&quot;: &quot;preserve&quot;,
+    // &#x4ECE; tslib &#x5BFC;&#x5165;&#x5916;&#x90E8;&#x5E2E;&#x52A9;&#x5E93;: &#x6BD4;&#x5982;__extends&#xFF0C;__rest&#x7B49;
+    &quot;importHelpers&quot;: true,
+    // &#x5982;&#x4F55;&#x5904;&#x7406;&#x6A21;&#x5757;
+    &quot;moduleResolution&quot;: &quot;node&quot;,
+    // &#x542F;&#x7528;&#x88C5;&#x9970;&#x5668;
+    &quot;experimentalDecorators&quot;: true,
+    &quot;esModuleInterop&quot;: true,
+    // &#x5141;&#x8BB8;&#x4ECE;&#x6CA1;&#x6709;&#x8BBE;&#x7F6E;&#x9ED8;&#x8BA4;&#x5BFC;&#x51FA;&#x7684;&#x6A21;&#x5757;&#x4E2D;&#x9ED8;&#x8BA4;&#x5BFC;&#x5165;
+    &quot;allowSyntheticDefaultImports&quot;: true,
+    // &#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x5C31;&#x5FC5;&#x987B;&#x7ED9;&#x5B83;&#x4E00;&#x4E2A;&#x521D;&#x59CB;&#x503C;
+    &quot;strictPropertyInitialization&quot; : false,
+    // &#x5141;&#x8BB8;&#x7F16;&#x8BD1;javascript&#x6587;&#x4EF6;
+    &quot;allowJs&quot;: true,
+    // &#x662F;&#x5426;&#x5305;&#x542B;&#x53EF;&#x4EE5;&#x7528;&#x4E8E; debug &#x7684; sourceMap
+    &quot;sourceMap&quot;: true,
+    // &#x5FFD;&#x7565; this &#x7684;&#x7C7B;&#x578B;&#x68C0;&#x67E5;, Raise error on this expressions with an implied any type.
+    &quot;noImplicitThis&quot;: false,
+    // &#x89E3;&#x6790;&#x975E;&#x76F8;&#x5BF9;&#x6A21;&#x5757;&#x540D;&#x7684;&#x57FA;&#x51C6;&#x76EE;&#x5F55; 
+    &quot;baseUrl&quot;: &quot;.&quot;,
+    // &#x7ED9;&#x9519;&#x8BEF;&#x548C;&#x6D88;&#x606F;&#x8BBE;&#x7F6E;&#x6837;&#x5F0F;&#xFF0C;&#x4F7F;&#x7528;&#x989C;&#x8272;&#x548C;&#x4E0A;&#x4E0B;&#x6587;&#x3002;
+    &quot;pretty&quot;: true,
+    // &#x8BBE;&#x7F6E;&#x5F15;&#x5165;&#x7684;&#x5B9A;&#x4E49;&#x6587;&#x4EF6;
+    &quot;types&quot;: [&quot;webpack-env&quot;, &quot;mocha&quot;, &quot;chai&quot;],
+    // &#x6307;&#x5B9A;&#x7279;&#x6B8A;&#x6A21;&#x5757;&#x7684;&#x8DEF;&#x5F84;
+    &quot;paths&quot;: {
+      &quot;@/*&quot;: [&quot;src/*&quot;]
+    },
+    // &#x7F16;&#x8BD1;&#x8FC7;&#x7A0B;&#x4E2D;&#x9700;&#x8981;&#x5F15;&#x5165;&#x7684;&#x5E93;&#x6587;&#x4EF6;&#x7684;&#x5217;&#x8868;
+    &quot;lib&quot;: [&quot;esnext&quot;, &quot;dom&quot;, &quot;dom.iterable&quot;, &quot;scripthost&quot;]
+  },
+  // ts &#x7BA1;&#x7406;&#x7684;&#x6587;&#x4EF6;
+  &quot;include&quot;: [
+    &quot;src/**/*.ts&quot;,
+    &quot;src/**/*.tsx&quot;,
+    &quot;src/**/*.vue&quot;,
+    &quot;tests/**/*.ts&quot;,
+    &quot;tests/**/*.tsx&quot;
+  ],
+  // ts &#x6392;&#x9664;&#x7684;&#x6587;&#x4EF6;
+  &quot;exclude&quot;: [&quot;node_modules&quot;]
+}
+</code></pre><p>&#x66F4;&#x591A;&#x914D;&#x7F6E;&#x8BF7;&#x770B;&#x5B98;&#x7F51;&#x7684; tsconfig.json &#x7684; <a href="https://www.tslang.cn/docs/handbook/compiler-options.html" target="_blank">&#x7F16;&#x8BD1;&#x9009;&#x9879;</a></p>
+<p>&#x672C;&#x9879;&#x76EE;&#x7684; vue.config.js:</p>
+<pre><code>const path = require(&quot;path&quot;);
+const sourceMap = process.env.NODE_ENV === &quot;development&quot;;
+
+module.exports = {
+  // &#x57FA;&#x672C;&#x8DEF;&#x5F84;
+  publicPath: &quot;./&quot;,
+  // &#x8F93;&#x51FA;&#x6587;&#x4EF6;&#x76EE;&#x5F55;
+  outputDir: &quot;dist&quot;,
+  // eslint-loader &#x662F;&#x5426;&#x5728;&#x4FDD;&#x5B58;&#x7684;&#x65F6;&#x5019;&#x68C0;&#x67E5;
+  lintOnSave: false,
+  // webpack&#x914D;&#x7F6E;
+  // see https://github.com/vuejs/vue-cli/blob/dev/docs/webpack.md
+  chainWebpack: () =&gt; {},
+  configureWebpack: config =&gt; {
+    if (process.env.NODE_ENV === &quot;production&quot;) {
+      // &#x4E3A;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x4FEE;&#x6539;&#x914D;&#x7F6E;...
+      config.mode = &quot;production&quot;;
+    } else {
+      // &#x4E3A;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x4FEE;&#x6539;&#x914D;&#x7F6E;...
+      config.mode = &quot;development&quot;;
+    }
+
+    Object.assign(config, {
+      // &#x5F00;&#x53D1;&#x751F;&#x4EA7;&#x5171;&#x540C;&#x914D;&#x7F6E;
+      resolve: {
+        extensions: [&quot;.js&quot;, &quot;.vue&quot;, &quot;.json&quot;, &quot;.ts&quot;, &quot;.tsx&quot;],
+        alias: {
+          vue$: &quot;vue/dist/vue.js&quot;,
+          &quot;@&quot;: path.resolve(__dirname, &quot;./src&quot;)
+        }
+      }
+    });
+  },
+  // &#x751F;&#x4EA7;&#x73AF;&#x5883;&#x662F;&#x5426;&#x751F;&#x6210; sourceMap &#x6587;&#x4EF6;
+  productionSourceMap: sourceMap,
+  // css&#x76F8;&#x5173;&#x914D;&#x7F6E;
+  css: {
+    // &#x662F;&#x5426;&#x4F7F;&#x7528;css&#x5206;&#x79BB;&#x63D2;&#x4EF6; ExtractTextPlugin
+    extract: true,
+    // &#x5F00;&#x542F; CSS source maps?
+    sourceMap: false,
+    // css&#x9884;&#x8BBE;&#x5668;&#x914D;&#x7F6E;&#x9879;
+    loaderOptions: {},
+    // &#x542F;&#x7528; CSS modules for all css / pre-processor files.
+    modules: false
+  },
+  // use thread-loader for babel &amp; TS in production build
+  // enabled by default if the machine has more than 1 cores
+  parallel: require(&quot;os&quot;).cpus().length &gt; 1,
+  // PWA &#x63D2;&#x4EF6;&#x76F8;&#x5173;&#x914D;&#x7F6E;
+  // see https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-pwa
+  pwa: {},
+  // webpack-dev-server &#x76F8;&#x5173;&#x914D;&#x7F6E;
+  devServer: {
+    open: process.platform === &quot;darwin&quot;,
+    host: &quot;localhost&quot;,
+    port: 3001, //8080,
+    https: false,
+    hotOnly: false,
+    proxy: {
+      // &#x8BBE;&#x7F6E;&#x4EE3;&#x7406;
+      // proxy all requests starting with /api to jsonplaceholder
+      &quot;/api&quot;: {
+        // target: &quot;https://emm.cmccbigdata.com:8443/&quot;,
+        target: &quot;http://localhost:3000/&quot;,
+        // target: &quot;http://47.106.136.114/&quot;,
+        changeOrigin: true,
+        ws: true,
+        pathRewrite: {
+          &quot;^/api&quot;: &quot;&quot;
+        }
+      }
+    },
+    before: app =&gt; {}
+  },
+  // &#x7B2C;&#x4E09;&#x65B9;&#x63D2;&#x4EF6;&#x914D;&#x7F6E;
+  pluginOptions: {
+    // ...
+  }
+};
+</code></pre><h3 id="62-&#x5B89;&#x88C5;-element-ui"><a name="62-&#x5B89;&#x88C5;-element-ui" class="anchor-navigation-ex-anchor" href="#62-&#x5B89;&#x88C5;-element-ui"><i class="fa fa-link" aria-hidden="true"></i></a>6.2 &#x5B89;&#x88C5; element-ui</h3>
+<p>&#x672C;&#x6765;&#x60F3;&#x642D;&#x914D; iview-ui &#x6765;&#x7528;&#x7684;&#xFF0C;&#x4F46;&#x540E;&#x7EED;&#x8FD8;&#x60F3;&#x628A;&#x8FD9;&#x4E2A;&#x9879;&#x76EE;&#x641E;&#x6210; ssr &#x7684;&#xFF0C;&#x800C; vue + typescript + iview + Nuxt.js &#x7684;&#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;&#x8FD8;&#x6709;&#x4E0D;&#x5C11;&#x5751;, &#x800C; vue + typescript + element + Nuxt.js &#x5BF9; ssr &#x7684;&#x652F;&#x6301;&#x5DF2;&#x7ECF;&#x4E0D;&#x9519;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x9009;&#x62E9;&#x4E86; element-ui &#x3002;</p>
+<p>&#x5B89;&#x88C5;&#xFF1A;</p>
+<pre><code>npm i element-ui -S
+</code></pre><p>&#x6309;&#x9700;&#x5F15;&#x5165;, &#x501F;&#x52A9; <a href="https://github.com/QingWei-Li/babel-plugin-component" target="_blank">babel-plugin-component</a>&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x53EA;&#x5F15;&#x5165;&#x9700;&#x8981;&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x4EE5;&#x8FBE;&#x5230;&#x51CF;&#x5C0F;&#x9879;&#x76EE;&#x4F53;&#x79EF;&#x7684;&#x76EE;&#x7684;&#x3002;</p>
+<pre><code>npm install babel-plugin-component -D
+</code></pre><p>&#x7136;&#x540E;&#xFF0C;&#x5C06; babel.config.js &#x4FEE;&#x6539;&#x4E3A;&#xFF1A;</p>
+<pre><code>module.exports = {
+  presets: [&quot;@vue/app&quot;],
+  plugins: [
+    [
+      &quot;component&quot;,
+      {
+        libraryName: &quot;element-ui&quot;,
+        styleLibraryName: &quot;theme-chalk&quot;
+      }
+    ]
+  ]
+};
+</code></pre><p>&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x53EA;&#x5E0C;&#x671B;&#x5F15;&#x5165;&#x90E8;&#x5206;&#x7EC4;&#x4EF6;&#xFF0C;&#x6BD4;&#x5982; Button &#x548C; Select&#xFF0C;&#x90A3;&#x4E48;&#x9700;&#x8981;&#x5728; main.js &#x4E2D;&#x5199;&#x5165;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre><code>import Vue from &apos;vue&apos;;
+import { Button, Select } from &apos;element-ui&apos;;
+import App from &apos;./App.vue&apos;;
+
+Vue.component(Button.name, Button);
+Vue.component(Select.name, Select);
+/* &#x6216;&#x5199;&#x4E3A;
+ * Vue.use(Button)
+ * Vue.use(Select)
+ */
+
+new Vue({
+  el: &apos;#app&apos;,
+  render: h =&gt; h(App)
+});
+</code></pre><h3 id="63-&#x5B8C;&#x5584;&#x9879;&#x76EE;&#x76EE;&#x5F55;&#x4E0E;&#x6587;&#x4EF6;"><a name="63-&#x5B8C;&#x5584;&#x9879;&#x76EE;&#x76EE;&#x5F55;&#x4E0E;&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#63-&#x5B8C;&#x5584;&#x9879;&#x76EE;&#x76EE;&#x5F55;&#x4E0E;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>6.3 &#x5B8C;&#x5584;&#x9879;&#x76EE;&#x76EE;&#x5F55;&#x4E0E;&#x6587;&#x4EF6;</h3>
+<h4 id="route"><a name="route" class="anchor-navigation-ex-anchor" href="#route"><i class="fa fa-link" aria-hidden="true"></i></a>route</h4>
+<p>&#x4F7F;&#x7528;&#x8DEF;&#x7531;&#x61D2;&#x52A0;&#x8F7D;&#x529F;&#x80FD;&#x3002;</p>
+<pre><code>export default new Router({
+  mode: &quot;history&quot;,
+  routes: [
+    {
+      path: &quot;/&quot;,
+      name: &quot;home&quot;,
+      component: () =&gt; import(/* webpackChunkName: &quot;home&quot; */ &quot;./views/home.vue&quot;)
+    },
+    {
+      path: &quot;/articles&quot;,
+      name: &quot;articles&quot;,
+      // route level code-splitting
+      // this generates a separate chunk (articles.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () =&gt;
+        import(/* webpackChunkName: &quot;articles&quot; */ &quot;./views/articles.vue&quot;)
+    },
+  ]
+});
+</code></pre><h4 id="utils"><a name="utils" class="anchor-navigation-ex-anchor" href="#utils"><i class="fa fa-link" aria-hidden="true"></i></a>utils</h4>
+<ul>
+<li>utils/utils.ts &#x5E38;&#x7528;&#x51FD;&#x6570;&#x7684;&#x5C01;&#x88C5;&#xFF0C; &#x6BD4;&#x5982; &#x4E8B;&#x4EF6;&#x7684;&#x8282;&#x6D41;&#xFF08;throttle&#xFF09;&#x4E0E;&#x9632;&#x6296;&#xFF08;debounce&#xFF09;&#x65B9;&#x6CD5;&#xFF1A;</li>
+</ul>
+<pre><code>// fn&#x662F;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5305;&#x88C5;&#x7684;&#x4E8B;&#x4EF6;&#x56DE;&#x8C03;, delay&#x662F;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#x7684;&#x9608;&#x503C;
+export function throttle(fn: Function, delay: number) {
+  // last&#x4E3A;&#x4E0A;&#x4E00;&#x6B21;&#x89E6;&#x53D1;&#x56DE;&#x8C03;&#x7684;&#x65F6;&#x95F4;, timer&#x662F;&#x5B9A;&#x65F6;&#x5668;
+  let last = 0,
+    timer: any = null;
+  // &#x5C06;throttle&#x5904;&#x7406;&#x7ED3;&#x679C;&#x5F53;&#x4F5C;&#x51FD;&#x6570;&#x8FD4;&#x56DE;
+  return function() {
+    // &#x4FDD;&#x7559;&#x8C03;&#x7528;&#x65F6;&#x7684;this&#x4E0A;&#x4E0B;&#x6587;
+    let context = this;
+    // &#x4FDD;&#x7559;&#x8C03;&#x7528;&#x65F6;&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;
+    let args = arguments;
+    // &#x8BB0;&#x5F55;&#x672C;&#x6B21;&#x89E6;&#x53D1;&#x56DE;&#x8C03;&#x7684;&#x65F6;&#x95F4;
+    let now = +new Date();
+    // &#x5224;&#x65AD;&#x4E0A;&#x6B21;&#x89E6;&#x53D1;&#x7684;&#x65F6;&#x95F4;&#x548C;&#x672C;&#x6B21;&#x89E6;&#x53D1;&#x7684;&#x65F6;&#x95F4;&#x5DEE;&#x662F;&#x5426;&#x5C0F;&#x4E8E;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#x7684;&#x9608;&#x503C;
+    if (now - last &lt; delay) {
+      // &#x5982;&#x679C;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#x5C0F;&#x4E8E;&#x6211;&#x4EEC;&#x8BBE;&#x5B9A;&#x7684;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#x9608;&#x503C;&#xFF0C;&#x5219;&#x4E3A;&#x672C;&#x6B21;&#x89E6;&#x53D1;&#x64CD;&#x4F5C;&#x8BBE;&#x7ACB;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5B9A;&#x65F6;&#x5668;
+      clearTimeout(timer);
+      timer = setTimeout(function() {
+        last = now;
+        fn.apply(context, args);
+      }, delay);
+    } else {
+      // &#x5982;&#x679C;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#x8D85;&#x51FA;&#x4E86;&#x6211;&#x4EEC;&#x8BBE;&#x5B9A;&#x7684;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#x9608;&#x503C;&#xFF0C;&#x90A3;&#x5C31;&#x4E0D;&#x7B49;&#x4E86;&#xFF0C;&#x65E0;&#x8BBA;&#x5982;&#x4F55;&#x8981;&#x53CD;&#x9988;&#x7ED9;&#x7528;&#x6237;&#x4E00;&#x6B21;&#x54CD;&#x5E94;
+      last = now;
+      fn.apply(context, args);
+    }
+  };
+}
+</code></pre><ul>
+<li>utils/config.ts &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x6BD4;&#x5982; github &#x6388;&#x6743;&#x767B;&#x5F55;&#x7684;&#x56DE;&#x8C03;&#x5730;&#x5740;&#x3001;client_id&#x3001;client_secret &#x7B49;&#x3002;</li>
+</ul>
+<pre><code>const config = {
+  &apos;oauth_uri&apos;: &apos;https://github.com/login/oauth/authorize&apos;,
+  &apos;redirect_uri&apos;: &apos;https://biaochenxuying.cn/login&apos;,
+  &apos;client_id&apos;: &apos;XXXXXXXXXX&apos;,
+  &apos;client_secret&apos;: &apos;XXXXXXXXXX&apos;,
+};
+
+// &#x672C;&#x5730;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#x4E0B;
+if (process.env.NODE_ENV === &apos;development&apos;) {
+  config.redirect_uri = &quot;http://localhost:3001/login&quot;
+  config.client_id = &quot;502176cec65773057a9e&quot;
+  config.client_secret = &quot;65d444de381a026301a2c7cffb6952b9a86ac235&quot;
+}
+export default config;
+</code></pre><p>&#x5982;&#x679C;&#x4F60;&#x7684;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x4E5F;&#x8981; github &#x767B;&#x5F55;&#x6388;&#x6743;&#x7684;&#x8BDD;&#xFF0C;&#x8BF7;&#x5728; github &#x4E0A;&#x7533;&#x8BF7;&#x4E00;&#x4E2A; Oauth App &#xFF0C;&#x628A;&#x4F60;&#x7684;  redirect_uri&#xFF0C;client_id&#xFF0C;client_secret &#x7684;&#x4FE1;&#x606F;&#x586B;&#x5728; config &#x91CC;&#x9762;&#x5373;&#x53EF;&#x3002;&#x5177;&#x4F53;&#x8BE6;&#x60C5;&#x8BF7;&#x770B;&#x6211;&#x5199;&#x7684;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0; <a href="https://biaochenxuying.cn/articleDetail?article_id=5c7bd34e42b55e2ecc90976d" target="_blank">github &#x6388;&#x6743;&#x767B;&#x5F55;&#x6559;&#x7A0B;&#x4E0E;&#x5982;&#x4F55;&#x8BBE;&#x8BA1;&#x7B2C;&#x4E09;&#x65B9;&#x6388;&#x6743;&#x767B;&#x5F55;&#x7684;&#x7528;&#x6237;&#x8868;</a></p>
+<ul>
+<li><p>utils/urls.ts &#x8BF7;&#x6C42;&#x63A5;&#x53E3;&#x5730;&#x5740;&#xFF0C;&#x7EDF;&#x4E00;&#x7BA1;&#x7406;&#x3002;</p>
+<pre><code>// url&#x7684;&#x94FE;&#x63A5;
+export const urls: object = {
+login: &quot;login&quot;,
+register: &quot;register&quot;,
+getArticleList: &quot;getArticleList&quot;,
+};
+export default urls;
+</code></pre></li>
+<li><p>utils/https.ts axios &#x8BF7;&#x6C42;&#x7684;&#x5C01;&#x88C5;&#x3002;</p>
+</li>
+</ul>
+<pre><code>import axios from &quot;axios&quot;;
+
+// &#x521B;&#x5EFA;axios&#x5B9E;&#x4F8B;
+let service: any = {};
+service = axios.create({
+    baseURL: &quot;/api&quot;, // api&#x7684;base_url
+    timeout: 50000 // &#x8BF7;&#x6C42;&#x8D85;&#x65F6;&#x65F6;&#x95F4;
+  });
+
+// request&#x62E6;&#x622A;&#x5668; axios&#x7684;&#x4E00;&#x4E9B;&#x914D;&#x7F6E;
+service.interceptors.request.use(
+  (config: any) =&gt; {
+    return config;
+  },
+  (error: any) =&gt; {
+    // Do something with request error
+    console.error(&quot;error:&quot;, error); // for debug
+    Promise.reject(error);
+  }
+);
+
+// respone&#x62E6;&#x622A;&#x5668; axios&#x7684;&#x4E00;&#x4E9B;&#x914D;&#x7F6E;
+service.interceptors.response.use(
+  (response: any) =&gt; {
+    return response;
+  },
+  (error: any) =&gt; {
+    console.error(&quot;error:&quot; + error); // for debug
+    return Promise.reject(error);
+  }
+);
+
+export default service;
+</code></pre><p>&#x628A; urls &#x548C; https &#x6302;&#x8F7D;&#x5230; main.ts &#x91CC;&#x9762;&#x7684; Vue &#x7684; prototype &#x4E0A;&#x9762;&#x3002;</p>
+<pre><code>import service from &quot;./utils/https&quot;;
+import urls from &quot;./utils/urls&quot;;
+
+Vue.prototype.$https = service; // &#x5176;&#x4ED6;&#x9875;&#x9762;&#x5728;&#x4F7F;&#x7528; axios &#x7684;&#x65F6;&#x5019;&#x76F4;&#x63A5;  this.$http &#x5C31;&#x53EF;&#x4EE5;&#x4E86;
+Vue.prototype.$urls = urls; // &#x5176;&#x4ED6;&#x9875;&#x9762;&#x5728;&#x4F7F;&#x7528; urls &#x7684;&#x65F6;&#x5019;&#x76F4;&#x63A5;  this.$urls &#x5C31;&#x53EF;&#x4EE5;&#x4E86;
+</code></pre><p>&#x7136;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x7EDF;&#x4E00;&#x7BA1;&#x7406;&#x63A5;&#x53E3;&#xFF0C;&#x800C;&#x4E14;&#x8C03;&#x7528;&#x8D77;&#x6765;&#x4E5F;&#x5F88;&#x65B9;&#x4FBF;&#x5566;&#x3002;&#x6BD4;&#x5982;&#x4E0B;&#x9762; &#x6587;&#x7AE0;&#x5217;&#x8868;&#x7684;&#x8BF7;&#x6C42;&#x3002;</p>
+<pre><code>async handleSearch() {
+    this.isLoading = true;
+    const res: any = await this.$https.get(this.$urls.getArticleList, {
+      params: this.params
+    });
+    this.isLoading = false;
+    if (res.status === 200) {
+      if (res.data.code === 0) {
+        const data: any = res.data.data;
+        this.articlesList = [...this.articlesList, ...data.list];
+        this.total = data.count;
+        this.params.pageNum++;
+        if (this.total === this.articlesList.length) {
+          this.isLoadEnd = true;
+        }
+      } else {
+        this.$message({
+          message: res.data.message,
+          type: &quot;error&quot;
+        });
+      }
+    } else {
+      this.$message({
+        message: &quot;&#x7F51;&#x7EDC;&#x9519;&#x8BEF;!&quot;,
+        type: &quot;error&quot;
+      });
+    }
+  }
+</code></pre><h4 id="store--vuex-"><a name="store--vuex-" class="anchor-navigation-ex-anchor" href="#store--vuex-"><i class="fa fa-link" aria-hidden="true"></i></a>store ( Vuex )</h4>
+<p>&#x4E00;&#x822C;&#x5927;&#x578B;&#x7684;&#x9879;&#x76EE;&#x90FD;&#x6709;&#x5F88;&#x591A;&#x6A21;&#x5757;&#x7684;&#xFF0C;&#x6BD4;&#x5982;&#x672C;&#x9879;&#x76EE;&#x4E2D;&#x6709;&#x516C;&#x5171;&#x4FE1;&#x606F;(&#x6BD4;&#x5982; token )&#x3001; &#x7528;&#x6237;&#x6A21;&#x5757;&#x3001;&#x6587;&#x7AE0;&#x6A21;&#x5757;&#x3002;</p>
+<pre><code>&#x251C;&#x2500;&#x2500; modules                         // &#x6A21;&#x5757;
+
+    &#x251C;&#x2500;&#x2500; user.ts                     // &#x7528;&#x6237;&#x6A21;&#x5757; 
+
+    &#x251C;&#x2500;&#x2500; article.ts                 // &#x6587;&#x7AE0;&#x6A21;&#x5757; 
+
+&#x251C;&#x2500;&#x2500; types.ts                        // &#x7C7B;&#x578B;
+
+&#x2514;&#x2500;&#x2500; index.ts                        // vuex &#x4E3B;&#x5165;&#x53E3;
+</code></pre><ul>
+<li>store/index.ts &#x5B58;&#x653E;&#x516C;&#x5171;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x5E76;&#x5BFC;&#x5165;&#x5176;&#x4ED6;&#x6A21;&#x5757;</li>
+</ul>
+<pre><code>import Vue from &quot;vue&quot;;
+import Vuex from &quot;vuex&quot;;
+import * as types from &quot;./types&quot;;
+import user from &quot;./modules/user&quot;;
+import article from &quot;./modules/article&quot;;
+
+Vue.use(Vuex);
+const initPageState = () =&gt; {
+  return {
+    token: &quot;&quot;
+  };
+};
+const store = new Vuex.Store({
+  strict: process.env.NODE_ENV !== &quot;production&quot;,
+  // &#x5177;&#x4F53;&#x6A21;&#x5757;
+  modules: {
+    user,
+    article
+  },
+  state: initPageState(),
+  mutations: {
+    [types.SAVE_TOKEN](state: any, pageState: any) {
+      for (const prop in pageState) {
+        state[prop] = pageState[prop];
+      }
+    }
+  },
+  actions: {}
+});
+
+export default store;
+</code></pre><ul>
+<li>types.ts </li>
+</ul>
+<pre><code>// &#x516C;&#x5171; token
+export const SAVE_TOKEN = &quot;SAVE_TOKEN&quot;;
+
+// &#x7528;&#x6237;
+export const SAVE_USER = &quot;SAVE_USER&quot;;
+</code></pre><ul>
+<li>user.ts</li>
+</ul>
+<pre><code>import * as types from &quot;../types&quot;;
+
+const initPageState = () =&gt; {
+  return {
+    userInfo: {
+      _id: &quot;&quot;,
+      name: &quot;&quot;,
+      avator: &quot;&quot;
+    }
+  };
+};
+const user = {
+  state: initPageState(),
+  mutations: {
+    [types.SAVE_USER](state: any, pageState: any) {
+      for (const prop in pageState) {
+        state[prop] = pageState[prop];
+      }
+    }
+  },
+  actions: {}
+};
+
+export default user;
+</code></pre><h2 id="7-markdown-&#x6E32;&#x67D3;"><a name="7-markdown-&#x6E32;&#x67D3;" class="anchor-navigation-ex-anchor" href="#7-markdown-&#x6E32;&#x67D3;"><i class="fa fa-link" aria-hidden="true"></i></a>7. markdown &#x6E32;&#x67D3;</h2>
+<p>markdown &#x6E32;&#x67D3;&#x6548;&#x679C;&#x56FE;: </p>
+<p><img src="https://upload-images.jianshu.io/upload_images/12890819-cf92cfb3f222c4fb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="markdown &#x6E32;&#x67D3;&#x6548;&#x679C;&#x56FE;"></p>
+<p>markdown &#x6E32;&#x67D3; &#x91C7;&#x7528;&#x4E86;&#x5F00;&#x6E90;&#x7684; marked&#xFF0C; &#x4EE3;&#x7801;&#x9AD8;&#x4EAE;&#x7528;&#x4E86; highlight.js &#x3002;</p>
+<p>&#x7528;&#x6CD5;&#xFF1A;</p>
+<p>&#x7B2C;&#x4E00;&#x6B65;&#xFF1A;npm i marked highlight.js --save</p>
+<pre><code>npm i marked highlight.js --save
+</code></pre><p>&#x7B2C;&#x4E8C;&#x6B65;&#xFF1A; &#x5BFC;&#x5165;&#x5C01;&#x88C5;&#x6210; markdown.js&#xFF0C;&#x5C06;&#x6587;&#x7AE0;&#x8BE6;&#x60C5;&#x7531;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6210; html&#xFF0C; &#x5E76;&#x62BD;&#x79BB;&#x51FA;&#x6587;&#x7AE0;&#x76EE;&#x5F55;&#x3002;</p>
+<p><a href="https://www.cherylgood.cn/detail/5bdaf4722382b4646c27143b.html" target="_blank">marked &#x7684;&#x5C01;&#x88C5;</a> &#x5F97;&#x611F;&#x8C22;&#x8FD9;&#x4F4D;&#x8001;&#x54E5;&#x3002;</p>
+<pre><code>const highlight = require(&quot;highlight.js&quot;);
+const marked = require(&quot;marked&quot;);
+const tocObj = {
+  add: function(text, level) {
+    var anchor = `#toc${level}${++this.index}`;
+    this.toc.push({ anchor: anchor, level: level, text: text });
+    return anchor;
+  },
+  // &#x4F7F;&#x7528;&#x5806;&#x6808;&#x7684;&#x65B9;&#x5F0F;&#x5904;&#x7406;&#x5D4C;&#x5957;&#x7684;ul,li&#xFF0C;level&#x5373;ul&#x7684;&#x5D4C;&#x5957;&#x5C42;&#x6B21;&#xFF0C;1&#x662F;&#x6700;&#x5916;&#x5C42;
+  // &lt;ul&gt;
+  //   &lt;li&gt;&lt;/li&gt;
+  //   &lt;ul&gt;
+  //     &lt;li&gt;&lt;/li&gt;
+  //   &lt;/ul&gt;
+  //   &lt;li&gt;&lt;/li&gt;
+  // &lt;/ul&gt;
+  toHTML: function() {
+    let levelStack = [];
+    let result = &quot;&quot;;
+    const addStartUL = () =&gt; {
+      result += &apos;&lt;ul class=&quot;anchor-ul&quot; id=&quot;anchor-fix&quot;&gt;&apos;;
+    };
+    const addEndUL = () =&gt; {
+      result += &quot;&lt;/ul&gt;\n&quot;;
+    };
+    const addLI = (anchor, text) =&gt; {
+      result +=
+        &apos;&lt;li&gt;&lt;a class=&quot;toc-link&quot; href=&quot;#&apos; + anchor + &apos;&quot;&gt;&apos; + text + &quot;&lt;a&gt;&lt;/li&gt;\n&quot;;
+    };
+
+    this.toc.forEach(function(item) {
+      let levelIndex = levelStack.indexOf(item.level);
+      // &#x6CA1;&#x6709;&#x627E;&#x5230;&#x76F8;&#x5E94;level&#x7684;ul&#x6807;&#x7B7E;&#xFF0C;&#x5219;&#x5C06;li&#x653E;&#x5165;&#x65B0;&#x589E;&#x7684;ul&#x4E2D;
+      if (levelIndex === -1) {
+        levelStack.unshift(item.level);
+        addStartUL();
+        addLI(item.anchor, item.text);
+      } // &#x627E;&#x5230;&#x4E86;&#x76F8;&#x5E94;level&#x7684;ul&#x6807;&#x7B7E;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x6808;&#x9876;&#x7684;&#x4F4D;&#x7F6E;&#x5219;&#x76F4;&#x63A5;&#x5C06;li&#x653E;&#x5728;&#x6B64;ul&#x4E0B;
+      else if (levelIndex === 0) {
+        addLI(item.anchor, item.text);
+      } // &#x627E;&#x5230;&#x4E86;&#x76F8;&#x5E94;level&#x7684;ul&#x6807;&#x7B7E;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x5728;&#x6808;&#x9876;&#x4F4D;&#x7F6E;&#xFF0C;&#x9700;&#x8981;&#x5C06;&#x4E4B;&#x524D;&#x7684;&#x6240;&#x6709;level&#x51FA;&#x6808;&#x5E76;&#x4E14;&#x6253;&#x4E0A;&#x95ED;&#x5408;&#x6807;&#x7B7E;&#xFF0C;&#x6700;&#x540E;&#x65B0;&#x589E;li
+      else {
+        while (levelIndex--) {
+          levelStack.shift();
+          addEndUL();
+        }
+        addLI(item.anchor, item.text);
+      }
+    });
+    // &#x5982;&#x679C;&#x6808;&#x4E2D;&#x8FD8;&#x6709;level&#xFF0C;&#x5168;&#x90E8;&#x51FA;&#x6808;&#x6253;&#x4E0A;&#x95ED;&#x5408;&#x6807;&#x7B7E;
+    while (levelStack.length) {
+      levelStack.shift();
+      addEndUL();
+    }
+    // &#x6E05;&#x7406;&#x5148;&#x524D;&#x6570;&#x636E;&#x4F9B;&#x4E0B;&#x6B21;&#x4F7F;&#x7528;
+    this.toc = [];
+    this.index = 0;
+    return result;
+  },
+  toc: [],
+  index: 0
+};
+
+class MarkUtils {
+  constructor() {
+    this.rendererMD = new marked.Renderer();
+    this.rendererMD.heading = function(text, level, raw) {
+      var anchor = tocObj.add(text, level);
+      return `&lt;h${level} id=${anchor}&gt;${text}&lt;/h${level}&gt;\n`;
+    };
+    highlight.configure({ useBR: true });
+    marked.setOptions({
+      renderer: this.rendererMD,
+      headerIds: false,
+      gfm: true,
+      tables: true,
+      breaks: false,
+      pedantic: false,
+      sanitize: false,
+      smartLists: true,
+      smartypants: false,
+      highlight: function(code) {
+        return highlight.highlightAuto(code).value;
+      }
+    });
+  }
+
+  async marked(data) {
+    if (data) {
+      let content = await marked(data); // &#x6587;&#x7AE0;&#x5185;&#x5BB9;
+      let toc = tocObj.toHTML(); // &#x6587;&#x7AE0;&#x76EE;&#x5F55;
+      return { content: content, toc: toc };
+    } else {
+      return null;
+    }
+  }
+}
+
+const markdown = new MarkUtils();
+
+export default markdown;
+</code></pre><p>&#x7B2C;&#x4E09;&#x6B65;&#xFF1A; &#x4F7F;&#x7528;</p>
+<pre><code>import markdown from &quot;@/utils/markdown&quot;;
+
+// &#x83B7;&#x53D6;&#x6587;&#x7AE0;&#x8BE6;&#x60C5;
+async handleSearch() {
+    const res: any = await this.$https.post(
+      this.$urls.getArticleDetail,
+      this.params
+    );
+    if (res.status === 200) {
+      if (res.data.code === 0) {
+        this.articleDetail = res.data.data;
+       // &#x4F7F;&#x7528; marked &#x8F6C;&#x6362;
+        const article = markdown.marked(res.data.data.content);
+        article.then((response: any) =&gt; {
+          this.articleDetail.content = response.content;
+          this.articleDetail.toc = response.toc;
+        });
+      } else {
+        // ...
+    } else {
+     // ... 
+    }
+  }
+
+// &#x6E32;&#x67D3;
+&lt;div id=&quot;content&quot;
+       class=&quot;article-detail&quot;
+       v-html=&quot;articleDetail.content&quot;&gt;
+&lt;/div&gt;
+</code></pre><p>&#x7B2C;&#x56DB;&#x6B65;&#xFF1A;&#x5F15;&#x5165; monokai_sublime &#x7684; css &#x6837;&#x5F0F;</p>
+<pre><code>&lt;link href=&quot;http://cdn.bootcss.com/highlight.js/8.0/styles/monokai_sublime.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+</code></pre><p>&#x7B2C;&#x4E94;&#x6B65;&#xFF1A;&#x5BF9; markdown &#x6837;&#x5F0F;&#x7684;&#x8865;&#x5145;</p>
+<p>&#x5982;&#x679C;&#x4E0D;&#x8865;&#x5145;&#x6837;&#x5F0F;&#xFF0C;&#x662F;&#x6CA1;&#x6709;&#x9ED1;&#x8272;&#x80CC;&#x666F;&#x7684;&#xFF0C;&#x5B57;&#x4F53;&#x5927;&#x5C0F;&#x7B49;&#x4E5F;&#x4F1A;&#x6BD4;&#x8F83;&#x5C0F;&#xFF0C;&#x56FE;&#x7247;&#x4E5F;&#x4E0D;&#x4F1A;&#x5C45;&#x4E2D;&#x663E;&#x793A;</p>
+<pre><code>/*&#x5BF9; markdown &#x6837;&#x5F0F;&#x7684;&#x8865;&#x5145;*/
+pre {
+    display: block;
+    padding: 10px;
+    margin: 0 0 10px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #abb2bf;
+    background: #282c34;
+    word-break: break-all;
+    word-wrap: break-word;
+    overflow: auto;
+}
+h1,h2,h3,h4,h5,h6{
+    margin-top: 1em;
+    /* margin-bottom: 1em; */
+}
+strong {
+    font-weight: bold;
+}
+
+p &gt; code:not([class]) {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 4px;
+}
+p img{
+    /* &#x56FE;&#x7247;&#x5C45;&#x4E2D; */
+    margin: 0 auto;
+    display: flex;
+}
+
+#content {
+    font-family: &quot;Microsoft YaHei&quot;,  &apos;sans-serif&apos;;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+#content .desc ul,#content .desc ol {
+    color: #333333;
+    margin: 1.5em 0 0 25px;
+}
+
+#content .desc h1, #content .desc h2 {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+#content .desc a {
+    color: #009a61;
+}
+</code></pre><h2 id="8-&#x6CE8;&#x610F;&#x70B9;"><a name="8-&#x6CE8;&#x610F;&#x70B9;" class="anchor-navigation-ex-anchor" href="#8-&#x6CE8;&#x610F;&#x70B9;"><i class="fa fa-link" aria-hidden="true"></i></a>8. &#x6CE8;&#x610F;&#x70B9;</h2>
+<ul>
+<li>&#x5173;&#x4E8E; &#x9875;&#x9762;</li>
+</ul>
+<p>&#x5BF9;&#x4E8E; &#x5173;&#x4E8E; &#x7684;&#x9875;&#x9762;&#xFF0C;&#x5176;&#x5B9E;&#x662F;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#x6765;&#x7684;&#xFF0C;&#x6839;&#x636E;&#x6587;&#x7AE0;&#x7C7B;&#x578B; type &#x6765;&#x51B3;&#x5B9A;&#x7684;&#xFF0C;&#x6570;&#x636E;&#x5E93;&#x91CC;&#x9762; type &#x4E3A; 3 
+ &#x7684;&#x6587;&#x7AE0;&#xFF0C;&#x53EA;&#x80FD;&#x6709;&#x4E00;&#x7BC7;&#x5C31;&#x662F; &#x535A;&#x4E3B;&#x4ECB;&#x7ECD; &#xFF1B;&#x8FBE;&#x5230;&#x4E86;&#x60F3;&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x4FEE;&#x6539;&#x5185;&#x5BB9;&#x90FD;&#x53EF;&#x4EE5;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x5F53; <strong>&#x5F53;&#x524D;&#x8DEF;&#x7531;</strong> === &apos;/about&apos; &#x65F6;&#x5C31;&#x662F;&#x8BF7;&#x6C42;&#x7C7B;&#x578B;&#x4E3A; &#x535A;&#x4E3B;&#x4ECB;&#x7ECD; &#x7684;&#x6587;&#x7AE0;&#x3002;</p>
+<pre><code>type: 3,  // &#x6587;&#x7AE0;&#x7C7B;&#x578B;: 1&#xFF1A;&#x666E;&#x901A;&#x6587;&#x7AE0;&#xFF1B;2&#xFF1A;&#x662F;&#x535A;&#x4E3B;&#x7B80;&#x5386;&#xFF1B;3 &#xFF1A;&#x662F;&#x535A;&#x4E3B;&#x7B80;&#x4ECB;&#xFF1B;
+</code></pre><ul>
+<li>&#x79FB;&#x52A8;&#x7AEF;&#x9002;&#x914D;
+&#x79FB;&#x52A8;&#x7AEF;&#x4F7F;&#x7528; rem &#x5355;&#x4F4D;&#x9002;&#x914D;&#x3002;<pre><code>// &#x5C4F;&#x5E55;&#x9002;&#x914D;&#xFF08; window.screen.width / &#x79FB;&#x52A8;&#x7AEF;&#x8BBE;&#x8BA1;&#x7A3F;&#x5BBD; * 100&#xFF09;&#x4E5F;&#x5373;&#x662F; (window.screen.width / 750 * 100)  &#x2014;&#x2014;*100 &#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x8BA1;&#x7B97;&#x3002;&#x5373; font-size &#x503C;&#x662F;&#x624B;&#x673A; deviceWidth &#x4E0E;&#x8BBE;&#x8BA1;&#x7A3F;&#x6BD4;&#x503C;&#x7684; 100 &#x500D;
+document.getElementsByTagName(&apos;html&apos;)[0].style.fontSize = window.screen.width / 7.5 + &apos;px&apos;;
+</code></pre></li>
+</ul>
+<p>&#x5982;&#x4E0A;&#xFF1A;&#x901A;&#x8FC7;&#x67E5;&#x8BE2;&#x5C4F;&#x5E55;&#x5BBD;&#x5EA6;&#xFF0C;&#x52A8;&#x6001;&#x7684;&#x8BBE;&#x7F6E; html &#x7684; font-size &#x503C;&#xFF0C;&#x79FB;&#x52A8;&#x7AEF;&#x7684;&#x8BBE;&#x8BA1;&#x7A3F;&#x5927;&#x591A;&#x4EE5;&#x5BBD;&#x4E3A; 750 px &#x6765;&#x8BBE;&#x7F6E;&#x7684;&#x3002;</p>
+<p>&#x6BD4;&#x5982;&#x5728;&#x8BBE;&#x8BA1;&#x56FE;&#x4E0A;&#x4E00;&#x4E2A; 150 * 250 &#x7684;&#x76D2;&#x5B50;(&#x5355;&#x4F4D; px)&#xFF1A;</p>
+<p>&#x539F;&#x672C;&#x5728; css &#x4E2D;&#x7684;&#x5199;&#x6CD5;&#xFF1A;</p>
+<pre><code>width: 150px;
+heigth: 250px;
+</code></pre><p>&#x901A;&#x8FC7;&#x4E0A;&#x8FF0;&#x6362;&#x7B97;&#x540E;&#xFF0C;&#x5728; css &#x4E2D;&#x5BF9;&#x5E94;&#x7684; rem &#x503C;&#x53EA;&#x9700;&#x8981;&#x5199;&#xFF1A;</p>
+<pre><code>width: 1.5rem; // 150 / 100 rem
+heigth: 2.5rem; // 250 / 100 rem
+</code></pre><p>&#x5982;&#x679C;&#x4F60;&#x7684;&#x79FB;&#x52A8;&#x7AEF;&#x7684;&#x8BBE;&#x8BA1;&#x7A3F;&#x662F;&#x4EE5;&#x5BBD;&#x4E3A; 1080 px &#x6765;&#x8BBE;&#x7F6E;&#x7684;&#x8BDD;&#xFF0C;&#x5C31;&#x7528; window.screen.width / 10.8 &#x5427;&#x3002;</p>
+<h2 id="9-&#x8E29;&#x5751;&#x8BB0;"><a name="9-&#x8E29;&#x5751;&#x8BB0;" class="anchor-navigation-ex-anchor" href="#9-&#x8E29;&#x5751;&#x8BB0;"><i class="fa fa-link" aria-hidden="true"></i></a>9. &#x8E29;&#x5751;&#x8BB0;</h2>
+<ul>
+<li><p><strong>1. &#x8BA9; vue &#x8BC6;&#x522B;&#x5168;&#x5C40;&#x65B9;&#x6CD5;/&#x53D8;&#x91CF;</strong></p>
+</li>
+<li><p>&#x6211;&#x4EEC;&#x7ECF;&#x5E38;&#x5728; main.ts &#x4E2D;&#x7ED9; vue.prototype &#x6302;&#x8F7D;&#x5B9E;&#x4F8B;&#x6216;&#x8005;&#x5185;&#x5BB9;&#xFF0C;&#x4EE5;&#x65B9;&#x4FBF;&#x5728;&#x7EC4;&#x4EF6;&#x91CC;&#x9762;&#x4F7F;&#x7528;&#x3002;</p>
+</li>
+</ul>
+<pre><code>import service from &quot;./utils/https&quot;;
+import urls from &quot;./utils/urls&quot;;
+
+Vue.prototype.$https = service; // &#x5176;&#x4ED6;&#x9875;&#x9762;&#x5728;&#x4F7F;&#x7528; axios &#x7684;&#x65F6;&#x5019;&#x76F4;&#x63A5;  this.$http &#x5C31;&#x53EF;&#x4EE5;&#x4E86;
+Vue.prototype.$urls = urls; // &#x5176;&#x4ED6;&#x9875;&#x9762;&#x5728;&#x4F7F;&#x7528; urls &#x7684;&#x65F6;&#x5019;&#x76F4;&#x63A5;  this.$urls &#x5C31;&#x53EF;&#x4EE5;&#x4E86;
+</code></pre><p>&#x7136;&#x800C;&#x5F53;&#x4F60;&#x5728;&#x7EC4;&#x4EF6;&#x4E2D;&#x76F4;&#x63A5;  this.$http &#x6216;&#x8005; this.$urls &#x65F6;&#x4F1A;&#x62A5;&#x9519;&#x7684;&#xFF0C;&#x90A3;&#x662F;&#x56E0;&#x4E3A; $http &#x548C; $urls &#x5C5E;&#x6027;&#xFF0C;&#x5E76;&#x6CA1;&#x6709;&#x5728; vue &#x5B9E;&#x4F8B;&#x4E2D;&#x58F0;&#x660E;&#x3002;</p>
+<ol>
+<li>&#x518D;&#x6BD4;&#x5982;&#x4F7F;&#x7528; Element-uI &#x7684; meesage&#x3002;</li>
+</ol>
+<pre><code>import { Message } from &quot;element-ui&quot;;
+
+Vue.prototype.$message = Message;
+</code></pre><p>&#x4E4B;&#x524D;&#x7528;&#x6CD5;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;</p>
+<pre><code>  this.$message({
+    message: &apos;&#x606D;&#x559C;&#x4F60;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x6761;&#x6210;&#x529F;&#x6D88;&#x606F;&apos;,
+    type: &apos;success&apos;
+  })
+</code></pre><p>&#x7136;&#x800C;&#x8FD8;&#x662F;&#x4F1A;&#x62A5;&#x9519;&#x7684;&#x3002;</p>
+<p>&#x518D;&#x6BD4;&#x5982; &#x76D1;&#x542C;&#x8DEF;&#x7531;&#x7684;&#x53D8;&#x5316;&#xFF1A;</p>
+<pre><code>import { Vue, Watch } from &quot;vue-property-decorator&quot;;
+import Component from &quot;vue-class-component&quot;;
+import { Route } from &quot;vue-router&quot;;
+
+@Component
+export default class App extends Vue {
+
+  @Watch(&quot;$route&quot;)
+  routeChange(val: Route, oldVal: Route) {
+      //  do something
+  }
+}
+</code></pre><p>&#x53EA;&#x662F;&#x8FD9;&#x6837;&#x5199;&#x7684;&#x8BDD;&#xFF0C;&#x76D1;&#x542C; $route &#x8FD8;&#x662F;&#x4F1A;&#x62A5;&#x9519;&#x7684;&#x3002;</p>
+<p>&#x60F3;&#x8981;&#x4EE5;&#x4E0A;&#x4E09;&#x79CD;&#x505A;&#x6CD5;&#x90FD;&#x6B63;&#x5E38;&#x6267;&#x884C;&#xFF0C;&#x5C31;&#x8FD8;&#x8981;&#x8865;&#x5145;&#x5982;&#x4E0B;&#x5185;&#x5BB9;&#xFF1A;</p>
+<p><strong>&#x5728; src &#x4E0B;&#x7684; shims-vue.d.ts &#x4E2D;&#x52A0;&#x5165;&#x8981;&#x6302;&#x8F7D;&#x7684;&#x5185;&#x5BB9;&#x3002;</strong> &#x8868;&#x793A; vue &#x91CC;&#x9762;&#x7684; this &#x4E0B;&#x6709;&#x8FD9;&#x4E9B;&#x4E1C;&#x897F;&#x3002;</p>
+<pre><code>import VueRouter, { Route } from &quot;vue-router&quot;;
+
+declare module &quot;vue/types/vue&quot; {
+  interface Vue {
+    $router: VueRouter; // &#x8FD9;&#x8868;&#x793A;this&#x4E0B;&#x6709;&#x8FD9;&#x4E2A;&#x4E1C;&#x897F;
+    $route: Route;
+    $https: any; // &#x4E0D;&#x77E5;&#x9053;&#x7C7B;&#x578B;&#x5C31;&#x5B9A;&#x4E3A; any &#x5427;&#xFF08;&#x5077;&#x61D2;&#xFF09;
+    $urls: any;
+    $Message: any;
+  }
+}
+</code></pre><ul>
+<li><strong>2. &#x5F15;&#x5165;&#x7684;&#x6A21;&#x5757;&#x8981;&#x58F0;&#x660E;</strong></li>
+</ul>
+<p>&#x6BD4;&#x5982; &#x5728;&#x7EC4;&#x4EF6;&#x91CC;&#x9762;&#x4F7F;&#x7528; window.document &#x6216;&#x8005;  document.querySelector &#x7684;&#x65F6;&#x5019;&#x4F1A;&#x62A5;&#x9519;&#x7684;&#xFF0C;npm run build &#x4E0D;&#x7ED9;&#x901A;&#x8FC7;&#x3002;</p>
+<p>&#x518D;&#x6BD4;&#x5982;&#xFF1A;&#x6309;&#x9700;&#x5F15;&#x7528; element &#x7684;&#x7EC4;&#x4EF6;&#x4E0E;&#x52A8;&#x753B;&#x7EC4;&#x4EF6;:</p>
+<pre><code>import { Button } from &quot;element-ui&quot;;
+import CollapseTransition from &quot;element-ui/lib/transitions/collapse-transition&quot;;
+</code></pre><p>npm run serve &#x65F6;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#xFF0C;&#x4F46;&#x662F;&#x5728; npm run build &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x76F4;&#x63A5;&#x62A5;&#x9519;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x6CA1;&#x6709;&#x58F0;&#x660E;&#x3002;</p>
+<p>&#x6B63;&#x786E;&#x505A;&#x6CD5;&#xFF1A;</p>
+<p>&#x6211;&#x5728; src &#x4E0B;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x6587;&#x4EF6; shime-global.d.ts &#xFF0C;&#x52A0;&#x5165;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>// &#x58F0;&#x660E;&#x5168;&#x5C40;&#x7684; window &#xFF0C;&#x4E0D;&#x7136;&#x4F7F;&#x7528; window.XX &#x65F6;&#x4F1A;&#x62A5;&#x9519;
+declare var window: Window;
+declare var document: Document;
+
+declare module &quot;element-ui/lib/transitions/collapse-transition&quot;;
+declare module &quot;element-ui&quot;;
+</code></pre><p>&#x5F53;&#x7136;&#xFF0C;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x4F60;&#x52A0;&#x5728;&#x5176;&#x4ED6;&#x5730;&#x65B9;&#x4E5F;&#x53EF;&#x4EE5;&#xFF0C;&#x8D77;&#x5176;&#x4ED6;&#x540D;&#x5B57;&#x90FD; OK&#x3002;</p>
+<p>&#x4F46;&#x662F;&#x5373;&#x4F7F;&#x914D;&#x7F6E;&#x4E86;&#x4EE5;&#x4E0A;&#x65B9;&#x6CD5;&#x4E4B;&#x540E;&#xFF0C;&#x6709;&#x4E9B;&#x5730;&#x65B9;&#x4F7F;&#x7528; document.XXX &#xFF0C;&#x6BD4;&#x5982; document.title &#x7684;&#x65F6;&#x5019;&#xFF0C;npm run build &#x8FD8;&#x662F;&#x901A;&#x8FC7;&#x4E0D;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x53EA;&#x80FD;&#x8FD9;&#x6837;&#x4E86;&#xFF1A; </p>
+<pre><code>&lt;script lang=&quot;ts&quot;&gt;
+// &#x5728;&#x7528;&#x5230; document.XXX  &#x7684;&#x6587;&#x4EF6;&#x4E2D;&#x58F0;&#x660E;&#x4E00;&#x4E0B;&#x5373;&#x53EF;
+declare var document: any;
+// &#x6B64;&#x5904;&#x7701;&#x7565; XXXX &#x591A;&#x7684;&#x4EE3;&#x7801;
+&lt;/script&gt;
+</code></pre><ul>
+<li><strong>3. this &#x7684;&#x7C7B;&#x578B;&#x68C0;&#x67E5;</strong></li>
+</ul>
+<p>&#x6BD4;&#x5982;&#x4E4B;&#x524D;&#x7684; &#x4E8B;&#x4EF6;&#x7684;&#x8282;&#x6D41;&#xFF08;throttle&#xFF09;&#x4E0E;&#x9632;&#x6296;&#xFF08;debounce&#xFF09;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code>export function throttle(fn: Function, delay: number) {
+  return function() {
+    // &#x4FDD;&#x7559;&#x8C03;&#x7528;&#x65F6;&#x7684; this &#x4E0A;&#x4E0B;&#x6587;
+    let context = this;
+}
+</code></pre><p>function &#x91CC;&#x9762;&#x7684; this &#x5728; npm run serve &#x65F6;&#x4F1A;&#x62A5;&#x9519;&#x7684;&#xFF0C;&#x56E0;&#x4E3A; tyescript &#x68C0;&#x6D4B;&#x5230;&#x5B83;&#x4E0D;&#x662F;&#x5728;&#x7C7B;(class)&#x91CC;&#x9762;&#x3002;</p>
+<p>&#x6B63;&#x786E;&#x505A;&#x6CD5;&#xFF1A;</p>
+<p>&#x5728;&#x6839;&#x76EE;&#x5F55;&#x7684; tsconfig.json &#x91CC;&#x9762;&#x52A0;&#x4E0A; &quot;noImplicitThis&quot;: false &#xFF0C;&#x5FFD;&#x7565; this &#x7684;&#x7C7B;&#x578B;&#x68C0;&#x67E5;&#x3002;</p>
+<pre><code>// &#x5FFD;&#x7565; this &#x7684;&#x7C7B;&#x578B;&#x68C0;&#x67E5;, Raise error on this expressions with an implied any type.
+&quot;noImplicitThis&quot;: false,
+</code></pre><ul>
+<li><strong>4. import &#x7684; .vue &#x6587;&#x4EF6;</strong></li>
+</ul>
+<p>import .vue &#x7684;&#x6587;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8981;&#x8865;&#x5168; .vue &#x7684;&#x540E;&#x7F00;&#xFF0C;&#x4E0D;&#x7136; npm run build &#x4F1A;&#x62A5;&#x9519;&#x7684;&#x3002;</p>
+<p>&#x6BD4;&#x5982;&#xFF1A;</p>
+<pre><code>import Nav from &quot;@/components/nav&quot;; // @ is an alias to /src
+import Footer from &quot;@/components/footer&quot;; // @ is an alias to /src
+</code></pre><p>&#x8981;&#x4FEE;&#x6539;&#x4E3A;&#xFF1A;</p>
+<pre><code>import Nav from &quot;@/components/nav.vue&quot;; // @ is an alias to /src
+import Footer from &quot;@/components/footer.vue&quot;; // @ is an alias to /src
+</code></pre><ul>
+<li><strong>5. &#x88C5;&#x9970;&#x5668; @Component</strong></li>
+</ul>
+<p>&#x62A5;&#x9519;&#x3002;</p>
+<pre><code>&lt;script lang=&quot;ts&quot;&gt;
+import { Vue, Component } from &quot;vue-property-decorator&quot;;
+export default class LoadingCustom extends Vue {}
+&lt;/script&gt;
+</code></pre><p>&#x4EE5;&#x4E0B;&#x624D;&#x662F;&#x6B63;&#x786E;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x91CC;&#x7684; Vue &#x662F;&#x4ECE; vue-property-decorator import &#x6765;&#x7684;&#x3002;</p>
+<pre><code>&lt;script lang=&quot;ts&quot;&gt;
+import { Vue, Component } from &quot;vue-property-decorator&quot;;
+
+@Component
+export default class LoadingCustom extends Vue {}
+&lt;/script&gt;
+</code></pre><ul>
+<li><strong>6. &#x8DEF;&#x7531;&#x7684;&#x7EC4;&#x4EF6;&#x5BFC;&#x822A;&#x5B88;&#x536B;&#x5931;&#x6548;</strong></li>
+</ul>
+<p>vue-class-component &#x5B98;&#x7F51;&#x91CC;&#x9762;&#x7684;&#x8DEF;&#x7531;&#x7684;&#x5BFC;&#x822A;&#x94A9;&#x5B50;&#x7684;&#x7528;&#x6CD5;&#x662F;&#x6CA1;&#x6709;&#x6548;&#x679C;&#x7684; <a href="https://github.com/vuejs/vue-class-component#adding-custom-hooks" target="_blank">Adding Custom Hooks</a></p>
+<p>&#x8DEF;&#x7531;&#x7684;&#x5BFC;&#x822A;&#x94A9;&#x5B50;&#x4E0D;&#x5C5E;&#x4E8E; Vue &#x672C;&#x8EAB;&#xFF0C;&#x8FD9;&#x4F1A;&#x5BFC;&#x81F4; class &#x7EC4;&#x4EF6;&#x8F6C;&#x4E49;&#x5230;&#x914D;&#x7F6E;&#x5BF9;&#x8C61;&#x65F6;&#x5BFC;&#x822A;&#x94A9;&#x5B50;&#x65E0;&#x6548;&#xFF0C;&#x56E0;&#x6B64;&#x5982;&#x679C;&#x8981;&#x4F7F;&#x7528;&#x5BFC;&#x822A;&#x94A9;&#x5B50;&#x9700;&#x8981;&#x5728; router &#x7684;&#x914D;&#x7F6E;&#x91CC;&#x58F0;&#x660E;&#xFF08;&#x7F51;&#x4E0A;&#x522B;&#x4EBA;&#x8BF4;&#x7684;&#xFF0C;&#x8FD8;&#x6CA1;&#x5B9E;&#x8DF5;&#xFF0C;&#x4E0D;&#x786E;&#x5B9A;&#x662F;&#x5426;&#x53EF;&#x884C;&#xFF09;&#x3002;</p>
+<ul>
+<li><p><strong>7. tsconfig.json &#x7684; strictPropertyInitialization &#x8BBE;&#x4E3A; false&#xFF0C;&#x4E0D;&#x7136;&#x4F60;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x5C31;&#x5FC5;&#x987B;&#x7ED9;&#x5B83;&#x4E00;&#x4E2A;&#x521D;&#x59CB;&#x503C;&#x3002;</strong></p>
+</li>
+<li><p><strong>position: sticky;</strong></p>
+</li>
+</ul>
+<p>&#x672C;&#x9879;&#x76EE;&#x4E2D;&#x7684;&#x6587;&#x7AE0;&#x8BE6;&#x60C5;&#x7684;&#x76EE;&#x5F55;&#x5C31;&#x662F;&#x7528;&#x4E86; sticky&#x3002;</p>
+<pre><code>.anchor {
+  position: sticky;
+  top: 213px;
+  margin-top: 213px;
+}
+</code></pre><p>position:sticky &#x662F; css &#x5B9A;&#x4F4D;&#x65B0;&#x589E;&#x5C5E;&#x6027;&#xFF1B;&#x53EF;&#x4EE5;&#x8BF4;&#x662F;&#x76F8;&#x5BF9;&#x5B9A;&#x4F4D; relative &#x548C;&#x56FA;&#x5B9A;&#x5B9A;&#x4F4D; fixed &#x7684;&#x7ED3;&#x5408;&#xFF1B;&#x5B83;&#x4E3B;&#x8981;&#x7528;&#x5728;&#x5BF9; scroll &#x4E8B;&#x4EF6;&#x7684;&#x76D1;&#x542C;&#x4E0A;&#xFF1B;&#x7B80;&#x5355;&#x6765;&#x8BF4;&#xFF0C;&#x5728;&#x6ED1;&#x52A8;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x67D0;&#x4E2A;&#x5143;&#x7D20;&#x8DDD;&#x79BB;&#x5176;&#x7236;&#x5143;&#x7D20;&#x7684;&#x8DDD;&#x79BB;&#x8FBE;&#x5230; sticky &#x7C98;&#x6027;&#x5B9A;&#x4F4D;&#x7684;&#x8981;&#x6C42;&#x65F6;(&#x6BD4;&#x5982; top&#xFF1A;100px )&#xFF1B;position:sticky &#x8FD9;&#x65F6;&#x7684;&#x6548;&#x679C;&#x76F8;&#x5F53;&#x4E8E; fixed &#x5B9A;&#x4F4D;&#xFF0C;&#x56FA;&#x5B9A;&#x5230;&#x9002;&#x5F53;&#x4F4D;&#x7F6E;&#x3002;</p>
+<p>&#x7528;&#x6CD5;&#x50CF;&#x4E0A;&#x9762;&#x90A3;&#x6837;&#x7528;&#x5373;&#x53EF;&#xFF0C;&#x4F46;&#x662F;&#x6709;&#x4F7F;&#x7528;&#x6761;&#x4EF6;&#xFF1A;</p>
+<p>1&#x3001;&#x7236;&#x5143;&#x7D20;&#x4E0D;&#x80FD; overflow:hidden &#x6216;&#x8005; overflow:auto &#x5C5E;&#x6027;&#x3002;
+2&#x3001;&#x5FC5;&#x987B;&#x6307;&#x5B9A; top&#x3001;bottom&#x3001;left&#x3001;right 4 &#x4E2A;&#x503C;&#x4E4B;&#x4E00;&#xFF0C;&#x5426;&#x5219;&#x53EA;&#x4F1A;&#x5904;&#x4E8E;&#x76F8;&#x5BF9;&#x5B9A;&#x4F4D;
+3&#x3001;&#x7236;&#x5143;&#x7D20;&#x7684;&#x9AD8;&#x5EA6;&#x4E0D;&#x80FD;&#x4F4E;&#x4E8E; sticky &#x5143;&#x7D20;&#x7684;&#x9AD8;&#x5EA6;
+4&#x3001;sticky &#x5143;&#x7D20;&#x4EC5;&#x5728;&#x5176;&#x7236;&#x5143;&#x7D20;&#x5185;&#x751F;&#x6548;</p>
+<ul>
+<li><strong>8. eslint &#x62A5;&#x627E;&#x4E0D;&#x5230;&#x6587;&#x4EF6;&#x548C;&#x88C5;&#x9970;&#x5668;&#x7684;&#x9519;</strong></li>
+</ul>
+<p>App.vue &#x4E2D;&#x53EA;&#x662F;&#x5199;&#x4E86;&#x5F15;&#x7528;&#x6587;&#x4EF6;&#x800C;&#x5DF2;&#xFF0C;&#x800C;&#x4E14; webpack &#x548C; tsconfig.josn &#x91CC;&#x9762;&#x5DF2;&#x7ECF;&#x914D;&#x7F6E;&#x4E86;&#x522B;&#x540D;&#x4E86;&#x7684;&#x3002;</p>
+<pre><code>import Nav from &quot;@/components/nav.vue&quot;; // @ is an alias to /src
+import Slider from &quot;@/components/slider.vue&quot;; // @ is an alias to /src
+import Footer from &quot;@/components/footer.vue&quot;; // @ is an alias to /src
+import ArrowUp from &quot;@/components/arrowUp.vue&quot;; // @ is an alias to /src
+import { isMobileOrPc } from &quot;@/utils/utils&quot;;
+</code></pre><p>&#x4F46;&#x662F;&#xFF0C;&#x8FD8;&#x662F;&#x4F1A;&#x62A5;&#x5982;&#x4E0B;&#x7684;&#x9519;&#xFF1A;</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/12890819-442426b7910d103e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>&#x53EA;&#x662F;&#x4EE3;&#x7801;&#x4E0D;&#x5F71;&#x54CD;&#x6587;&#x4EF6;&#x7684;&#x6253;&#x5305;&#xFF0C;&#x800C;&#x4E14;&#x672C;&#x5730;&#x4E0E;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x7684;&#x4EE3;&#x7801;&#x4E5F;&#x6B63;&#x5E38;&#xFF0C;&#x6CA1;&#x62A5;&#x9519;&#x800C;&#x5DF2;&#x3002;</p>
+<p>&#x8FD9;&#x4E2A; eslint &#x7684;&#x68C0;&#x6D4B;&#x76EE;&#x524D;&#x8FD8;&#x6CA1;&#x627E;&#x5230;&#x76F8;&#x5173;&#x7684;&#x914D;&#x7F6E;&#x53EF;&#x4EE5;&#x628A;&#x8FD9;&#x4E9B;&#x9519;&#x8BEF;&#x53BB;&#x6389;&#x3002;</p>
+<ul>
+<li><strong>9. &#x8DEF;&#x7531;&#x6A21;&#x5F0F;&#x4FEE;&#x6539;&#x4E3A; history</strong></li>
+</ul>
+<p>&#x56E0;&#x4E3A;&#x6587;&#x7AE0;&#x8BE6;&#x60C5;&#x9875;&#x9762;&#x6709;&#x76EE;&#x5F55;&#xFF0C;&#x70B9;&#x51FB;&#x76EE;&#x5F55;&#x65F6;&#x5B9A;&#x4F4D;&#x5B9A;&#x76F8;&#x5E94;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x5B9A;&#x4F4D;&#x5185;&#x5BB9;&#x662F;&#x6839;&#x636E;&#x951A;&#x70B9;&#x6765;&#x505A;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x8DEF;&#x7531;&#x6A21;&#x5F0F;&#x4E3A; hash &#x6A21;&#x5F0F;&#x7684;&#x8BDD;&#xFF0C;&#x672C;&#x6765;&#x6587;&#x7AE0;&#x8BE6;&#x60C5;&#x9875;&#x9762;&#x7684;&#x8DEF;&#x7531;&#x5C31;&#x662F; #articleDetail &#x4E86;&#xFF0C;&#x518D;&#x70B9;&#x51FB;&#x76EE;&#x5F55;&#x7684;&#x8BDD;&#xFF08;&#x6BD4;&#x5982; #title2 &#xFF09;&#xFF0C;&#x4F1A;&#x5728; #articleDetail &#x540E;&#x9762;&#x518D;&#x52A0;&#x4E0A; #title2&#xFF0C;&#x4E00;&#x5237;&#x65B0;&#x4F1A;&#x627E;&#x4E0D;&#x5230;&#x8FD9;&#x4E2A;&#x9875;&#x9762;&#x7684;&#x3002;</p>
+<h2 id="10-build-setup"><a name="10-build-setup" class="anchor-navigation-ex-anchor" href="#10-build-setup"><i class="fa fa-link" aria-hidden="true"></i></a>10. Build Setup</h2>
+<pre><code> # clone
+git clone https://github.com/biaochenxuying/blog-vue-typescript.git
+</code></pre><pre><code># cd
+cd  blog-vue-typescript
+</code></pre><pre><code># install dependencies
+npm install
+</code></pre><pre><code># Compiles and hot-reloads for development
+npm run serve
+</code></pre><pre><code># Compiles and minifies for production
+npm run build
+</code></pre><pre><code>### Run your tests
+npm run test
+</code></pre><pre><code>### Lints and fixes files
+npm run lint
+</code></pre><pre><code>### Run your unit tests
+npm run test:unit
+</code></pre><ul>
+<li>Customize configuration
+See <a href="https://cli.vuejs.org/config/" target="_blank">Configuration Reference</a>.</li>
+</ul>
+<p>&#x5982;&#x679C;&#x8981;&#x770B;&#x6709;&#x540E;&#x53F0;&#x6570;&#x636E;&#x5B8C;&#x6574;&#x7684;&#x6548;&#x679C;&#xFF0C;&#x662F;&#x8981;&#x548C;&#x540E;&#x53F0;&#x9879;&#x76EE;  <strong><a href="https://github.com/biaochenxuying/blog-node" target="_blank">blog-node</a></strong> &#x4E00;&#x8D77;&#x8FD0;&#x884C;&#x624D;&#x884C;&#x7684;&#xFF0C;&#x4E0D;&#x7136;&#x63A5;&#x53E3;&#x8BF7;&#x6C42;&#x4F1A;&#x5931;&#x8D25;&#x3002;</p>
+<p>&#x867D;&#x7136;&#x5F15;&#x5165;&#x4E86; mock &#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x8FD8;&#x6CA1;&#x6709;&#x65F6;&#x95F4;&#x505A;&#x6A21;&#x62DF;&#x6570;&#x636E;&#xFF0C;&#x60F3;&#x770B;&#x5177;&#x4F53;&#x6548;&#x679C;&#xFF0C;&#x8BF7;&#x7A33;&#x6B65;&#x5230;&#x6211;&#x7684;&#x7F51;&#x7AD9;&#x4E0A;&#x67E5;&#x770B; <a href="https://biaochenxuying.cn" target="_blank">https://biaochenxuying.cn</a></p>
+<h2 id="11-&#x9879;&#x76EE;&#x5730;&#x5740;&#x4E0E;&#x7CFB;&#x5217;&#x76F8;&#x5173;&#x6587;&#x7AE0;"><a name="11-&#x9879;&#x76EE;&#x5730;&#x5740;&#x4E0E;&#x7CFB;&#x5217;&#x76F8;&#x5173;&#x6587;&#x7AE0;" class="anchor-navigation-ex-anchor" href="#11-&#x9879;&#x76EE;&#x5730;&#x5740;&#x4E0E;&#x7CFB;&#x5217;&#x76F8;&#x5173;&#x6587;&#x7AE0;"><i class="fa fa-link" aria-hidden="true"></i></a>11. &#x9879;&#x76EE;&#x5730;&#x5740;&#x4E0E;&#x7CFB;&#x5217;&#x76F8;&#x5173;&#x6587;&#x7AE0;</h2>
+<p>&#x57FA;&#x4E8E; Vue + TypeScript + Element &#x7684; <a href="https://github.com/biaochenxuying/blog-vue-typescript" target="_blank"> blog-vue-typescript &#x524D;&#x53F0;&#x5C55;&#x793A;: https://github.com/biaochenxuying/blog-vue-typescript</a></p>
+<p>&#x57FA;&#x4E8E; react + node + express + ant + mongodb &#x7684;&#x535A;&#x5BA2;&#x524D;&#x53F0;&#xFF0C;&#x8FD9;&#x4E2A;&#x662F;&#x7B14;&#x8005;&#x4E4B;&#x524D;&#x505A;&#x7684;&#xFF0C;&#x6548;&#x679C;&#x548C;&#x8FD9;&#x4E2A;&#x7C7B;&#x4F3C;&#xFF0C;&#x5730;&#x5740;&#x5982;&#x4E0B;&#xFF1A;
+<a href="https://github.com/biaochenxuying/blog-react" target="_blank"> blog-react &#x524D;&#x53F0;&#x5C55;&#x793A;: https://github.com/biaochenxuying/blog-react</a></p>
+<p><em>&#x63A8;&#x8350;&#x9605;&#x8BFB; :</em></p>
+<p><strong>&#x672C;&#x535A;&#x5BA2;&#x7CFB;&#x7EDF;&#x7684;&#x7CFB;&#x5217;&#x6587;&#x7AE0;&#xFF1A;</strong></p>
+<ul>
+<li><ol>
+<li><a href="https://biaochenxuying.cn/articleDetail?article_id=5bf57a8f85e0f13af26e579b" target="_blank">react + node + express + ant + mongodb &#x7684;&#x7B80;&#x6D01;&#x517C;&#x65F6;&#x5C1A;&#x7684;&#x535A;&#x5BA2;&#x7F51;&#x7AD9;</a></li>
+</ol>
+</li>
+<li><ol>
+<li><a href="https://biaochenxuying.cn/articleDetail?article_id=5bf6bb5e85e0f13af26e57b7" target="_blank">react + Ant Design + &#x652F;&#x6301; markdown &#x7684; blog-react &#x9879;&#x76EE;&#x6587;&#x6863;&#x8BF4;&#x660E;</a></li>
+</ol>
+</li>
+<li><ol>
+<li><a href="https://biaochenxuying.cn/articleDetail?article_id=5bf8c57185e0f13af26e7d0d" target="_blank">&#x57FA;&#x4E8E; node + express + mongodb &#x7684; blog-node &#x9879;&#x76EE;&#x6587;&#x6863;&#x8BF4;&#x660E;</a></li>
+</ol>
+</li>
+<li><ol>
+<li><a href="https://biaochenxuying.cn/articleDetail?article_id=5bfa728bb54f044b4f9da240" target="_blank">&#x670D;&#x52A1;&#x5668;&#x5C0F;&#x767D;&#x7684;&#x6211;,&#x662F;&#x5982;&#x4F55;&#x5C06;node+mongodb&#x9879;&#x76EE;&#x90E8;&#x7F72;&#x5728;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x5E76;&#x8FDB;&#x884C;&#x6027;&#x80FD;&#x4F18;&#x5316;&#x7684;</a></li>
+</ol>
+</li>
+<li><ol>
+<li><a href="https://biaochenxuying.cn/articleDetail?article_id=5c7bd34e42b55e2ecc90976d" target="_blank">github &#x6388;&#x6743;&#x767B;&#x5F55;&#x6559;&#x7A0B;&#x4E0E;&#x5982;&#x4F55;&#x8BBE;&#x8BA1;&#x7B2C;&#x4E09;&#x65B9;&#x6388;&#x6743;&#x767B;&#x5F55;&#x7684;&#x7528;&#x6237;&#x8868;</a></li>
+</ol>
+</li>
+<li><ol>
+<li><a href="https://biaochenxuying.cn/articleDetail?article_id=5c8ca2d3b87b8a04f1860c9a" target="_blank">&#x4E00;&#x6B21;&#x7F51;&#x7AD9;&#x7684;&#x6027;&#x80FD;&#x4F18;&#x5316;&#x4E4B;&#x8DEF; -- &#x5929;&#x4E0B;&#x6B66;&#x529F;&#xFF0C;&#x552F;&#x5FEB;&#x4E0D;&#x7834;</a></li>
+</ol>
+</li>
+<li><ol>
+<li><a href="https://biaochenxuying.cn/articleDetail?article_id=5c9d8ce5f181945ddd6b0ffc" target="_blank">Vue + TypeScript + Element &#x642D;&#x5EFA;&#x7B80;&#x6D01;&#x65F6;&#x5C1A;&#x7684;&#x535A;&#x5BA2;&#x7F51;&#x7AD9;&#x53CA;&#x8E29;&#x5751;&#x8BB0;</a></li>
+</ol>
+</li>
+</ul>
+<h2 id="12-&#x6700;&#x540E;"><a name="12-&#x6700;&#x540E;" class="anchor-navigation-ex-anchor" href="#12-&#x6700;&#x540E;"><i class="fa fa-link" aria-hidden="true"></i></a>12. &#x6700;&#x540E;</h2>
+<p>&#x7B14;&#x8005;&#x4E5F;&#x662F;&#x521D;&#x5B66; TS &#xFF0C;&#x5982;&#x679C;&#x6587;&#x7AE0;&#x6709;&#x9519;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x8BF7;&#x6307;&#x51FA;&#xFF0C;&#x611F;&#x8C22;&#x3002;</p>
+<p>&#x4E00;&#x5F00;&#x59CB;&#x7528; Vue + TS &#x6765;&#x642D;&#x5EFA;&#x65F6;&#xFF0C;&#x6211;&#x4E5F;&#x662F;&#x633A;&#x62B5;&#x89E6;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x8E29;&#x4E86;&#x597D;&#x591A;&#x5751;&#xFF0C;&#x800C;&#x4E14;&#x5F88;&#x591A;&#x7C7B;&#x578B;&#x68C0;&#x67E5;&#x65B9;&#x9762;&#x4E5F;&#x633A;&#x70E6;&#x4EBA;&#x3002;&#x540E;&#x9762;&#x89E3;&#x51B3;&#x4E86;&#xFF0C;&#x660E;&#x767D;&#x539F;&#x7406;&#x4E4B;&#x540E;&#xFF0C;&#x662F;&#x8D8A;&#x7528;&#x8D8A;&#x723D;&#xFF0C;&#x54C8;&#x54C8;&#x3002;</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/12890819-a8fd0a50f25a993e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h4 id="&#x6743;&#x8861;"><a name="&#x6743;&#x8861;" class="anchor-navigation-ex-anchor" href="#&#x6743;&#x8861;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6743;&#x8861;</h4>
+<p>&#x5982;&#x4F55;&#x66F4;&#x597D;&#x7684;&#x5229;&#x7528; JS &#x7684;&#x52A8;&#x6001;&#x6027;&#x548C; TS &#x7684;&#x9759;&#x6001;&#x7279;&#x8D28;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7ED3;&#x5408;&#x9879;&#x76EE;&#x7684;&#x5B9E;&#x9645;&#x60C5;&#x51B5;&#x6765;&#x8FDB;&#x884C;&#x7EFC;&#x5408;&#x5224;&#x65AD;&#x3002;&#x4E00;&#x4E9B;&#x5EFA;&#x8BAE;&#xFF1A;</p>
+<ul>
+<li>&#x5982;&#x679C;&#x662F;&#x4E2D;&#x5C0F;&#x578B;&#x9879;&#x76EE;&#xFF0C;&#x4E14;&#x751F;&#x547D;&#x5468;&#x671F;&#x4E0D;&#x662F;&#x5F88;&#x957F;&#xFF0C;&#x90A3;&#x5C31;&#x76F4;&#x63A5;&#x7528; JS &#x5427;&#xFF0C;&#x4E0D;&#x8981;&#x88AB; TS &#x675F;&#x7F1A;&#x4F4F;&#x4E86;&#x624B;&#x811A;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x662F;&#x5927;&#x578B;&#x5E94;&#x7528;&#xFF0C;&#x4E14;&#x751F;&#x547D;&#x5468;&#x671F;&#x6BD4;&#x8F83;&#x957F;&#xFF0C;&#x90A3;&#x5EFA;&#x8BAE;&#x8BD5;&#x8BD5; TS&#x3002;</li>
+<li>&#x5982;&#x679C;&#x662F;&#x6846;&#x67B6;&#x3001;&#x5E93;&#x4E4B;&#x7C7B;&#x7684;&#x516C;&#x5171;&#x6A21;&#x5757;&#xFF0C;&#x90A3;&#x66F4;&#x5EFA;&#x8BAE;&#x7528; TS &#x4E86;&#x3002;</li>
+</ul>
+<p><strong>&#x81F3;&#x4E8E;&#x5230;&#x5E95;&#x7528;&#x4E0D;&#x7528;TS&#xFF0C;&#x8FD8;&#x662F;&#x8981;&#x770B;&#x5B9E;&#x9645;&#x9879;&#x76EE;&#x89C4;&#x6A21;&#x3001;&#x9879;&#x76EE;&#x751F;&#x547D;&#x5468;&#x671F;&#x3001;&#x56E2;&#x961F;&#x89C4;&#x6A21;&#x3001;&#x56E2;&#x961F;&#x6210;&#x5458;&#x60C5;&#x51B5;&#x7B49;&#x5B9E;&#x9645;&#x60C5;&#x51B5;&#x7EFC;&#x5408;&#x8003;&#x8651;&#x3002;</strong></p>
+<p>&#x5176;&#x5B9E;&#x672C;&#x9879;&#x76EE;&#x4E5F;&#x662F;&#x5C0F;&#x9879;&#x76EE;&#x6765;&#x7684;&#xFF0C;&#x5176;&#x5B9E;&#x5E76;&#x4E0D;&#x592A;&#x9002;&#x5408;&#x52A0;&#x5165;  TypeScript &#xFF0C;&#x4E0D;&#x8FC7;&#x8FD9;&#x4E2A;&#x9879;&#x76EE;&#x662F;&#x4E2A;&#x4EBA;&#x7684;&#x9879;&#x76EE;&#xFF0C;&#x662F;&#x4E3A;&#x4E86;&#x7EC3;&#x624B;&#x7528;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x5C31;&#x65E0;&#x4F24;&#x5927;&#x5927;&#x96C5;&#x3002;</p>
+<p>&#x672A;&#x6765;&#xFF0C;class-compoent &#x4E5F;&#x5C06;&#x6210;&#x4E3A;&#x4E3B;&#x6D41;&#xFF0C;&#x73B0;&#x5728;&#x5199; TypeScript &#x4EE5;&#x540E;&#x8FDB;&#x884C; 3.0 &#x7684;&#x8FC1;&#x79FB;&#x4F1A;&#x66F4;&#x52A0;&#x65B9;&#x4FBF;&#x3002;</p>
+<p>&#x6BCF;&#x5929;&#x4E0B;&#x73ED;&#x540E;&#xFF0C;&#x7528;&#x51E0;&#x4E2A;&#x665A;&#x4E0A;&#x7684;&#x65F6;&#x95F4;&#x6765;&#x5199;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#xFF0C;&#x7801;&#x5B57;&#x4E0D;&#x6613;&#xFF0C;&#x5982;&#x679C;&#x60A8;&#x89C9;&#x5F97;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x4E0D;&#x9519;&#x6216;&#x8005;&#x5BF9;&#x4F60;&#x6709;&#x6240;&#x5E2E;&#x52A9;&#xFF0C;<strong>&#x8BF7;&#x7ED9;&#x4E2A;&#x8D5E;&#x6216;&#x8005;&#x661F;&#x5427;&#xFF0C;&#x4F60;&#x7684;&#x70B9;&#x8D5E;&#x5C31;&#x662F;&#x6211;&#x7EE7;&#x7EED;&#x521B;&#x4F5C;&#x7684;&#x6700;&#x5927;&#x52A8;&#x529B;&#x3002;</strong></p>
+<p>&#x53C2;&#x8003;&#x6587;&#x7AE0;:</p>
+<ol>
+<li><p><a href="https://segmentfault.com/a/1190000011744210" target="_blank">vue + typescript &#x9879;&#x76EE;&#x8D77;&#x624B;&#x5F0F;</a></p>
+</li>
+<li><p><a href="https://www.imooc.com/article/47096" target="_blank">TypeScript + &#x5927;&#x578B;&#x9879;&#x76EE;&#x5B9E;&#x6218;</a></p>
+</li>
+<li><p><a href="https://www.jianshu.com/p/6c064270691f" target="_blank">Vue&#x5168;&#x5BB6;&#x6876;+TypeScript&#x4F7F;&#x7528;&#x603B;&#x7ED3;</a></p>
+</li>
+</ol>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; biaochenxuying.cn 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2019-12-07 22:21:27
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Vue + TS + El 搭建博客及踩坑记","level":"1.4.1","depth":2,"next":{"title":"JavaScript 数据结构与算法之美","level":"1.5","depth":1,"ref":"","articles":[{"title":"时间和空间复杂度","level":"1.5.1","depth":2,"path":"views/algorithms/js-time-space.md","ref":"./views/algorithms/js-time-space.md","articles":[]},{"title":"十大经典排序算法","level":"1.5.2","depth":2,"path":"views/algorithms/js-10algo.md","ref":"./views/algorithms/js-10algo.md","articles":[]}]},"previous":{"title":"Vue.js","level":"1.4","depth":1,"ref":"","articles":[{"title":"Vue + TS + El 搭建博客及踩坑记","level":"1.4.1","depth":2,"path":"views/vue/vue-ts.md","ref":"./views/vue/vue-ts.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-highlight","copy-code-button","search-pro","-search","-lunr","expandable-chapters","splitter","-sharing","github-buttons","donate","tbfed-pagefooter","baidu-tongji","anchor-navigation-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy biaochenxuying.cn 2019","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"baidu-tongji":{"url":"https://hm.baidu.com/hm.js","token":"82d755d3a2e0a4df9c27c4c5895a4a81"},"splitter":{},"search-pro":{},"donate":{"alipay":"","alipayText":"支付宝打赏","button":"打赏","title":"","wechat":"https://camo.githubusercontent.com/ee094d402f957e5d656a399b9dc50ff8c010114e/68747470733a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f31323839303831392d666661623762643234643038633030642e6a7065673f696d6167654d6f6772322f6175746f2d6f7269656e742f7374726970253743696d61676556696577322f322f772f31323430","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"github-buttons":{"buttons":[{"user":"biaochenxuying","repo":"blog","type":"star","count":true,"size":"small"},{"user":"biaochenxuying","width":"160","type":"follow","count":true,"size":"small"}]},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"biaochenxuying","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"夜尽天明的博客","language":"zh-hans","gitbook":"*","description":"大前端技术为主，读书笔记、随笔、理财为辅，做个终身学习者。"},"file":{"path":"views/vue/vue-ts.md","mtime":"2019-12-07T14:21:27.360Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-08T03:22:38.247Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-baidu-tongji/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
