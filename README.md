@@ -4,6 +4,8 @@
 
 ## 简介
 
+地址：[https://biaochenxuying.github.io/blog](https://biaochenxuying.github.io/blog)
+
 > 芳华正茂始少年，时光正好，未来可期 ！
 
 技术为主，读书笔记、随笔、理财为辅，做个终身学习者。
@@ -44,7 +46,6 @@
 - [1. 程序员不止眼前的逻辑和代码，还应有健康的体魄和精气神](https://github.com/biaochenxuying/blog/issues/6)
 
 
-
 #### | JavaScript 数据结构与算法之美
 
 - [1. JavaScript 数据结构与算法之美 - 时间和空间复杂度](https://github.com/biaochenxuying/blog/issues/29)
@@ -76,7 +77,7 @@
 - [5. 基于 vue+mint-ui 的 mobile-h5 的项目说明](https://github.com/biaochenxuying/blog/issues/4)
 - [6. 复杂表格设计数据格式](https://github.com/biaochenxuying/blog/issues/7)
 
-#### | React.js 
+#### | React.js
 
 
 - [1. github 授权登录教程与如何设计第三方授权登录的用户表](https://github.com/biaochenxuying/blog/issues/23)
@@ -105,7 +106,7 @@
 - [11. WebKit 技术内幕之浏览器与 WebKit 内核](https://github.com/biaochenxuying/blog/issues/10)
 
 
-#### | Node.js 
+#### | Node.js
 
 - [1. 基于 node express mongodb 的 blog-node 项目文档说明](https://github.com/biaochenxuying/blog/issues/17)
 - [2. 服务器小白的我，是如何将 node+mongodb 项目部署在服务器上并进行性能优化的](https://github.com/biaochenxuying/blog/issues/18)
@@ -115,15 +116,19 @@
 
 - [1. 一次网站的性能优化之路 -- 天下武功，唯快不破](https://github.com/biaochenxuying/blog/issues/24)
 
+#### | VuePress & GitBook
+
+- [1. 借助 VuePress 和 GitBook ，10 分钟即可免费部署你的静态博客网站](https://github.com/biaochenxuying/blog/issues/53)
 
 #### | 半小时硬核理财入门
 
 - [1. 用钱生钱，从掌握金钱的规律开始](https://github.com/biaochenxuying/blog/issues/26)
-- 精彩待续 ... 
+- 精彩待续 ...
 
 #### | 学习资源
 
-- [极客时间上的《TypeScript 开发实战》课程资源，包含课件、思维导图、课程源代码](https://github.com/biaochenxuying/blog/tree/master/typescript-in-action)
+- [1. 极客时间上的《TypeScript 开发实战》课程资源，包含课件、思维导图、课程源代码](https://github.com/biaochenxuying/blog/tree/master/typescript-in-action)
+- [2. (视频教程)Vue、React、Node、MongoDB 全栈、打造商城系统、实战项目汇总](https://mp.weixin.qq.com/s/7f767Y5FHM9i2_GeUSz-Iw)
 
 
 ## 计划
@@ -132,28 +137,28 @@
 
 #### | webpack 原理及源码分析
 
-- 精彩待续 ... 
+- 精彩待续 ...
   
    
 #### | Vue 原理及源码分析
 
-- 精彩待续 ... 
+- 精彩待续 ...
   
 
 #### | TypeScript 入门到熟练
 
 - [1. Vue + TypeScript + Element 搭建简洁时尚的博客网站及踩坑记](https://github.com/biaochenxuying/blog/issues/25)
-- 精彩待续 ... 
+- 精彩待续 ...
   
 #### | 小程序入门到熟练
 
-- 精彩待续 ... 
+- 精彩待续 ...
   
-  
-<!-- #### | Flutter 入门到熟练
+<!--   
+#### | Flutter 入门到熟练
 
-- 精彩待续 ... 
-   -->
+- 精彩待续 ...  -->
+  
   
 #### | 翻译国外文章
 
@@ -164,9 +169,6 @@
 
 - [**GitHub**](https://github.com/biaochenxuying/blog)
 - [**掘金**](https://juejin.im/user/591d6b4d0ce463006926ae40)
-<!-- - [**知乎**](https://www.zhihu.com/people/gu-jian-qi-tan-shui/activities)
-- [**SegmentFault**](https://segmentfault.com/u/biaochenxuying )
-- [**简书**](https://www.jianshu.com/u/91717b553bfd) -->
   
 
 ## 撩我
@@ -180,25 +182,27 @@
 
 有什么问题，直接发邮件到我邮箱就可以，有必要的，我都会给您回复邮件的。
 
+<div align="center">
 
-## BB
+![](https://upload-images.jianshu.io/upload_images/12890819-0c42f7a1976fee04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/245)
+![](https://upload-images.jianshu.io/upload_images/12890819-ffab7bd24d08c00d.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/250)
+
+</div>
+
+> **江山父老能容我，不使人间造孽钱**。
 
 > 文章版权为夜尽天明所有，未经允许，不得转载；如要转载文章，请联系笔者。
 
 如果你觉得该项目不错，或者对你有所帮助，点个 Star 、或者真心赞赏一下 都是对我最大的鼓励，我会更有动力维护好该项目。
 
-
-> **江山父老能容我，不使人间造孽钱**。
-
-![](https://upload-images.jianshu.io/upload_images/12890819-ffab7bd24d08c00d.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+## BB
 
 
 #### 技术以内
 
-这里是笔者平时 BB 技术的地方。
+这里是笔者平时 BB 大前端技术的地方。
 
-
-![全栈修炼](https://upload-images.jianshu.io/upload_images/12890819-9399d149e09f638e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![全栈修炼](https://upload-images.jianshu.io/upload_images/12890819-9399d149e09f638e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000)
 
 
 #### 技术以外
@@ -207,5 +211,5 @@
 
 闲暇之余，技术以外的世界同样精彩。
 
-![硬核杂货铺](https://upload-images.jianshu.io/upload_images/12890819-a1e96383a05d5e4b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![硬核杂货铺](https://upload-images.jianshu.io/upload_images/12890819-7ed698c2818cdc3c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000)
 
