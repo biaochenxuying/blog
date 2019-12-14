@@ -13,7 +13,7 @@
 收获不止技术，还有财富。
 
 
-## 分类
+<!-- ## 分类
 
 - [JavaScript 数据结构与算法之美](https://github.com/biaochenxuying/blog/projects/10)
 - [JavaScript](https://github.com/biaochenxuying/blog/projects/4)
@@ -26,9 +26,39 @@
 - [硬核面试专题](https://github.com/biaochenxuying/blog/projects/12)
 - [前端工程师成长之路](https://github.com/biaochenxuying/blog/projects/14)
 - [半小时硬核理财入门](https://github.com/biaochenxuying/blog/projects/9)
-- [随笔](https://github.com/biaochenxuying/blog/projects/5)
+- [随笔](https://github.com/biaochenxuying/blog/projects/5) -->
+
+## 专栏
+
+- [**掘金专栏**](https://juejin.im/user/591d6b4d0ce463006926ae40)
+
+## 服务器
+
+优惠消息：[阿里服务器低于 1 折、89/年、229/3年，比学生机还便宜](https://www.aliyun.com/minisite/goods?userCode=g6evk7n0&share_source=copy_link)。
+
+笔者觉得每个开发者都应该拥有自己的网站和服务器，这可是很酷的事情，学习 Linux、跑跑脚本、建站、搭博客啥的都行啊。
+
+因为全栈君就有自己的服务器，而且有两台了，用于平时的学习，还搭建了自己的网站。
+
+**有不少读者问过我，为什么我学的那么快的呢 ？ 怎么在一年内学了那么知识的...**
+
+其实也没什么秘决，就是平时有自己的服务器了，就爱折腾，学到的知识能很快得到验证，所以学起来兴致高一点。
+
+特别是大三和大四的学生，买了服务器，搭建个项目给面试官看也香，对找工作和面试都加分，还可以熟悉技术栈。
+
+现在服务器 89/年，229/3年，比学生套餐的 9.9元每月 还便宜，还有 2 核 4G 3M 和 2 核 8G 5M 及更高配置的。
+
+一台 24 小时不关机的电脑，一年电费都不止 89 元，还有香港节点不用备案。
+
+还有 2000 元代金券领哦，需要的赶快上车了，错过还需要再等一年。
+
+如果是新用户，我建议是直接买 3 年期的，只买一年期真的亏了，因为你下一年又得重新找朋友家人的身份证注册新用户才有优惠了。
+
 
 ## 文章
+
+
+> 文章版权为夜尽天明所有，未经允许，不得转载；如要转载文章，请联系笔者。
 
 #### | 软技能
 
@@ -44,7 +74,6 @@
 #### | 随笔
 
 - [1. 程序员不止眼前的逻辑和代码，还应有健康的体魄和精气神](https://github.com/biaochenxuying/blog/issues/6)
-
 
 
 #### | JavaScript 数据结构与算法之美
@@ -78,7 +107,7 @@
 - [5. 基于 vue+mint-ui 的 mobile-h5 的项目说明](https://github.com/biaochenxuying/blog/issues/4)
 - [6. 复杂表格设计数据格式](https://github.com/biaochenxuying/blog/issues/7)
 
-#### | React.js 
+#### | React.js
 
 
 - [1. github 授权登录教程与如何设计第三方授权登录的用户表](https://github.com/biaochenxuying/blog/issues/23)
@@ -107,7 +136,7 @@
 - [11. WebKit 技术内幕之浏览器与 WebKit 内核](https://github.com/biaochenxuying/blog/issues/10)
 
 
-#### | Node.js 
+#### | Node.js
 
 - [1. 基于 node express mongodb 的 blog-node 项目文档说明](https://github.com/biaochenxuying/blog/issues/17)
 - [2. 服务器小白的我，是如何将 node+mongodb 项目部署在服务器上并进行性能优化的](https://github.com/biaochenxuying/blog/issues/18)
@@ -117,39 +146,42 @@
 
 - [1. 一次网站的性能优化之路 -- 天下武功，唯快不破](https://github.com/biaochenxuying/blog/issues/24)
 
+#### | VuePress & GitBook
+
+- [1. 借助 VuePress 和 GitBook ，10 分钟即可免费部署你的静态博客网站](https://github.com/biaochenxuying/blog/issues/53)
 
 #### | 半小时硬核理财入门
 
 - [1. 用钱生钱，从掌握金钱的规律开始](https://github.com/biaochenxuying/blog/issues/26)
-- 精彩待续 ... 
+- 精彩待续 ...
 
 #### | 学习资源
 
-- [极客时间上的《TypeScript 开发实战》课程资源，包含课件、思维导图、课程源代码](https://github.com/biaochenxuying/blog/tree/master/typescript-in-action)
+- [1. 极客时间上的《TypeScript 开发实战》课程资源，包含课件、思维导图、课程源代码](https://github.com/biaochenxuying/blog/tree/master/typescript-in-action)
+- [2. (视频教程)Vue、React、Node、MongoDB 全栈、打造商城系统、实战项目汇总](https://mp.weixin.qq.com/s/7f767Y5FHM9i2_GeUSz-Iw)
 
-
+  
 ## 计划
 
 以下是笔者往后的计划，计划执行的先后顺序，视情况而定。
 
 #### | webpack 原理及源码分析
 
-- 精彩待续 ... 
+- 精彩待续 ...
   
    
 #### | Vue 原理及源码分析
 
-- 精彩待续 ... 
+- 精彩待续 ...
   
 
 #### | TypeScript 入门到熟练
 
-- [1. Vue + TypeScript + Element 搭建简洁时尚的博客网站及踩坑记](https://github.com/biaochenxuying/blog/issues/25)
-- 精彩待续 ... 
+- 精彩待续 ...
   
 #### | 小程序入门到熟练
 
-- 精彩待续 ... 
+- 精彩待续 ...
   
 <!--   
 #### | Flutter 入门到熟练
@@ -162,14 +194,8 @@
 - 精彩待续 ... 
 
 
-## 社区
-
-- [**GitHub**](https://github.com/biaochenxuying/blog)
-- [**掘金**](https://juejin.im/user/591d6b4d0ce463006926ae40)
-  
 
 ## 撩我
-
 
 微信：**CB834301747**，加我时的验证申请，请输入暗号哦。
 
@@ -179,18 +205,14 @@
 
 有什么问题，直接发邮件到我邮箱就可以，有必要的，我都会给您回复邮件的。
 
+想加入前端交流群，跟诸多一线大厂的大佬交流学习，加我微信，回复 **进群**，我拉你入群。
+
 <div align="center">
 
-![](https://upload-images.jianshu.io/upload_images/12890819-0c42f7a1976fee04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/245)
-![](https://upload-images.jianshu.io/upload_images/12890819-ffab7bd24d08c00d.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/250)
+![](https://upload-images.jianshu.io/upload_images/12890819-0c42f7a1976fee04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/265)
 
 </div>
 
-> **江山父老能容我，不使人间造孽钱**。
-
-> 文章版权为夜尽天明所有，未经允许，不得转载；如要转载文章，请联系笔者。
-
-如果你觉得该项目不错，或者对你有所帮助，点个 Star 、或者真心赞赏一下 都是对我最大的鼓励，我会更有动力维护好该项目。
 
 ## BB
 
@@ -199,14 +221,29 @@
 
 这里是笔者平时 BB 大前端技术的地方。
 
+<div align="center">
+
 ![全栈修炼](https://upload-images.jianshu.io/upload_images/12890819-9399d149e09f638e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000)
 
+</div>
 
-#### 技术以外
+## 打赏
+
+> **江山父老能容我，不使人间造孽钱**。
+
+如果你感觉有收获，欢迎给我点个 Star 、或者真心赞赏一下，都是对我最大的鼓励，我会更有动力输出有价值的内容。
+
+<div align="center">
+
+![](https://upload-images.jianshu.io/upload_images/12890819-ffab7bd24d08c00d.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/250)
+
+</div>
+
+<!-- #### 技术以外
 
 技术以外的 BB。
 
 闲暇之余，技术以外的世界同样精彩。
 
-![硬核杂货铺](https://upload-images.jianshu.io/upload_images/12890819-7ed698c2818cdc3c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000)
+![硬核杂货铺](https://upload-images.jianshu.io/upload_images/12890819-7ed698c2818cdc3c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000) -->
 
