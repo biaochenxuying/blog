@@ -52,8 +52,9 @@
 
 #### | 前端工程师的成长之路
 
-- [1. 2018 年，我的本命年 - 前端工作师的年终总结](https://github.com/biaochenxuying/blog/issues/19)
-- [2. 前端架构师亲述：前端工程师成长之路的 N 问 及 回答](https://github.com/biaochenxuying/blog/issues/33)
+- [1. 前端工程师的 2019 年年终总结 - 真香篇](https://github.com/biaochenxuying/blog/issues/54)
+- [2. 2018 年，我的本命年 - 前端工作师的年终总结](https://github.com/biaochenxuying/blog/issues/19)
+- [3. 前端架构师亲述：前端工程师成长之路的 N 问 及 回答](https://github.com/biaochenxuying/blog/issues/33)
 
 
 #### | 随笔
@@ -190,7 +191,7 @@
 
 <div align="center">
 
-![全栈修炼](https://upload-images.jianshu.io/upload_images/12890819-f3f0bee138d74e7f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![全栈修炼](https://upload-images.jianshu.io/upload_images/12890819-8a7bdbd67a49d519.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 <!-- ![](https://upload-images.jianshu.io/upload_images/12890819-0c42f7a1976fee04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/265) -->
 
