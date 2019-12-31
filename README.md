@@ -32,13 +32,14 @@
 
 - [**掘金专栏**](https://juejin.im/user/591d6b4d0ce463006926ae40)
 
-## 服务器
+<!-- ## 服务器
 
 优惠消息：[阿里服务器低于 1 折、89/年、229/3年，比学生机还便宜](https://www.aliyun.com/minisite/goods?userCode=g6evk7n0&share_source=copy_link)，通过些链接购买就是最便宜的。
 
 笔者觉得每个开发者都应该拥有自己的网站和服务器，这可是很酷的事情，学习 Linux、跑跑脚本、建站、搭博客、搭建个项目给面试官看也香，对找工作和面试都加分，还可以熟悉技术栈。
 
-不知道如何使用服务器？可以看看我写的文章：[服务器小白的我,是如何将 node+mongodb 项目部署在服务器上并进行性能优化的](https://juejin.im/post/5bfb4ce46fb9a049a81efd2e)
+不知道如何使用服务器？可以看看我写的文章：[服务器小白的我,是如何将 node+mongodb 项目部署在服务器上并进行性能优化的](https://juejin.im/post/5bfb4ce46fb9a049a81efd2e) -->
+
 
 ## 文章
 
@@ -52,9 +53,10 @@
 
 #### | 前端工程师的成长之路
 
-- [1. 前端工程师的 2019 年年终总结 - 真香篇](https://github.com/biaochenxuying/blog/issues/54)
-- [2. 2018 年，我的本命年 - 前端工作师的年终总结](https://github.com/biaochenxuying/blog/issues/19)
-- [3. 前端架构师亲述：前端工程师成长之路的 N 问 及 回答](https://github.com/biaochenxuying/blog/issues/33)
+- [1. 我的 2019 年 - 当勤精进，但念无常，何以解忧，唯有暴富](https://github.com/biaochenxuying/blog/issues/55)
+- [2. 前端工程师的 2019 年年终总结 - 真香篇](https://github.com/biaochenxuying/blog/issues/54)
+- [3. 2018 年，我的本命年 - 前端工作师的年终总结](https://github.com/biaochenxuying/blog/issues/19)
+- [4. 前端架构师亲述：前端工程师成长之路的 N 问 及 回答](https://github.com/biaochenxuying/blog/issues/33)
 
 
 #### | 随笔
