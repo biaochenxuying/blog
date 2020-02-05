@@ -145,8 +145,9 @@
 
 #### | 学习资源
 
-- [1. 极客时间上的《TypeScript 开发实战》课程资源，包含课件、思维导图、课程源代码](https://github.com/biaochenxuying/blog/tree/master/typescript-in-action)
-- [2. (视频教程)Vue、React、Node、MongoDB 全栈、打造商城系统、实战项目汇总](https://mp.weixin.qq.com/s/7f767Y5FHM9i2_GeUSz-Iw)
+- [1. 150+ 本技术类常用电子书开源了，包括 前端、后端、数据结构与算法、计算机基础、设计模式、数据库等书籍](https://github.com/biaochenxuying/awesome-books)
+- [2. 极客时间上的《TypeScript 开发实战》课程资源，包含课件、思维导图、课程源代码](https://github.com/biaochenxuying/blog/tree/master/typescript-in-action)
+- [3. 视频资料分享 - Vue、React、Node、MongoDB 全栈、打造商城系统、实战项目汇总](https://mp.weixin.qq.com/s/7f767Y5FHM9i2_GeUSz-Iw)
 
   
 ## 计划
