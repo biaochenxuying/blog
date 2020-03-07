@@ -50,6 +50,7 @@
 
 - [1. GitHub 上能挖矿的神仙技巧 - 如何发现优秀开源项目](https://github.com/biaochenxuying/blog/issues/45)
 - [2. GitHub 吸星大法 - 一年收获 2000+ Star 的心得](https://github.com/biaochenxuying/blog/issues/49)
+- [3. 提升 google 使用效率的 30个快捷键、16个扩展插件与 11个前端调试方法](https://github.com/biaochenxuying/blog/issues/58)
 
 #### | 前端工程师的成长之路
 
@@ -61,7 +62,8 @@
 
 #### | 随笔
 
-- [1. 程序员不止眼前的逻辑和代码，还应有健康的体魄和精气神](https://github.com/biaochenxuying/blog/issues/6)
+- [1. **程序员如何优雅的挣零花钱！这里提供 9 种思路打开你挣钱的世界**](https://github.com/biaochenxuying/blog/issues/59)
+- [2. 程序员不止眼前的逻辑和代码，还应有健康的体魄和精气神](https://github.com/biaochenxuying/blog/issues/6)
 
 
 #### | JavaScript 数据结构与算法之美
@@ -194,7 +196,7 @@
 
 <div align="center">
 
-![全栈修炼](https://upload-images.jianshu.io/upload_images/12890819-8a7bdbd67a49d519.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/12890819-23d717c6aeb74e4c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 <!-- ![](https://upload-images.jianshu.io/upload_images/12890819-0c42f7a1976fee04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/265) -->
 
