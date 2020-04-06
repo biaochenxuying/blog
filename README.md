@@ -48,9 +48,10 @@
 
 #### | 软技能
 
-- [1. GitHub 上能挖矿的神仙技巧 - 如何发现优秀开源项目](https://github.com/biaochenxuying/blog/issues/45)
+- [1. **GitHub 上能挖矿的神仙技巧 - 如何发现优秀开源项目**](https://github.com/biaochenxuying/blog/issues/45)
 - [2. GitHub 吸星大法 - 一年收获 2000+ Star 的心得](https://github.com/biaochenxuying/blog/issues/49)
 - [3. 提升 google 使用效率的 30个快捷键、16个扩展插件与 11个前端调试方法](https://github.com/biaochenxuying/blog/issues/58)
+- [4. **Github 近 200k Star 的计算机专业课程与学习资源，在家也能上名校！成为大牛！**](https://github.com/biaochenxuying/blog/issues/62)
 
 #### | 前端工程师的成长之路
 
@@ -82,13 +83,13 @@
 - [8. JavaScript 数据结构与算法之美 - 归并排序、快速排序、希尔排序、堆排序](https://github.com/biaochenxuying/blog/issues/40) 
 - [9. JavaScript 数据结构与算法之美 - 计数排序、桶排序、基数排序](https://github.com/biaochenxuying/blog/issues/41) 
 - [10. JavaScript 数据结构与算法之美 - 十大经典排序算法汇总](https://github.com/biaochenxuying/blog/issues/42) 
-- [11. JavaScript 数据结构与算法之美 - 强烈推荐 GitHub 上值得前端学习的数据结构与算法项目](https://github.com/biaochenxuying/blog/issues/43)
+- [11. JavaScript 数据结构与算法之美 - **GitHub 上 170K+ Star 的前端学习的数据结构与算法项目**](https://github.com/biaochenxuying/blog/issues/43)
 
 
 #### | 前端硬核面试专题
 
 - [1. fe-interview：HTML + CSS + JS + ES6 + Webpack + Vue + React + Node + HTTPS + 数据结构与算法 + Git](https://github.com/biaochenxuying/blog/blob/master/interview/fe-interview.md)
-- [2. 重磅：硬核前端面试开源项目汇总（进大厂必备）](https://github.com/biaochenxuying/blog/issues/47)
+- [2. **GitHub 上 100K+ Star 的前端面试开源项目汇总（进大厂必备）**](https://github.com/biaochenxuying/blog/issues/47)
 - [3. 2019 前端秋季社招面试经历总结（二年多经验）](https://github.com/biaochenxuying/blog/issues/48)
 
 
@@ -151,9 +152,10 @@
 
 #### | 学习资源
 
-- [1. 150+ 本技术类常用电子书开源了，包括 前端、后端、数据结构与算法、计算机基础、设计模式、数据库等书籍](https://github.com/biaochenxuying/awesome-books)
+- [1. **150+ 本技术类常用电子书开源了，包括 前端、后端、数据结构与算法、计算机基础、设计模式、数据库等书籍**](https://github.com/biaochenxuying/awesome-books)
 - [2. 极客时间上的《TypeScript 开发实战》课程资源，包含课件、思维导图、课程源代码](https://github.com/biaochenxuying/blog/tree/master/typescript-in-action)
 - [3. 视频资料分享 - Vue、React、Node、MongoDB 全栈、打造商城系统、实战项目汇总](https://mp.weixin.qq.com/s/7f767Y5FHM9i2_GeUSz-Iw)
+
 
   
 ## 计划
