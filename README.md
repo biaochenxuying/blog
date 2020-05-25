@@ -55,7 +55,7 @@
 - [1. **GitHub 上能挖矿的神仙技巧 - 如何发现优秀开源项目**](https://github.com/biaochenxuying/blog/issues/45)
 - [2. GitHub 吸星大法 - 一年收获 2000+ Star 的心得](https://github.com/biaochenxuying/blog/issues/49)
 - [3. 提升 google 使用效率的 30个快捷键、16个扩展插件与 11个前端调试方法](https://github.com/biaochenxuying/blog/issues/58)
-- [4. **Github 近 200k Star 的计算机专业课程与学习资源，在家也能上名校！成为大牛！**](https://github.com/biaochenxuying/blog/issues/62)
+- [4. **Github 近 200k Star 的计算机学习资源，在家也能成为大牛！**](https://github.com/biaochenxuying/blog/issues/62)
 
 #### | 前端工程师的成长之路
 
@@ -68,6 +68,9 @@
 
 - [1. 浏览器指纹：原来我们一直被互联网巨头监视，隐私在网上裸奔、无处可藏](https://github.com/biaochenxuying/blog/issues/60)
 
+### | 译文
+
+- [1. 惊艳！可视化的 js：动态图演示 Promises & Async/Await 的过程！](https://github.com/biaochenxuying/blog/issues/64)
 
 #### | 随笔
 
