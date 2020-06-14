@@ -71,6 +71,8 @@
 ### | 译文
 
 - [1. 惊艳！可视化的 js：动态图演示 Promises & Async/Await 的过程！](https://github.com/biaochenxuying/blog/issues/64)
+- [2. 惊艳！可视化的 js：动态图演示-事件循环 Event Loop](https://github.com/biaochenxuying/blog/issues/65)
+- [3. 惊艳！小姐姐用动画图解 Git 的 10 大命令，这也太秀了吧！](https://github.com/biaochenxuying/blog/issues/67)
 
 #### | 随笔
 
@@ -209,7 +211,17 @@
 
 <div align="center">
 
+
+[![](https://upload-images.jianshu.io/upload_images/12890819-f3b3fedec1c5dc8a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)](https://github.com/biaochenxuying/awesome-books)
+
+[https://github.com/biaochenxuying/awesome-books](https://github.com/biaochenxuying/awesome-books)
+
+</div>
+
+<div align="center">
+
 ![](https://upload-images.jianshu.io/upload_images/12890819-50b85ba33dd7ba90.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 <!-- ![](https://upload-images.jianshu.io/upload_images/12890819-0c42f7a1976fee04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/265) -->
 
