@@ -56,6 +56,7 @@
 - [2. GitHub 吸星大法 - 一年收获 2000+ Star 的心得](https://github.com/biaochenxuying/blog/issues/49)
 - [3. 提升 google 使用效率的 30个快捷键、16个扩展插件与 11个前端调试方法](https://github.com/biaochenxuying/blog/issues/58)
 - [4. **Github 近 200k Star 的计算机学习资源，在家也能成为大牛！**](https://github.com/biaochenxuying/blog/issues/62)
+- [5. 推荐一个程序员必备网站之一：Dev Hints ，非常实用！](https://github.com/biaochenxuying/blog/issues/70)
 
 #### | 前端工程师的成长之路
 
@@ -139,6 +140,10 @@
 - [10. js 递归调用](https://github.com/biaochenxuying/blog/issues/9)
 - [11. WebKit 技术内幕之浏览器与 WebKit 内核](https://github.com/biaochenxuying/blog/issues/10)
 
+
+#### | Puppeteer & 自动化
+
+- [1. Puppeteer 自动化的性能优化与执行速度提升](https://github.com/biaochenxuying/blog/issues/69)
 
 #### | Node.js
 
