@@ -206,22 +206,46 @@
 
 
 
+## 服务器
+
+笔者觉得每个开发者都应该拥有自己的网站和服务器，这可是很酷的事情，学习 Linux、跑跑脚本、建站、搭博客啥的都行啊。
+
+因为笔者就有自己的服务器，而且有两台了，用于平时的学习，还搭建了自己的网站。
+
+有不少读者问过我，为什么我学的那么快的呢 ？ 怎么在一年内学了那么知识的...
+
+其实也没什么秘决，就是平时有自己的服务器了，就爱折腾，学到的知识能很快得到验证，所以学起来兴致高一点。
+
+特别是大三和大四的学生，买了服务器，搭建个项目给面试官看也香，对找工作和面试都加分，还可以熟悉技术栈。
+
+[想学得快，就得有自己的服务器来折腾才行（低于 1 折、89/年、229/3年，比学生机还便宜）](https://biaochenxuying.cn/articleDetail?article_id=5de65dd90283dc742f8f633a)
+
+比如笔者的两个网站：
+
+> https://biaochenxuying.cn/
+
+> https://www.kwgg2020.com/
+
+
+
 ## 撩我
+
+微信：**CB834301747**。
 
 邮箱：**2993806084#qq.com** ，将 **#** 号换成 **@** 即可。
 
-微信：**CB834301747**，加我时的验证申请，请输入暗号哦，暗号是：**夜尽天明**（非诚勿扰）。
+<!-- 微信：**CB834301747**，加我时的验证申请，请输入暗号哦，暗号是：**夜尽天明**（非诚勿扰）。 -->
 
 有什么问题，直接微信我，或者发邮件到我邮箱就可以，有必要的，我都会给您回复的。
 
-<div align="center">
+<!-- <div align="center">
 
 
 [![](https://upload-images.jianshu.io/upload_images/12890819-f3b3fedec1c5dc8a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)](https://github.com/biaochenxuying/awesome-books)
 
 [https://github.com/biaochenxuying/awesome-books](https://github.com/biaochenxuying/awesome-books)
 
-</div>
+</div> -->
 
 <div align="center">
 
