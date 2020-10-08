@@ -6,6 +6,8 @@
 
 地址：[https://biaochenxuying.cn/](https://biaochenxuying.cn/)
 
+2020 - 2021 年 Web 前端最新导航 ：[https://www.kwgg2020.com/](https://www.kwgg2020.com/)
+
 > **芳华正茂始少年，时光正好，未来可期 ！**
 
 技术为主，读书笔记、随笔、理财为辅，做个终身学习者。
@@ -57,6 +59,7 @@
 - [3. 提升 google 使用效率的 30个快捷键、16个扩展插件与 11个前端调试方法](https://github.com/biaochenxuying/blog/issues/58)
 - [4. **Github 近 200k Star 的计算机学习资源，在家也能成为大牛！**](https://github.com/biaochenxuying/blog/issues/62)
 - [5. 推荐一个程序员必备网站之一：Dev Hints ，非常实用！](https://github.com/biaochenxuying/blog/issues/70)
+- [6. 2020 - 2021 年 Web 前端最新导航](https://github.com/biaochenxuying/blog/issues/74)
 
 #### | 前端工程师的成长之路
 
