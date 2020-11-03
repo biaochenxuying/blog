@@ -60,6 +60,7 @@
 - [4. **Github 近 200k Star 的计算机学习资源，在家也能成为大牛！**](https://github.com/biaochenxuying/blog/issues/62)
 - [5. 推荐一个程序员必备网站之一：Dev Hints ，非常实用！](https://github.com/biaochenxuying/blog/issues/70)
 - [6. 2020 - 2021 年 Web 前端最新导航](https://github.com/biaochenxuying/blog/issues/74)
+- [7. **恕我直言，你可能连 GitHub 搜索都不会用 - 如何精准搜索的神仙技巧**](https://github.com/biaochenxuying/blog/issues/75)
 
 #### | 前端工程师的成长之路
 
@@ -233,13 +234,13 @@
 
 ## 撩我
 
-微信：**CB834301747**。
+<!-- 微信：**CB834301747**。
 
-邮箱：**2993806084#qq.com** ，将 **#** 号换成 **@** 即可。
+邮箱：**2993806084#qq.com** ，将 **#** 号换成 **@** 即可。 -->
 
 <!-- 微信：**CB834301747**，加我时的验证申请，请输入暗号哦，暗号是：**夜尽天明**（非诚勿扰）。 -->
 
-有什么问题，直接微信我，或者发邮件到我邮箱就可以，有必要的，我都会给您回复的。
+<!-- 有什么问题，直接微信我，或者发邮件到我邮箱就可以，有必要的，我都会给您回复的。 -->
 
 <!-- <div align="center">
 
@@ -250,6 +251,17 @@
 
 </div> -->
 
+
+
+> 微信：**CB834301747**
+
+<div align="center">
+
+![CB834301747](./CB834301747.jpeg)
+
+</div>
+
+
 <div align="center">
 
 ![](https://upload-images.jianshu.io/upload_images/12890819-50b85ba33dd7ba90.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
@@ -258,7 +270,6 @@
 <!-- ![](https://upload-images.jianshu.io/upload_images/12890819-0c42f7a1976fee04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/265) -->
 
 </div>
-
 
 <!-- ## BB
 
