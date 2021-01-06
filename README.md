@@ -57,6 +57,7 @@
 
 #### | 前端工程师的成长之路
 
+- [1. 我的 2020 年终总结 - 成长不及预期的 3 年之痒](https://github.com/biaochenxuying/blog/issues/79)
 - [1. 我的 2019 年 - 当勤精进，但念无常，何以解忧，唯有暴富](https://github.com/biaochenxuying/blog/issues/55)
 - [2. 前端工程师的 2019 年年终总结 - 真香篇](https://github.com/biaochenxuying/blog/issues/54)
 - [3. 2018 年，我的本命年 - 前端工作师的年终总结](https://github.com/biaochenxuying/blog/issues/19)
