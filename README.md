@@ -34,6 +34,38 @@
 
 - [**掘金专栏**](https://juejin.im/user/591d6b4d0ce463006926ae40)
 
+## 目录
+
+- [简介](#简介)
+- [专栏](#专栏)
+- [目录](#目录)
+- [文章](#文章)
+  - [Vue3.x](#vue3x)
+  - [TypeScript](#typescript)
+  - [软技能](#软技能)
+  - [前端工程师的成长之路](#前端工程师的成长之路)
+  - [安全](#安全)
+  - [译文](#译文)
+  - [随笔](#随笔)
+  - [JavaScript 数据结构与算法之美](#javascript-数据结构与算法之美)
+  - [前端硬核面试专题](#前端硬核面试专题)
+  - [Vue.js](#vuejs)
+  - [React.js](#reactjs)
+  - [ES 6](#es-6)
+  - [JavaScript](#javascript)
+  - [Puppeteer & 自动化](#puppeteer--自动化)
+  - [Node.js](#nodejs)
+  - [性能优化](#性能优化)
+  - [VuePress & GitBook](#vuepress--gitbook)
+  - [半小时硬核理财入门](#半小时硬核理财入门)
+  - [学习资源](#学习资源)
+- [计划](#计划)
+  - [webpack 原理及源码分析](#webpack-原理及源码分析)
+  - [Vue 原理及源码分析](#vue-原理及源码分析)
+  - [小程序入门到熟练](#小程序入门到熟练)
+- [前端开发路线图](#前端开发路线图)
+- [服务器](#服务器)
+- [撩我](#撩我)
 
 
 ## 文章
@@ -41,11 +73,15 @@
 
 > **文章版权为夜尽天明所有，未经允许，不得转载；如要转载文章，请联系笔者**。
 
-#### | Vue3.x
+### Vue3.x
 
 - [1. 通过10个实例小练习，快速入门熟练 Vue3.0 核心新特性](https://github.com/biaochenxuying/blog/issues/63)
 
-#### | 软技能
+### TypeScript
+
+- [1. TypeScript 中提升幸福感的 10 个高级技巧](https://github.com/biaochenxuying/blog/issues/80)
+
+### 软技能
 
 - [1. **GitHub 上能挖矿的神仙技巧 - 如何发现优秀开源项目**](https://github.com/biaochenxuying/blog/issues/45)
 - [2. GitHub 吸星大法 - 一年收获 2000+ Star 的心得](https://github.com/biaochenxuying/blog/issues/49)
@@ -55,31 +91,31 @@
 - [6. 2020 - 2021 年 Web 前端最新导航](https://github.com/biaochenxuying/blog/issues/74)
 - [7. **恕我直言，你可能连 GitHub 搜索都不会用 - 如何精准搜索的神仙技巧**](https://github.com/biaochenxuying/blog/issues/75)
 
-#### | 前端工程师的成长之路
+### 前端工程师的成长之路
 
-- [1. 我的 2020 年终总结 - 成长不及预期的 3 年之痒](https://github.com/biaochenxuying/blog/issues/79)
+- [1. 我的 2020 年终总结 - 乾坤未定，你我皆黑马](https://github.com/biaochenxuying/blog/issues/79)
 - [1. 我的 2019 年 - 当勤精进，但念无常，何以解忧，唯有暴富](https://github.com/biaochenxuying/blog/issues/55)
 - [2. 前端工程师的 2019 年年终总结 - 真香篇](https://github.com/biaochenxuying/blog/issues/54)
 - [3. 2018 年，我的本命年 - 前端工作师的年终总结](https://github.com/biaochenxuying/blog/issues/19)
 - [4. 前端架构师亲述：前端工程师成长之路的 N 问 及 回答](https://github.com/biaochenxuying/blog/issues/33)
 
-#### | 安全
+### 安全
 
 - [1. 浏览器指纹：原来我们一直被互联网巨头监视，隐私在网上裸奔、无处可藏](https://github.com/biaochenxuying/blog/issues/60)
 
-### | 译文
+### 译文
 
 - [1. 惊艳！可视化的 js：动态图演示 Promises & Async/Await 的过程！](https://github.com/biaochenxuying/blog/issues/64)
 - [2. 惊艳！可视化的 js：动态图演示-事件循环 Event Loop](https://github.com/biaochenxuying/blog/issues/65)
 - [3. 惊艳！小姐姐用动画图解 Git 的 10 大命令，这也太秀了吧！](https://github.com/biaochenxuying/blog/issues/67)
 
-#### | 随笔
+### 随笔
 
 - [1. **程序员如何优雅的挣零花钱！这里提供 9 种思路打开你挣钱的世界**](https://github.com/biaochenxuying/blog/issues/59)
 - [2. 程序员不止眼前的逻辑和代码，还应有健康的体魄和精气神](https://github.com/biaochenxuying/blog/issues/6)
 
 
-#### | JavaScript 数据结构与算法之美
+### JavaScript 数据结构与算法之美
 
 - [1. JavaScript 数据结构与算法之美 - 时间和空间复杂度](https://github.com/biaochenxuying/blog/issues/29)
 - [2. JavaScript 数据结构与算法之美 - 线性表（数组、队列、栈、链表）](https://github.com/biaochenxuying/blog/issues/34)
@@ -94,14 +130,14 @@
 - [11. JavaScript 数据结构与算法之美 - **GitHub 上 170K+ Star 的前端学习的数据结构与算法项目**](https://github.com/biaochenxuying/blog/issues/43)
 
 
-#### | 前端硬核面试专题
+### 前端硬核面试专题
 
 - [1. fe-interview：HTML + CSS + JS + ES6 + Webpack + Vue + React + Node + HTTPS + 数据结构与算法 + Git](https://github.com/biaochenxuying/blog/blob/master/interview/fe-interview.md)
 - [2. **GitHub 上 100K+ Star 的前端面试开源项目汇总（进大厂必备）**](https://github.com/biaochenxuying/blog/issues/47)
 - [3. 2019 前端秋季社招面试经历总结（二年多经验）](https://github.com/biaochenxuying/blog/issues/48)
 
 
-#### | Vue.js
+### Vue.js
 
 - [1. 一张思维导图辅助你深入了解 Vue | Vue-Router | Vuex 源码架构(文字版)](https://github.com/biaochenxuying/blog/issues/28)
 - [2. 一张思维导图辅助你深入了解 Vue | Vue-Router | Vuex 源码架构](https://github.com/biaochenxuying/blog/issues/27)
@@ -110,7 +146,7 @@
 - [5. 基于 vue+mint-ui 的 mobile-h5 的项目说明](https://github.com/biaochenxuying/blog/issues/4)
 - [6. 复杂表格设计数据格式](https://github.com/biaochenxuying/blog/issues/7)
 
-#### | React.js
+### React.js
 
 
 - [1. github 授权登录教程与如何设计第三方授权登录的用户表](https://github.com/biaochenxuying/blog/issues/23)
@@ -119,12 +155,12 @@
 - [4. react + node + express + ant + mongodb 的简洁兼时尚的博客网站](https://github.com/biaochenxuying/blog/issues/14)
 
 
-#### | ES 6
+### ES 6
 
 - [1. 那些必会用到的 ES6 精粹](https://github.com/biaochenxuying/blog/issues/1)
 
 
-#### | JavaScript
+### JavaScript
 
 - [1. 前端解决第三方图片防盗链的办法 - html referrer 访问图片资源 403 问题](https://github.com/biaochenxuying/blog/issues/31)
 - [2. 原生 js 实现一个有动画效果的进度条插件 progress](https://github.com/biaochenxuying/blog/issues/21)
@@ -140,70 +176,65 @@
 - [12. 前端工程化必备，语义化版本号扫盲，支持任意版本号位数的比较方法](https://github.com/biaochenxuying/blog/issues/78)
 
 
-#### | Puppeteer & 自动化
+### Puppeteer & 自动化
 
 - [1. Puppeteer 自动化的性能优化与执行速度提升](https://github.com/biaochenxuying/blog/issues/69)
 
-#### | Node.js
+### Node.js
 
 - [1. 基于 node express mongodb 的 blog-node 项目文档说明](https://github.com/biaochenxuying/blog/issues/17)
 - [2. 服务器小白的我，是如何将 node+mongodb 项目部署在服务器上并进行性能优化的](https://github.com/biaochenxuying/blog/issues/18)
 
 
-#### | 性能优化
+### 性能优化
 
 - [1. 一次网站的性能优化之路 -- 天下武功，唯快不破](https://github.com/biaochenxuying/blog/issues/24)
 
-#### | VuePress & GitBook
+### VuePress & GitBook
 
 - [1. 借助 VuePress 和 GitBook ，10 分钟即可免费部署你的静态博客网站](https://github.com/biaochenxuying/blog/issues/53)
 
-#### | 半小时硬核理财入门
+### 半小时硬核理财入门
 
 - [1. 用钱生钱，从掌握金钱的规律开始](https://github.com/biaochenxuying/blog/issues/26)
 - 精彩待续 ...
 
-#### | 学习资源
+### 学习资源
 
 - [1. **150+ 本技术类常用电子书开源了，包括 前端、后端、数据结构与算法、计算机基础、设计模式、数据库等书籍**](https://github.com/biaochenxuying/awesome-books)
 - [2. 极客时间上的《TypeScript 开发实战》课程资源，包含课件、思维导图、课程源代码](https://github.com/biaochenxuying/blog/tree/master/typescript-in-action)
 - [3. 视频资料分享 - Vue、React、Node、MongoDB 全栈、打造商城系统、实战项目汇总](https://mp.weixin.qq.com/s/7f767Y5FHM9i2_GeUSz-Iw)
 
-
+[⬆️ 返回顶部](#目录)
   
 ## 计划
 
 以下是笔者往后的计划，计划执行的先后顺序，视情况而定。
 
-#### | webpack 原理及源码分析
+### webpack 原理及源码分析
 
 - 精彩待续 ...
   
    
-#### | Vue 原理及源码分析
+### Vue 原理及源码分析
 
 - 精彩待续 ...
   
-
-#### | TypeScript 入门到熟练
-
-- 精彩待续 ...
   
-#### | 小程序入门到熟练
+### 小程序入门到熟练
 
 - 精彩待续 ...
   
 <!--   
-#### | Flutter 入门到熟练
+### Flutter 入门到熟练
 
 - 精彩待续 ...  -->
-  
-  
-#### | 翻译国外文章
 
-- 精彩待续 ... 
+[⬆️ 返回顶部](#目录)
 
+## 前端开发路线图
 
+![frontend-map.png](./images/frontend-map.png)
 
 ## 服务器
 
@@ -226,58 +257,20 @@
 > https://www.kwgg2020.com/
 
 
+[⬆️ 返回顶部](#目录)
 
 ## 撩我
 
-<!-- 微信：**CB834301747**。
 
-邮箱：**2993806084#qq.com** ，将 **#** 号换成 **@** 即可。 -->
+> 欢迎关注公众号：**全栈修炼**，每周会有一到三篇的文章推送，后台回复 “**电子书**”，获取 160+ 本前端精华电子书哦。
 
-<!-- 微信：**CB834301747**，加我时的验证申请，请输入暗号哦，暗号是：**夜尽天明**（非诚勿扰）。 -->
-
-<!-- 有什么问题，直接微信我，或者发邮件到我邮箱就可以，有必要的，我都会给您回复的。 -->
-
-<!-- <div align="center">
+| 微信 | 公众号 |
+| :------: |  :------: |
+| 微信：**CB834301747** <div align="center" style="margin-top: 10px;"> ![CB834301747](./images/CB834301747.jpeg) </div> | <div align="center"> ![](https://upload-images.jianshu.io/upload_images/12890819-50b85ba33dd7ba90.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) </div> |
 
 
-[![](https://upload-images.jianshu.io/upload_images/12890819-f3b3fedec1c5dc8a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)](https://github.com/biaochenxuying/awesome-books)
+[⬆️ 返回顶部](#目录)
 
-[https://github.com/biaochenxuying/awesome-books](https://github.com/biaochenxuying/awesome-books)
-
-</div> -->
-
-
-
-> 微信：**CB834301747**
-
-<div align="center">
-
-![CB834301747](./CB834301747.jpeg)
-
-</div>
-
-
-<div align="center">
-
-![](https://upload-images.jianshu.io/upload_images/12890819-50b85ba33dd7ba90.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-
-<!-- ![](https://upload-images.jianshu.io/upload_images/12890819-0c42f7a1976fee04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/265) -->
-
-</div>
-
-<!-- ## BB
-
-
-#### 技术以内
-
-这里是笔者平时 BB 大前端技术的地方。
-
-<div align="center">
-
-![全栈修炼](https://upload-images.jianshu.io/upload_images/12890819-9399d149e09f638e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000)
-
-</div> -->
 
 <!-- ## 打赏
 
@@ -290,12 +283,3 @@
 ![](https://upload-images.jianshu.io/upload_images/12890819-ffab7bd24d08c00d.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/250)
 
 </div> -->
-
-<!-- #### 技术以外
-
-技术以外的 BB。
-
-闲暇之余，技术以外的世界同样精彩。
-
-![硬核杂货铺](https://upload-images.jianshu.io/upload_images/12890819-7ed698c2818cdc3c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000)
- -->
