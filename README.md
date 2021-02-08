@@ -6,7 +6,9 @@
 
 地址：[https://biaochenxuying.cn/](https://biaochenxuying.cn/)
 
-2020 - 2021 年 Web 前端最新导航 ：[https://www.kwgg2020.com/](https://www.kwgg2020.com/)
+前端最强的学习导航：[https://www.kwgg2020.com/](https://www.kwgg2020.com/)
+
+专注于挖掘优秀的前端开源项目，抹平你的前端信息不对称的项目：https://github.com/FrontEndGitHub/FrontEndGitHub
 
 > **芳华正茂始少年，时光正好，未来可期 ！**
 
@@ -197,6 +199,7 @@
 ### 半小时硬核理财入门
 
 - [1. 用钱生钱，从掌握金钱的规律开始](https://github.com/biaochenxuying/blog/issues/26)
+- [2. 用钱生钱，谈谈我对财富自由的理解](https://github.com/biaochenxuying/blog/issues/82)
 - 精彩待续 ...
 
 ### 学习资源
