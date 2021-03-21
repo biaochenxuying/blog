@@ -184,8 +184,9 @@
 
 ### Node.js
 
-- [1. 基于 node express mongodb 的 blog-node 项目文档说明](https://github.com/biaochenxuying/blog/issues/17)
-- [2. 服务器小白的我，是如何将 node+mongodb 项目部署在服务器上并进行性能优化的](https://github.com/biaochenxuying/blog/issues/18)
+- [1. [解秘 Node.js 单线程实现高并发请求原理，以及串联同步执行并发请求的方案](https://github.com/biaochenxuying/blog/issues/86)](https://github.com/biaochenxuying/blog/issues/86)
+- [2. 基于 node express mongodb 的 blog-node 项目文档说明](https://github.com/biaochenxuying/blog/issues/17)
+- [3. 服务器小白的我，是如何将 node+mongodb 项目部署在服务器上并进行性能优化的](https://github.com/biaochenxuying/blog/issues/18)
 
 
 ### 性能优化
