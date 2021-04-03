@@ -6,7 +6,6 @@
 
 地址：[https://biaochenxuying.cn/](https://biaochenxuying.cn/)
 
-前端最强的学习导航：[https://www.kwgg2020.com/](https://www.kwgg2020.com/)
 
 专注于挖掘优秀的前端开源项目，抹平你的前端信息不对称的项目：https://github.com/FrontEndGitHub/FrontEndGitHub
 
@@ -113,8 +112,9 @@
 
 ### 随笔
 
-- [1. **程序员如何优雅的挣零花钱！这里提供 9 种思路打开你挣钱的世界**](https://github.com/biaochenxuying/blog/issues/59)
-- [2. 程序员不止眼前的逻辑和代码，还应有健康的体魄和精气神](https://github.com/biaochenxuying/blog/issues/6)
+- [1. **相亲感悟：关于恋爱择偶的几点直击心灵深处的认知**](https://github.com/biaochenxuying/blog/issues/83)
+- [2. **程序员如何优雅的挣零花钱！这里提供 9 种思路打开你挣钱的世界**](https://github.com/biaochenxuying/blog/issues/59)
+- [3. **程序员不止眼前的逻辑和代码，还应有健康的体魄和精气神**](https://github.com/biaochenxuying/blog/issues/6)
 
 
 ### JavaScript 数据结构与算法之美
@@ -159,7 +159,8 @@
 
 ### ES 6
 
-- [1. 那些必会用到的 ES6 精粹](https://github.com/biaochenxuying/blog/issues/1)
+- [1. JavaScript ES2021 最值得期待的 5 个新特性解析](https://github.com/biaochenxuying/blog/issues/87)
+- [2. 那些必会用到的 ES6 精粹](https://github.com/biaochenxuying/blog/issues/1)
 
 
 ### JavaScript
@@ -266,11 +267,14 @@
 ## 撩我
 
 
-> 欢迎关注公众号：**全栈修炼**，每周会有一到三篇的文章推送，后台回复 “**电子书**”，获取 160+ 本前端精华电子书哦。
-
 | 微信 | 公众号 |
 | :------: |  :------: |
 | 微信：**CB834301747** <div align="center" style="margin-top: 10px;"> ![CB834301747](./images/CB834301747.jpeg) </div> | <div align="center"> ![](https://upload-images.jianshu.io/upload_images/12890819-50b85ba33dd7ba90.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) </div> |
+
+
+> 欢迎关注微信公众号 “**[全栈修炼](https://upload-images.jianshu.io/upload_images/12890819-9a13b43f4feb8f84.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)**”，回复 “**电子书**” 即可以获得下面 **300** 本技术精华书籍和 **160+** 本前端精华电子书哦。
+
+![](https://upload-images.jianshu.io/upload_images/12890819-62496904db90a9fa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 [⬆️ 返回顶部](#目录)
