@@ -7,13 +7,15 @@
 地址：[https://biaochenxuying.cn/](https://biaochenxuying.cn/)
 
 
-专注于挖掘优秀的前端开源项目，抹平你的前端信息不对称的项目：https://github.com/FrontEndGitHub/FrontEndGitHub
-
 > **芳华正茂始少年，时光正好，未来可期 ！**
 
 技术为主，读书笔记、随笔、理财为辅，做个终身学习者。
 
 收获不止技术，还有财富。
+
+> 以最优惠的方式购买极客时间课程：https://github.com/biaochenxuying/preferential-courses ，涵盖了后端、架构、前端、移动、人工智能、大数据、产品、运营、运维、测试等
+
+> 专注于挖掘优秀的前端开源项目，抹平你的前端信息不对称的项目：https://github.com/FrontEndGitHub/FrontEndGitHub
 
 
 <!-- ## 分类
@@ -185,7 +187,7 @@
 
 ### Node.js
 
-- [1. [解秘 Node.js 单线程实现高并发请求原理，以及串联同步执行并发请求的方案](https://github.com/biaochenxuying/blog/issues/86)](https://github.com/biaochenxuying/blog/issues/86)
+- [1. 解秘 Node.js 单线程实现高并发请求原理，以及串联同步执行并发请求的方案](https://github.com/biaochenxuying/blog/issues/86)
 - [2. 基于 node express mongodb 的 blog-node 项目文档说明](https://github.com/biaochenxuying/blog/issues/17)
 - [3. 服务器小白的我，是如何将 node+mongodb 项目部署在服务器上并进行性能优化的](https://github.com/biaochenxuying/blog/issues/18)
 
