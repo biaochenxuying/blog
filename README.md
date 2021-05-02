@@ -114,6 +114,7 @@
 
 ### 随笔
 
+- [1. **说说最近的状态与一件开心的事：获得了两个奖**](https://github.com/biaochenxuying/blog/issues/89)
 - [1. **相亲感悟：关于恋爱择偶的几点直击心灵深处的认知**](https://github.com/biaochenxuying/blog/issues/83)
 - [2. **程序员如何优雅的挣零花钱！这里提供 9 种思路打开你挣钱的世界**](https://github.com/biaochenxuying/blog/issues/59)
 - [3. **程序员不止眼前的逻辑和代码，还应有健康的体魄和精气神**](https://github.com/biaochenxuying/blog/issues/6)
