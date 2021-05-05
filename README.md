@@ -78,7 +78,8 @@
 
 ### Vue3.x
 
-- [1. 通过10个实例小练习，快速入门熟练 Vue3.0 核心新特性](https://github.com/biaochenxuying/blog/issues/63)
+- [1. Vue3 全家桶 + TS+ Vite2 + element-plus 搭建简洁时尚的博客网站实战及踩坑记 ](https://github.com/biaochenxuying/blog/issues/90)
+- [2. 通过10个实例小练习，快速入门熟练 Vue3.0 核心新特性](https://github.com/biaochenxuying/blog/issues/63)
 
 ### TypeScript
 
