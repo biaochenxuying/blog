@@ -78,7 +78,7 @@
 
 ### Vue3.x
 
-- [1. Vue3 全家桶 + TS+ Vite2 + element-plus 搭建简洁时尚的博客网站实战及踩坑记 ](https://github.com/biaochenxuying/blog/issues/90)
+- [1. Vue3 全家桶 + TS+ Vite2 + element-plus 搭建简洁时尚的博客网站实战及踩坑记](https://github.com/biaochenxuying/blog/issues/90)
 - [2. 通过10个实例小练习，快速入门熟练 Vue3.0 核心新特性](https://github.com/biaochenxuying/blog/issues/63)
 
 ### TypeScript
@@ -276,9 +276,12 @@
 | 微信：**CB834301747** <div align="center" style="margin-top: 10px;"> ![CB834301747](./images/CB834301747.jpeg) </div> | <div align="center"> ![](https://upload-images.jianshu.io/upload_images/12890819-50b85ba33dd7ba90.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) </div> |
 
 
-> 欢迎关注微信公众号 “**[全栈修炼](https://upload-images.jianshu.io/upload_images/12890819-9a13b43f4feb8f84.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)**”，回复 “**电子书**” 即可以获得下面 **300** 本技术精华书籍和 **160+** 本前端精华电子书哦。
+> 欢迎关注微信公众号 “**[全栈修炼](https://upload-images.jianshu.io/upload_images/12890819-9a13b43f4feb8f84.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)**”，回复 **电子书** 就送你 **1000+** 本精华编程电子书；回复 **1024** 送你一套完整的 **前端** 视频教程。
 
-![](https://upload-images.jianshu.io/upload_images/12890819-62496904db90a9fa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![](https://upload-images.jianshu.io/upload_images/12890819-860e00b3a4b6c418.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+有需要的就来拿吧，**绝对免费，无套路获取**。
 
 
 [⬆️ 返回顶部](#目录)
