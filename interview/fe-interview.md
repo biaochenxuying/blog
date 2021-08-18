@@ -1744,6 +1744,7 @@ console.log(Object.prototype.toString.call(null)); // [object Null]
 
 ---
 
+[彻底弄清 js 继承的几种实现方式](https://segmentfault.com/a/1190000022677985)
 [理解 js 继承的 6 种方式](https://www.cnblogs.com/Grace-zyy/p/8206002.html)
 
 ---
@@ -2738,6 +2739,10 @@ javascript 优化
 - 不要在 HTML 中使用缩放图片
 - favicon.ico 要小而且可缓存
 
+
+[前端性能优化 24 条建议（2020）](https://juejin.cn/post/6892994632968306702)
+
+
 ---
 
 **JS 格式化数字（每三位加逗号）**
@@ -3069,6 +3074,9 @@ for (var i = 0; i < arr.length; i++) {
   }
 }
 ```
+
+[js闭包的9个使用场景](https://www.jb51.net/article/203104.htm)
+
 
 ---
 
@@ -3645,13 +3653,18 @@ Vuex
 
 #### Vue 经典面试相关文章
 
-- [1. Vue 生命周期](https://www.jianshu.com/p/304a44f7c11b)
-- [2. 详解 Vue 生命周期](https://segmentfault.com/a/1190000011381906)
-- [3. Vue 组件间通信六种方式（完整版）](https://juejin.im/post/5cde0b43f265da03867e78d3)
-- [4. Vue 组件之间 8 种组件通信方式总结](https://blog.csdn.net/zhoulu001/article/details/79548350)
-- [5. Vue 学习笔记-实现一个分页组件](https://www.jianshu.com/p/d17d8e35deda)
-- [6. 30 道 Vue 面试题，内含详细讲解（涵盖入门到精通，自测 Vue 掌握程度）](https://www.jianshu.com/p/b1564296a78b)
-- [7. Vue 生命周期和详细的执行过程](https://blog.csdn.net/qq_38021852/article/details/88640807)
+- [Vue 生命周期](https://www.jianshu.com/p/304a44f7c11b)
+- [详解 Vue 生命周期](https://segmentfault.com/a/1190000011381906)
+- [Vue 组件间通信六种方式（完整版）](https://juejin.im/post/5cde0b43f265da03867e78d3)
+- [Vue 组件之间 8 种组件通信方式总结](https://blog.csdn.net/zhoulu001/article/details/79548350)
+- [Vue 学习笔记-实现一个分页组件](https://www.jianshu.com/p/d17d8e35deda)
+- [30 道 Vue 面试题，内含详细讲解（涵盖入门到精通，自测 Vue 掌握程度）](https://www.jianshu.com/p/b1564296a78b)
+- [Vue 生命周期和详细的执行过程](https://blog.csdn.net/qq_38021852/article/details/88640807)
+- [20+ Vue面试题整理](https://juejin.cn/post/6844904084374290446)
+- [12 道vue高频原理面试题,你能答出几道?](https://juejin.cn/post/6844904031983239181)
+- [他写出了 Vue，却做不对这十道 Vue 笔试题](https://juejin.cn/post/6870737289736093710)
+- [Vue2 原理浅谈](https://juejin.cn/post/6844903506621497358)
+- [Vue 最全知识点，面试必备（基础到进阶，覆盖 vue3.0，持续更新整理](https://juejin.cn/post/6844903709055401991)
 
 [⬆️ 返回顶部](#目录)
 
