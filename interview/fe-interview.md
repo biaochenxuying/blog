@@ -1736,8 +1736,88 @@ console.log(Object.prototype.toString.call(null)); // [object Null]
 3. 如果你要传递的参数很多，则可以用数组将参数整理好调用 fn.apply(thisObj, [arg1, arg2 ...])
 4. 如果你想生成一个新的函数长期绑定某个函数给某个对象使用，则可以使用 const newFn = fn.bind(thisObj); newFn(arg1, arg2...)
 
+
+手写 bind
+
+```js
+Function.prototype.myBind = function(context, ...args) {
+  // 设置 fn 为调用 myCall 的方法
+  const fn = this
+  args = args ? args : []
+
+  // 设置返回的一个新方法
+  const result = function(...newFnArgs) {
+
+    // 如果是通过 new 调用的，绑定 this 为实例对象
+    if (this instanceof result) {
+      fn.apply(this, [...args, ...newFnArgs]);
+    } else { // 否则普通函数形式绑定 context
+      fn.apply(context, [...args, ...newFnArgs]);
+    }
+  }
+
+  // 绑定原型链
+  result.prototype = Object.create(fn.prototype);
+
+  // 返回结果
+  return result;
+};
+
+this.a = 1;
+
+const fn = function() {
+  this.a = 2;
+  console.log(this.a);
+}
+
+fn.myBind(fn);
+fn();
+```
+
+
+实现 apply
+
+```js
+Function.prototype.myApply = function (context, args) {
+    //这里默认不传就是给window,也可以用es6给参数设置默认参数
+    context = context || window
+    args = args ? args : []
+    //给context新增一个独一无二的属性以免覆盖原有属性
+    const key = Symbol()
+    context[key] = this
+    //通过隐式绑定的方式调用函数
+    const result = context[key](...args)
+    //删除添加的属性
+    delete context[key]
+    //返回函数调用的返回值
+    return result
+}
+```
+
+
+实现 call
+
+```js
+//传递参数从一个数组变成逐个传参了,不用...扩展运算符的也可以用arguments代替
+Function.prototype.myCall = function (context, ...args) {
+    //这里默认不传就是给window,也可以用es6给参数设置默认参数
+    context = context || window
+    args = args ? args : []
+    //给context新增一个独一无二的属性以免覆盖原有属性
+    const key = Symbol()
+    context[key] = this
+    //通过隐式绑定的方式调用函数
+    const result = context[key](...args)
+    //删除添加的属性
+    delete context[key]
+    //返回函数调用的返回值
+    return result
+}
+```
+
 参考文章：
 
+- [手写 bind, apply, call](https://juejin.cn/post/6844903891092389901)
 - [call、apply、bind 的区别](https://www.jianshu.com/p/bbeadae6127e)
 - [聊一聊 call、apply、bind 的区别](https://segmentfault.com/a/1190000012772040)
 
@@ -2192,6 +2272,9 @@ null 典型用法是： 
 **讲一下 prototype 是什么东西，原型链的理解，什么时候用 prototype ？**
 
 prototype 是函数对象上面预设的对象属性。
+
+
+[深入JavaScript系列（六）：原型与原型链](https://juejin.cn/post/6844903749345886216)
 
 ---
 
@@ -3364,6 +3447,76 @@ document.addEventListener('scroll', better_scroll)
 
 ---
 
+手写实现一个简单版本的 promise
+
+```js
+// 三个常量用于表示状态
+const PENDING = 'pending'
+const RESOLVED = 'resolved'
+const REJECTED = 'rejected'
+
+function MyPromise(fn) {
+    const that = this
+    this.state = PENDING
+
+    // value 变量用于保存 resolve 或者 reject 中传入的值
+    this.value = null
+
+    // 用于保存 then 中的回调，因为当执行完 Promise 时状态可能还是等待中，这时候应该把 then 中的回调保存起来用于状态改变时使用
+    that.resolvedCallbacks = []
+    that.rejectedCallbacks = []
+
+
+    function resolve(value) {
+         // 首先两个函数都得判断当前状态是否为等待中
+        if(that.state === PENDING) {
+            that.state = RESOLVED
+            that.value = value
+
+            // 遍历回调数组并执行
+            that.resolvedCallbacks.map(cb=>cb(that.value))
+        }
+    }
+    function reject(value) {
+        if(that.state === PENDING) {
+            that.state = REJECTED
+            that.value = value
+            that.rejectedCallbacks.map(cb=>cb(that.value))
+        }
+    }
+
+    // 完成以上两个函数以后，我们就该实现如何执行 Promise 中传入的函数了
+    try {
+        fn(resolve,reject)
+    }cach(e){
+        reject(e)
+    }
+}
+
+// 最后我们来实现较为复杂的 then 函数
+MyPromise.prototype.then = function(onFulfilled,onRejected){
+  const that = this
+
+  // 判断两个参数是否为函数类型，因为这两个参数是可选参数
+  onFulfilled = typeof onFulfilled === 'function' ? onFulfilled : v => v;
+  onRejected = typeof onRejected === 'function' ? onRejected : e => throw e;
+
+  // 当状态不是等待态时，就去执行相对应的函数。如果状态是等待态的话，就往回调函数中 push 函数
+  if(this.state === PENDING) {
+      this.resolvedCallbacks.push(onFulfilled)
+      this.rejectedCallbacks.push(onRejected)
+  }
+  if(this.state === RESOLVED) {
+      onFulfilled(that.value)
+  }
+  if(this.state === REJECTED) {
+      onRejected(that.value)
+  }
+}
+```
+
+---
+
 #### ES6+ 面试知识文章
 
 - [那些必会用到的 ES6 精粹](https://github.com/biaochenxuying/blog/issues/1)
@@ -3651,6 +3804,56 @@ Vuex
 
 ![Vuex](https://upload-images.jianshu.io/upload_images/12890819-a4909259bd32ae9c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+---
+
+在 Vue 2 的实现中，在组件初始化阶段把数据变成响应式时，遇到子属性仍然是对象的情况，会递归执行 Object.defineProperty 定义子对象的响应式；而在 Vue 3 的实现中，只有在对象属性被访问的时候才会判断子属性的类型来决定要不要递归执行 reactive，这其实是一种延时定义子对象响应式的实现，在性能上会有一定的提升。
+
+---
+
+涉及面试题：Proxy 可以实现什么功能？
+
+在 Vue3.0 中将会通过 Proxy 来替换原本的 Object.defineProperty 来实现数据响应式。 Proxy 是 ES6 中新增的功能，它可以用来自定义对象中的操作。
+
+```js
+const p = new Proxy(target, handler)
+```
+
+target 代表需要添加代理的对象，handler 用来自定义对象中的操作，比如可以用来自定义 set 或者 get 函数。
+
+
+接下来我们通过 Proxy 来实现一个数据响应式
+
+```js
+let onWatch = (obj, setBind, getLogger) => {
+  let handler = {
+    get(target, property, receiver) {
+      getLogger(target, property)
+      return Reflect.get(target, property, receiver)
+    },
+    set(target, property, value, receiver) {
+      setBind(value, property)
+      return Reflect.set(target, property, value)
+    }
+  }
+  return new Proxy(obj, handler)
+}
+
+let obj = { a: 1 }
+let p = onWatch(
+  obj,
+  (v, property) => {
+    console.log(`监听到属性${property}改变为${v}`)
+  },
+  (target, property) => {
+    console.log(`'${property}' = ${target[property]}`)
+  }
+)
+p.a = 2 // 监听到属性a改变
+p.a // 'a' = 2
+```
+
+
+
 #### Vue 经典面试相关文章
 
 - [Vue 生命周期](https://www.jianshu.com/p/304a44f7c11b)
@@ -3763,6 +3966,12 @@ GET 和 POST 能做的事情是一样一样的。你要给 GET 加上 request bo
 - GET 和 POST 本质上就是 TCP 链接，并无差别。但是由于 HTTP 的规定和浏览器/服务器的限制，导致他们在应用过程中体现出一些不同。
 
 
+
+- [关于三次握手和四次挥手，面试官想听到怎样的回答？](https://juejin.cn/post/6978733203062915103)
+
+- [跟着动画来学习TCP三次握手和四次挥手](https://juejin.cn/post/6844903625513238541)
+
+
 ---
 
 **HTTP 中 GET 与 POST 的区别**
@@ -3825,6 +4034,11 @@ Expires：显示的设置页面过期时间。
 Last-Modified：请求对象最后一次的修改时间，用来判断缓存是否过期，通常由文件的时间信息产生。
 
 If-Modified-Since：客户端发送请求附带的信息，指浏览器缓存请求对象的最后修改日期，用来和服务器端的 Last-Modified 做比较。
+
+
+
+[一文读懂前端缓存（好文）](https://juejin.cn/post/6844903747357769742)
+
 
 ---
 

@@ -4,7 +4,7 @@
 
 ## 简介
 
-地址：[https://biaochenxuying.cn/](https://biaochenxuying.cn/)
+<!-- 地址：[https://biaochenxuying.cn/](https://biaochenxuying.cn/) -->
 
 
 > **芳华正茂始少年，时光正好，未来可期 ！**
@@ -15,7 +15,7 @@
 
 > 以最优惠的方式购买极客时间课程：https://github.com/biaochenxuying/preferential-courses ，涵盖了后端、架构、前端、移动、人工智能、大数据、产品、运营、运维、测试等
 
-> 专注于挖掘优秀的前端开源项目，抹平你的前端信息不对称的项目：https://github.com/FrontEndGitHub/FrontEndGitHub
+<!-- > 专注于挖掘优秀的前端开源项目，抹平你的前端信息不对称的项目：https://github.com/FrontEndGitHub/FrontEndGitHub -->
 
 
 <!-- ## 分类
@@ -33,14 +33,13 @@
 - [半小时硬核理财入门](https://github.com/biaochenxuying/blog/projects/9)
 - [随笔](https://github.com/biaochenxuying/blog/projects/5) -->
 
-## 专栏
+<!-- ## 专栏
 
-- [**掘金专栏**](https://juejin.im/user/591d6b4d0ce463006926ae40)
+- [**掘金专栏**](https://juejin.im/user/591d6b4d0ce463006926ae40) -->
 
 ## 目录
 
 - [简介](#简介)
-- [专栏](#专栏)
 - [目录](#目录)
 - [文章](#文章)
   - [Vue3.x](#vue3x)
@@ -61,13 +60,10 @@
   - [性能优化](#性能优化)
   - [VuePress & GitBook](#vuepress--gitbook)
   - [半小时硬核理财入门](#半小时硬核理财入门)
-  - [学习资源](#学习资源)
 - [计划](#计划)
   - [webpack 原理及源码分析](#webpack-原理及源码分析)
   - [Vue 原理及源码分析](#vue-原理及源码分析)
   - [小程序入门到熟练](#小程序入门到熟练)
-- [服务器](#服务器)
-- [撩我](#撩我)
 
 
 ## 文章
@@ -207,13 +203,13 @@
 - [2. 用钱生钱，谈谈我对财富自由的理解](https://github.com/biaochenxuying/blog/issues/82)
 - 精彩待续 ...
 
-### 学习资源
+<!-- ### 学习资源
 
 - [1. **150+ 本技术类常用电子书开源了，包括 前端、后端、数据结构与算法、计算机基础、设计模式、数据库等书籍**](https://github.com/biaochenxuying/awesome-books)
 - [2. 极客时间上的《TypeScript 开发实战》课程资源，包含课件、思维导图、课程源代码](https://github.com/biaochenxuying/blog/tree/master/typescript-in-action)
 - [3. 视频资料分享 - Vue、React、Node、MongoDB 全栈、打造商城系统、实战项目汇总](https://mp.weixin.qq.com/s/7f767Y5FHM9i2_GeUSz-Iw)
 
-[⬆️ 返回顶部](#目录)
+[⬆️ 返回顶部](#目录) -->
   
 ## 计划
 
@@ -240,7 +236,7 @@
 
 [⬆️ 返回顶部](#目录)
 
-
+<!-- 
 ## 服务器
 
 笔者觉得每个开发者都应该拥有自己的网站和服务器，这可是很酷的事情，学习 Linux、跑跑脚本、建站、搭博客啥的都行啊。
@@ -259,12 +255,12 @@
 
 > https://biaochenxuying.cn/
 
-> https://www.kwgg2020.com/
+> https://www.kwgg2020.com/ -->
 
+<!-- 
+[⬆️ 返回顶部](#目录) -->
 
-[⬆️ 返回顶部](#目录)
-
-## 撩我
+<!-- ## 撩我
 
 
 | 微信 | 公众号 |
@@ -277,10 +273,10 @@
 
 ![](https://upload-images.jianshu.io/upload_images/12890819-860e00b3a4b6c418.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-有需要的就来拿吧，**绝对免费，无套路获取**。
+有需要的就来拿吧，**绝对免费，无套路获取**。 -->
 
 
-[⬆️ 返回顶部](#目录)
+<!-- [⬆️ 返回顶部](#目录) -->
 
 
 <!-- ## 打赏
