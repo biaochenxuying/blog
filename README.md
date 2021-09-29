@@ -12,8 +12,8 @@
 技术为主，读书笔记、随笔、理财为辅，做个终身学习者。
 
 收获不止技术，还有财富。
-
-> 以最优惠的方式购买极客时间课程：https://github.com/biaochenxuying/preferential-courses ，涵盖了后端、架构、前端、移动、人工智能、大数据、产品、运营、运维、测试等
+<!-- 
+> 以最优惠的方式购买极客时间课程：https://github.com/biaochenxuying/preferential-courses ，涵盖了后端、架构、前端、移动、人工智能、大数据、产品、运营、运维、测试等 -->
 
 <!-- > 专注于挖掘优秀的前端开源项目，抹平你的前端信息不对称的项目：https://github.com/FrontEndGitHub/FrontEndGitHub -->
 
@@ -44,7 +44,6 @@
 - [文章](#文章)
   - [Vue3.x](#vue3x)
   - [TypeScript](#typescript)
-  - [软技能](#软技能)
   - [前端工程师的成长之路](#前端工程师的成长之路)
   - [安全](#安全)
   - [译文](#译文)
@@ -59,7 +58,6 @@
   - [Node.js](#nodejs)
   - [性能优化](#性能优化)
   - [VuePress & GitBook](#vuepress--gitbook)
-  - [半小时硬核理财入门](#半小时硬核理财入门)
 - [计划](#计划)
   - [webpack 原理及源码分析](#webpack-原理及源码分析)
   - [Vue 原理及源码分析](#vue-原理及源码分析)
@@ -80,7 +78,7 @@
 
 - [1. TypeScript 中提升幸福感的 10 个高级技巧](https://github.com/biaochenxuying/blog/issues/80)
 
-### 软技能
+<!-- ### 软技能
 
 - [1. **GitHub 上能挖矿的神仙技巧 - 如何发现优秀开源项目**](https://github.com/biaochenxuying/blog/issues/45)
 - [2. GitHub 吸星大法 - 一年收获 2000+ Star 的心得](https://github.com/biaochenxuying/blog/issues/49)
@@ -88,15 +86,15 @@
 - [4. **Github 近 200k Star 的计算机学习资源，在家也能成为大牛！**](https://github.com/biaochenxuying/blog/issues/62)
 - [5. 推荐一个程序员必备网站之一：Dev Hints ，非常实用！](https://github.com/biaochenxuying/blog/issues/70)
 - [6. 2020 - 2021 年 Web 前端最新导航](https://github.com/biaochenxuying/blog/issues/74)
-- [7. **恕我直言，你可能连 GitHub 搜索都不会用 - 如何精准搜索的神仙技巧**](https://github.com/biaochenxuying/blog/issues/75)
+- [7. **恕我直言，你可能连 GitHub 搜索都不会用 - 如何精准搜索的神仙技巧**](https://github.com/biaochenxuying/blog/issues/75) -->
 
 ### 前端工程师的成长之路
 
-- [1. 我的 2020 年终总结 - 乾坤未定，你我皆黑马](https://github.com/biaochenxuying/blog/issues/79)
+<!-- - [1. 我的 2020 年终总结 - 乾坤未定，你我皆黑马](https://github.com/biaochenxuying/blog/issues/79)
 - [1. 我的 2019 年 - 当勤精进，但念无常，何以解忧，唯有暴富](https://github.com/biaochenxuying/blog/issues/55)
 - [2. 前端工程师的 2019 年年终总结 - 真香篇](https://github.com/biaochenxuying/blog/issues/54)
-- [3. 2018 年，我的本命年 - 前端工作师的年终总结](https://github.com/biaochenxuying/blog/issues/19)
-- [4. 前端架构师亲述：前端工程师成长之路的 N 问 及 回答](https://github.com/biaochenxuying/blog/issues/33)
+- [3. 2018 年，我的本命年 - 前端工作师的年终总结](https://github.com/biaochenxuying/blog/issues/19) -->
+- [前端架构师亲述：前端工程师成长之路的 N 问 及 回答](https://github.com/biaochenxuying/blog/issues/33)
 
 ### 安全
 
@@ -110,10 +108,10 @@
 
 ### 随笔
 
-- [1. **说说最近的状态与一件开心的事：获得了两个奖**](https://github.com/biaochenxuying/blog/issues/89)
-- [1. **相亲感悟：关于恋爱择偶的几点直击心灵深处的认知**](https://github.com/biaochenxuying/blog/issues/83)
-- [2. **程序员如何优雅的挣零花钱！这里提供 9 种思路打开你挣钱的世界**](https://github.com/biaochenxuying/blog/issues/59)
-- [3. **程序员不止眼前的逻辑和代码，还应有健康的体魄和精气神**](https://github.com/biaochenxuying/blog/issues/6)
+<!-- - [1. 说说最近的状态与一件开心的事：获得了两个奖](https://github.com/biaochenxuying/blog/issues/89)
+- [1. 相亲感悟：关于恋爱择偶的几点直击心灵深处的认知](https://github.com/biaochenxuying/blog/issues/83)
+- [2. 程序员如何优雅的挣零花钱！这里提供 9 种思路打开你挣钱的世界](https://github.com/biaochenxuying/blog/issues/59) -->
+- [程序员不止眼前的逻辑和代码，还应有健康的体魄和精气神](https://github.com/biaochenxuying/blog/issues/6)
 
 
 ### JavaScript 数据结构与算法之美
@@ -134,7 +132,7 @@
 ### 前端硬核面试专题
 
 - [1. fe-interview：HTML + CSS + JS + ES6 + Webpack + Vue + React + Node + HTTPS + 数据结构与算法 + Git](https://github.com/biaochenxuying/blog/blob/master/interview/fe-interview.md)
-- [2. **GitHub 上 100K+ Star 的前端面试开源项目汇总（进大厂必备）**](https://github.com/biaochenxuying/blog/issues/47)
+- [2. GitHub 上 100K+ Star 的前端面试开源项目汇总（进大厂必备）](https://github.com/biaochenxuying/blog/issues/47)
 - [3. 2019 前端秋季社招面试经历总结（二年多经验）](https://github.com/biaochenxuying/blog/issues/48)
 
 
@@ -197,11 +195,11 @@
 
 - [1. 借助 VuePress 和 GitBook ，10 分钟即可免费部署你的静态博客网站](https://github.com/biaochenxuying/blog/issues/53)
 
-### 半小时硬核理财入门
+<!-- ### 半小时硬核理财入门
 
 - [1. 用钱生钱，从掌握金钱的规律开始](https://github.com/biaochenxuying/blog/issues/26)
 - [2. 用钱生钱，谈谈我对财富自由的理解](https://github.com/biaochenxuying/blog/issues/82)
-- 精彩待续 ...
+- 精彩待续 ... -->
 
 <!-- ### 学习资源
 
